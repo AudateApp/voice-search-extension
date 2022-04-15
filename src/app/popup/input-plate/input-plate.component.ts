@@ -18,10 +18,10 @@ export class InputPlateComponent implements OnInit {
   currentLocale: LocaleProperties = DefaultLocale;
   totalTranscript?: string;
 
-  transcript$?: Observable<string>;
-  listening$?: Observable<boolean>;
-  errorMessage$?: Observable<string>;
-  defaultError$ = new Subject<string | undefined>();
+  transcript?: Observable<string>;
+  listening?: Observable<boolean>;
+  errorMessage?: Observable<string>;
+  defaultError = new Subject<string | undefined>();
 
   constructor(
     private speechRecognizer: RecognitionService,
@@ -32,7 +32,7 @@ export class InputPlateComponent implements OnInit {
     if (webSpeechReady) {
       this.initRecognition();
     }else {
-      this.errorMessage$ = of('Your Browser is not supported. Please try Google Chrome.');
+      this.errorMessage = of('Your Browser is not supported. Please try Google Chrome.');
     }
   }
 
@@ -42,7 +42,7 @@ export class InputPlateComponent implements OnInit {
       return;
     }
 
-    this.defaultError$.next(undefined);
+    this.defaultError.next(undefined);
     this.speechRecognizer.start();
   }
 
@@ -59,21 +59,21 @@ export class InputPlateComponent implements OnInit {
   }
 
   private initRecognition(): void {
-    this.transcript$ = this.speechRecognizer.onResult().pipe(
+    this.transcript = this.speechRecognizer.onResult().pipe(
       tap((notification) => {
         this.processNotification(notification);
       }),
       map((notification) => notification.content || '')
     );
 
-    this.listening$ = merge(
+    this.listening = merge(
       this.speechRecognizer.onStart(),
       this.speechRecognizer.onEnd()
     ).pipe(map((notification) => notification.event === RecognitionEvent.Start));
 
-    this.errorMessage$ = merge(
+    this.errorMessage = merge(
       this.speechRecognizer.onError(),
-      this.defaultError$
+      this.defaultError
     ).pipe(
       map((data) => {
         if (data === undefined) {

@@ -1,8 +1,8 @@
 <section>
-    <p *ngIf="errorMessage$| async as errorMessage" class="notification">{{errorMessage}}</p>
+    <p *ngIf="errorMessage | async as errorMessage" class="notification">{{errorMessage}}</p>
   </section>
   <section>
-    <button *ngIf="listening$ | async; else mic" (click)="stop()">
+    <button *ngIf="listening | async; else mic" (click)="stop()">
       <span class="soundwave">stop</span>
     </button>
     <ng-template #mic>
@@ -19,8 +19,8 @@
         </option>
       </select>
   </section>
-<section *ngIf="transcript$ | async">
-  <p class="notification">{{transcript$ | async}}</p>
+<section *ngIf="transcript | async">
+  <p class="notification">{{transcript | async}}</p>
 </section>
 <section>
     <textarea  [value]="totalTranscript || ''" placeholder="Speech Input Result" rows="15" disabled="true"></textarea>
