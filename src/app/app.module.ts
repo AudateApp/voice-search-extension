@@ -7,6 +7,7 @@ import { PopupComponent } from './popup/popup.component';
 import { InputPlateComponent } from './popup/input-plate/input-plate.component';
 import { TranscriptComponent } from './popup/transcript/transcript.component';
 import { AudioWavesComponent } from './popup/audio-waves/audio-waves.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AudioWavesComponent } from './popup/audio-waves/audio-waves.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

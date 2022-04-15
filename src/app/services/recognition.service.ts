@@ -19,7 +19,7 @@ const { webkitSpeechRecognition }: IWindow = (window as any) as IWindow;
   providedIn: 'root',
 })
 export class RecognitionService {
-  recognition!: SpeechRecognition;
+  recognition!: any;
   language!: LocaleProperties;
   isListening = false;
 
@@ -82,7 +82,7 @@ export class RecognitionService {
 
   onResult(): Observable<SpeechNotification<string>> {
     return new Observable(observer => {
-      this.recognition.onresult = (event: SpeechRecognitionEvent) => {
+      this.recognition.onresult = (event: any) => {
         let interimContent = '';
         let finalContent = '';
 
@@ -112,7 +112,7 @@ export class RecognitionService {
 
   onError(): Observable<SpeechNotification<never>> {
     return new Observable(observer => {
-      this.recognition.onerror = (event) => {
+      this.recognition.onerror = (event: any) => {
         // tslint:disable-next-line:no-any
         const eventError: string = (event as any).error;
         console.log('error', eventError);
