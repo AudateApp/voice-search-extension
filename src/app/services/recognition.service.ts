@@ -22,6 +22,7 @@ export class RecognitionService {
   recognition!: any;
   language!: LocaleProperties;
   isListening = false;
+  recognitionState: RecognitionState = RecognitionState.UNKNOWN;
 
   constructor(private ngZone: NgZone) {}
 
@@ -143,5 +144,11 @@ export class RecognitionService {
 
   stop(): void {
     this.recognition.stop();
+  }
+
+  // Handle a mic-tap interaction.
+  micTap(): void {
+
+
   }
 }
