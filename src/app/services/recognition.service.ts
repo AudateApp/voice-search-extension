@@ -6,7 +6,8 @@ import {
   AudioState,
   AppState,
 } from '../model/recognition-state';
-import { LocaleProperties } from '../model/locale';
+import { LocaleProperties } from '../model/locale-properties';
+import { LocaleService } from './locale.service';
 
 // This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
 // Since TypeScript cannot find it.
@@ -27,7 +28,7 @@ export class RecognitionService {
   recognitionState: RecognitionState = IdleState;
   recognitionState$: Subject<RecognitionState> = new Subject();
 
-  constructor(private ngZone: NgZone) {}
+  constructor() {}
 
   #initialize(language: LocaleProperties, isContinuous: boolean): ErrorType {
     // When using the chrome recognition API via popup, no special permission is required.
@@ -44,7 +45,7 @@ export class RecognitionService {
     this.recognition.continuous = isContinuous; // TODO: Parameterize.
     this.recognition.interimResults = true;
     this.recognition.maxAlternatives = 3;
-    this.recognition.lang = 'en-US'; // TODO: Parameterize.
+    this.recognition.lang = LocaleService.getDefaultLocale().bcp_47;
 
     // Wire up life-cycle methods, in the order they are invoked.
     this.recognition.onstart = this.#onStart;
