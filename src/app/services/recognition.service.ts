@@ -6,7 +6,7 @@ import {
   AudioState,
   AppState,
 } from '../model/recognition-state';
-import { LocaleProperties } from '../model/languages';
+import { LocaleProperties } from '../model/locale';
 
 // This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
 // Since TypeScript cannot find it.

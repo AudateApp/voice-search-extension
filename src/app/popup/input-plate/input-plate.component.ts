@@ -8,7 +8,7 @@ import {
   DefaultLocale,
   LocaleProperties,
   LocalesForDefaultModel,
-} from '../../model/languages';
+} from '../../model/locale';
 import { AppState } from '../../model/recognition-state';
 import { RecognitionService } from '../../services/recognition.service';
 
