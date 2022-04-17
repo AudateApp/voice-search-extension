@@ -21,10 +21,8 @@ import { RecognitionService } from '../../services/recognition.service';
 export class InputPlateComponent implements OnInit {
   locales: LocaleProperties[] = LocalesForDefaultModel;
   currentLocale: LocaleProperties = DefaultLocale;
-  totalTranscript?: string;
 
   errorMessage?: string;
-  transcript?: string;
   listening = false;
 
   constructor(
@@ -41,7 +39,6 @@ export class InputPlateComponent implements OnInit {
       }
       if (rstate.state == AppState.RECOGNIZING) {
         this.listening = true;
-        this.transcript = rstate.data?.transcript?.partialText || '#underfined';
       } else {
         this.listening = false;
       }
@@ -53,7 +50,7 @@ export class InputPlateComponent implements OnInit {
     if (this.listening) {
       this.speechRecognizer.stop();
     } else {
-      this.speechRecognizer.start(true);
+      this.speechRecognizer.start(false);
     }
   }
 
