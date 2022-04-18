@@ -12,7 +12,6 @@ export class PopupComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("#ngOnInit");
   }  
   
   showDialog() {
