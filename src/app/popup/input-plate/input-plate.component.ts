@@ -10,7 +10,7 @@ import {
   LocaleProperties,
   LocalesForDefaultModel,
 } from '../../model/locale-properties';
-import { AppState } from '../../model/recognition-state';
+import { State } from '../../model/recognition-state';
 import { RecognitionService } from '../../services/recognition.service';
 
 @Component({
@@ -34,7 +34,7 @@ export class InputPlateComponent implements OnInit {
     let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
       console.log('#event ', count++, rstate);
-      if (rstate.state == AppState.RECOGNIZING) {
+      if (rstate.state == State.TRANSCRIBING) {
         this.listening = true;
       } else {
         this.listening = false;

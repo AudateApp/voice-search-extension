@@ -1,11 +1,6 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Observable, share, Subject } from 'rxjs';
-import {
-  RecognitionState,
-  ErrorType,
-  AudioState,
-  AppState,
-} from '../model/recognition-state';
+import { RecognitionState, State } from '../model/recognition-state';
 import { LocaleProperties } from '../model/locale-properties';
 import { LocaleService } from './locale.service';
 
@@ -17,7 +12,7 @@ interface IWindow extends Window {
 }
 // tslint:disable-next-line:no-any
 const { webkitSpeechRecognition }: IWindow = window as any as IWindow;
-const IdleState: RecognitionState = { state: AppState.IDLE };
+const IdleState: RecognitionState = { state: State.IDLE };
 
 @Injectable({
   providedIn: 'root',
@@ -26,17 +21,17 @@ export class RecognitionService {
   recognition!: any;
   language!: LocaleProperties;
   recognitionState: RecognitionState = IdleState;
-  recognitionState$: Subject<RecognitionState> = new Subject();
+  RecognitionState$: Subject<RecognitionState> = new Subject();
 
   constructor() {}
 
-  #initialize(language: LocaleProperties, isContinuous: boolean): ErrorType {
+  #initialize(language: LocaleProperties, isContinuous: boolean): State {
     // When using the chrome recognition API via popup, no special permission is required.
     // See permsisiosn list here - https://developer.chrome.com/docs/extensions/mv3/declare_permissions/
     // When accessing on a webpage, microphone access is a required permission. If this extension is installed, it has it.
 
     if (!('webkitSpeechRecognition' in window)) {
-      return ErrorType.NOT_SUPPORTED;
+      return State.NOT_SUPPORTED;
     }
 
     this.recognition = new webkitSpeechRecognition();
@@ -60,7 +55,7 @@ export class RecognitionService {
     // Wire up response handlers.
     this.recognition.onresult = this.#onResult;
     this.recognition.onerror = this.#onError;
-    return ErrorType.UNKNOWN;
+    return State.IDLE;
   }
 
   /**
@@ -71,10 +66,9 @@ export class RecognitionService {
   #onStart = () => {
     console.log('#onStart');
     this.recognitionState = {
-      state: AppState.RECOGNIZING,
-      data: { audioState: AudioState.START },
+      state: State.START,
     };
-    this.recognitionState$.next(this.recognitionState);
+    this.RecognitionState$.next(this.recognitionState);
   };
 
   /** Fired when the user agent has started to capture audio. */
@@ -106,10 +100,9 @@ export class RecognitionService {
   #onAudioEnd = () => {
     console.log('#onAudioEnd');
     this.recognitionState = {
-      state: AppState.RECOGNIZING,
-      data: { audioState: AudioState.END },
+      state: State.END,
     };
-    this.recognitionState$.next(this.recognitionState);
+    this.RecognitionState$.next(this.recognitionState);
   };
 
   /** Fired when the speech recognition service has disconnected.
@@ -120,7 +113,7 @@ export class RecognitionService {
   #onEnd = () => {
     console.log('#onEnd');
     this.recognitionState = IdleState;
-    this.recognitionState$.next(this.recognitionState);
+    this.RecognitionState$.next(this.recognitionState);
     this.recognition = null;
   };
 
@@ -130,51 +123,41 @@ export class RecognitionService {
     const eventError: string = (event as any).error;
     switch (eventError) {
       case 'no-speech':
-        this.recognitionState = {
-          state: AppState.RECOGNIZING,
-          data: {
-            audioState: AudioState.NO_SPEECH_DETECTED,
-          },
-        };
+        this.recognitionState = { state: State.NO_SPEECH_DETECTED };
         break;
       case 'audio-capture':
         this.recognitionState = {
-          state: AppState.ERROR,
-          error: {
-            type: ErrorType.NO_AUDIO_INPUT_DEVICE,
-            message: 'No microphone devices detected or mic is muted.',
-          },
+          state: State.NO_AUDIO_INPUT_DEVICE,
+          errorMessage: 'No microphone devices detected or mic is muted.',        
         };
         break;
       case 'not-allowed':
         this.recognitionState = {
-          state: AppState.ERROR,
-          error: {
-            type: ErrorType.PERMISSION_NOT_GRANTED,
-            message: 'Microphone permission not yet granted.',
-          },
+          state: State.PERMISSION_NOT_GRANTED,
+          errorMessage: 'Microphone permission not yet granted.',
         };
         break;
       case 'network':
         this.recognitionState = {
-          state: AppState.ERROR,
-          error: {
-            type: ErrorType.NO_CONNECTION,
-            message: 'Network disconnected.',
-          },
+          state: State.NO_CONNECTION,
+          errorMessage: 'Network disconnected.',
         };
         break;
       case 'aborted':
         // Starting speech recognition while one ongoing.
+        this.recognitionState = {
+          state: State.IDLE,
+          errorMessage: 'Recognition cancelled.',
+        };
         break;
       default:
         this.recognitionState = {
-          state: AppState.ERROR,
-          error: { type: ErrorType.UNKNOWN, message: 'TODO:Please set this' },
+          state: State.UNKNOWN,
+          errorMessage: 'TODO:Please set this',
         };
         break;
     }
-    this.recognitionState$.next(this.recognitionState);
+    this.RecognitionState$.next(this.recognitionState);
   };
 
   /** Fired when the speech recognition service returns a
@@ -190,23 +173,17 @@ export class RecognitionService {
       if (event.results[i].isFinal) {
         finalContent += event.results[i][0].transcript;
         this.recognitionState = {
-          state: AppState.RECOGNIZING,
-          data: {
-            audioState: AudioState.TRANSCRIBING,
-            transcript: { finalText: finalContent },
-          },
+          state: State.TRANSCRIBING,
+          transcript: { finalText: finalContent },
         };
-        this.recognitionState$.next(this.recognitionState);
+        this.RecognitionState$.next(this.recognitionState);
       } else {
         interimContent += event.results[i][0].transcript;
         this.recognitionState = {
-          state: AppState.RECOGNIZING,
-          data: {
-            audioState: AudioState.TRANSCRIBING,
-            transcript: { partialText: interimContent },
-          },
+          state: State.TRANSCRIBING,
+          transcript: { partialText: interimContent },
         };
-        this.recognitionState$.next(this.recognitionState);
+        this.RecognitionState$.next(this.recognitionState);
       }
     }
   };
@@ -215,19 +192,18 @@ export class RecognitionService {
     if (this.recognition) {
       console.log('stopping recognition');
       this.recognition.abort();
-      
+
       // TODO: Wait for recognition object to become null, i.e. onEnd has fired.
       // If this function is invoked twice back-to-back, it would fail.
     }
 
-
-    const errorType = this.#initialize(this.language, isContinuous);
-    if (errorType !== ErrorType.UNKNOWN) {
+    const state = this.#initialize(this.language, isContinuous);
+    if (state === State.NOT_SUPPORTED) {
       this.recognitionState = {
-        state: AppState.ERROR,
-        error: { type: errorType, message: 'Recognition not supported.' },
+        state: state,
+        errorMessage: 'Recognition not supported.',
       };
-      this.recognitionState$.next(this.recognitionState);
+      this.RecognitionState$.next(this.recognitionState);
       return;
     }
 
@@ -239,12 +215,12 @@ export class RecognitionService {
       console.error("Stopping recognition that isn't initialized");
       return;
     }
-    
+
     // Aborting instead of stopping prevents streaming results after closure.
     this.recognition.abort();
   }
 
   getRecognitionState(): Observable<RecognitionState> {
-    return this.recognitionState$.asObservable().pipe(share());
+    return this.RecognitionState$.asObservable().pipe(share());
   }
 }
