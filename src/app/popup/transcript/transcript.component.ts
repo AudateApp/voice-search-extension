@@ -9,10 +9,12 @@ import { RecognitionService } from 'src/app/services/recognition.service';
 })
 export class TranscriptComponent implements OnInit {
   idleMessage = 'Click start to speaking';
-  // TODO: Clear this timeout if a new event fires.
-  idleTimeoutMs = 1000;
+  idleTimeoutMs = 5000;
+  idleTimeout?: any|null = null;
   message?: string = this.idleMessage;
 
+  // TODO: Hanlde case where sound that is not transcribable is detected.
+  // And hence no-speech detected is not fired. Listening -> Done.
   constructor(
     private speechRecognizer: RecognitionService,
     private ref: ChangeDetectorRef
@@ -21,7 +23,8 @@ export class TranscriptComponent implements OnInit {
   ngOnInit(): void {
     let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
-      console.log('#event ', count++, rstate);
+      console.log('#event ', count++, rstate.state);
+      clearTimeout(this.idleTimeout);
       switch (rstate.state) {
         case State.NOT_SUPPORTED:
           this.message = rstate.errorMessage;
@@ -36,7 +39,7 @@ export class TranscriptComponent implements OnInit {
           this.message = rstate.errorMessage;
           break;
         case State.NO_SPEECH_DETECTED:
-          this.message = 'No Speech Detected';
+          this.message =  rstate.errorMessage;
           break;
         case State.START:
           this.message = 'Listening...';
@@ -50,7 +53,7 @@ export class TranscriptComponent implements OnInit {
           // Do nothing.
           break;
         case State.IDLE:
-          setTimeout(() => {
+          this.idleTimeout = setTimeout(() => {
             this.message = this.idleMessage;
             this.ref.detectChanges();
           }, this.idleTimeoutMs);

@@ -33,11 +33,22 @@ export class InputPlateComponent implements OnInit {
   ngOnInit(): void {
     let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
-      console.log('#event ', count++, rstate);
-      if (rstate.state == State.TRANSCRIBING) {
-        this.listening = true;
-      } else {
-        this.listening = false;
+      console.log('#event ', count++, rstate.state);
+      switch (rstate.state) {
+        case State.UNKNOWN:
+        case State.NOT_SUPPORTED:
+        case State.PERMISSION_NOT_GRANTED:
+        case State.NO_AUDIO_INPUT_DEVICE:
+        case State.NO_CONNECTION:
+        case State.NO_SPEECH_DETECTED:
+        case State.IDLE:
+        case State.END:
+          this.listening = false;
+          break;
+        case State.START:
+        case State.TRANSCRIBING:
+          this.listening = true;
+          break;
       }
       this.ref.detectChanges();
     });
@@ -52,7 +63,7 @@ export class InputPlateComponent implements OnInit {
   }
 
   setLocale(locale: LocaleProperties): void {
-    console.log("Set locale: ", locale);
+    console.log('Set locale: ', locale);
     LocaleService.setRecognitionLocale(locale);
     this.currentLocale = locale;
   }

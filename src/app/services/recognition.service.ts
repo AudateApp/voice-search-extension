@@ -123,7 +123,10 @@ export class RecognitionService {
     const eventError: string = (event as any).error;
     switch (eventError) {
       case 'no-speech':
-        this.recognitionState = { state: State.NO_SPEECH_DETECTED };
+        this.recognitionState = { 
+          state: State.NO_SPEECH_DETECTED, 
+          errorMessage: "No Speech Detected.",
+         };
         break;
       case 'audio-capture':
         this.recognitionState = {
