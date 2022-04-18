@@ -4,6 +4,7 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
+import { LocaleService } from 'src/app/services/locale.service';
 import {
   DefaultLocale,
   LocaleProperties,
@@ -50,7 +51,9 @@ export class InputPlateComponent implements OnInit {
     }
   }
 
-  selectLanguage(language: LocaleProperties): void {
-    this.currentLocale = language;
+  setLocale(locale: LocaleProperties): void {
+    console.log("Set locale: ", locale);
+    LocaleService.setRecognitionLocale(locale);
+    this.currentLocale = locale;
   }
 }

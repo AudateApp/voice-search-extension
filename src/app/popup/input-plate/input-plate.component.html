@@ -6,10 +6,7 @@
   </section>
   <section>
       <p>Select your language</p>
-      <select [ngModel]="currentLocale" (ngModelChange)="selectLanguage($event)">
-        <option *ngFor="let language of locales" [value]="language" >
-          {{language.name}}
-        </option>
-      </select>
+      <p-dropdown [options]="locales" (ngModelChange)="setLocale($event)" [ngModel]="currentLocale" optionLabel="name"></p-dropdown>
+
   </section>
 
