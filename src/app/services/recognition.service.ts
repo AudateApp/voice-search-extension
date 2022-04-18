@@ -1,7 +1,7 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Observable, share, Subject } from 'rxjs';
 import { RecognitionState, State } from '../model/recognition-state';
-import { LocaleProperties } from '../model/locale-properties';
+import { DefaultLocale, LocaleProperties } from '../model/locale-properties';
 import { LocaleService } from './locale.service';
 
 // This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
@@ -168,10 +168,25 @@ export class RecognitionService {
           errorMessage: 'Recognition cancelled.',
         };
         break;
+      case 'language-not-supported':
+        const locale = this.recognition.lang;
+        this.localeService.setRecognitionLocale(DefaultLocale);
+        this.recognitionState = {
+          state: State.LANGUAGE_NOT_SUPPORTED,
+          errorMessage: `Locale ${locale} not supported, reset to ${DefaultLocale.bcp_47}`
+        };
+        break;
+      case 'service-not-allowed':
+        this.recognitionState = {
+          state: State.SERVICE_NOT_ALLOWED,
+          errorMessage: "Browser not allowing speech recognition."
+        };
+        break;
+      case 'bad-grammar':
       default:
         this.recognitionState = {
           state: State.UNKNOWN,
-          errorMessage: 'TODO:Please set this',
+          errorMessage: 'TODO:Please handle these cases',
         };
         break;
     }

@@ -24,24 +24,6 @@ export class TranscriptComponent implements OnInit {
       console.log('#event ', count++, rstate.state);
       clearTimeout(this.idleTimeout);
       switch (rstate.state) {
-        case State.NOT_SUPPORTED:
-          this.message = rstate.errorMessage;
-          break;
-        case State.PERMISSION_NOT_GRANTED:
-          this.message = rstate.errorMessage;
-          break;
-        case State.NO_AUDIO_INPUT_DEVICE:
-          this.message = rstate.errorMessage;
-          break;
-        case State.NO_CONNECTION:
-          this.message = rstate.errorMessage;
-          break;
-        case State.NO_SPEECH_DETECTED:
-          this.message = rstate.errorMessage;
-          break;
-        case State.ABORTED:
-          this.message = rstate.errorMessage;
-          break;
         case State.START:
           this.message = 'Listening...';
           break;
@@ -61,6 +43,15 @@ export class TranscriptComponent implements OnInit {
             }, this.idleTimeoutMs);
           }
           break;
+        case State.NOT_SUPPORTED:
+        case State.PERMISSION_NOT_GRANTED:
+        case State.NO_AUDIO_INPUT_DEVICE:
+        case State.NO_CONNECTION:
+        case State.NO_SPEECH_DETECTED:
+        case State.ABORTED:
+        case State.LANGUAGE_NOT_SUPPORTED:
+        case State.SERVICE_NOT_ALLOWED:
+          this.message = rstate.errorMessage;
       }
       this.ref.detectChanges();
     });

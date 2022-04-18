@@ -39,6 +39,8 @@ export class InputPlateComponent implements OnInit {
         case State.UNKNOWN:
         case State.NOT_SUPPORTED:
         case State.PERMISSION_NOT_GRANTED:
+        case State.LANGUAGE_NOT_SUPPORTED:
+        case State.SERVICE_NOT_ALLOWED:
         case State.NO_AUDIO_INPUT_DEVICE:
         case State.NO_CONNECTION:
         case State.NO_SPEECH_DETECTED:
