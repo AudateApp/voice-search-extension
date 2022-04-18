@@ -8,10 +8,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class PopupComponent implements OnInit {
   display: boolean = false;
-  
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log("#ngOnInit");
   }  
   
   showDialog() {

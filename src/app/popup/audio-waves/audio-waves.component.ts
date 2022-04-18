@@ -10,6 +10,7 @@ export class AudioWavesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("Hello");
   }
 
   // Samples here https://www.cssscript.com/tag/wave/,
