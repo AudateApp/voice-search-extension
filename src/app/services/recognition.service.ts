@@ -22,6 +22,7 @@ export class RecognitionService {
   language!: LocaleProperties;
   recognitionState: RecognitionState = IdleState;
   RecognitionState$: Subject<RecognitionState> = new Subject();
+  detectedSpeech: boolean = false;
 
   constructor() {}
 
@@ -65,6 +66,7 @@ export class RecognitionService {
    */
   #onStart = () => {
     console.log('#onStart');
+    this.detectedSpeech = false;
     this.recognitionState = {
       state: State.START,
     };
@@ -103,6 +105,14 @@ export class RecognitionService {
       state: State.END,
     };
     this.RecognitionState$.next(this.recognitionState);
+
+    if(!this.detectedSpeech) {
+      this.recognitionState = {
+        state: State.NO_SPEECH_DETECTED,
+        errorMessage: "No recognizable sound detected."
+      };
+      this.RecognitionState$.next(this.recognitionState);
+    }
   };
 
   /** Fired when the speech recognition service has disconnected.
@@ -119,25 +129,27 @@ export class RecognitionService {
 
   /** Fired when a speech recognition error occurs. */
   #onError = (event: any) => {
-    console.error('#onError', event);
-    const eventError: string = (event as any).error;
+    const eventError: string = event.error;
+    const errorMessage: string = event.message;
+    console.error('#onError', eventError, errorMessage);
+    // Not using errorMessage below as it is not very descriptive.
     switch (eventError) {
       case 'no-speech':
         this.recognitionState = { 
           state: State.NO_SPEECH_DETECTED, 
-          errorMessage: "No Speech Detected.",
+          errorMessage: "No speech detected.",
          };
         break;
       case 'audio-capture':
         this.recognitionState = {
           state: State.NO_AUDIO_INPUT_DEVICE,
-          errorMessage: 'No microphone devices detected or mic is muted.',        
+          errorMessage: 'No microphone devices detected or microphone is muted.',        
         };
         break;
       case 'not-allowed':
         this.recognitionState = {
           state: State.PERMISSION_NOT_GRANTED,
-          errorMessage: 'Microphone permission not yet granted.',
+          errorMessage: 'Microphone permission not granted.',
         };
         break;
       case 'network':
@@ -147,7 +159,6 @@ export class RecognitionService {
         };
         break;
       case 'aborted':
-        // Starting speech recognition while one ongoing.
         this.recognitionState = {
           state: State.ABORTED,
           errorMessage: 'Recognition cancelled.',
@@ -169,6 +180,7 @@ export class RecognitionService {
    */
   #onResult = (event: any) => {
     console.log('#onResult', event);
+    this.detectedSpeech = true;
     let interimContent = '';
     let finalContent = '';
 
