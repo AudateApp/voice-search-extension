@@ -19,6 +19,7 @@ export enum State {
   NO_AUDIO_INPUT_DEVICE = "no-audio-capture",
   NO_CONNECTION = "no-connection",
   NO_SPEECH_DETECTED = "no-speech-detected",
+  ABORTED = "aborted",
 
   IDLE = "idle",
   START = "start",

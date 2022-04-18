@@ -10,7 +10,7 @@ import { RecognitionService } from 'src/app/services/recognition.service';
 export class TranscriptComponent implements OnInit {
   idleMessage = 'Click start to speaking';
   idleTimeoutMs = 5000;
-  idleTimeout?: any|null = null;
+  idleTimeout?: any | null = null;
   message?: string = this.idleMessage;
 
   // TODO: Hanlde case where sound that is not transcribable is detected.
@@ -39,7 +39,10 @@ export class TranscriptComponent implements OnInit {
           this.message = rstate.errorMessage;
           break;
         case State.NO_SPEECH_DETECTED:
-          this.message =  rstate.errorMessage;
+          this.message = rstate.errorMessage;
+          break;
+        case State.ABORTED:
+          this.message = rstate.errorMessage;
           break;
         case State.START:
           this.message = 'Listening...';
@@ -53,10 +56,12 @@ export class TranscriptComponent implements OnInit {
           // Do nothing.
           break;
         case State.IDLE:
-          this.idleTimeout = setTimeout(() => {
-            this.message = this.idleMessage;
-            this.ref.detectChanges();
-          }, this.idleTimeoutMs);
+          if (this.message !== this.idleMessage) {
+            this.idleTimeout = setTimeout(() => {
+              this.message = this.idleMessage;
+              this.ref.detectChanges();
+            }, this.idleTimeoutMs);
+          }
           break;
       }
       this.ref.detectChanges();

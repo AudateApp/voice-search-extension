@@ -42,6 +42,7 @@ export class InputPlateComponent implements OnInit {
         case State.NO_CONNECTION:
         case State.NO_SPEECH_DETECTED:
         case State.IDLE:
+        case State.ABORTED:
         case State.END:
           this.listening = false;
           break;

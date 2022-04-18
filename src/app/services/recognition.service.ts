@@ -149,7 +149,7 @@ export class RecognitionService {
       case 'aborted':
         // Starting speech recognition while one ongoing.
         this.recognitionState = {
-          state: State.IDLE,
+          state: State.ABORTED,
           errorMessage: 'Recognition cancelled.',
         };
         break;
