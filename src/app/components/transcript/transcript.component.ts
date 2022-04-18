@@ -9,7 +9,7 @@ import { RecognitionService } from 'src/app/services/recognition.service';
 })
 export class TranscriptComponent implements OnInit {
   idleMessage = 'Click start to speaking';
-  idleTimeoutMs = 5000;
+  idleTimeoutMs = 1000;
   idleTimeout?: any | null = null;
   message?: string = this.idleMessage;
 
