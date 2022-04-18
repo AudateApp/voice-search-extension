@@ -19,12 +19,16 @@ const IdleState: RecognitionState = { state: State.IDLE };
 })
 export class RecognitionService {
   recognition!: any;
-  language!: LocaleProperties;
+  locale: LocaleProperties = LocaleService.getDefaultLocale();
   recognitionState: RecognitionState = IdleState;
   RecognitionState$: Subject<RecognitionState> = new Subject();
   detectedSpeech: boolean = false;
 
-  constructor() {}
+  constructor(private localeService: LocaleService) {
+    localeService.getRecognitionLocale().subscribe(l => {
+      this.locale = l;
+    });
+  }
 
   #initialize(language: LocaleProperties, isContinuous: boolean): State {
     // When using the chrome recognition API via popup, no special permission is required.
@@ -41,7 +45,7 @@ export class RecognitionService {
     this.recognition.continuous = isContinuous; // TODO: Parameterize.
     this.recognition.interimResults = true;
     this.recognition.maxAlternatives = 3;
-    this.recognition.lang = LocaleService.getDefaultLocale().bcp_47;
+    this.recognition.lang = this.locale.bcp_47;
 
     // Wire up life-cycle methods, in the order they are invoked.
     this.recognition.onstart = this.#onStart;
@@ -212,7 +216,7 @@ export class RecognitionService {
       // If this function is invoked twice back-to-back, it would fail.
     }
 
-    const state = this.#initialize(this.language, isContinuous);
+    const state = this.#initialize(this.locale, isContinuous);
     if (state === State.NOT_SUPPORTED) {
       this.recognitionState = {
         state: state,

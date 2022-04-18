@@ -27,6 +27,7 @@ export class InputPlateComponent implements OnInit {
 
   constructor(
     private speechRecognizer: RecognitionService,
+    private localeService: LocaleService,
     private ref: ChangeDetectorRef
   ) {}
 
@@ -53,6 +54,11 @@ export class InputPlateComponent implements OnInit {
       }
       this.ref.detectChanges();
     });
+
+    this.localeService.getRecognitionLocale().subscribe(locale => {
+      this.currentLocale = locale;
+      this.ref.detectChanges();
+    });
   }
 
   micTap(): void {
@@ -64,8 +70,6 @@ export class InputPlateComponent implements OnInit {
   }
 
   setLocale(locale: LocaleProperties): void {
-    console.log('Set locale: ', locale);
-    LocaleService.setRecognitionLocale(locale);
-    this.currentLocale = locale;
+    this.localeService.setRecognitionLocale(locale);
   }
 }

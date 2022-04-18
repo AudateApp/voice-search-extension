@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, share, Subject } from 'rxjs';
 import {
   LocaleProperties,
   LocalesForDefaultModel,
@@ -12,15 +13,38 @@ import {
   providedIn: 'root',
 })
 export class LocaleService {
+  localeSubject$ = new Subject<LocaleProperties>();
+  constructor() {
+    this.getLocale().then((l) => {
+      this.localeSubject$.next(l);
+    });
+  }
   /**
    * Update the user locale.
    *
    * @param {string} locale
    */
-  static setRecognitionLocale(locale: LocaleProperties) {
-    chrome.storage.sync
-      .set({ voice_recognition_locale: locale })
-      .then((savedData: any) => console.log(savedData));
+  setRecognitionLocale(locale: LocaleProperties) {
+    if (!chrome.storage) {
+      console.warn('Locale is not set, only broadcast');
+      this.localeSubject$.next(locale);
+      return;
+    }
+
+    chrome.storage.sync.set({ voice_recognition_locale: locale }).then(
+      (savedData: any) => {
+        console.log(savedData);
+        this.localeSubject$.next(savedData);
+      },
+      (errorReason) => {
+        this.localeSubject$.error(errorReason);
+      }
+    );
+  }
+
+  /** Return an observable over locale data. */
+  getRecognitionLocale(): Observable<LocaleProperties> {
+    return this.localeSubject$.asObservable().pipe(share());
   }
 
   /**
@@ -31,14 +55,19 @@ export class LocaleService {
    * // TODO: Return Navigation locale others.
    * @return {string} a BCP-47 locale.
    */
-  static getRecognitionLocale(): Promise<LocaleProperties> {
+  private getLocale(): Promise<LocaleProperties> {
+    if(!chrome.storage) {
+      console.warn("Local not fetched from storage");
+      return Promise.resolve(LocaleService.getDefaultLocale());
+    }
+
     return chrome.storage.sync
       .get('voice_recognition_locale')
       .then((locale: any) => {
         console.log('#getRecognitionLocale() :', locale);
-        if(!locale) {
-          this.setRecognitionLocale(DefaultLocale);
-          return DefaultLocale;
+        if (!locale) {
+          this.setRecognitionLocale(LocaleService.getDefaultLocale());
+          return LocaleService.getDefaultLocale();
         }
         return locale as LocaleProperties;
       });
