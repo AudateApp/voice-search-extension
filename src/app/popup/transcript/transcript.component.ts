@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { AppState } from 'src/app/model/recognition-state';
+import { AppState, AudioState } from 'src/app/model/recognition-state';
 import { RecognitionService } from 'src/app/services/recognition.service';
 
 @Component({
@@ -24,6 +24,10 @@ export class TranscriptComponent implements OnInit {
         this.message = rstate.error?.message || this.idleMessage;
       }
       if (rstate.state == AppState.RECOGNIZING) {
+        // Clear transcript view.
+        if(rstate.data?.audioState === AudioState.START) {
+          this.message = " ";
+        }
         if (rstate.data?.transcript?.partialText) {
           this.message = rstate.data?.transcript?.partialText;
         }
