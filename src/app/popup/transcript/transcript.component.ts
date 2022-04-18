@@ -8,7 +8,8 @@ import { RecognitionService } from 'src/app/services/recognition.service';
   styleUrls: ['./transcript.component.scss'],
 })
 export class TranscriptComponent implements OnInit {
-  idleMessage = 'Click start to being';
+  idleMessage = 'Click start to speaking';
+  idleTimeoutMs = 1000;
   message: string = this.idleMessage;
 
   constructor(
@@ -24,12 +25,25 @@ export class TranscriptComponent implements OnInit {
         this.message = rstate.error?.message || this.idleMessage;
       }
       if (rstate.state == AppState.RECOGNIZING) {
-        // Clear transcript view.
-        if(rstate.data?.audioState === AudioState.START) {
-          this.message = " ";
-        }
-        if (rstate.data?.transcript?.partialText) {
-          this.message = rstate.data?.transcript?.partialText;
+        const audioState = rstate.data?.audioState || AudioState.UNKNOWN;
+        switch (audioState) {
+          case AudioState.START:
+            this.message = 'Listening...';
+            break;
+          case AudioState.NO_SPEECH_DETECTED:
+            this.message = 'No Speech Detected';
+            break;
+          case AudioState.END:
+            setTimeout(() => {
+              this.message = this.idleMessage;
+              this.ref.detectChanges();
+            }, this.idleTimeoutMs);
+            break;
+          case AudioState.TRANSCRIBING:
+            if (rstate.data?.transcript?.partialText) {
+              this.message = rstate.data?.transcript?.partialText;
+            }
+            break;
         }
       }
 
