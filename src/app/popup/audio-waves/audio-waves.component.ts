@@ -12,4 +12,7 @@ export class AudioWavesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Samples here https://www.cssscript.com/tag/wave/,
+  // Desired UI - https://in.pinterest.com/pin/527836018814735661/
+  // Inspiration - https://codepen.io/justiceo/pens/loved.
 }
