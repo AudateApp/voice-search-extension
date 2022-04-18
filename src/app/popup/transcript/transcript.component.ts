@@ -13,8 +13,6 @@ export class TranscriptComponent implements OnInit {
   idleTimeout?: any | null = null;
   message?: string = this.idleMessage;
 
-  // TODO: Hanlde case where sound that is not transcribable is detected.
-  // And hence no-speech detected is not fired. Listening -> Done.
   constructor(
     private speechRecognizer: RecognitionService,
     private ref: ChangeDetectorRef
