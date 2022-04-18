@@ -22,7 +22,6 @@ export class InputPlateComponent implements OnInit {
   locales: LocaleProperties[] = LocalesForDefaultModel;
   currentLocale: LocaleProperties = DefaultLocale;
 
-  errorMessage?: string;
   listening = false;
 
   constructor(
@@ -34,9 +33,6 @@ export class InputPlateComponent implements OnInit {
     let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
       console.log('#event ', count++, rstate);
-      if (rstate.state === AppState.ERROR) {
-        this.errorMessage = rstate.error?.message;
-      }
       if (rstate.state == AppState.RECOGNIZING) {
         this.listening = true;
       } else {
