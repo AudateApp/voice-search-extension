@@ -1,3 +1,14 @@
 <audate-transcript></audate-transcript>
 <audate-audio-waves></audate-audio-waves>
 <audate-input-plate></audate-input-plate>
+
+<p-dialog class="shadow-1 opacity-70"
+[showHeader]="true" [closable]="true" 
+position="top-right" [(visible)]="display" 
+[style]="{width: '250px'}" >
+<audate-transcript></audate-transcript>
+<audate-audio-waves></audate-audio-waves>
+<audate-input-plate></audate-input-plate>
+</p-dialog>
+
+<button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">Show dialog</button>
