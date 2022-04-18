@@ -8,10 +8,10 @@ import { DialogModule } from 'primeng/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PopupComponent } from './components/popup/popup.component';
-import { InputPlateComponent } from './components/input-plate/input-plate.component';
-import { TranscriptComponent } from './components/transcript/transcript.component';
-import { AudioWavesComponent } from './components/audio-waves/audio-waves.component';
+import { PopupComponent } from '../popup/popup.component';
+import { InputPlateComponent } from '../input-plate/input-plate.component';
+import { TranscriptComponent } from '../transcript/transcript.component';
+import { AudioWavesComponent } from '../audio-waves/audio-waves.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
