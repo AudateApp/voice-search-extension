@@ -36,6 +36,10 @@ export class LocaleService {
       .get('voice_recognition_locale')
       .then((locale: any) => {
         console.log('#getRecognitionLocale() :', locale);
+        if(!locale) {
+          this.setRecognitionLocale(DefaultLocale);
+          return DefaultLocale;
+        }
         return locale as LocaleProperties;
       });
   }
