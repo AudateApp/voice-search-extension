@@ -5,12 +5,10 @@ import { RecognitionService } from 'src/app/services/recognition.service';
 @Component({
   selector: 'audate-transcript',
   templateUrl: './transcript.component.html',
-  styleUrls: ['./transcript.component.scss']
+  styleUrls: ['./transcript.component.scss'],
 })
 export class TranscriptComponent implements OnInit {
-
-
-  idleMessage = "Click start to being";
+  idleMessage = 'Click start to being';
   message: string = this.idleMessage;
 
   constructor(
@@ -23,14 +21,15 @@ export class TranscriptComponent implements OnInit {
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
       console.log('#event ', count++, rstate);
       if (rstate.state === AppState.ERROR) {
-        this.message = rstate.error?.message || this.idleMessage ;
+        this.message = rstate.error?.message || this.idleMessage;
       }
       if (rstate.state == AppState.RECOGNIZING) {
-        this.message = rstate.data?.transcript?.partialText || this.idleMessage;
+        if (rstate.data?.transcript?.partialText) {
+          this.message = rstate.data?.transcript?.partialText;
+        }
       }
 
       this.ref.detectChanges();
     });
   }
-
 }
