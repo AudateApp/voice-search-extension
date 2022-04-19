@@ -37,7 +37,7 @@ export class PopupComponent implements OnInit {
           break;
         case State.IDLE:
           if (this.finalTrascript) {
-            this.openSearch(this.finalTrascript);
+            // this.openSearch(this.finalTrascript);
           }
           this.finalTrascript = undefined;
       }

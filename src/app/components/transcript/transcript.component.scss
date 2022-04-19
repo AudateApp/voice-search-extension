@@ -1,7 +1,13 @@
 .message {
-    min-height: 80px;
-    background: red;
     width: 100%;
     padding: 20px;
     margin: 0;
+}
+
+#audate-transcript {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    background: #fff;
 }
