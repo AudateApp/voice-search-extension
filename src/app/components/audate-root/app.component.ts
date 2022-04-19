@@ -8,10 +8,15 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent implements OnInit {
   title = 'audate';
+  display: boolean = false;
 
   constructor(private primengConfig: PrimeNGConfig) {}
 
   ngOnInit() {
     this.primengConfig.ripple = true;
+  }
+  
+  showDialog() {
+    this.display = true;
   }
 }

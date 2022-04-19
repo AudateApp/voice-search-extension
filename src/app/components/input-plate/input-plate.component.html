@@ -1,11 +1,14 @@
   <section>
+    <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded"></button>
+    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger"></button>
     <button pButton  type="button" class="p-button-link" class="p-button-raised p-button-rounded" (click)="micTap()">  
       <span *ngIf="listening === true">Stop</span>
       <span *ngIf="listening === false">Start</span>
-    </button>    
+    </button>
   </section>
   <section>
       <p>Select your language</p>
       <p-dropdown [options]="locales" (ngModelChange)="setLocale($event)" [ngModel]="currentLocale" optionLabel="name"></p-dropdown>
   </section>
+  <button pButton pRipple type="button" icon="pi pi-ellipsis-h" class="p-button p-button-text"></button>
 

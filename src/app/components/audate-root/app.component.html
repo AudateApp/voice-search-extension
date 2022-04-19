@@ -1,1 +1,12 @@
+<p-dialog
+  position="top-right"
+  [(visible)]="display"
+>
+  <audate-popup></audate-popup>
+</p-dialog>
+
+<button  (click)="showDialog()">
+  Show dialog
+</button>
+
 <router-outlet></router-outlet>
