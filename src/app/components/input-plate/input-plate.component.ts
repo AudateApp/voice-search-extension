@@ -3,6 +3,7 @@ import {
   ChangeDetectorRef,
   Component,
   OnInit,
+  ViewEncapsulation,
 } from '@angular/core';
 import { LocaleService } from 'src/app/services/locale.service';
 import {
@@ -18,6 +19,7 @@ import { RecognitionService } from '../../services/recognition.service';
   templateUrl: './input-plate.component.html',
   styleUrls: ['./input-plate.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
 })
 export class InputPlateComponent implements OnInit {
   locales: LocaleProperties[] = LocalesForDefaultModel;

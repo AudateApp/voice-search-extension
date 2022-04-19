@@ -2,7 +2,6 @@
   height: 200px;
   display: flex;
   flex-direction: column;
-  background-color: cyan;
   padding: 10px;
 
   #record-button-wrapper {
@@ -13,12 +12,20 @@
 
     i {
         font-size: 5rem;
-        color: red;
     }
   }
 
   #more-button-wrapper {
     display: flex;
-    justify-content: space-between;;
+    justify-content: space-between;
+    align-items: center;
+
+    .p-dropdown-label, .p-dropdown-trigger-icon {
+        font-size: 0.6rem;
+    }
+
+    i {
+        font-size: 1.2rem;
+    }
   }
 }
