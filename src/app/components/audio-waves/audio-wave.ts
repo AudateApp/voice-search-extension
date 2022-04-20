@@ -14,10 +14,10 @@ export class AudioWave {
   waves: any[] = [];
 
   // This determines the number of peaks and troughs visible at a time. 1 - flat barely overlapping waves, 100 - a riot of waves.
-  nodes = 20;
+  nodes = 2;
 
   // This determines the height of the canvas, and by extension the height of the waves.
-  waveHeight = 20;
+  waveHeight = 10;
 
   // This determines the width of the canvas which affects how many nodes are packed in the visible area.
   canvasWidth = 400;
@@ -34,8 +34,12 @@ export class AudioWave {
   // For inverting a color, see https://stackoverflow.com/a/6961743.
   screenColors = ['#f80000', '#00f800', '#0000f8'];
 
+  // The animation ID of the current running aniation from.
+  animationId?: number;
+
   constructor() {}
 
+  // TODO: Slowly add and remove nodes to avoid jank due to complete canvas redraw.
   init(canvas: HTMLCanvasElement): boolean {
     this.canvas = canvas;
     // This may be null if another context already in use, https://stackoverflow.com/a/13406681.
@@ -45,6 +49,13 @@ export class AudioWave {
       return false;
     }
     this.renderingContext = context;
+    // Clear waves since #init may be called multiple times per instance.
+    this.waves = [];
+
+    // Clear animation frames.
+    if(this.animationId){
+      window.cancelAnimationFrame(this.animationId);
+    }
     this.resizeCanvas(this.canvas, this.canvasWidth);
     this.screenColors.forEach((color) =>
       this.waves.push(new AudioWave.Wave(this.canvas, color, 1, this.nodes))
@@ -65,7 +76,7 @@ export class AudioWave {
       this.drawWave(wave);
     });
 
-    requestAnimationFrame(() => this.update());
+    this.animationId = requestAnimationFrame(() => this.update());
   }
 
   private bounce(nodeArr: any[]) {
