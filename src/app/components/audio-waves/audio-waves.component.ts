@@ -23,23 +23,23 @@ export class AudioWavesComponent extends AudioWave implements OnInit {
       console.log('#audio-event ', count++, rstate.state);
       switch (rstate.state) {
         case State.START:
-          this.nodes = 10;
+          this.nodeCount = 10;
           this.init(this.canvasView.nativeElement);
           break;
         case State.TRANSCRIBING:
           if (rstate.transcript?.partialText) {
-            if(this.nodes != 20) {
-              this.nodes = 20;
+            if(this.nodeCount != 20) {
+              this.nodeCount = 20;
               this.init(this.canvasView.nativeElement);
             }
           }
           break;
         case State.END:
-          this.nodes = 2;
+          this.nodeCount = 2;
           this.init(this.canvasView.nativeElement);
           break;
         case State.IDLE:
-          this.nodes = 2;
+          this.nodeCount = 2;
           this.init(this.canvasView.nativeElement);
           break;
         case State.NOT_SUPPORTED:

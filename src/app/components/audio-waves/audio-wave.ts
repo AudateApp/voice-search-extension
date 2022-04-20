@@ -14,7 +14,7 @@ export class AudioWave {
   waves: any[] = [];
 
   // This determines the number of peaks and troughs visible at a time. 1 - flat barely overlapping waves, 100 - a riot of waves.
-  nodes = 2;
+  nodeCount = 2;
 
   // This determines the height of the canvas, and by extension the height of the waves.
   waveHeight = 10;
@@ -58,7 +58,7 @@ export class AudioWave {
     }
     this.resizeCanvas(this.canvas, this.canvasWidth);
     this.screenColors.forEach((color) =>
-      this.waves.push(new AudioWave.Wave(this.canvas, color, 1, this.nodes))
+      this.waves.push(new AudioWave.Wave(this.canvas, color, 1, this.nodeCount))
     );
     this.update();
     return true;
@@ -135,15 +135,15 @@ export class AudioWave {
       cvs: HTMLCanvasElement,
       color: string,
       lambda: number,
-      nodes: number
+      nodeCount: number
     ) {
       this.color = color;
       this.lambda = lambda;
       this.nodes = [];
 
-      for (let i = 0; i <= nodes + 2; i++) {
+      for (let i = 0; i <= nodeCount + 2; i++) {
         // Index 1 is reset in #bounce.
-        let temp = [((i - 1) * cvs.width) / nodes, 0, Math.random() * 200, 0.3];
+        let temp = [((i - 1) * cvs.width) / nodeCount, 0, Math.random() * 200, 0.3];
         this.nodes.push(temp);
       }
     }
