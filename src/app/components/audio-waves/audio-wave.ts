@@ -14,13 +14,16 @@ export class AudioWave {
   waves: any[] = [];
 
   // This determines the number of peaks and troughs visible at a time. 1 - flat barely overlapping waves, 100 - a riot of waves.
-  nodes = 6;
+  nodes = 20;
 
   // This determines the height of the canvas, and by extension the height of the waves.
-  waveHeight = 60;
+  waveHeight = 20;
+
+  // This determines the width of the canvas which affects how many nodes are packed in the visible area.
+  canvasWidth = 400;
 
   // This is the color from which screening (or color bleaching) begins.
-  topColor = '#22184c';
+  darkColor = '#22184c';
 
   // These three colors are 'screen'ed out of the topColor to create the bottom color. See https://colorblendy.com/#!/screen.
   // To determine  what the final screened out color would be (usually close to #fff) - use a color picker :D
@@ -42,7 +45,7 @@ export class AudioWave {
       return false;
     }
     this.renderingContext = context;
-    this.resizeCanvas(this.canvas);
+    this.resizeCanvas(this.canvas, this.canvasWidth);
     this.screenColors.forEach((color) =>
       this.waves.push(new AudioWave.Wave(this.canvas, color, 1, this.nodes))
     );
@@ -53,7 +56,7 @@ export class AudioWave {
   // This function runs the animation. To get its gist, comment out #requestAnimationFrame.
   // It may be invoked 60x per second on 60fps browsers to update the canvas and should be as fast as possible to avoid dropping frames.
   private update() {
-    this.renderingContext.fillStyle = this.topColor;
+    this.renderingContext.fillStyle = this.darkColor;
     this.renderingContext.globalCompositeOperation = 'source-over';
     this.renderingContext.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.renderingContext.globalCompositeOperation = 'screen';
