@@ -5,10 +5,11 @@
 // and uncomment the lines below:
 // document.addEventListener("DOMContentLoaded",
 //     () => {
-//         const aw = new AudioWave( document.getElementById('canvas') as HTMLCanvasElement);
-//         aw.init();
+//         const aw = new AudioWave();
+//         aw.init(document.getElementById('canvas') as HTMLCanvasElement);
 //     }, false);
 export class AudioWave {
+  canvas!: HTMLCanvasElement;
   renderingContext!: CanvasRenderingContext2D;
   waves: any[] = [];
 
@@ -30,9 +31,10 @@ export class AudioWave {
   // For inverting a color, see https://stackoverflow.com/a/6961743.
   screenColors = ['#f80000', '#00f800', '#0000f8'];
 
-  constructor(private canvas: HTMLCanvasElement) {}
+  constructor() {}
 
-  init(): boolean {
+  init(canvas: HTMLCanvasElement): boolean {
+    this.canvas = canvas;
     // This may be null if another context already in use, https://stackoverflow.com/a/13406681.
     const context = this.canvas.getContext('2d');
     if (context == null) {
@@ -124,9 +126,9 @@ export class AudioWave {
       this.color = color;
       this.lambda = lambda;
       this.nodes = [];
-      let tick = 1;
 
       for (let i = 0; i <= nodes + 2; i++) {
+        // Index 1 is reset in #bounce.
         let temp = [((i - 1) * cvs.width) / nodes, 0, Math.random() * 200, 0.3];
         this.nodes.push(temp);
       }
