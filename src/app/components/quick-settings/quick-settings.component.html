@@ -1,3 +1,4 @@
+<div>
 <label>Language</label>
 <p-dropdown
       [options]="locales"
@@ -5,7 +6,8 @@
       [ngModel]="currentLocale"
       optionLabel="name"
     ></p-dropdown>
-
+  </div>
+<div>
 <label>Microphone</label>
 <p-dropdown
       [options]="locales"
@@ -13,8 +15,10 @@
       [ngModel]="currentLocale"
       optionLabel="name"
     ></p-dropdown>
-<a>See how to update microphone</a>
+<p>See how to update microphone</p>
+</div>
 
+<div>
 <label>Search Engine</label>
 <p-dropdown
       [options]="searchEngines"
@@ -22,9 +26,10 @@
       [ngModel]="currentSearchEngine"
       optionLabel="name"
     ></p-dropdown>
+  </div>
 
-<label>Automatically open search page</label>
+<p>Automatically open search page</p>
 
-<label>Disable Extension</label>
+<p>Disable Extension</p>
 
-<button>More Help & Settings</button>
+<p><button>More Help & Settings</button></p>
