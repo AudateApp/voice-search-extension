@@ -1,35 +1,32 @@
 <div>
-<label>Language</label>
-<p-dropdown
-      [options]="locales"
-      (ngModelChange)="setLocale($event)"
-      [ngModel]="currentLocale"
-      optionLabel="name"
-    ></p-dropdown>
-  </div>
-<div>
-<label>Microphone</label>
-<p-dropdown
-[disabled]=true
-      [options]="inputDevices"
-      [ngModel]="currentInputDevice"
-      optionLabel="label"
-    ></p-dropdown>
-<p>See how to update microphone</p>
+  <label>Language</label>
+  <p-dropdown
+    [options]="locales"
+    (ngModelChange)="setLocale($event)"
+    [ngModel]="currentLocale"
+    optionLabel="name"
+  ></p-dropdown>
 </div>
 
 <div>
-<label>Search Engine</label>
-<p-dropdown
-      [options]="searchEngines"
-      (ngModelChange)="setSearchEngine($event)"
-      [ngModel]="currentSearchEngine"
-      optionLabel="name"
-    ></p-dropdown>
-  </div>
+  <label>Search Engine</label>
+  <p-dropdown
+    [options]="searchEngines"
+    (ngModelChange)="setSearchEngine($event)"
+    [ngModel]="currentSearchEngine"
+    optionLabel="name"
+  ></p-dropdown>
+</div>
 
-<p>Automatically open search page</p>
-
-<p>Disable Extension</p>
+<div>
+  <label>Microphone</label>
+  <p-dropdown
+    [disabled]="true"
+    [options]="inputDevices"
+    [ngModel]="currentInputDevice"
+    optionLabel="label"
+  ></p-dropdown>
+  <p>See how to update microphone</p>
+</div>
 
 <p><button>More Help & Settings</button></p>
