@@ -22,11 +22,14 @@ export class InputDeviceService {
     return navigator.mediaDevices.enumerateDevices().then((devices) => {
       const device = devices.find(d => d.deviceId == "default");
       if(device) {
+        console.log(device, devices);
         return device;
       } else {
         console.error("Default device not found in devices list: ", devices);
         throw "Default device not found";
       }
+    }, (error) => {
+      throw error;
     });
   }
 }

@@ -10,10 +10,10 @@
 <div>
 <label>Microphone</label>
 <p-dropdown
-      [options]="locales"
-      (ngModelChange)="setLocale($event)"
-      [ngModel]="currentLocale"
-      optionLabel="name"
+[disabled]=true
+      [options]="inputDevices"
+      [ngModel]="currentInputDevice"
+      optionLabel="label"
     ></p-dropdown>
 <p>See how to update microphone</p>
 </div>

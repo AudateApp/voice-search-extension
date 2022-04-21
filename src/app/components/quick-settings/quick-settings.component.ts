@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LocaleProperties, LocalesForDefaultModel, DefaultLocale } from 'src/app/model/locale-properties';
 import { DefaultSearchEngine, SearchEngine, SearchEngines } from 'src/app/model/search-engine';
+import { InputDeviceService } from 'src/app/services/input-device.service';
 import { LocaleService } from 'src/app/services/locale.service';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
 
@@ -17,9 +18,13 @@ export class QuickSettingsComponent implements OnInit {
   searchEngines: SearchEngine[] = SearchEngines;
   currentSearchEngine: SearchEngine = DefaultSearchEngine;
 
+  inputDevices: MediaDeviceInfo[] = [];
+  currentInputDevice?: MediaDeviceInfo;
+
   constructor(
     private localeService: LocaleService,
     private searchEngineService: SearchEngineService,
+    private inputDeviceService: InputDeviceService,
     private ref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
@@ -31,7 +36,15 @@ export class QuickSettingsComponent implements OnInit {
     this.searchEngineService.getSearchEngine().subscribe(se => {
       this.currentSearchEngine = se;
       this.ref.detectChanges();
-    })
+    });
+
+    this.inputDeviceService.getDefaultDevice().then(d => {
+      this.inputDevices.push(d);
+      this.currentInputDevice = d;
+      this.ref.detectChanges();
+    }, error => {
+      console.error(error);
+    });  
   }
   
   setLocale(locale: LocaleProperties): void {

@@ -88,7 +88,6 @@ export class AudioWave {
     this.renderingContext.globalCompositeOperation = 'screen';
     this.waves.forEach((wave) => {
       wave.points.forEach((point: Point) => this.bounceY(point));
-      console.log('before drawing:', wave.points);
       this.drawWave(wave);
     });
 
@@ -167,7 +166,6 @@ class Wave {
       p.yBase = Math.random() * 200;
       this.points.push(p);
     }
-    console.log('nodes :', this.points);
   }
 
   pop() {
