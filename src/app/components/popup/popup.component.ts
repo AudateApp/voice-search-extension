@@ -15,7 +15,7 @@ import { RecognitionService } from '../../services/recognition.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class PopupComponent implements OnInit {
-  showQuickSettings =true;
+  showQuickSettings = true;
   finalTrascript?: string;
 
   constructor(
@@ -39,20 +39,11 @@ export class PopupComponent implements OnInit {
           break;
         case State.IDLE:
           if (this.finalTrascript) {
-            this.openSearch(this.finalTrascript);
+            this.searchEngineService.performSearch(this.finalTrascript);
           }
           this.finalTrascript = undefined;
       }
     });
-  }
-
-  openSearch(query: string, inNewTab = true) {
-    const url =  this.searchEngineService.getSearchUrl(query);
-    if (inNewTab) {
-      (window as any).open(url, '_blank').focus();
-    } else {
-      (window as any).open(url).focus();
-    }
   }
 
   toggleQuickSettings() {

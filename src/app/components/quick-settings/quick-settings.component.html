@@ -17,9 +17,9 @@
 
 <label>Search Engine</label>
 <p-dropdown
-      [options]="locales"
-      (ngModelChange)="setLocale($event)"
-      [ngModel]="currentLocale"
+      [options]="searchEngines"
+      (ngModelChange)="setSearchEngine($event)"
+      [ngModel]="currentSearchEngine"
       optionLabel="name"
     ></p-dropdown>
 

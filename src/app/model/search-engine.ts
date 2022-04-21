@@ -4,6 +4,7 @@ export interface SearchEngine {
     iconPath: string;
 }
 
+// TODO: Add default provider: https://developer.chrome.com/docs/extensions/reference/search/
 export const SearchEngines: SearchEngine[] = [
     {
         name: "Google",

@@ -23,7 +23,11 @@ export class SearchEngineService {
     this.currentSearchEngine$.next(this.currentSearchEngine);
   }
 
-  getSearchUrl(query: string) {
-    return this.currentSearchEngine.queryTemplate.replace("%QUERY%", query);
+   // TODO: Use default provider: https://developer.chrome.com/docs/extensions/reference/search/
+  performSearch(query: string): void {
+    const url = this.currentSearchEngine.queryTemplate.replace("%QUERY%", query);
+
+    // TODO: Make NewTab optional.
+    (window as any).open(url, '_blank').focus();
   }
-}
+ }
