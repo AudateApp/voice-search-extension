@@ -2,7 +2,9 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  EventEmitter,
   OnInit,
+  Output,
   ViewEncapsulation,
 } from '@angular/core';
 import { LocaleService } from 'src/app/services/locale.service';
@@ -22,7 +24,8 @@ import { RecognitionService } from '../../services/recognition.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class InputPlateComponent implements OnInit {
-  listening = false;
+  listening = false; 
+  @Output() gearToggle: EventEmitter<any> = new EventEmitter();
 
   constructor(
     private speechRecognizer: RecognitionService,
@@ -62,5 +65,9 @@ export class InputPlateComponent implements OnInit {
     } else {
       this.speechRecognizer.start(false);
     }
+  }
+
+  onGearTap() {
+    this.gearToggle.emit(null);
   }
 }

@@ -15,7 +15,7 @@ import { RecognitionService } from '../../services/recognition.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class PopupComponent implements OnInit {
-  showQuickSettings = true;
+  showQuickSettings = false;
   finalTrascript?: string;
 
   constructor(
