@@ -25,7 +25,7 @@ export class AudioWave {
   canvasWidth = 400;
 
   // This is the color from which screening (or color bleaching) begins.
-  darkColor = '#22184c';
+  darkColor = '#2136BB';
 
   // These three colors are 'screen'ed out of the topColor to create the bottom color. See https://colorblendy.com/#!/screen.
   // To determine  what the final screened out color would be (usually close to #fff) - use a color picker :D
@@ -34,7 +34,7 @@ export class AudioWave {
   // Based on the definition here https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode#values
   // And https://webdesign.tutsplus.com/tutorials/blending-modes-in-css-color-theory-and-practical-application--cms-25201.
   // For inverting a color, see https://stackoverflow.com/a/6961743.
-  screenColors = ['#f80000', '#00f800', '#0000f8'];
+  screenColors = ['#ff0000', '#00ff00', '#0000ff'];
 
   // The animation ID of the current running aniation from.
   animationId?: number;
