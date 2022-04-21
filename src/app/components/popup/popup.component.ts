@@ -2,7 +2,6 @@ import {
   ChangeDetectorRef,
   Component,
   OnInit,
-  ViewEncapsulation,
 } from '@angular/core';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
 import { State } from '../../model/recognition-state';
@@ -12,7 +11,6 @@ import { RecognitionService } from '../../services/recognition.service';
   selector: 'audate-popup',
   templateUrl: './popup.component.html',
   styleUrls: ['./popup.component.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class PopupComponent implements OnInit {
   showQuickSettings = false;
