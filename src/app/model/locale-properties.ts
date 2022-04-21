@@ -22,8 +22,6 @@ export type LocaleProperties = {
     spoken_emojis: '' | '✔';
   };
 
-  // This is a super-long list (over 3K lines), collapse in side panel.
-// TODO: Move to separate .json file.
 const SupportedLocalesAndProperties: LocaleProperties[] =
 locales as LocaleProperties[];
 

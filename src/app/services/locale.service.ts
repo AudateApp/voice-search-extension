@@ -51,8 +51,6 @@ export class LocaleService {
    * Get the recognition language.
    *
    * If it is not set, set it to default locale.
-   *
-   * // TODO: Return Navigation locale others.
    * @return {string} a BCP-47 locale.
    */
   private getLocale(): Promise<LocaleProperties> {
