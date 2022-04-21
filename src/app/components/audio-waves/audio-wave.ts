@@ -1,4 +1,3 @@
-
 // A class for generating audio-waves inside a given Canvas element.
 
 // To test changes to this function, copy-paste this entire file here https://codepen.io/justiceo/pen/PoEVEvw.
@@ -11,10 +10,13 @@
 export class AudioWave {
   canvas!: HTMLCanvasElement;
   renderingContext!: CanvasRenderingContext2D;
-  waves: any[] = [];
+  waves: Wave[] = [];
 
   // This determines the number of peaks and troughs visible at a time. 1 - flat barely overlapping waves, 100 - a riot of waves.
   nodeCount = 2;
+
+  // This is a dynamically set value. We anneal nodeCount with each frame to match targetNodeCount.
+  targetNodeCount = 2;
 
   // This determines the height of the canvas, and by extension the height of the waves.
   waveHeight = 10;
@@ -53,12 +55,12 @@ export class AudioWave {
     this.waves = [];
 
     // Clear animation frames.
-    if(this.animationId){
+    if (this.animationId) {
       window.cancelAnimationFrame(this.animationId);
     }
     this.resizeCanvas(this.canvas, this.canvasWidth);
     this.screenColors.forEach((color) =>
-      this.waves.push(new AudioWave.Wave(this.canvas, color, 1, this.nodeCount))
+      this.waves.push(new Wave(this.canvas, color, this.nodeCount))
     );
     this.update();
     return true;
@@ -66,27 +68,45 @@ export class AudioWave {
 
   // This function runs the animation. To get its gist, comment out #requestAnimationFrame.
   // It may be invoked 60x per second on 60fps browsers to update the canvas and should be as fast as possible to avoid dropping frames.
+  // count = 0;
   private update() {
+    // Anneal node count.
+    // each 2 seconds call the createNewObject() function
+    
+    // if (++this.count % 10 ==  0) {
+    //   this.count = 0;
+    //   if (this.nodeCount > this.targetNodeCount) {
+    //     this.waves.forEach((w) => w.pop());
+    //     this.nodeCount--;
+    //   }
+    // }
+    // TODO: Try adjusting the height via Math.sin.
+    
     this.renderingContext.fillStyle = this.darkColor;
     this.renderingContext.globalCompositeOperation = 'source-over';
     this.renderingContext.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.renderingContext.globalCompositeOperation = 'screen';
     this.waves.forEach((wave) => {
-      wave.nodes.forEach((node: any) => this.bounce(node));
+      wave.points.forEach((point: Point) => this.bounceY(point));
+      console.log('before drawing:', wave.points);
       this.drawWave(wave);
     });
 
     this.animationId = requestAnimationFrame(() => this.update());
   }
 
-  private bounce(nodeArr: any[]) {
-    nodeArr[1] =
-      (this.waveHeight / 2) * Math.sin(nodeArr[2] / 20) +
+  private bounceY(point: Point) {
+    // The smaller this number, the more the actual height is determined by the random yBase leading to more entropy.
+    const entropy = 20;
+    point.y =
+      (this.waveHeight / 2) * Math.sin(point.yBase / entropy) +
       this.canvas.height / 2;
-    nodeArr[2] = nodeArr[2] + nodeArr[3];
+
+    // Increase the randomly generated Y value with a tiny amount to avoid a repeating loop.
+    point.yBase += 0.3;
   }
 
-  private drawWave(wave: { color: string; nodes: any[] }) {
+  private drawWave(wave: Wave) {
     let diff = function (a: number, b: number) {
       return (b - a) / 2 + a;
     };
@@ -94,21 +114,24 @@ export class AudioWave {
     this.renderingContext.fillStyle = wave.color;
     this.renderingContext.beginPath();
     this.renderingContext.moveTo(0, this.canvas.height);
-    this.renderingContext.lineTo(wave.nodes[0][0], wave.nodes[0][1]);
+    this.renderingContext.lineTo(wave.points[0].x, wave.points[0].y);
 
-    for (let i = 0; i < wave.nodes.length; i++) {
-      if (wave.nodes[i + 1]) {
+    // Draw a quadratic curve from point i to the middle of point i and i+1.
+    for (let i = 0; i < wave.points.length; i++) {
+      if (wave.points[i + 1]) {
+        // Change this to #lineTo to visualize points.
         this.renderingContext.quadraticCurveTo(
-          wave.nodes[i][0],
-          wave.nodes[i][1],
-          diff(wave.nodes[i][0], wave.nodes[i + 1][0]),
-          diff(wave.nodes[i][1], wave.nodes[i + 1][1])
+          wave.points[i].x,
+          wave.points[i].y,
+          diff(wave.points[i].x, wave.points[i + 1].x),
+          diff(wave.points[i].y, wave.points[i + 1].y)
         );
       } else {
-        this.renderingContext.lineTo(wave.nodes[i][0], wave.nodes[i][1]);
+        this.renderingContext.lineTo(wave.points[i].x, wave.points[i].y);
         this.renderingContext.lineTo(this.canvas.width, this.canvas.height);
       }
     }
+    // Join all the end points and paint.
     this.renderingContext.closePath();
     this.renderingContext.fill();
   }
@@ -126,29 +149,41 @@ export class AudioWave {
 
     canvas.height = this.waveHeight;
   }
-
-  private static Wave = class {
-    color: string;
-    lambda: number;
-    nodes: any[];
-    constructor(
-      cvs: HTMLCanvasElement,
-      color: string,
-      lambda: number,
-      nodeCount: number
-    ) {
-      this.color = color;
-      this.lambda = lambda;
-      this.nodes = [];
-
-      for (let i = 0; i <= nodeCount + 2; i++) {
-        // Index 1 is reset in #bounce.
-        let temp = [((i - 1) * cvs.width) / nodeCount, 0, Math.random() * 200, 0.3];
-        this.nodes.push(temp);
-      }
-    }
-  };
 }
 
+class Wave {
+  color: string;
+  points: Point[];
+  canvasWidth: number;
+  constructor(canvas: HTMLCanvasElement, color: string, nodeCount: number) {
+    this.color = color;
+    this.points = [];
+    this.canvasWidth = canvas.width;
 
+    for (let i = 0; i <= nodeCount + 2; i++) {
+      const p = new Point();
+      p.x = ((i - 1) * canvas.width) / nodeCount;
+      // p.y is derived in #bounce using this base.
+      p.yBase = Math.random() * 200;
+      this.points.push(p);
+    }
+    console.log('nodes :', this.points);
+  }
 
+  pop() {
+    const i = Math.random() * this.points.length;
+    this.points.splice(i, 1);
+    const step = this.canvasWidth / this.points.length;
+    for (let i = 0; i < this.points.length; i++) {
+      this.points[i].x = (i - 1) * step;
+    }
+  }
+}
+
+// To see this point on the canvas,
+// change #quadraticCurveTo to #lineTo in #drawWave.
+class Point {
+  x = 0;
+  y = 0;
+  yBase = 0;
+}
