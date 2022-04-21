@@ -1,1 +1,6 @@
-<p>quick-settings works!</p>
+<p-dropdown
+      [options]="locales"
+      (ngModelChange)="setLocale($event)"
+      [ngModel]="currentLocale"
+      optionLabel="name"
+    ></p-dropdown>

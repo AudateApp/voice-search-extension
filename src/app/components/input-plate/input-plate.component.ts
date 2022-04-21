@@ -22,14 +22,10 @@ import { RecognitionService } from '../../services/recognition.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class InputPlateComponent implements OnInit {
-  locales: LocaleProperties[] = LocalesForDefaultModel;
-  currentLocale: LocaleProperties = DefaultLocale;
-
   listening = false;
 
   constructor(
     private speechRecognizer: RecognitionService,
-    private localeService: LocaleService,
     private ref: ChangeDetectorRef
   ) {}
 
@@ -58,11 +54,6 @@ export class InputPlateComponent implements OnInit {
       }
       this.ref.detectChanges();
     });
-
-    this.localeService.getRecognitionLocale().subscribe(locale => {
-      this.currentLocale = locale;
-      this.ref.detectChanges();
-    });
   }
 
   micTap(): void {
@@ -71,9 +62,5 @@ export class InputPlateComponent implements OnInit {
     } else {
       this.speechRecognizer.start(false);
     }
-  }
-
-  setLocale(locale: LocaleProperties): void {
-    this.localeService.setRecognitionLocale(locale);
   }
 }
