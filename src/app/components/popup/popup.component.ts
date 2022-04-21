@@ -14,7 +14,7 @@ import { RecognitionService } from '../../services/recognition.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class PopupComponent implements OnInit {
-  display: boolean = false;
+  showQuickSettings =true;
   finalTrascript?: string;
 
   constructor(
@@ -53,7 +53,7 @@ export class PopupComponent implements OnInit {
     }
   }
 
-  showDialog() {
-    this.display = true;
+  toggleQuickSettings() {
+    this.showQuickSettings = !this.showQuickSettings;
   }
 }

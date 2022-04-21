@@ -12,6 +12,7 @@ import { PopupComponent } from '../popup/popup.component';
 import { InputPlateComponent } from '../input-plate/input-plate.component';
 import { TranscriptComponent } from '../transcript/transcript.component';
 import { AudioWavesComponent } from '../audio-waves/audio-waves.component';
+import { QuickSettingsComponent } from '../quick-settings/quick-settings.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     InputPlateComponent,
     TranscriptComponent,
     AudioWavesComponent,
+    QuickSettingsComponent,
   ],
   imports: [
     BrowserModule,
