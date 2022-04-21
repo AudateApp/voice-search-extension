@@ -4,6 +4,7 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
+import { SearchEngineService } from 'src/app/services/search-engine.service';
 import { State } from '../../model/recognition-state';
 import { RecognitionService } from '../../services/recognition.service';
 
@@ -19,6 +20,7 @@ export class PopupComponent implements OnInit {
 
   constructor(
     private speechRecognizer: RecognitionService,
+    private searchEngineService: SearchEngineService,
     private ref: ChangeDetectorRef
   ) {}
 
@@ -37,7 +39,7 @@ export class PopupComponent implements OnInit {
           break;
         case State.IDLE:
           if (this.finalTrascript) {
-            // this.openSearch(this.finalTrascript);
+            this.openSearch(this.finalTrascript);
           }
           this.finalTrascript = undefined;
       }
@@ -45,7 +47,7 @@ export class PopupComponent implements OnInit {
   }
 
   openSearch(query: string, inNewTab = true) {
-    const url = 'https://google.com/search?q=' + query;
+    const url =  this.searchEngineService.getSearchUrl(query);
     if (inNewTab) {
       (window as any).open(url, '_blank').focus();
     } else {
