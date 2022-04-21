@@ -24,7 +24,8 @@ import { RecognitionService } from '../../services/recognition.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class InputPlateComponent implements OnInit {
-  listening = false; 
+  listening = false;
+  moreIconClass = 'pi-angle-down';
   @Output() gearToggle: EventEmitter<any> = new EventEmitter();
 
   constructor(
@@ -68,6 +69,8 @@ export class InputPlateComponent implements OnInit {
   }
 
   onGearTap() {
+    this.moreIconClass =
+      this.moreIconClass == 'pi-angle-down' ? 'pi-angle-up' : 'pi-angle-down';
     this.gearToggle.emit(null);
   }
 }
