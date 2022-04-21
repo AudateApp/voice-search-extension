@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Inter';
+    src: url("../../../assets/Inter-VariableFont.ttf") format('truetype');
+}
+
+body, * {
+    font-family: 'Inter', sans-serif;
+}
+
 .p-dialog {
     border-radius: 8px;
     overflow: hidden;
