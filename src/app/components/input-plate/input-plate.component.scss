@@ -30,6 +30,10 @@
     i {
         font-size: 1.2rem;
         padding: 10px;
+        transition-duration: 0.5s;
+        &:hover {
+          transform: scale(1.5);
+        }
     }
   }
 }

@@ -1,8 +1,9 @@
-.p-dialog-draggable .p-dialog-header:hover {
-    background-color: #f0f0f0;
-}
 .p-dialog-header  {
     padding: 0 !important;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
 }
 .p-dialog-content {
     padding: 0 !important;
