@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 10px;
   padding-bottom: 0;
-  background-color: #2136BB;
+  background-color: #2136bb;
   color: white;
 
   #record-button-wrapper {
@@ -11,11 +11,19 @@
     flex-grow: 1;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;;
 
     i {
-        font-size: 4rem;
-        padding-top: 20px;
-        padding-bottom: 20px;
+      font-size: 3rem;
+      border: 1.5px solid;
+      border-radius: 50%;
+      padding: 3px;
+      transition: all 0.5s ease-in;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -24,17 +32,18 @@
     justify-content: space-between;
     align-items: center;
 
-    .p-dropdown-label, .p-dropdown-trigger-icon {
-        font-size: 0.6rem;
+    .p-dropdown-label,
+    .p-dropdown-trigger-icon {
+      font-size: 0.6rem;
     }
 
     i {
-        font-size: 1.2rem;
-        padding: 10px;
-        transition-duration: 0.5s;
-        &:hover {
-          transform: scale(1.5);
-        }
+      font-size: 1.2rem;
+      padding: 10px;
+      transition-duration: 0.5s;
+      &:hover {
+        transform: scale(1.5);
+      }
     }
   }
 }
