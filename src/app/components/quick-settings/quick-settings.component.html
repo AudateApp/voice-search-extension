@@ -6,7 +6,7 @@
 <hr>
 <div class="setting">
   <h5 class="label">Search Engine</h5>
-  <p class="value">{{currentSearchEngine.name}}</p>
+  <p class="value"><img src="{{currentSearchEngine.iconPath}}" /> {{currentSearchEngine.name}}</p>
   <!-- TODO: show the icons. -->
   <!-- TODO: Move to listbox on its own - https://www.primefaces.org/primeng/listbox -->
 </div>
@@ -15,4 +15,12 @@
   <h5 class="label">Microphone</h5>
   <p class="value">{{currentInputDevice?.label}}</p>
 </div>
+</section>
+
+<section class="search-engine-selection">
+  <p *ngFor="let se of searchEngines" (click)="currentSearchEngine = se">
+    <img src="{{se.iconPath}}" />
+    <span class="label">{{se.name}}</span>
+    <i class="selected pi pi-check" *ngIf="se === currentSearchEngine"></i>
+  </p>
 </section>
