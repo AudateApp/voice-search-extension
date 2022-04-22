@@ -26,7 +26,8 @@
       }
 
       &.listening {
-        opacity: 0.5;
+        color: yellow;
+        opacity: 0.95;
       }
     }
   }
