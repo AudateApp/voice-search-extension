@@ -1,26 +1,60 @@
-<section class="settings-wrapper" [hidden]="activeSection !== 'quick-settings'" c>
-<div class="setting"(click)="activeSection = 'language'">
-  <h5 class="label">Speech Language</h5>
-  <p class="value">{{currentLocale.name}}</p>
-</div>
-<hr>
-<div class="setting" (click)="activeSection = 'search-engine'">
-  <h5 class="label">Search Engine</h5>
-  <p class="value"><img src="{{currentSearchEngine.iconPath}}" /> {{currentSearchEngine.name}}</p>
-  <!-- TODO: show the icons. -->
-  <!-- TODO: Move to listbox on its own - https://www.primefaces.org/primeng/listbox -->
-</div>
-<hr>
-<div class="setting" (click)="activeSection = 'microphone'">
-  <h5 class="label">Microphone</h5>
-  <p class="value">{{currentInputDevice?.label}}</p>
-</div>
+<section
+  class="settings-wrapper"
+  [hidden]="activeSection !== 'quick-settings'"
+  c
+>
+  <div class="setting" (click)="activeSection = 'language'">
+    <h5 class="label">Speech Language</h5>
+    <p class="value">{{ currentLocale.name }}</p>
+  </div>
+  <hr />
+  <div class="setting" (click)="activeSection = 'search-engine'">
+    <h5 class="label">Search Engine</h5>
+    <p class="value">
+      <img src="{{ currentSearchEngine.iconPath }}" />
+      {{ currentSearchEngine.name }}
+    </p>
+    <!-- TODO: show the icons. -->
+    <!-- TODO: Move to listbox on its own - https://www.primefaces.org/primeng/listbox -->
+  </div>
+  <hr />
+  <div class="setting" (click)="activeSection = 'microphone'">
+    <h5 class="label">Microphone</h5>
+    <p class="value">{{ currentInputDevice?.label }}</p>
+  </div>
 </section>
 
-<section [hidden]="activeSection !== 'search-engine'" class="search-engine-selection">
-  <p *ngFor="let se of searchEngines" (click)="currentSearchEngine = se; activeSection = 'quick-settings'">
-    <img src="{{se.iconPath}}" />
-    <span class="label">{{se.name}}</span>
-    <i class="selected pi pi-check" *ngIf="se === currentSearchEngine"></i>
-  </p>
+<section
+  [hidden]="activeSection !== 'language'"
+  class="listbox language-selection"
+>
+  <p class="header">choose a language</p>
+  <div class="items">
+    <p
+      class="item"
+      *ngFor="let locale of locales"
+      (click)="currentLocale = locale; activeSection = 'quick-settings'"
+    >
+      <span class="label">{{ locale.name }}</span>
+      <i class="selected pi pi-check" *ngIf="locale === currentLocale"></i>
+    </p>
+  </div>
+</section>
+
+<section
+  [hidden]="activeSection !== 'search-engine'"
+  class="listbox search-engine-selection"
+>
+  <p class="header">choose a search engine</p>
+  <div class="items">
+    <p
+      class="item"
+      *ngFor="let se of searchEngines"
+      (click)="currentSearchEngine = se; activeSection = 'quick-settings'"
+    >
+      <img src="{{ se.iconPath }}" />
+      <span class="label">{{ se.name }}</span>
+      <i class="selected pi pi-check" *ngIf="se === currentSearchEngine"></i>
+    </p>
+  </div>
 </section>

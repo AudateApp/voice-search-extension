@@ -40,12 +40,26 @@ hr {
   opacity: 0.8;
 }
 
-.search-engine-selection {
-    p {
+.listbox {
+    .header {
         display: flex;
-        margin: 0 -1em;
-        padding: 1em;
-        padding-left: 2em;
+        margin: 0 -15px;
+        padding: 10px;
+        padding-left: 20px;
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+
+.items {
+    max-height: 200px;
+    overflow: scroll;
+    font-size: 0.9rem;
+}
+    .item {
+        display: flex;
+        margin: 0 -15px;
+        padding: 15px;
+        padding-left: 30px;
 
         &:hover {
             background-color: rgba(255,255,255, .1);
@@ -65,5 +79,14 @@ hr {
         margin-right: 10px;
         // Hex for #eee from https://codepen.io/sosuke/pen/Pjoqqp.
         filter: invert(100%) sepia(0%) saturate(5101%) hue-rotate(193deg) brightness(123%) contrast(87%);
+    }
+}
+
+.language-selection {
+
+    .item {
+        margin-left: -10px;
+        padding: 10px;
+        padding-left: 20px;
     }
 }
