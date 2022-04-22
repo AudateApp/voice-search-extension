@@ -13,7 +13,6 @@ import { RecognitionService } from '../../services/recognition.service';
   styleUrls: ['./popup.component.scss'],
 })
 export class PopupComponent implements OnInit {
-  showQuickSettings = true;
   finalTrascript?: string;
 
   constructor(
@@ -42,9 +41,5 @@ export class PopupComponent implements OnInit {
           this.finalTrascript = undefined;
       }
     });
-  }
-
-  toggleQuickSettings() {
-    this.showQuickSettings = !this.showQuickSettings;
   }
 }

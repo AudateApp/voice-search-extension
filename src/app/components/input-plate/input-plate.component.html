@@ -3,6 +3,8 @@
     <i class="pi pi-circle-off" (click)="micTap()"></i>
   </div>
 
+  <audate-quick-settings *ngIf="showSettings"></audate-quick-settings>
+
   <div id="more-button-wrapper">
     <button style="visibility: hidden;">Voice Search</button>
     <i (click)="onGearTap()" [ngClass]="moreIconClass" class="pi"></i>

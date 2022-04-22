@@ -25,8 +25,8 @@ import { RecognitionService } from '../../services/recognition.service';
 })
 export class InputPlateComponent implements OnInit {
   listening = false;
+  showSettings = false;
   moreIconClass = 'pi-angle-down';
-  @Output() gearToggle: EventEmitter<any> = new EventEmitter();
 
   constructor(
     private speechRecognizer: RecognitionService,
@@ -71,6 +71,6 @@ export class InputPlateComponent implements OnInit {
   onGearTap() {
     this.moreIconClass =
       this.moreIconClass == 'pi-angle-down' ? 'pi-angle-up' : 'pi-angle-down';
-    this.gearToggle.emit(null);
+    this.showSettings = !this.showSettings;
   }
 }
