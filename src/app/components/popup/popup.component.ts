@@ -24,7 +24,6 @@ export class PopupComponent implements OnInit {
   ngOnInit(): void {
     let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
-      console.log('#event ', count++, rstate.state);
       switch (rstate.state) {
         case State.START:
           this.finalTrascript = undefined;

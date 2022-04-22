@@ -27,7 +27,6 @@ export class InputPlateComponent implements OnInit {
   ngOnInit(): void {
     let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
-      console.log('#event ', count++, rstate.state);
       switch (rstate.state) {
         case State.UNKNOWN:
         case State.NOT_SUPPORTED:

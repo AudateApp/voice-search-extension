@@ -20,7 +20,6 @@ export class AudioWavesComponent extends AudioWave implements OnInit {
   ngOnInit(): void {
     let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
-      console.log('#audio-event ', count++, rstate.state);
       switch (rstate.state) {
         case State.START:
           this.nodeCount = 10;

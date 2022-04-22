@@ -21,7 +21,6 @@ export class TranscriptComponent implements OnInit {
   ngOnInit(): void {
     let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
-      console.log('#event ', count++, rstate.state);
       clearTimeout(this.idleTimeout);
       switch (rstate.state) {
         case State.START:
