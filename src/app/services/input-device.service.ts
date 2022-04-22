@@ -14,7 +14,11 @@ export class InputDeviceService {
       // this.devices = devices.filter(d => d.kind === "audioinput");
       // this.currentDevice = this.devices.find(d => d.deviceId == "default");
       // console.log("audio devices", this.devices, this.currentDevice);
-      return devices;
+      const inputDevices = devices.filter(device => device.kind === "audioinput");
+
+      // Remove the default device's normal input from this list.
+      const defaultInputDevice = inputDevices.find(d => d.deviceId == "default");
+      return inputDevices.filter(d => d.groupId != defaultInputDevice?.groupId);
     });
   }
 
