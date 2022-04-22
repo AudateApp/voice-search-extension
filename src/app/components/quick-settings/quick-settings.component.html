@@ -1,32 +1,16 @@
 <div>
-  <label>Language</label>
-  <p-dropdown
-    [options]="locales"
-    (ngModelChange)="setLocale($event)"
-    [ngModel]="currentLocale"
-    optionLabel="name"
-  ></p-dropdown>
+  <h5>Speech Language</h5>
+  <p>{{currentLocale.name}}</p>
 </div>
-
+<hr>
 <div>
-  <label>Search Engine</label>
-  <p-dropdown
-    [options]="searchEngines"
-    (ngModelChange)="setSearchEngine($event)"
-    [ngModel]="currentSearchEngine"
-    optionLabel="name"
-  ></p-dropdown>
+  <h5>Search Engine</h5>
+  <p>{{currentSearchEngine.name}}</p>
+  <!-- TODO: show the icons. -->
+  <!-- TODO: Move to listbox on its own - https://www.primefaces.org/primeng/listbox -->
 </div>
-
+<hr>
 <div>
-  <label>Microphone</label>
-  <p-dropdown
-    [disabled]="true"
-    [options]="inputDevices"
-    [ngModel]="currentInputDevice"
-    optionLabel="label"
-  ></p-dropdown>
-  <p>See how to update microphone</p>
+  <h5>Microphone</h5>
+  <p>{{currentInputDevice?.label}}</p>
 </div>
-
-<p><button>More Help & Settings</button></p>

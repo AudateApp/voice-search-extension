@@ -13,7 +13,7 @@ import { RecognitionService } from '../../services/recognition.service';
   styleUrls: ['./popup.component.scss'],
 })
 export class PopupComponent implements OnInit {
-  showQuickSettings = false;
+  showQuickSettings = true;
   finalTrascript?: string;
 
   constructor(
