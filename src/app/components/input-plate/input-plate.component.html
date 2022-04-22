@@ -7,6 +7,6 @@
 
   <div id="more-button-wrapper">
     <button style="visibility: hidden;">Voice Search</button>
-    <i (click)="onGearTap()" [ngClass]="moreIconClass" class="pi"></i>
+    <i (click)="onGearTap()" [ngClass]="{'pi-angle-up': showSettings === true, 'pi-angle-down': showSettings ===false}" class="pi"></i>
   </div>
 </div>

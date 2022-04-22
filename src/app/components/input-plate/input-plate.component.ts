@@ -2,17 +2,9 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  EventEmitter,
   OnInit,
-  Output,
   ViewEncapsulation,
 } from '@angular/core';
-import { LocaleService } from 'src/app/services/locale.service';
-import {
-  DefaultLocale,
-  LocaleProperties,
-  LocalesForDefaultModel,
-} from '../../model/locale-properties';
 import { State } from '../../model/recognition-state';
 import { RecognitionService } from '../../services/recognition.service';
 
@@ -26,7 +18,6 @@ import { RecognitionService } from '../../services/recognition.service';
 export class InputPlateComponent implements OnInit {
   listening = false;
   showSettings = false;
-  moreIconClass = 'pi-angle-down';
 
   constructor(
     private speechRecognizer: RecognitionService,
@@ -70,7 +61,5 @@ export class InputPlateComponent implements OnInit {
 
   onGearTap() {
     this.showSettings = !this.showSettings;
-    this.moreIconClass =
-      this.showSettings ? 'pi-angle-up' : 'pi-angle-down';
   }
 }
