@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Logger } from './logger';
+import { LoggingService } from './logging.service';
 
 /** Provide abstraction for audio input devices. */
 @Injectable({
@@ -6,18 +8,20 @@ import { Injectable } from '@angular/core';
 })
 export class InputDeviceService {
 
-  constructor() {
+  logger: Logger;
+  constructor(loggingService: LoggingService) {
+    this.logger = loggingService.getLogger("InputDevService");
   }
 
   getInputDevices(): Promise<MediaDeviceInfo[]> {
     return navigator.mediaDevices.enumerateDevices().then((devices) => {
-      // this.devices = devices.filter(d => d.kind === "audioinput");
-      // this.currentDevice = this.devices.find(d => d.deviceId == "default");
-      // console.log("audio devices", this.devices, this.currentDevice);
       const inputDevices = devices.filter(device => device.kind === "audioinput");
 
       // Remove the default device's normal input from this list.
       const defaultInputDevice = inputDevices.find(d => d.deviceId == "default");
+      if(!defaultInputDevice) {
+        return inputDevices;
+      }
       return inputDevices.filter(d => d.groupId != defaultInputDevice?.groupId);
     });
   }
@@ -26,10 +30,9 @@ export class InputDeviceService {
     return navigator.mediaDevices.enumerateDevices().then((devices) => {
       const device = devices.find(d => d.deviceId == "default");
       if(device) {
-        console.log(device, devices);
         return device;
       } else {
-        console.error("Default device not found in devices list: ", devices);
+        this.logger.error("Default device not found in devices list: ", devices);
         throw "Default device not found";
       }
     }, (error) => {

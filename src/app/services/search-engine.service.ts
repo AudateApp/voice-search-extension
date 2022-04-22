@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Observable, share, Subject } from 'rxjs';
 import { DefaultSearchEngine, SearchEngine } from '../model/search-engine';
+import { Logger } from './logger';
+import { LoggingService } from './logging.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SearchEngineService {
-
+  logger: Logger;
   currentSearchEngine = DefaultSearchEngine;
   currentSearchEngine$: Subject<SearchEngine> = new Subject();
 
-  constructor() { 
+  constructor(loggingService: LoggingService) { 
+    this.logger = loggingService.getLogger("SearchEngService");
     this.currentSearchEngine$.next(this.currentSearchEngine);
   }
 

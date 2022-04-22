@@ -5,6 +5,8 @@ import {
   LocalesForDefaultModel,
   DefaultLocale,
 } from '../model/locale-properties';
+import { Logger } from './logger';
+import { LoggingService } from './logging.service';
 
 /**
  * Class for answering locale-related questions
@@ -13,8 +15,10 @@ import {
   providedIn: 'root',
 })
 export class LocaleService {
+  logger: Logger;
   localeSubject$ = new Subject<LocaleProperties>();
-  constructor() {
+  constructor(loggingService: LoggingService) {
+    this.logger = loggingService.getLogger("LocaleService");
     this.getLocale().then((l) => {
       this.localeSubject$.next(l);
     });
@@ -26,14 +30,14 @@ export class LocaleService {
    */
   setRecognitionLocale(locale: LocaleProperties) {
     if (!chrome.storage) {
-      console.warn('Locale is not set, only broadcast');
+      this.logger.warn('Locale is not set, only broadcast');
       this.localeSubject$.next(locale);
       return;
     }
 
     chrome.storage.sync.set({ voice_recognition_locale: locale }).then(
       (savedData: any) => {
-        console.log(savedData);
+        this.logger.log(savedData);
         this.localeSubject$.next(savedData);
       },
       (errorReason) => {
@@ -55,14 +59,14 @@ export class LocaleService {
    */
   private getLocale(): Promise<LocaleProperties> {
     if(!chrome.storage) {
-      console.warn("Local not fetched from storage");
+      this.logger.warn("Local not fetched from storage");
       return Promise.resolve(LocaleService.getDefaultLocale());
     }
 
     return chrome.storage.sync
       .get('voice_recognition_locale')
       .then((locale: any) => {
-        console.log('#getRecognitionLocale() :', locale);
+        this.logger.log('#getRecognitionLocale() :', locale);
         if (!locale) {
           this.setRecognitionLocale(LocaleService.getDefaultLocale());
           return LocaleService.getDefaultLocale();
@@ -95,7 +99,6 @@ export class LocaleService {
     if (navLocale) {
       defaultLocale = navLocale;
     }
-    console.info('Using locale: ', defaultLocale);
     return defaultLocale;
   }
 }

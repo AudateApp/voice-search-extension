@@ -3,6 +3,8 @@ import { Observable, share, Subject } from 'rxjs';
 import { RecognitionState, State } from '../model/recognition-state';
 import { DefaultLocale, LocaleProperties } from '../model/locale-properties';
 import { LocaleService } from './locale.service';
+import { LoggingService } from './logging.service';
+import { Logger } from './logger';
 
 // This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
 // Since TypeScript cannot find it.
@@ -23,8 +25,10 @@ export class RecognitionService {
   recognitionState: RecognitionState = IdleState;
   RecognitionState$: Subject<RecognitionState> = new Subject();
   detectedSpeech: boolean = false;
+  logger: Logger;
 
-  constructor(private localeService: LocaleService) {
+  constructor(private localeService: LocaleService, loggingService: LoggingService) {
+    this.logger = loggingService.getLogger("RecognitionService");
     localeService.getRecognitionLocale().subscribe(l => {
       this.locale = l;
     });
@@ -69,7 +73,7 @@ export class RecognitionService {
    * the current SpeechRecognition.
    */
   #onStart = () => {
-    console.log('#onStart');
+    this.logger.log('#onStart');
     this.detectedSpeech = false;
     this.recognitionState = {
       state: State.START,
@@ -79,32 +83,32 @@ export class RecognitionService {
 
   /** Fired when the user agent has started to capture audio. */
   #onAudioStart = () => {
-    console.log('#onAudioStart');
+    this.logger.log('#onAudioStart');
   };
 
   /** Fired when any sound — recognizable speech or not — has been detected. */
   #onSoundStart = () => {
-    console.log('#onSoundStart');
+    this.logger.log('#onSoundStart');
   };
 
   /** Fired when sound that is recognized by the speech recognition service as speech has been detected. */
   #onSpeechStart = () => {
-    console.log('#onSpeechStart');
+    this.logger.log('#onSpeechStart');
   };
 
   /** Fired when speech recognized by the speech recognition service has stopped being detected. */
   #onSpeechEnd = () => {
-    console.log('#onSpeechEnd');
+    this.logger.log('#onSpeechEnd');
   };
 
   /** Fired when any sound — recognizable speech or not — has stopped being detected. */
   #onSoundEnd = () => {
-    console.log('#onSoundEnd');
+    this.logger.log('#onSoundEnd');
   };
 
   /** Fired when the user agent has finished capturing audio. */
   #onAudioEnd = () => {
-    console.log('#onAudioEnd');
+    this.logger.log('#onAudioEnd');
     this.recognitionState = {
       state: State.END,
     };
@@ -125,7 +129,7 @@ export class RecognitionService {
    * and even in instances where #onSpeechEnd or #onAudioEnd are not invoked.
    */
   #onEnd = () => {
-    console.log('#onEnd');
+    this.logger.log('#onEnd');
     this.recognitionState = IdleState;
     this.RecognitionState$.next(this.recognitionState);
     this.recognition = null;
@@ -135,7 +139,7 @@ export class RecognitionService {
   #onError = (event: any) => {
     const eventError: string = event.error;
     const errorMessage: string = event.message;
-    console.error('#onError', eventError, errorMessage);
+    this.logger.error('#onError', eventError, errorMessage);
     // Not using errorMessage below as it is not very descriptive.
     switch (eventError) {
       case 'no-speech':
@@ -198,7 +202,7 @@ export class RecognitionService {
    * and this has been communicated back to the app.
    */
   #onResult = (event: any) => {
-    console.log('#onResult', event);
+    this.logger.log('#onResult', event);
     this.detectedSpeech = true;
     let interimContent = '';
     let finalContent = '';
@@ -224,7 +228,7 @@ export class RecognitionService {
 
   start(isContinuous: boolean): void {
     if (this.recognition) {
-      console.log('stopping recognition');
+      this.logger.log('stopping recognition');
       this.recognition.abort();
 
       // TODO: Wait for recognition object to become null, i.e. onEnd has fired.
@@ -246,7 +250,7 @@ export class RecognitionService {
 
   stop(): void {
     if (!this.recognition) {
-      console.error("Stopping recognition that isn't initialized");
+      this.logger.error("Stopping recognition that isn't initialized");
       return;
     }
 
