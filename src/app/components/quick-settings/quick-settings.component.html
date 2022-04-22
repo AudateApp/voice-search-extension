@@ -1,24 +1,24 @@
-<section class="settings-wrapper">
-<div class="setting">
+<section class="settings-wrapper" [hidden]="activeSection !== 'quick-settings'" c>
+<div class="setting"(click)="activeSection = 'language'">
   <h5 class="label">Speech Language</h5>
   <p class="value">{{currentLocale.name}}</p>
 </div>
 <hr>
-<div class="setting">
+<div class="setting" (click)="activeSection = 'search-engine'">
   <h5 class="label">Search Engine</h5>
   <p class="value"><img src="{{currentSearchEngine.iconPath}}" /> {{currentSearchEngine.name}}</p>
   <!-- TODO: show the icons. -->
   <!-- TODO: Move to listbox on its own - https://www.primefaces.org/primeng/listbox -->
 </div>
 <hr>
-<div class="setting">
+<div class="setting" (click)="activeSection = 'microphone'">
   <h5 class="label">Microphone</h5>
   <p class="value">{{currentInputDevice?.label}}</p>
 </div>
 </section>
 
-<section class="search-engine-selection">
-  <p *ngFor="let se of searchEngines" (click)="currentSearchEngine = se">
+<section [hidden]="activeSection !== 'search-engine'" class="search-engine-selection">
+  <p *ngFor="let se of searchEngines" (click)="currentSearchEngine = se; activeSection = 'quick-settings'">
     <img src="{{se.iconPath}}" />
     <span class="label">{{se.name}}</span>
     <i class="selected pi pi-check" *ngIf="se === currentSearchEngine"></i>

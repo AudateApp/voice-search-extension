@@ -21,6 +21,8 @@ export class QuickSettingsComponent implements OnInit {
   inputDevices: MediaDeviceInfo[] = [];
   currentInputDevice?: MediaDeviceInfo;
 
+  activeSection: string = "quick-settings";
+
   constructor(
     private localeService: LocaleService,
     private searchEngineService: SearchEngineService,
