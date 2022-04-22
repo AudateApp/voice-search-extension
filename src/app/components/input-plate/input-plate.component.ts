@@ -69,8 +69,8 @@ export class InputPlateComponent implements OnInit {
   }
 
   onGearTap() {
-    this.moreIconClass =
-      this.moreIconClass == 'pi-angle-down' ? 'pi-angle-up' : 'pi-angle-down';
     this.showSettings = !this.showSettings;
+    this.moreIconClass =
+      this.showSettings ? 'pi-angle-up' : 'pi-angle-down';
   }
 }
