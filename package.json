@@ -1,15 +1,34 @@
 {
   "name": "audate",
   "version": "0.0.0",
+  "description": "Bringing voice-forward experiences to the browser",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "start:chrome": "gulp ChromeDemo",
+    "start:firefox": "web-ext run --source-dir ./extension/"
   },
   "private": true,
+  "author": "Justice Ogbonna",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justiceo/audate"
+  },
+  "keywords": [
+    "chrome",
+    "firefox",
+    "addon",
+    "extension",
+    "voice",
+    "search",
+    "recording",
+    "notes"
+  ],
   "dependencies": {
     "@angular/animations": "~13.3.0",
     "@angular/cdk": "~13.3.0",
@@ -25,7 +44,9 @@
     "primeng": "^13.3.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@sentry/browser": "^6.18.1",
+    "@sentry/tracing": "^6.18.1"
   },
   "peerDependencies": {
     "primeicons": "^5.0.0",
