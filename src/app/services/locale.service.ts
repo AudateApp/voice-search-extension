@@ -18,7 +18,7 @@ export class LocaleService {
   logger: Logger;
   localeSubject$ = new Subject<LocaleProperties>();
   constructor(loggingService: LoggingService) {
-    this.logger = loggingService.getLogger("LocaleService");
+    this.logger = loggingService.getLogger('LocaleService');
     this.getLocale().then((l) => {
       this.localeSubject$.next(l);
     });
@@ -58,8 +58,8 @@ export class LocaleService {
    * @return {string} a BCP-47 locale.
    */
   private getLocale(): Promise<LocaleProperties> {
-    if(!chrome.storage) {
-      this.logger.warn("Local not fetched from storage");
+    if (!chrome.storage) {
+      this.logger.warn('Local not fetched from storage');
       return Promise.resolve(LocaleService.getDefaultLocale());
     }
 

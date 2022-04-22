@@ -5,15 +5,15 @@ import { Logger } from './logger';
 import { LoggingService } from './logging.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SearchEngineService {
   logger: Logger;
   currentSearchEngine = DefaultSearchEngine;
   currentSearchEngine$: Subject<SearchEngine> = new Subject();
 
-  constructor(loggingService: LoggingService) { 
-    this.logger = loggingService.getLogger("SearchEngService");
+  constructor(loggingService: LoggingService) {
+    this.logger = loggingService.getLogger('SearchEngService');
     this.currentSearchEngine$.next(this.currentSearchEngine);
   }
 
@@ -26,11 +26,14 @@ export class SearchEngineService {
     this.currentSearchEngine$.next(this.currentSearchEngine);
   }
 
-   // TODO: Use default provider: https://developer.chrome.com/docs/extensions/reference/search/
+  // TODO: Use default provider: https://developer.chrome.com/docs/extensions/reference/search/
   performSearch(query: string): void {
-    const url = this.currentSearchEngine.queryTemplate.replace("%QUERY%", query);
+    const url = this.currentSearchEngine.queryTemplate.replace(
+      '%QUERY%',
+      query
+    );
 
     // TODO: Make NewTab optional.
     (window as any).open(url, '_blank').focus();
   }
- }
+}

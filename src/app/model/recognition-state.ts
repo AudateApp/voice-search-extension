@@ -11,21 +11,20 @@ export interface Transcript {
   alternatives?: string[];
 }
 
-
 export enum State {
-  UNKNOWN = "unknown",
+  UNKNOWN = 'unknown',
   // Full error-list here - https://wicg.github.io/speech-api/#dom-speechrecognitionerrorcode-service-not-allowed
-  NOT_SUPPORTED = "not-supported",
-  PERMISSION_NOT_GRANTED = "permission-not-granted",
-  LANGUAGE_NOT_SUPPORTED = "language-not-supported",
-  SERVICE_NOT_ALLOWED = "service-not-allowed",
-  NO_AUDIO_INPUT_DEVICE = "no-audio-capture",
-  NO_CONNECTION = "no-connection",
-  NO_SPEECH_DETECTED = "no-speech-detected",
-  ABORTED = "aborted",
+  NOT_SUPPORTED = 'not-supported',
+  PERMISSION_NOT_GRANTED = 'permission-not-granted',
+  LANGUAGE_NOT_SUPPORTED = 'language-not-supported',
+  SERVICE_NOT_ALLOWED = 'service-not-allowed',
+  NO_AUDIO_INPUT_DEVICE = 'no-audio-capture',
+  NO_CONNECTION = 'no-connection',
+  NO_SPEECH_DETECTED = 'no-speech-detected',
+  ABORTED = 'aborted',
 
-  IDLE = "idle",
-  START = "start",
-  TRANSCRIBING = "transcribing",
-  END = "end",
+  IDLE = 'idle',
+  START = 'start',
+  TRANSCRIBING = 'transcribing',
+  END = 'end',
 }

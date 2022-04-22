@@ -27,9 +27,12 @@ export class RecognitionService {
   detectedSpeech: boolean = false;
   logger: Logger;
 
-  constructor(private localeService: LocaleService, loggingService: LoggingService) {
-    this.logger = loggingService.getLogger("RecognitionService");
-    localeService.getRecognitionLocale().subscribe(l => {
+  constructor(
+    private localeService: LocaleService,
+    loggingService: LoggingService
+  ) {
+    this.logger = loggingService.getLogger('RecognitionService');
+    localeService.getRecognitionLocale().subscribe((l) => {
       this.locale = l;
     });
   }
@@ -114,10 +117,10 @@ export class RecognitionService {
     };
     this.RecognitionState$.next(this.recognitionState);
 
-    if(!this.detectedSpeech) {
+    if (!this.detectedSpeech) {
       this.recognitionState = {
         state: State.NO_SPEECH_DETECTED,
-        errorMessage: "No recognizable sound detected."
+        errorMessage: 'No recognizable sound detected.',
       };
       this.RecognitionState$.next(this.recognitionState);
     }
@@ -143,15 +146,16 @@ export class RecognitionService {
     // Not using errorMessage below as it is not very descriptive.
     switch (eventError) {
       case 'no-speech':
-        this.recognitionState = { 
-          state: State.NO_SPEECH_DETECTED, 
-          errorMessage: "No speech detected.",
-         };
+        this.recognitionState = {
+          state: State.NO_SPEECH_DETECTED,
+          errorMessage: 'No speech detected.',
+        };
         break;
       case 'audio-capture':
         this.recognitionState = {
           state: State.NO_AUDIO_INPUT_DEVICE,
-          errorMessage: 'No microphone devices detected or microphone is muted.',        
+          errorMessage:
+            'No microphone devices detected or microphone is muted.',
         };
         break;
       case 'not-allowed':
@@ -177,13 +181,13 @@ export class RecognitionService {
         this.localeService.setRecognitionLocale(DefaultLocale);
         this.recognitionState = {
           state: State.LANGUAGE_NOT_SUPPORTED,
-          errorMessage: `Locale ${locale} not supported, reset to ${DefaultLocale.bcp_47}`
+          errorMessage: `Locale ${locale} not supported, reset to ${DefaultLocale.bcp_47}`,
         };
         break;
       case 'service-not-allowed':
         this.recognitionState = {
           state: State.SERVICE_NOT_ALLOWED,
-          errorMessage: "Browser not allowing speech recognition."
+          errorMessage: 'Browser not allowing speech recognition.',
         };
         break;
       case 'bad-grammar':

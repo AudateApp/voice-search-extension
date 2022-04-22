@@ -8,9 +8,8 @@ describe('QuickSettingsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuickSettingsComponent ]
-    })
-    .compileComponents();
+      declarations: [QuickSettingsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

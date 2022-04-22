@@ -1,8 +1,4 @@
-import {
-  ChangeDetectorRef,
-  Component,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
 import { State } from '../../model/recognition-state';
 import { RecognitionService } from '../../services/recognition.service';

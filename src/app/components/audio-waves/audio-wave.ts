@@ -72,7 +72,7 @@ export class AudioWave {
   private update() {
     // Anneal node count.
     // each 2 seconds call the createNewObject() function
-    
+
     // if (++this.count % 10 ==  0) {
     //   this.count = 0;
     //   if (this.nodeCount > this.targetNodeCount) {
@@ -81,7 +81,7 @@ export class AudioWave {
     //   }
     // }
     // TODO: Try adjusting the height via Math.sin.
-    
+
     this.renderingContext.fillStyle = this.darkColor;
     this.renderingContext.globalCompositeOperation = 'source-over';
     this.renderingContext.fillRect(0, 0, this.canvas.width, this.canvas.height);

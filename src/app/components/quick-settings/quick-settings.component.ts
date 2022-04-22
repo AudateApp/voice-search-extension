@@ -1,6 +1,14 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { LocaleProperties, LocalesForDefaultModel, DefaultLocale } from 'src/app/model/locale-properties';
-import { DefaultSearchEngine, SearchEngine, SearchEngines } from 'src/app/model/search-engine';
+import {
+  LocaleProperties,
+  LocalesForDefaultModel,
+  DefaultLocale,
+} from 'src/app/model/locale-properties';
+import {
+  DefaultSearchEngine,
+  SearchEngine,
+  SearchEngines,
+} from 'src/app/model/search-engine';
 import { InputDeviceService } from 'src/app/services/input-device.service';
 import { LocaleService } from 'src/app/services/locale.service';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
@@ -8,10 +16,9 @@ import { SearchEngineService } from 'src/app/services/search-engine.service';
 @Component({
   selector: 'audate-quick-settings',
   templateUrl: './quick-settings.component.html',
-  styleUrls: ['./quick-settings.component.scss']
+  styleUrls: ['./quick-settings.component.scss'],
 })
 export class QuickSettingsComponent implements OnInit {
-
   locales: LocaleProperties[] = LocalesForDefaultModel;
   currentLocale: LocaleProperties = DefaultLocale;
 
@@ -21,34 +28,38 @@ export class QuickSettingsComponent implements OnInit {
   inputDevices: MediaDeviceInfo[] = [];
   currentInputDevice?: MediaDeviceInfo;
 
-  activeSection: string = "quick-settings";
+  activeSection: string = 'quick-settings';
 
   constructor(
     private localeService: LocaleService,
     private searchEngineService: SearchEngineService,
     private inputDeviceService: InputDeviceService,
-    private ref: ChangeDetectorRef) { }
+    private ref: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
-    this.localeService.getRecognitionLocale().subscribe(locale => {
+    this.localeService.getRecognitionLocale().subscribe((locale) => {
       this.currentLocale = locale;
       this.ref.detectChanges();
     });
 
-    this.searchEngineService.getSearchEngine().subscribe(se => {
+    this.searchEngineService.getSearchEngine().subscribe((se) => {
       this.currentSearchEngine = se;
       this.ref.detectChanges();
     });
 
-    this.inputDeviceService.getDefaultDevice().then(d => {
-      this.inputDevices.push(d);
-      this.currentInputDevice = d;
-      this.ref.detectChanges();
-    }, error => {
-      console.error(error);
-    });  
+    this.inputDeviceService.getDefaultDevice().then(
+      (d) => {
+        this.inputDevices.push(d);
+        this.currentInputDevice = d;
+        this.ref.detectChanges();
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
-  
+
   setLocale(locale: LocaleProperties): void {
     this.localeService.setRecognitionLocale(locale);
   }

@@ -6,18 +6,18 @@
  * Ensure output level is set to 'verbose' to see debug logs.
  */
 export interface Logger {
-    debug(...logs: unknown[]): void;
-    log(...logs: unknown[]): void;
-    warn(...logs: unknown[]): void;
-    error(...logs: unknown[]): void;
+  debug(...logs: unknown[]): void;
+  log(...logs: unknown[]): void;
+  warn(...logs: unknown[]): void;
+  error(...logs: unknown[]): void;
 }
 
 // TODO: Implement this.
 export class RemoteLogger implements Logger {
-    debug(...logs: unknown[]): void {}
-    log(...logs: unknown[]): void {}
-    warn(...logs: unknown[]): void {}
-    error(...logs: unknown[]): void {}
+  debug(...logs: unknown[]): void {}
+  log(...logs: unknown[]): void {}
+  warn(...logs: unknown[]): void {}
+  error(...logs: unknown[]): void {}
 }
 
 export class ConsoleLogger implements Logger {

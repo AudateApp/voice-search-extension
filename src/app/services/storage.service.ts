@@ -4,9 +4,8 @@ import { Injectable } from '@angular/core';
  * and localStorage for demos and tests.
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class StorageService {
-
-  constructor() { }
+  constructor() {}
 }
