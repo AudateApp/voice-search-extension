@@ -1,4 +1,10 @@
-import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { State } from 'src/app/model/recognition-state';
 import { RecognitionService } from 'src/app/services/recognition.service';
 import { AudioWave } from './audio-wave';
@@ -8,7 +14,10 @@ import { AudioWave } from './audio-wave';
   templateUrl: './audio-waves.component.html',
   styleUrls: ['./audio-waves.component.scss'],
 })
-export class AudioWavesComponent extends AudioWave implements OnInit {
+export class AudioWavesComponent
+  extends AudioWave
+  implements OnInit, AfterViewInit
+{
   @ViewChild('waveCanvas') canvasView: any;
   constructor(
     private speechRecognizer: RecognitionService,
@@ -27,7 +36,7 @@ export class AudioWavesComponent extends AudioWave implements OnInit {
           break;
         case State.TRANSCRIBING:
           if (rstate.transcript?.partialText) {
-            if(this.nodeCount != 20) {
+            if (this.nodeCount != 20) {
               this.nodeCount = 20;
               this.init(this.canvasView.nativeElement);
             }
