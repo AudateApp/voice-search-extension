@@ -33,7 +33,7 @@
     <p
       class="item"
       *ngFor="let locale of locales"
-      (click)="currentLocale = locale; activeSection = 'quick-settings'"
+      (click)="setLocale(locale); activeSection = 'quick-settings'"
     >
       <span class="label">{{ locale.name }}</span>
       <i class="selected pi pi-check" *ngIf="locale === currentLocale"></i>
@@ -50,7 +50,7 @@
     <p
       class="item"
       *ngFor="let se of searchEngines"
-      (click)="currentSearchEngine = se; activeSection = 'quick-settings'"
+      (click)="setSearchEngine(se); activeSection = 'quick-settings'"
     >
       <img src="{{ se.iconPath }}" />
       <span class="label">{{ se.name }}</span>
