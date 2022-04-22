@@ -24,6 +24,10 @@
       &:hover {
         transform: scale(1.1);
       }
+
+      &.listening {
+        opacity: 0.5;
+      }
     }
   }
 
