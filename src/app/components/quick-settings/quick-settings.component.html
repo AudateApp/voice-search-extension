@@ -1,16 +1,18 @@
-<div>
-  <h5>Speech Language</h5>
-  <p>{{currentLocale.name}}</p>
+<section class="settings-wrapper">
+<div class="setting">
+  <h5 class="label">Speech Language</h5>
+  <p class="value">{{currentLocale.name}}</p>
 </div>
 <hr>
-<div>
-  <h5>Search Engine</h5>
-  <p>{{currentSearchEngine.name}}</p>
+<div class="setting">
+  <h5 class="label">Search Engine</h5>
+  <p class="value">{{currentSearchEngine.name}}</p>
   <!-- TODO: show the icons. -->
   <!-- TODO: Move to listbox on its own - https://www.primefaces.org/primeng/listbox -->
 </div>
 <hr>
-<div>
-  <h5>Microphone</h5>
-  <p>{{currentInputDevice?.label}}</p>
+<div class="setting">
+  <h5 class="label">Microphone</h5>
+  <p class="value">{{currentInputDevice?.label}}</p>
 </div>
+</section>
