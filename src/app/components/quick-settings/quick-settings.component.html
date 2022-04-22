@@ -1,7 +1,6 @@
 <section
   class="settings-wrapper"
   [hidden]="activeSection !== 'quick-settings'"
-  c
 >
   <div class="setting" (click)="activeSection = 'language'">
     <h5 class="label">Speech Language</h5>
@@ -14,8 +13,6 @@
       <img src="{{ currentSearchEngine.iconPath }}" />
       {{ currentSearchEngine.name }}
     </p>
-    <!-- TODO: show the icons. -->
-    <!-- TODO: Move to listbox on its own - https://www.primefaces.org/primeng/listbox -->
   </div>
   <hr />
   <div class="setting" (click)="activeSection = 'microphone'">
