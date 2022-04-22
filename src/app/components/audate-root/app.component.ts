@@ -9,7 +9,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent implements OnInit {
   title = 'audate';
-  display: boolean = false;
+  display: boolean = true;
 
   constructor(private primengConfig: PrimeNGConfig) {}
 

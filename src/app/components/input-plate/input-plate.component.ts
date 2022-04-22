@@ -25,7 +25,7 @@ import { RecognitionService } from '../../services/recognition.service';
 })
 export class InputPlateComponent implements OnInit {
   listening = false;
-  showSettings = false;
+  showSettings = true;
   moreIconClass = 'pi-angle-down';
 
   constructor(
