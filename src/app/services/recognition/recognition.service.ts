@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { RecognitionState } from './recognition-state';
 import { RecognitionProvider } from './recognition-provider';
-import { BrowserRecognitionProvider } from './browser-recognition-provier';
+import { BrowserRecognitionProvider } from './browser-recognition-provider';
 import { GoogleRecognitionProvider } from './google-recognition-provider';
 
 @Injectable({
