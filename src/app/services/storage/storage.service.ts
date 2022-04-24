@@ -5,8 +5,7 @@ import { LocalStorageProvider } from './local-storage-provider';
 import { RelayStorageProvider } from './relay-storage-provider';
 import { StorageProvider } from './storage-provider';
 
-/** Provides abstrction for using chrome.storage in extension
- * and localStorage for demos and tests.
+/** Provides abstraction over different storage mechanisms and contexts for the app.
  *
  * TODO: Consider using https://github.com/fregante/webext-detect-page/blob/main/index.ts
  * to determine the current page context.

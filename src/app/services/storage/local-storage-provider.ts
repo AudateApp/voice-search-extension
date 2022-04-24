@@ -1,5 +1,6 @@
 import { StorageProvider } from './storage-provider';
 
+/** Fallback storage for development and testing. */
 export class LocalStorageProvider implements StorageProvider {
   storageService: Storage;
   constructor() {

@@ -1,6 +1,7 @@
 import { StorageProvider } from './storage-provider';
 import { StorageMessage } from './storage-message';
 
+/** Wrapper for chrome.storage.sync, ideally only used by the background page. */
 export class ChromeStorageProvider implements StorageProvider {
   storageService!: chrome.storage.SyncStorageArea;
   constructor() {
