@@ -1,5 +1,5 @@
 import { StorageProvider } from './storage-provider';
-import { StorageMessage } from './storage.service';
+import { StorageMessage } from './storage-message';
 
 export class ChromeStorageProvider implements StorageProvider {
   storageService!: chrome.storage.SyncStorageArea;

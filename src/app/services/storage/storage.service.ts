@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { rejectedSyncPromise } from '@sentry/utils';
 import { ChromeStorageProvider } from './chrome-storage-provider';
 import { LocalStorageProvider } from './local-storage-provider';
 import { RelayStorageProvider } from './relay-storage-provider';
@@ -36,9 +35,4 @@ export class StorageService implements StorageProvider {
   getAll(): Promise<any> {
     return this.storageProvider.getAll();
   }
-}
-export interface StorageMessage {
-  type: 'save' | 'read' | 'read_all';
-  key: string | null;
-  value?: any;
 }
