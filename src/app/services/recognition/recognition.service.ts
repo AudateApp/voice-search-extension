@@ -5,6 +5,7 @@ import { DefaultLocale, LocaleProperties } from '../locale/locale-properties';
 import { LocaleService } from '../locale/locale.service';
 import { LoggingService } from '../logging/logging.service';
 import { Logger } from '../logging/logger';
+import { RecognitionProvider } from './recognition-provider';
 
 // This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
 // Since TypeScript cannot find it.
@@ -19,7 +20,7 @@ const IdleState: RecognitionState = { state: State.IDLE };
 @Injectable({
   providedIn: 'root',
 })
-export class RecognitionService {
+export class RecognitionService implements RecognitionProvider {
   recognition!: any;
   locale: LocaleProperties = LocaleService.getDefaultLocale();
   recognitionState: RecognitionState = IdleState;
