@@ -4,10 +4,10 @@ import {
   LocaleProperties,
   LocalesForDefaultModel,
   DefaultLocale,
-} from '../model/locale-properties';
-import { Logger } from './logging/logger';
-import { LoggingService } from './logging/logging.service';
-import { StorageService } from './storage/storage.service';
+} from './locale-properties';
+import { Logger } from '../logging/logger';
+import { LoggingService } from '../logging/logging.service';
+import { StorageService } from '../storage/storage.service';
 
 /**
  * Class for answering locale-related questions

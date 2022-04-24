@@ -1,4 +1,4 @@
-import locales from '../data/locale.json';
+import locales from './locale.json';
 
 // All supported locales for STT - https://cloud.google.com/speech-to-text/docs/languages
 // https://docs.google.com/spreadsheets/d/109VdbrRIMspIdKzrcxb6tEG0TxJhwfGLU6pex4Y8zrM/edit#gid=0

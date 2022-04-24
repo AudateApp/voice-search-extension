@@ -1,8 +1,8 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Observable, share, Subject } from 'rxjs';
 import { RecognitionState, State } from './recognition-state';
-import { DefaultLocale, LocaleProperties } from '../../model/locale-properties';
-import { LocaleService } from '../locale.service';
+import { DefaultLocale, LocaleProperties } from '../locale/locale-properties';
+import { LocaleService } from '../locale/locale.service';
 import { LoggingService } from '../logging/logging.service';
 import { Logger } from '../logging/logger';
 

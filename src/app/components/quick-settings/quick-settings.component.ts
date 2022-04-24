@@ -3,14 +3,14 @@ import {
   LocaleProperties,
   LocalesForDefaultModel,
   DefaultLocale,
-} from 'src/app/model/locale-properties';
+} from 'src/app/services/locale/locale-properties';
 import {
   DefaultSearchEngine,
   SearchEngine,
   SearchEngines,
 } from 'src/app/model/search-engine';
 import { InputDeviceService } from 'src/app/services/input-device.service';
-import { LocaleService } from 'src/app/services/locale.service';
+import { LocaleService } from 'src/app/services/locale/locale.service';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
 
 @Component({
