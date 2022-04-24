@@ -21,59 +21,56 @@ export class StorageService {
     if (!value) {
       return Promise.reject('Attempting to save a null value');
     }
-    if (!chrome.storage) {
-      if (!canDefer) {
-        console.error('Unable to save data.');
-        return Promise.reject('Unable to save data');
-      }
+
+    // Store the data at once if we can access chrome.storage.
+    if (chrome.storage) {
+      const data: any = {};
+      data[key] = value;
+      return chrome.storage.sync.set(data);
+    }
+
+    // Pass it to the background script to store, if not already in bg-script.
+    if (canDefer) {
       return this.sendMessage({
         key: key,
         value: value,
         type: 'save',
       });
     }
-
-    const data: any = {};
-    data[key] = value;
-    return chrome.storage.sync.set(data);
+    return Promise.reject('Unable to save data');
   }
 
-  // Returns the value for a given key.
+  // Returns the value for a given key or null if not defined.
   get(key: string, canDefer = true): Promise<any> {
-    if (!chrome.storage) {
-      if (!canDefer) {
-        console.error('Unable to read data.');
-        return Promise.reject('Unable to read data');
-      }
+    if (chrome.storage) {
+      return chrome.storage.sync.get(key).then((response: any) => {
+        // This would return null if key is not defined as response == {}.
+        return response[key];
+      });
+    }
+
+    if (canDefer) {
       return this.sendMessage({
         key: key,
         type: 'read',
       });
     }
-
-    return chrome.storage.sync.get(key).then((data: any) => {
-      if (Object.keys(data).length <= 0) {
-        throw 'No entry defined for key: ' + key;
-      }
-      return data[key];
-    });
+    return Promise.reject('Unable to read data');
   }
 
   // Returns an object containing all key-value pairs saved to storage by this extension.
   getAudateData(canDefer = true): Promise<any> {
-    console.log('#getAudateData', canDefer);
-    if (!chrome.storage) {
-      if (!canDefer) {
-        console.error('Unable to read all data.');
-        return Promise.reject('Unable to read all data');
-      }
+    if (chrome.storage) {
+      return chrome.storage.sync.get(null);
+    }
+
+    if (canDefer) {
       return this.sendMessage({
         key: null,
         type: 'read_all',
       });
     }
-
-    return chrome.storage.sync.get(null);
+    return Promise.reject('Unable to read all data');
   }
 
   // A promise-wrapper around chrome.runtime.sendMessage.
@@ -106,46 +103,33 @@ export class StorageService {
   }
 
   onMessage = (
-    msg: StorageMessage,
+    message: StorageMessage,
     sender: chrome.runtime.MessageSender,
-    callback: (data?: any) => void
+    callback: (response?: any) => void
   ) => {
-    console.debug('received message: ', msg, ' from: ', sender);
+    console.debug('received message: ', message, ' from: ', sender);
     // TODO Ensure sender.id is this extension. Confirm works for content-script.
-    switch (msg.type) {
+    switch (message.type) {
       case 'save':
-        if (!msg.key || !msg.value) {
-          callback(new Error('A valid key+value is required to save data'));
-          break;
-        }
-        this.put(msg.key, /* canDefer=*/ msg.value);
+        this.put(message.key!, /* canDefer=*/ message.value).then(
+          (response) => callback(response),
+          (errorReason) => callback(new Error(errorReason))
+        );
         break;
       case 'read':
-        if (!msg.key) {
-          callback(new Error('A key is required to read a piece of data'));
-          break;
-        }
-        this.get(msg.key, /* canDefer=*/ false).then(
-          (value) => {
-            callback(value);
-          },
-          (errorReason) => {
-            callback(new Error(errorReason));
-          }
+        this.get(message.key!, /* canDefer=*/ false).then(
+          (value) => callback(value),
+          (errorReason) => callback(new Error(errorReason))
         );
         break;
       case 'read_all':
         this.getAudateData(/* canDefer=*/ false).then(
-          (value: any) => {
-            callback(value);
-          },
-          (errorReason) => {
-            callback(new Error(errorReason));
-          }
+          (response) => callback(response),
+          (errorReason) => callback(new Error(errorReason))
         );
         break;
       default:
-        callback(new Error('Undefined message type: ' + msg.type));
+        callback(new Error('Undefined message type: ' + message.type));
         break;
     }
   };
