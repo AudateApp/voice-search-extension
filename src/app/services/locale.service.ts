@@ -7,7 +7,7 @@ import {
 } from '../model/locale-properties';
 import { Logger } from './logger';
 import { LoggingService } from './logging.service';
-import { StorageService } from './storage.service';
+import { StorageService } from './storage/storage.service';
 
 /**
  * Class for answering locale-related questions
