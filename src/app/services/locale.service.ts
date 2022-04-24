@@ -7,6 +7,7 @@ import {
 } from '../model/locale-properties';
 import { Logger } from './logger';
 import { LoggingService } from './logging.service';
+import { StorageService } from './storage.service';
 
 /**
  * Class for answering locale-related questions
@@ -17,7 +18,10 @@ import { LoggingService } from './logging.service';
 export class LocaleService {
   logger: Logger;
   localeSubject$ = new Subject<LocaleProperties>();
-  constructor(loggingService: LoggingService) {
+  constructor(
+    loggingService: LoggingService,
+    private storageService: StorageService
+  ) {
     this.logger = loggingService.getLogger('LocaleService');
     this.getLocale().then((l) => {
       this.localeSubject$.next(l);
@@ -29,19 +33,13 @@ export class LocaleService {
    * @param {string} locale
    */
   setRecognitionLocale(locale: LocaleProperties) {
-    if (!chrome.storage) {
-      this.logger.warn('Locale is not set, only broadcast');
-      this.localeSubject$.next(locale);
-      return;
-    }
-
-    chrome.storage.sync.set({ voice_recognition_locale: locale }).then(
-      (savedData: any) => {
-        this.logger.log(savedData);
-        this.localeSubject$.next(savedData);
+    this.storageService.put('locale', locale).then(
+      () => {
+        this.localeSubject$.next(locale);
       },
-      (errorReason) => {
-        this.localeSubject$.error(errorReason);
+      (error) => {
+        this.logger.error(error);
+        this.localeSubject$.error(error);
       }
     );
   }
@@ -58,21 +56,17 @@ export class LocaleService {
    * @return {string} a BCP-47 locale.
    */
   private getLocale(): Promise<LocaleProperties> {
-    if (!chrome.storage) {
-      this.logger.warn('Local not fetched from storage');
-      return Promise.resolve(LocaleService.getDefaultLocale());
-    }
-
-    return chrome.storage.sync
-      .get('voice_recognition_locale')
-      .then((locale: any) => {
+    return this.storageService.get('voice_recognition_locale').then(
+      (locale: any) => {
         this.logger.log('#getRecognitionLocale() :', locale);
-        if (!locale) {
-          this.setRecognitionLocale(LocaleService.getDefaultLocale());
-          return LocaleService.getDefaultLocale();
-        }
         return locale as LocaleProperties;
-      });
+      },
+      (errorReason) => {
+        this.logger.error('Failed to fetch locale due to error: ', errorReason);
+        this.logger.warn('Using default locale instead');
+        return LocaleService.getDefaultLocale();
+      }
+    );
   }
 
   /**
