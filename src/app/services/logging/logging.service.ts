@@ -1,5 +1,7 @@
 import { Injectable, isDevMode } from '@angular/core';
-import { ConsoleLogger, Logger, RemoteLogger } from './logger';
+import { Logger } from './logger';
+import { ConsoleLogger } from './console-logger';
+import { RemoteLogger } from './remote-logger';
 
 @Injectable({
   providedIn: 'root',

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, share, Subject } from 'rxjs';
 import { DefaultSearchEngine, SearchEngine } from '../model/search-engine';
-import { Logger } from './logger';
-import { LoggingService } from './logging.service';
+import { Logger } from './logging/logger';
+import { LoggingService } from './logging/logging.service';
 
 @Injectable({
   providedIn: 'root',

@@ -3,8 +3,8 @@ import { Observable, share, Subject } from 'rxjs';
 import { RecognitionState, State } from './recognition-state';
 import { DefaultLocale, LocaleProperties } from '../../model/locale-properties';
 import { LocaleService } from '../locale.service';
-import { LoggingService } from '../logging.service';
-import { Logger } from '../logger';
+import { LoggingService } from '../logging/logging.service';
+import { Logger } from '../logging/logger';
 
 // This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
 // Since TypeScript cannot find it.
