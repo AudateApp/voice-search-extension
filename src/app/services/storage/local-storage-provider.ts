@@ -1,7 +1,10 @@
 import { StorageProvider } from './storage-provider';
 
 export class LocalStorageProvider implements StorageProvider {
-  constructor(private storageService: Storage) {}
+  storageService: Storage;
+  constructor() {
+    this.storageService = window.localStorage;
+  }
   async put(key: string, value: any): Promise<void> {
     if (!value) {
       return Promise.reject('Attempting to save a null value');
