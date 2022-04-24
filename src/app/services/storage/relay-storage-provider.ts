@@ -27,6 +27,9 @@ export class RelayStorageProvider implements StorageProvider {
 
   // A promise-wrapper around chrome.runtime.sendMessage.
   sendMessage(message: StorageMessage): Promise<any> {
+    if (!chrome?.runtime?.sendMessage) {
+      return Promise.reject('Invalid context');
+    }
     let resolve: any, reject: any;
     const promise = new Promise((_resolve, _reject) => {
       resolve = _resolve;
