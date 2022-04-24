@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
-import { State } from '../../model/recognition-state';
-import { RecognitionService } from '../../services/recognition.service';
+import { State } from '../../services/recognition/recognition-state';
+import { RecognitionService } from '../../services/recognition/recognition.service';
 
 @Component({
   selector: 'audate-popup',

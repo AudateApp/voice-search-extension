@@ -5,8 +5,8 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import { State } from '../../model/recognition-state';
-import { RecognitionService } from '../../services/recognition.service';
+import { State } from '../../services/recognition/recognition-state';
+import { RecognitionService } from '../../services/recognition/recognition.service';
 
 @Component({
   selector: 'audate-input-plate',

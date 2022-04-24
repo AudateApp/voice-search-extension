@@ -5,8 +5,8 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { State } from 'src/app/model/recognition-state';
-import { RecognitionService } from 'src/app/services/recognition.service';
+import { State } from 'src/app/services/recognition/recognition-state';
+import { RecognitionService } from 'src/app/services/recognition/recognition.service';
 import { AudioWave } from './audio-wave';
 
 @Component({

@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { State } from 'src/app/model/recognition-state';
-import { RecognitionService } from 'src/app/services/recognition.service';
+import { State } from 'src/app/services/recognition/recognition-state';
+import { RecognitionService } from 'src/app/services/recognition/recognition.service';
 
 @Component({
   selector: 'audate-transcript',
