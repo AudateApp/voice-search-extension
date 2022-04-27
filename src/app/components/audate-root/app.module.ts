@@ -16,6 +16,7 @@ import { QuickSettingsComponent } from '../quick-settings/quick-settings.compone
 import { FormsModule } from '@angular/forms';
 import { OptionsPageComponent } from '../options-page/options-page.component';
 import { ContentPopupComponent } from '../content-popup/content-popup.component';
+import { PermissionRequestComponent } from '../permission-request/permission-request.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ContentPopupComponent } from '../content-popup/content-popup.component'
     QuickSettingsComponent,
     OptionsPageComponent,
     ContentPopupComponent,
+    PermissionRequestComponent,
   ],
   imports: [
     BrowserModule,
