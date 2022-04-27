@@ -33,8 +33,9 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
     loggingService: LoggingService
   ) {
     this.logger = loggingService.getLogger('RecognitionService');
-    localeService.getRecognitionLocale().subscribe((l) => {
-      this.locale = l;
+    localeService.getRecognitionLocale().subscribe({
+      next: (locale) => (this.locale = locale ? locale : this.locale),
+      error: (error) => this.logger.error(error),
     });
   }
 
@@ -232,6 +233,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
   };
 
   start(isContinuous: boolean): void {
+    console.error('#start');
     if (this.recognition) {
       this.logger.log('stopping recognition');
       this.recognition.abort();

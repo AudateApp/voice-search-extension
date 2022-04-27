@@ -14,7 +14,7 @@ export class RecognitionService implements RecognitionProvider {
   constructor(browserProvider: BrowserRecognitionProvider) {
     this.recognitionProvider = browserProvider;
     // To use Google, uncomment below
-    this.recognitionProvider = new GoogleRecognitionProvider();
+    // this.recognitionProvider = new GoogleRecognitionProvider();
   }
 
   start(isContinuous: boolean): void {
