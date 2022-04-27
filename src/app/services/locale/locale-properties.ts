@@ -1,7 +1,9 @@
 import locales from './locale.json';
 
-// All supported locales for STT - https://cloud.google.com/speech-to-text/docs/languages
-// https://docs.google.com/spreadsheets/d/109VdbrRIMspIdKzrcxb6tEG0TxJhwfGLU6pex4Y8zrM/edit#gid=0
+/*
+ * All supported locales for STT - https://cloud.google.com/speech-to-text/docs/languages
+ * https://docs.google.com/spreadsheets/d/109VdbrRIMspIdKzrcxb6tEG0TxJhwfGLU6pex4Y8zrM/edit#gid=0
+ */
 export type LocaleProperties = {
   name: string;
   bcp_47: string;

@@ -1,12 +1,14 @@
 // A class for generating audio-waves inside a given Canvas element.
 
-// To test changes to this function, copy-paste this entire file here https://codepen.io/justiceo/pen/PoEVEvw.
-// and uncomment the lines below:
-// document.addEventListener("DOMContentLoaded",
-//     () => {
-//         const aw = new AudioWave();
-//         aw.init(document.getElementById('canvas') as HTMLCanvasElement);
-//     }, false);
+/*
+ * To test changes to this function, copy-paste this entire file here https://codepen.io/justiceo/pen/PoEVEvw.
+ * and uncomment the lines below:
+ * document.addEventListener("DOMContentLoaded",
+ *     () => {
+ *         const aw = new AudioWave();
+ *         aw.init(document.getElementById('canvas') as HTMLCanvasElement);
+ *     }, false);
+ */
 export class AudioWave {
   canvas!: HTMLCanvasElement;
   renderingContext!: CanvasRenderingContext2D;
@@ -27,13 +29,15 @@ export class AudioWave {
   // This is the color from which screening (or color bleaching) begins.
   darkColor = '#2136BB';
 
-  // These three colors are 'screen'ed out of the topColor to create the bottom color. See https://colorblendy.com/#!/screen.
-  // To determine  what the final screened out color would be (usually close to #fff) - use a color picker :D
-  // If needed programmatically, here is the formular `Cscreen = 1 - [(1 - Ca) * (1 - Cb) * (1 - Cc)].
-  // Where Cx is a color and 1-Cx is an invertion of Cx.
-  // Based on the definition here https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode#values
-  // And https://webdesign.tutsplus.com/tutorials/blending-modes-in-css-color-theory-and-practical-application--cms-25201.
-  // For inverting a color, see https://stackoverflow.com/a/6961743.
+  /*
+   * These three colors are 'screen'ed out of the topColor to create the bottom color. See https://colorblendy.com/#!/screen.
+   * To determine  what the final screened out color would be (usually close to #fff) - use a color picker :D
+   * If needed programmatically, here is the formular `Cscreen = 1 - [(1 - Ca) * (1 - Cb) * (1 - Cc)].
+   * Where Cx is a color and 1-Cx is an invertion of Cx.
+   * Based on the definition here https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode#values
+   * And https://webdesign.tutsplus.com/tutorials/blending-modes-in-css-color-theory-and-practical-application--cms-25201.
+   * For inverting a color, see https://stackoverflow.com/a/6961743.
+   */
   screenColors = ['#ff0000', '#00ff00', '#0000ff'];
 
   // The animation ID of the current running aniation from.
@@ -66,21 +70,27 @@ export class AudioWave {
     return true;
   }
 
-  // This function runs the animation. To get its gist, comment out #requestAnimationFrame.
-  // It may be invoked 60x per second on 60fps browsers to update the canvas and should be as fast as possible to avoid dropping frames.
-  // count = 0;
+  /*
+   * This function runs the animation. To get its gist, comment out #requestAnimationFrame.
+   * It may be invoked 60x per second on 60fps browsers to update the canvas and should be as fast as possible to avoid dropping frames.
+   * count = 0;
+   */
   private update() {
-    // Anneal node count.
-    // each 2 seconds call the createNewObject() function
+    /*
+     * Anneal node count.
+     * each 2 seconds call the createNewObject() function
+     */
 
-    // if (++this.count % 10 ==  0) {
-    //   this.count = 0;
-    //   if (this.nodeCount > this.targetNodeCount) {
-    //     this.waves.forEach((w) => w.pop());
-    //     this.nodeCount--;
-    //   }
-    // }
-    // TODO: Try adjusting the height via Math.sin.
+    /*
+     * if (++this.count % 10 ==  0) {
+     *   this.count = 0;
+     *   if (this.nodeCount > this.targetNodeCount) {
+     *     this.waves.forEach((w) => w.pop());
+     *     this.nodeCount--;
+     *   }
+     * }
+     * TODO: Try adjusting the height via Math.sin.
+     */
 
     this.renderingContext.fillStyle = this.darkColor;
     this.renderingContext.globalCompositeOperation = 'source-over';
@@ -178,8 +188,10 @@ class Wave {
   }
 }
 
-// To see this point on the canvas,
-// change #quadraticCurveTo to #lineTo in #drawWave.
+/*
+ * To see this point on the canvas,
+ * change #quadraticCurveTo to #lineTo in #drawWave.
+ */
 class Point {
   x = 0;
   y = 0;

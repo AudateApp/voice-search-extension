@@ -7,8 +7,10 @@ import { LoggingService } from '../logging/logging.service';
 import { Logger } from '../logging/logger';
 import { RecognitionProvider } from './recognition-provider';
 
-// This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
-// Since TypeScript cannot find it.
+/*
+ * This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
+ * Since TypeScript cannot find it.
+ */
 interface IWindow extends Window {
   // tslint:disable-next-line:no-any
   webkitSpeechRecognition: any;
@@ -40,17 +42,21 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
   }
 
   #initialize(language: LocaleProperties, isContinuous: boolean): State {
-    // When using the chrome recognition API via popup, no special permission is required.
-    // See permsisiosn list here - https://developer.chrome.com/docs/extensions/mv3/declare_permissions/
-    // When accessing on a webpage, microphone access is a required permission. If this extension is installed, it has it.
+    /*
+     * When using the chrome recognition API via popup, no special permission is required.
+     * See permsisiosn list here - https://developer.chrome.com/docs/extensions/mv3/declare_permissions/
+     * When accessing on a webpage, microphone access is a required permission. If this extension is installed, it has it.
+     */
 
     if (!('webkitSpeechRecognition' in window)) {
       return State.NOT_SUPPORTED;
     }
 
     this.recognition = new webkitSpeechRecognition();
-    // When disabled, recognition would automatically stop after the first continguous audio streams.
-    // The final transcript is sent one, after #onAudioEnd.
+    /*
+     * When disabled, recognition would automatically stop after the first continguous audio streams.
+     * The final transcript is sent one, after #onAudioEnd.
+     */
     this.recognition.continuous = isContinuous; // TODO: Parameterize.
     this.recognition.interimResults = true;
     this.recognition.maxAlternatives = 3;
@@ -128,7 +134,8 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
     }
   };
 
-  /** Fired when the speech recognition service has disconnected.
+  /**
+   * Fired when the speech recognition service has disconnected.
    *
    * This method is guaranteed to be executed, even if #onStart was never called,
    * and even in instances where #onSpeechEnd or #onAudioEnd are not invoked.
@@ -203,7 +210,8 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
     this.RecognitionState$.next(this.recognitionState);
   };
 
-  /** Fired when the speech recognition service returns a
+  /**
+   * Fired when the speech recognition service returns a
    * result — a word or phrase has been positively recognized
    * and this has been communicated back to the app.
    */
@@ -237,8 +245,10 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
       this.logger.log('stopping recognition');
       this.recognition.abort();
 
-      // TODO: Wait for recognition object to become null, i.e. onEnd has fired.
-      // If this function is invoked twice back-to-back, it would fail.
+      /*
+       * TODO: Wait for recognition object to become null, i.e. onEnd has fired.
+       * If this function is invoked twice back-to-back, it would fail.
+       */
     }
 
     const state = this.#initialize(this.locale, isContinuous);

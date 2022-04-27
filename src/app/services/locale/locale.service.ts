@@ -77,8 +77,10 @@ export class LocaleService {
   static getDefaultLocale(): LocaleProperties {
     let defaultLocale = DefaultLocale;
 
-    // Navigator.language returns the preferred language of the user for the browser UI.
-    // See https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language.
+    /*
+     * Navigator.language returns the preferred language of the user for the browser UI.
+     * See https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language.
+     */
     let navLocale = undefined;
     if (navigator.languages !== undefined) {
       navLocale = LocalesForDefaultModel.find(
