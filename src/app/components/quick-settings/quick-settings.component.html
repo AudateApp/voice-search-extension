@@ -1,7 +1,4 @@
-<section
-  class="settings-wrapper"
-  [hidden]="activeSection !== 'quick-settings'"
->
+<section class="settings-wrapper" [hidden]="activeSection !== 'quick-settings'">
   <div class="setting" (click)="activeSection = 'language'">
     <h5 class="label">Speech Language</h5>
     <p class="value">{{ currentLocale.name }}</p>
@@ -71,5 +68,11 @@
       <i class="selected pi pi-check" *ngIf="device === currentInputDevice"></i>
     </p>
   </div>
-  <p *ngIf="inputDevices.length > 1" class="notice">This extension cannot change your microphone, see <a href="https://support.google.com/chrome/answer/2693767?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Cselect-a-default-microphone">guide here</a></p>
+  <p *ngIf="inputDevices.length > 1" class="notice">
+    This extension cannot change your microphone, see
+    <a
+      href="https://support.google.com/chrome/answer/2693767?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Cselect-a-default-microphone"
+      >guide here</a
+    >
+  </p>
 </section>

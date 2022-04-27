@@ -16,7 +16,8 @@
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "prettier" // This should be last to avoid prettier formatting issues
       ],
       "rules": {
         "@angular-eslint/directive-selector": [

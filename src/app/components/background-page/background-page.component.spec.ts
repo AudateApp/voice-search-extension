@@ -8,9 +8,8 @@ describe('BackgroundPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BackgroundPageComponent ]
-    })
-    .compileComponents();
+      declarations: [BackgroundPageComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

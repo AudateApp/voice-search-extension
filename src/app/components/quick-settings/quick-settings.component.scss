@@ -20,7 +20,7 @@
     margin-bottom: 0;
     padding-bottom: 5px;
   }
-  
+
   .value {
     font-size: 0.85rem;
     display: flex;
@@ -28,10 +28,11 @@
     margin-top: 0;
     padding-top: 0;
     img {
-        width: 13px;
-        margin-right: 5px;
-        // Hex for #eee from https://codepen.io/sosuke/pen/Pjoqqp.
-        filter: invert(100%) sepia(0%) saturate(5101%) hue-rotate(193deg) brightness(123%) contrast(87%);
+      width: 13px;
+      margin-right: 5px;
+      // Hex for #eee from https://codepen.io/sosuke/pen/Pjoqqp.
+      filter: invert(100%) sepia(0%) saturate(5101%) hue-rotate(193deg)
+        brightness(123%) contrast(87%);
     }
   }
 }
@@ -41,58 +42,58 @@ hr {
 }
 
 .listbox {
-    .header {
-        display: flex;
-        margin: 0 -15px;
-        padding: 10px;
-        padding-left: 20px;
-        font-size: 0.8rem;
-        font-weight: 200;
-    }
+  .header {
+    display: flex;
+    margin: 0 -15px;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
 
-.items {
+  .items {
     max-height: 200px;
     overflow: scroll;
     font-size: 0.9rem;
-}
-    .item {
-        display: flex;
-        margin: 0 -15px;
-        padding: 15px;
-        padding-left: 30px;
+  }
+  .item {
+    display: flex;
+    margin: 0 -15px;
+    padding: 15px;
+    padding-left: 30px;
 
-        &:hover {
-            background-color: rgba(255,255,255, .1);
-        }
-
-        .label {
-            flex-grow: 1;;
-        }
-
-        .selected {
-            align-self: end;
-            margin-right: 10px;
-        }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
     }
-    img {
-        width: 15px;
-        margin-right: 10px;
-        // Hex for #eee from https://codepen.io/sosuke/pen/Pjoqqp.
-        filter: invert(100%) sepia(0%) saturate(5101%) hue-rotate(193deg) brightness(123%) contrast(87%);
+
+    .label {
+      flex-grow: 1;
     }
+
+    .selected {
+      align-self: end;
+      margin-right: 10px;
+    }
+  }
+  img {
+    width: 15px;
+    margin-right: 10px;
+    // Hex for #eee from https://codepen.io/sosuke/pen/Pjoqqp.
+    filter: invert(100%) sepia(0%) saturate(5101%) hue-rotate(193deg)
+      brightness(123%) contrast(87%);
+  }
 }
 
 .language-selection {
-
-    .item {
-        margin-left: -10px;
-        padding: 10px;
-        padding-left: 20px;
-    }
+  .item {
+    margin-left: -10px;
+    padding: 10px;
+    padding-left: 20px;
+  }
 }
 
 .notice {
-    a {
-        color: white;
-    }
+  a {
+    color: white;
+  }
 }
