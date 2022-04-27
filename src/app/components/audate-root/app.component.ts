@@ -23,21 +23,31 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.primengConfig.ripple = true;
+    this.addExtensionRedirects();
+  }
+
+  /**
+   * Enables navigating to different pages in chrome extension
+   * where paths are not supported but fragments are.
+   * This function would redirect index.html/#popup
+   * (or simply /#popup) to the path /popup.
+   */
+  addExtensionRedirects() {
     const fragment = window.location.href.split('#')[1];
     switch (fragment) {
       case 'popup':
         this.router.navigateByUrl('popup', { skipLocationChange: true });
+        break;
+      case 'content-popup':
+        this.router.navigateByUrl('content-popup', {
+          skipLocationChange: true,
+        });
         break;
       case 'options':
         this.router.navigateByUrl('options', { skipLocationChange: true });
         break;
       default:
         this.logger.error('Invalid fragment ', fragment);
-        if (isDevMode()) {
-          this.router.navigateByUrl('content-popup', {
-            skipLocationChange: true,
-          });
-        }
     }
   }
 }
