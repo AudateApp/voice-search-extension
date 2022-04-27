@@ -13,7 +13,7 @@
       "32": "assets/images/icon-32x32.png"
     },
     "default_title": "Audate",
-    "default_popup": "index.html#popup"
+    "default_popup": "popup.html"
   },
   "icons": {
     "16": "assets/images/icon-16x16.png",
@@ -26,5 +26,6 @@
       "resources": ["index.html"],
       "matches": ["<all_urls>"]
     }
-  ]
+  ],
+  "options_page": "options.html"
 }

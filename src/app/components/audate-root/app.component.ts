@@ -34,18 +34,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.primengConfig.ripple = true;
     switch (this.invocationType) {
-      case InvocationType.BACKGROUND_PAGE:
-        this.router.navigate(['background']).then(
-          (result) => {
-            if (!result) {
-              console.error('Failed to navigate to background page');
-            }
-          },
-          (errorReason) => console.error(errorReason)
-        );
-        break;
       case InvocationType.OPTIONS_PAGE:
-        this.router.navigate(['options']).then(
+        this.router.navigate(['options.html']).then(
           (result) => {
             if (!result) {
               console.error('Failed to navigate to options page');
@@ -55,7 +45,7 @@ export class AppComponent implements OnInit {
         );
         break;
       case InvocationType.BROWSER_ACTION:
-        this.router.navigate(['popup']).then(
+        this.router.navigate(['popup.html']).then(
           (result) => {
             if (!result) {
               console.error('Failed to navigate to popup page');
@@ -65,17 +55,24 @@ export class AppComponent implements OnInit {
         );
         break;
       default:
-        console.error('Unhandled invocation type ', this.invocationType);
+        console.error(
+          'Unhandled invocation type ',
+          this.invocationType,
+          'route: ',
+          this.router.url
+        );
         if (this.invocationType == null && isDevMode()) {
           console.error('TODO: Remove using popup for development');
-          this.router.navigate(['popup']).then(
-            (result) => {
-              if (!result) {
-                console.error('Failed to navigate to popup page');
-              }
-            },
-            (errorReason) => console.error(errorReason)
-          );
+          this.router
+            .navigateByUrl('popup.html', { skipLocationChange: false })
+            .then(
+              (result) => {
+                if (!result) {
+                  console.error('Failed to navigate to popup page');
+                }
+              },
+              (errorReason) => console.error(errorReason)
+            );
         }
         break;
     }

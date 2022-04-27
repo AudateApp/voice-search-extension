@@ -7,21 +7,21 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
-    path: 'popup',
+    path: 'popup.html',
     component: PopupComponent,
   },
   {
-    path: 'background',
-    component: BackgroundPageComponent,
-  },
-  {
-    path: 'options',
+    path: 'options.html',
     component: OptionsPageComponent,
   },
   {
     path: '',
     component: AppComponent,
     pathMatch: 'full',
+  },
+  {
+    path: '**',
+    redirectTo: '',
   },
 ];
 
