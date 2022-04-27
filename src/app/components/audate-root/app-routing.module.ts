@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
-    path: 'popup.html',
+    path: 'popup',
     component: PopupComponent,
   },
   {
-    path: 'options.html',
+    path: 'options',
     component: OptionsPageComponent,
   },
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '',
+    component: AppComponent,
   },
 ];
 

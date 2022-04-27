@@ -1,15 +1,6 @@
-import {
-  Component,
-  ElementRef,
-  Input,
-  isDevMode,
-  OnChanges,
-  OnInit,
-  ViewEncapsulation,
-} from '@angular/core';
+import { Component, isDevMode, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
-import { InvocationType } from 'src/app/model/invocation-type';
 
 @Component({
   selector: 'audate-root',
@@ -20,61 +11,25 @@ import { InvocationType } from 'src/app/model/invocation-type';
 export class AppComponent implements OnInit {
   title = 'audate';
   display: boolean = true;
-  @Input() invocationType: InvocationType;
 
-  constructor(
-    private router: Router,
-    private elementRef: ElementRef,
-    private primengConfig: PrimeNGConfig
-  ) {
-    this.invocationType =
-      elementRef.nativeElement.getAttribute('invocationType');
-  }
+  constructor(private router: Router, private primengConfig: PrimeNGConfig) {}
 
   ngOnInit() {
     this.primengConfig.ripple = true;
-    switch (this.invocationType) {
-      case InvocationType.OPTIONS_PAGE:
-        this.router.navigate(['options.html']).then(
-          (result) => {
-            if (!result) {
-              console.error('Failed to navigate to options page');
-            }
-          },
-          (errorReason) => console.error(errorReason)
-        );
+    const fragment = window.location.href.split('#')[1];
+    switch (fragment) {
+      case 'popup':
+        this.router.navigateByUrl('popup', { skipLocationChange: true });
         break;
-      case InvocationType.BROWSER_ACTION:
-        this.router.navigate(['popup.html']).then(
-          (result) => {
-            if (!result) {
-              console.error('Failed to navigate to popup page');
-            }
-          },
-          (errorReason) => console.error(errorReason)
-        );
+      case 'options':
+        this.router.navigateByUrl('options', { skipLocationChange: true });
         break;
       default:
-        console.error(
-          'Unhandled invocation type ',
-          this.invocationType,
-          'route: ',
-          this.router.url
-        );
-        if (this.invocationType == null && isDevMode()) {
+        console.error('Invalid fragment ', fragment);
+        if (isDevMode()) {
           console.error('TODO: Remove using popup for development');
-          this.router
-            .navigateByUrl('popup.html', { skipLocationChange: false })
-            .then(
-              (result) => {
-                if (!result) {
-                  console.error('Failed to navigate to popup page');
-                }
-              },
-              (errorReason) => console.error(errorReason)
-            );
+          this.router.navigateByUrl('popup', { skipLocationChange: true });
         }
-        break;
     }
   }
 
