@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContentPopupComponent } from '../content-popup/content-popup.component';
 import { OptionsPageComponent } from '../options-page/options-page.component';
 import { PopupComponent } from '../popup/popup.component';
 import { AppComponent } from './app.component';
@@ -8,6 +9,10 @@ const routes: Routes = [
   {
     path: 'popup',
     component: PopupComponent,
+  },
+  {
+    path: 'content-popup',
+    component: ContentPopupComponent,
   },
   {
     path: 'options',

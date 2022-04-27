@@ -11,8 +11,6 @@ import { LoggingService } from 'src/app/services/logging/logging.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {
-  title = 'audate';
-  display: boolean = true;
   logger: Logger;
 
   constructor(
@@ -36,13 +34,10 @@ export class AppComponent implements OnInit {
       default:
         this.logger.error('Invalid fragment ', fragment);
         if (isDevMode()) {
-          this.logger.error('TODO: Remove using popup for development');
-          this.router.navigateByUrl('popup', { skipLocationChange: true });
+          this.router.navigateByUrl('content-popup', {
+            skipLocationChange: true,
+          });
         }
     }
-  }
-
-  showDialog() {
-    this.display = true;
   }
 }

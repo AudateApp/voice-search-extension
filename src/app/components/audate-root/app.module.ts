@@ -15,6 +15,7 @@ import { AudioWavesComponent } from '../audio-waves/audio-waves.component';
 import { QuickSettingsComponent } from '../quick-settings/quick-settings.component';
 import { FormsModule } from '@angular/forms';
 import { OptionsPageComponent } from '../options-page/options-page.component';
+import { ContentPopupComponent } from '../content-popup/content-popup.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { OptionsPageComponent } from '../options-page/options-page.component';
     AudioWavesComponent,
     QuickSettingsComponent,
     OptionsPageComponent,
+    ContentPopupComponent,
   ],
   imports: [
     BrowserModule,
