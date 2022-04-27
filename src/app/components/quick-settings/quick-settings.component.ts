@@ -12,6 +12,8 @@ import {
 import { InputDeviceService } from 'src/app/services/input-device.service';
 import { LocaleService } from 'src/app/services/locale/locale.service';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
+import { LoggingService } from 'src/app/services/logging/logging.service';
+import { Logger } from 'src/app/services/logging/logger';
 
 @Component({
   selector: 'audate-quick-settings',
@@ -19,6 +21,7 @@ import { SearchEngineService } from 'src/app/services/search-engine.service';
   styleUrls: ['./quick-settings.component.scss'],
 })
 export class QuickSettingsComponent implements OnInit {
+  logger: Logger;
   locales: LocaleProperties[] = LocalesForDefaultModel;
   currentLocale: LocaleProperties = DefaultLocale;
 
@@ -27,6 +30,15 @@ export class QuickSettingsComponent implements OnInit {
 
   inputDevices: MediaDeviceInfo[] = [];
   currentInputDevice?: MediaDeviceInfo;
+  NO_DEFAULT_INPUT_DEVICE: MediaDeviceInfo = {
+    label: 'No Default Input Device',
+    kind: 'audioinput',
+    groupId: '',
+    deviceId: '',
+    toJSON: function () {
+      throw new Error('Function not implemented.');
+    },
+  };
 
   activeSection: string = 'quick-settings';
 
@@ -34,8 +46,11 @@ export class QuickSettingsComponent implements OnInit {
     private localeService: LocaleService,
     private searchEngineService: SearchEngineService,
     private inputDeviceService: InputDeviceService,
-    private ref: ChangeDetectorRef
-  ) {}
+    private ref: ChangeDetectorRef,
+    loggingService: LoggingService
+  ) {
+    this.logger = loggingService.getLogger('quick-settings');
+  }
 
   ngOnInit(): void {
     this.localeService.getRecognitionLocale().subscribe((locale) => {
@@ -55,7 +70,10 @@ export class QuickSettingsComponent implements OnInit {
         this.ref.detectChanges();
       },
       (error) => {
-        console.error(error);
+        this.logger.error(error);
+        if (!this.currentInputDevice) {
+          this.currentInputDevice = this.NO_DEFAULT_INPUT_DEVICE;
+        }
       }
     );
   }

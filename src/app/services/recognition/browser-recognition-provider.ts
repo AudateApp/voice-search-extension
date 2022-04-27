@@ -233,7 +233,6 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
   };
 
   start(isContinuous: boolean): void {
-    console.error('#start');
     if (this.recognition) {
       this.logger.log('stopping recognition');
       this.recognition.abort();
