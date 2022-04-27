@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BackgroundPageComponent } from '../background-page/background-page.component';
 import { OptionsPageComponent } from '../options-page/options-page.component';
 import { PopupComponent } from '../popup/popup.component';
 import { AppComponent } from './app.component';

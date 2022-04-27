@@ -14,7 +14,6 @@ import { TranscriptComponent } from '../transcript/transcript.component';
 import { AudioWavesComponent } from '../audio-waves/audio-waves.component';
 import { QuickSettingsComponent } from '../quick-settings/quick-settings.component';
 import { FormsModule } from '@angular/forms';
-import { BackgroundPageComponent } from '../background-page/background-page.component';
 import { OptionsPageComponent } from '../options-page/options-page.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { OptionsPageComponent } from '../options-page/options-page.component';
     TranscriptComponent,
     AudioWavesComponent,
     QuickSettingsComponent,
-    BackgroundPageComponent,
     OptionsPageComponent,
   ],
   imports: [
