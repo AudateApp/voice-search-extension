@@ -8,7 +8,7 @@ import { RecognitionService } from 'src/app/services/recognition/recognition.ser
   styleUrls: ['./transcript.component.scss'],
 })
 export class TranscriptComponent implements OnInit {
-  idleMessage = 'Click start to speaking';
+  idleMessage = 'Click ⓞ to start speaking';
   idleTimeoutMs = 1000;
   idleTimeout?: any | null = null;
   message?: string = this.idleMessage;
