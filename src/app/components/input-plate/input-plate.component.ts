@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { State } from '../../services/recognition/recognition-state';
 import { RecognitionService } from '../../services/recognition/recognition.service';
 
@@ -18,19 +19,22 @@ import { RecognitionService } from '../../services/recognition/recognition.servi
 export class InputPlateComponent implements OnInit {
   listening = false;
   showSettings = false;
+  idleTimeoutMs = 1000;
 
   constructor(
+    private router: Router,
     private speechRecognizer: RecognitionService,
     private ref: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
-    let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
       switch (rstate.state) {
         case State.UNKNOWN:
         case State.NOT_SUPPORTED:
         case State.PERMISSION_NOT_GRANTED:
+          this.requestPermissions();
+          break;
         case State.LANGUAGE_NOT_SUPPORTED:
         case State.SERVICE_NOT_ALLOWED:
         case State.NO_AUDIO_INPUT_DEVICE:
@@ -48,6 +52,13 @@ export class InputPlateComponent implements OnInit {
       }
       this.ref.detectChanges();
     });
+  }
+
+  requestPermissions() {
+    setTimeout(
+      () => this.router.navigate(['request-permissions']),
+      this.idleTimeoutMs
+    );
   }
 
   micTap(): void {

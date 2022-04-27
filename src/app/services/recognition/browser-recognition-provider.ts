@@ -170,7 +170,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
       case 'not-allowed':
         this.recognitionState = {
           state: State.PERMISSION_NOT_GRANTED,
-          errorMessage: 'Microphone permission not granted.',
+          errorMessage: 'Cannot access microphone.\nRequesting permission...',
         };
         break;
       case 'network':
