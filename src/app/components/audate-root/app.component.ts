@@ -1,6 +1,8 @@
 import { Component, isDevMode, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
+import { Logger } from 'src/app/services/logging/logger';
+import { LoggingService } from 'src/app/services/logging/logging.service';
 
 @Component({
   selector: 'audate-root',
@@ -11,8 +13,15 @@ import { PrimeNGConfig } from 'primeng/api';
 export class AppComponent implements OnInit {
   title = 'audate';
   display: boolean = true;
+  logger: Logger;
 
-  constructor(private router: Router, private primengConfig: PrimeNGConfig) {}
+  constructor(
+    private router: Router,
+    private primengConfig: PrimeNGConfig,
+    loggingService: LoggingService
+  ) {
+    this.logger = loggingService.getLogger('audate-root');
+  }
 
   ngOnInit() {
     this.primengConfig.ripple = true;
@@ -25,9 +34,9 @@ export class AppComponent implements OnInit {
         this.router.navigateByUrl('options', { skipLocationChange: true });
         break;
       default:
-        console.error('Invalid fragment ', fragment);
+        this.logger.error('Invalid fragment ', fragment);
         if (isDevMode()) {
-          console.error('TODO: Remove using popup for development');
+          this.logger.error('TODO: Remove using popup for development');
           this.router.navigateByUrl('popup', { skipLocationChange: true });
         }
     }

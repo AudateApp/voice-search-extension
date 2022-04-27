@@ -5,6 +5,8 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { Logger } from 'src/app/services/logging/logger';
+import { LoggingService } from 'src/app/services/logging/logging.service';
 import { State } from 'src/app/services/recognition/recognition-state';
 import { RecognitionService } from 'src/app/services/recognition/recognition.service';
 import { AudioWave } from './audio-wave';
@@ -18,16 +20,19 @@ export class AudioWavesComponent
   extends AudioWave
   implements OnInit, AfterViewInit
 {
+  logger: Logger;
+
   @ViewChild('waveCanvas') canvasView: any;
   constructor(
     private speechRecognizer: RecognitionService,
-    private ref: ChangeDetectorRef
+    private ref: ChangeDetectorRef,
+    loggingService: LoggingService
   ) {
     super();
+    this.logger = loggingService.getLogger('audio-waves');
   }
 
   ngOnInit(): void {
-    let count = 1;
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
       switch (rstate.state) {
         case State.START:
@@ -66,7 +71,7 @@ export class AudioWavesComponent
 
   ngAfterViewInit() {
     if (!this.init(this.canvasView.nativeElement)) {
-      console.error('Unable to initialize audio waves');
+      this.logger.error('Unable to initialize audio waves');
     }
   }
 
