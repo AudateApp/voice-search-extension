@@ -34,20 +34,14 @@ export class AppComponent implements OnInit {
    */
   addExtensionRedirects() {
     const fragment = window.location.href.split('#')[1];
-    switch (fragment) {
-      case 'popup':
-        this.router.navigateByUrl('popup', { skipLocationChange: true });
-        break;
-      case 'content-popup':
-        this.router.navigateByUrl('content-popup', {
-          skipLocationChange: true,
-        });
-        break;
-      case 'options':
-        this.router.navigateByUrl('options', { skipLocationChange: true });
-        break;
-      default:
-        this.logger.error('Invalid fragment ', fragment);
+    const matchingRoute = this.router.config
+      .map((r) => r.path)
+      .find((p) => p === fragment);
+
+    if (matchingRoute) {
+      this.router.navigateByUrl(fragment, { skipLocationChange: true });
+    } else {
+      this.logger.error('Invalid fragment ', fragment);
     }
   }
 }
