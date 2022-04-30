@@ -39,7 +39,18 @@
               "node_modules/primeicons/primeicons.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "src/chrome/content-script.ts",
+                "inject": false,
+                "bundleName": "content-script"
+              },
+              {
+                "input": "src/chrome/service-worker.ts",
+                "inject": false,
+                "bundleName": "service-worker"
+              }
+            ]
           },
           "configurations": {
             "production": {
