@@ -27,5 +27,16 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "options_page": "index.html#options"
+  "options_page": "index.html#options",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "all_frames": true,
+      "js": ["content-script.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  }
 }
