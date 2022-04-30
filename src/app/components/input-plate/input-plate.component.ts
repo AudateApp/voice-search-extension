@@ -6,6 +6,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { Router } from '@angular/router';
+import { getUrlForPath } from 'src/app/utils/util';
 import { State } from '../../services/recognition/recognition-state';
 import { RecognitionService } from '../../services/recognition/recognition.service';
 
@@ -55,10 +56,10 @@ export class InputPlateComponent implements OnInit {
   }
 
   requestPermissions() {
-    setTimeout(
-      () => this.router.navigate(['request-permissions']),
-      this.idleTimeoutMs
-    );
+    setTimeout(() => {
+      const url = getUrlForPath('request-permissions');
+      chrome.tabs.create({ url: url });
+    }, this.idleTimeoutMs);
   }
 
   micTap(): void {
