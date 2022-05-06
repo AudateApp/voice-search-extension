@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
@@ -17,7 +18,7 @@ import { RecognitionService } from '../../services/recognition/recognition.servi
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })
-export class InputPlateComponent implements OnInit {
+export class InputPlateComponent implements OnInit, AfterViewInit {
   listening = false;
   showSettings = false;
   idleTimeoutMs = 1000;
@@ -53,6 +54,11 @@ export class InputPlateComponent implements OnInit {
       }
       this.ref.detectChanges();
     });
+  }
+
+  ngAfterViewInit(): void {
+    // Trigger mic tap.
+    this.micTap();
   }
 
   requestPermissions() {
