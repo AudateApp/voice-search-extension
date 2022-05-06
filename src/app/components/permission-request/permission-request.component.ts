@@ -8,17 +8,34 @@ import { Component } from '@angular/core';
 export class PermissionRequestComponent {
   constructor() {}
 
+  /*
+   * Also request permissions to display popups,
+   * This is necessary for opening search from content script.
+   */
   requestPermission() {
     navigator.mediaDevices
       .getUserMedia({ video: false, audio: true })
       .then((stream) => {
-        (window as any).localStream = stream; // A
-        (window as any).localAudio.srcObject = stream; // B
-        (window as any).localAudio.autoplay = true; // C
+        console.log('Perimission granted ', stream);
       })
       .catch((err) => {
-        // Check error to see if dismissed or denied.
-        console.log('Permission not granted' + err);
+        /*
+         * TODO: Handle errors:
+         *
+         * Chrome error messages.
+         * err: DOMException: Permission denied
+         * err: DOMException: Permission dismissed
+         * err: DOMException: Permission denied by system // browser doesn't have access
+         *
+         * Firefox:
+         * err: DOMException: The request is not allowed by the user agent or the platform in the current context.
+         * err: DOMException: The object can not be found here - (the browser doesn't have mic permission).
+         *
+         * Safari:
+         * err: NotAllowedError: The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+         *
+         */
+        console.log('Error requesting permission ', err);
       });
   }
 }
