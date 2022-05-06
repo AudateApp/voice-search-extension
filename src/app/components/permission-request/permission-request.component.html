@@ -1,6 +1,11 @@
 <div class="wrapper">
-  <i class="pi pi-check"></i>
-  <h5>Enable Microphone</h5>
-  <p>We need microphone access to record audio for transcription.</p>
-  <button class="pi-btn" (click)="requestPermission()">Grant permission</button>
+  <section class="logo">
+    <img src="../../../assets/images/logo-128x128.png" />
+  </section>
+  <section class="content">
+    <p>We need microphone access to record audio for transcription.</p>
+    <button pRipple class="p-button" (click)="requestPermission()">
+      Grant permission
+    </button>
+  </section>
 </div>
