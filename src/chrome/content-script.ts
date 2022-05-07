@@ -8,6 +8,7 @@ function insertPopup() {
   shadow.innerHTML = `
     <iframe 
         part="audate-frame" 
+        allow=""microphone *;"
         src="chrome-extension://${environment.extensionId}/index.html#content-popup"
     ></iframe>`;
   document.body.appendChild(audateWrapper);
