@@ -1,4 +1,4 @@
-import { Component, isDevMode, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
 import { Logger } from 'src/app/services/logging/logger';

@@ -4,7 +4,7 @@ import { RecognitionState } from './recognition-state';
 
 export class GoogleRecognitionProvider implements RecognitionProvider {
   // Start speech recognition.
-  start(isContinuous: boolean): void {}
+  start(unusedIsContinuous: boolean): void {}
 
   // Stop speech recognition.
   stop(): void {}

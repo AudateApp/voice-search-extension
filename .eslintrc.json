@@ -47,9 +47,6 @@
             "varsIgnorePattern": "unused",
             "argsIgnorePattern": "unused"
           }
-        ],
-        "max-len": [
-          "warn"
         ]
       }
     },

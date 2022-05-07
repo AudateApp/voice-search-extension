@@ -1,4 +1,4 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable, share, Subject } from 'rxjs';
 import { RecognitionState, State } from './recognition-state';
 import { DefaultLocale, LocaleProperties } from '../locale/locale-properties';
