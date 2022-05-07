@@ -13,4 +13,11 @@ function insertPopup() {
     ></iframe>`;
   document.body.appendChild(audateWrapper);
 }
-insertPopup();
+
+/*
+ * Mic access doesn't yet work with native recognition service.
+ * Enable this after custom STT APIs implemented.
+ */
+if (!environment.production) {
+  insertPopup();
+}
