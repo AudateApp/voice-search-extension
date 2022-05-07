@@ -7,9 +7,7 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts",
-    "src/chrome/content-script.ts",
-    "src/chrome/service-worker.ts",
+    "src/polyfills.ts"
   ],
   "include": [
     "src/**/*.d.ts"
