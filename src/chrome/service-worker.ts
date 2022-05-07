@@ -1,11 +1,12 @@
+import { environment } from '../environments/environment';
 import { StorageMessage } from 'src/shared/storage-message';
 import { ChromeStorageProvider } from '../shared/chrome-storage-provider';
 import { ContextMenu } from './context-menu';
 
 new ContextMenu().init();
 
-const uninstallUrl = 'https://justiceo.github.io/audate-ui/uninstall.html';
-const welcomeUrl = 'https://justiceo.github.io/audate-ui/welcome.html';
+const uninstallUrl = 'https://justiceo.github.io/speak/uninstall.html';
+const welcomeUrl = `chrome-extension://${environment.extensionId}/index.html#request-permissions`;
 
 const onInstalled = (details: chrome.runtime.InstalledDetails) => {
   // On fresh install, open page how to use extension.

@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "start:chrome": "gulp ChromeDemo",
     "start:firefox": "web-ext run --source-dir ./extension/",
-    "package": "ng build --configuration=production && zip -r dist/audate.zip dist/audate",
+    "package": "ng build --configuration=production && webpack --config webpack.config.js --env production && zip -r dist/audate.zip dist/audate",
     "prettier": "prettier --write \"src/**/*.{js,json,css,scss,less,md,ts,html}\""
   },
   "private": true,
