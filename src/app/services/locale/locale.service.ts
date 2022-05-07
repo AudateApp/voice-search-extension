@@ -25,11 +25,11 @@ export class LocaleService {
     this.logger = loggingService.getLogger('LocaleService');
 
     // Fetch and broadcast saved locale, set it if not available.
-    this.getLocale().then((locale) => {
+    this.getSavedLocale().then((locale) => {
       if (locale) {
         this.localeSubject$.next(locale);
       } else {
-        this.setRecognitionLocale(DefaultLocale);
+        this.setRecognitionLocale(LocaleService.getDefaultLocale());
       }
     });
   }
@@ -45,7 +45,6 @@ export class LocaleService {
       },
       (error) => {
         this.logger.error(error);
-        this.localeSubject$.error(error);
       }
     );
   }
@@ -61,7 +60,7 @@ export class LocaleService {
    * If it is not set, set it to default locale.
    * @return {string} a BCP-47 locale.
    */
-  private getLocale(): Promise<LocaleProperties> {
+  private getSavedLocale(): Promise<LocaleProperties> {
     return this.storageService.get('voice_recognition_locale').then(
       (locale: any) => {
         this.logger.log('#getRecognitionLocale() :', locale);
