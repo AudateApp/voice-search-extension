@@ -23,8 +23,14 @@ export class LocaleService {
     private storageService: StorageService
   ) {
     this.logger = loggingService.getLogger('LocaleService');
-    this.getLocale().then((l) => {
-      this.localeSubject$.next(l);
+
+    // Fetch and broadcast saved locale, set it if not available.
+    this.getLocale().then((locale) => {
+      if (locale) {
+        this.localeSubject$.next(locale);
+      } else {
+        this.setRecognitionLocale(DefaultLocale);
+      }
     });
   }
   /**
@@ -33,7 +39,7 @@ export class LocaleService {
    * @param {string} locale
    */
   setRecognitionLocale(locale: LocaleProperties) {
-    this.storageService.put('locale', locale).then(
+    this.storageService.put('voice_recognition_locale', locale).then(
       () => {
         this.localeSubject$.next(locale);
       },
