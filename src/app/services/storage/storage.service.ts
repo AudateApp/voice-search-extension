@@ -17,10 +17,10 @@ import { StorageProvider } from '../../../shared/storage-provider';
 export class StorageService implements StorageProvider {
   storageProvider: StorageProvider;
   constructor(private router: Router) {
-    if (this.router.url == '/popup') {
-      this.storageProvider = new RelayStorageProvider();
-    } else if (this.router.url === '/background') {
+    if (chrome?.storage?.sync) {
       this.storageProvider = new ChromeStorageProvider();
+    } else if (this.router.url == '/popup') {
+      this.storageProvider = new RelayStorageProvider();
     } else {
       this.storageProvider = new LocalStorageProvider();
     }

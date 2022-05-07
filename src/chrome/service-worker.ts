@@ -1,3 +1,5 @@
+import { StorageMessage } from 'src/shared/storage-message';
+import { ChromeStorageProvider } from '../shared/chrome-storage-provider';
 import { ContextMenu } from './context-menu';
 
 new ContextMenu().init();
@@ -34,3 +36,38 @@ const onInstalled = (details: chrome.runtime.InstalledDetails) => {
   });
 };
 chrome.runtime.onInstalled.addListener(onInstalled);
+
+const storageProvider = new ChromeStorageProvider();
+const onMessage = (
+  message: StorageMessage,
+  sender: chrome.runtime.MessageSender,
+  callback: (response?: any) => void
+) => {
+  console.error('received message: ', message, ' from: ', sender);
+  // TODO Ensure sender.id is this extension. Confirm works for content-script.
+  switch (message.type) {
+    case 'save':
+      storageProvider.put(message.key!, /* canDefer=*/ message.value).then(
+        (response) => callback(response),
+        (errorReason) => callback(new Error(errorReason))
+      );
+      break;
+    case 'read':
+      storageProvider.get(message.key!).then(
+        (value) => callback(value),
+        (errorReason) => callback(new Error(errorReason))
+      );
+      break;
+    case 'read_all':
+      storageProvider.getAll().then(
+        (response) => callback(response),
+        (errorReason) => callback(new Error(errorReason))
+      );
+      break;
+    default:
+      callback(new Error('Undefined message type: ' + message.type));
+      break;
+  }
+};
+
+chrome.runtime.onMessage.addListener(onMessage);
