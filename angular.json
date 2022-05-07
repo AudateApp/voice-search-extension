@@ -1,3 +1,4 @@
+// Full schema - https://github.com/angular/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/browser/schema.json
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
