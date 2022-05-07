@@ -32,8 +32,7 @@
     {
       "matches": ["http://*/*", "https://*/*"],
       "all_frames": true,
-      "js": ["content-script.js"],
-      "css": ["styles.css"]
+      "js": ["content-script.js"]
     }
   ],
   "background": {
