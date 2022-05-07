@@ -1,8 +1,8 @@
+import { environment } from 'src/environments/environment';
 import { StorageProvider } from '../../../shared/storage-provider';
 import { StorageMessage } from '../../../shared/storage-message';
 
 export class RelayStorageProvider implements StorageProvider {
-  EXTENSION_ID = 'hcihgccndneebcppakmppfdolodldpge';
   put(key: string, value: any): Promise<void> {
     return this.sendMessage({
       key: key,
@@ -35,7 +35,7 @@ export class RelayStorageProvider implements StorageProvider {
       resolve = _resolve;
       reject = _reject;
     });
-    chrome.runtime.sendMessage(this.EXTENSION_ID, message, (response) => {
+    chrome.runtime.sendMessage(environment.extensionId, message, (response) => {
       // Handle platform errors.
       if (chrome.runtime.lastError) {
         reject(chrome.runtime.lastError.message);
