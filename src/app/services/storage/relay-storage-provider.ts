@@ -1,5 +1,5 @@
-import { StorageProvider } from './storage-provider';
-import { StorageMessage } from './storage-message';
+import { StorageProvider } from '../../../shared/storage-provider';
+import { StorageMessage } from '../../../shared/storage-message';
 
 export class RelayStorageProvider implements StorageProvider {
   EXTENSION_ID = 'hcihgccndneebcppakmppfdolodldpge';

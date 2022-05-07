@@ -1,4 +1,4 @@
-import { StorageProvider } from './storage-provider';
+import { StorageProvider } from '../../../shared/storage-provider';
 
 /** Fallback storage for development and testing. */
 export class LocalStorageProvider implements StorageProvider {
