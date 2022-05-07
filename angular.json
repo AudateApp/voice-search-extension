@@ -31,8 +31,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.json",
-              "src/popup.html",
-              "src/options.html"
+              "src/content-style.css"
             ],
             "styles": [
               "node_modules/primeng/resources/themes/saga-blue/theme.css",

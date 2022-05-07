@@ -1,0 +1,11 @@
+.audate-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  z-index: -1;
+}
+.audate-wrapper::part(audate-frame) {
+  height: 500px;
+  border: 0px;
+}
