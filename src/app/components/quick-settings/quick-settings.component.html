@@ -22,7 +22,9 @@
   [hidden]="activeSection !== 'language'"
   class="listbox language-selection"
 >
-  <p class="header">choose a language</p>
+  <p class="header" (click)="activeSection = 'quick-settings'">
+    <i class="selected pi pi-angle-left"></i> Go back
+  </p>
   <div class="items">
     <p
       class="item"
@@ -39,7 +41,9 @@
   [hidden]="activeSection !== 'search-engine'"
   class="listbox search-engine-selection"
 >
-  <p class="header">choose a search engine</p>
+  <p class="header" (click)="activeSection = 'quick-settings'">
+    <i class="selected pi pi-angle-left"></i> Go back
+  </p>
   <div class="items">
     <p
       class="item"
@@ -57,7 +61,9 @@
   [hidden]="activeSection !== 'microphone'"
   class="listbox microphone-selection"
 >
-  <p class="header">choose a microphone</p>
+  <p class="header" (click)="activeSection = 'quick-settings'">
+    <i class="selected pi pi-angle-left"></i> Go back
+  </p>
   <div class="items">
     <p
       class="item"

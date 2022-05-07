@@ -49,6 +49,10 @@ hr {
     padding-left: 20px;
     font-size: 0.8rem;
     font-weight: 200;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 
   .items {
