@@ -1,4 +1,4 @@
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 
 /*
  * Set up context menu (right-click menu) for different conexts.
@@ -64,5 +64,3 @@ export class ContextMenu {
     }
   };
 }
-
-new ContextMenu().init();

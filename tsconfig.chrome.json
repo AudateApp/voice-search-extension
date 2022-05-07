@@ -7,8 +7,8 @@
             "chrome"
         ]
     },
-    "files": [
-        "src/chrome/content-script.ts",
-        "src/chrome/service-worker.ts"
+    "include": [
+        "src/chrome/*.ts",
+        "src/environments/*.ts",
     ],
 }
