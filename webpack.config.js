@@ -13,8 +13,8 @@ module.exports = (env) => {
   const config = {
     mode: mode,
     entry: {
-      content_script: join(__dirname, "src/chrome/content-script.ts"),
-      service_worker: join(__dirname, "src/chrome/service-worker.ts"),
+      "content-script": join(__dirname, "src/chrome/content-script.ts"),
+      "service-worker": join(__dirname, "src/chrome/service-worker.ts"),
     },
     module: {
       rules: [
