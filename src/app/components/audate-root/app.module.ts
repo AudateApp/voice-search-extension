@@ -10,7 +10,7 @@ import * as Sentry from '@sentry/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PopupComponent } from '../popup/popup.component';
+import { VoiceSearchComponent } from '../voice-search/voice-search.component';
 import { InputPlateComponent } from '../input-plate/input-plate.component';
 import { TranscriptComponent } from '../transcript/transcript.component';
 import { AudioWavesComponent } from '../audio-waves/audio-waves.component';
@@ -23,7 +23,7 @@ import { Router } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    PopupComponent,
+    VoiceSearchComponent,
     InputPlateComponent,
     TranscriptComponent,
     AudioWavesComponent,

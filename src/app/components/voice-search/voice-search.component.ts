@@ -4,11 +4,11 @@ import { State } from '../../services/recognition/recognition-state';
 import { RecognitionService } from '../../services/recognition/recognition.service';
 
 @Component({
-  selector: 'audate-popup',
-  templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.scss'],
+  selector: 'audate-voice-search',
+  templateUrl: './voice-search.component.html',
+  styleUrls: ['./voice-search.component.scss'],
 })
-export class PopupComponent implements OnInit {
+export class VoiceSearchComponent implements OnInit {
   finalTrascript?: string;
 
   constructor(
