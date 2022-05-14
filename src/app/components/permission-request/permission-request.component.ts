@@ -16,6 +16,9 @@ export class PermissionRequestComponent {
     navigator.mediaDevices
       .getUserMedia({ video: false, audio: true })
       .then((stream) => {
+        stream.getTracks().forEach((track) => {
+          track.stop();
+        });
         console.log('Perimission granted ', stream);
       })
       .catch((err) => {
