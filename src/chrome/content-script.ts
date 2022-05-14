@@ -19,5 +19,5 @@ function insertPopup() {
  * Enable this after custom STT APIs implemented.
  */
 if (!environment.production) {
-  insertPopup();
+  //   insertPopup();
 }
