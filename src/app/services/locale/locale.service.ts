@@ -95,6 +95,11 @@ export class LocaleService {
       navLocale = LocalesForDefaultModel.find(
         (l: LocaleProperties) => l.bcp_47 == navigator.language
       );
+    } else if (chrome?.i18n) {
+      const i18nLocale = chrome.i18n.getUILanguage();
+      navLocale = LocalesForDefaultModel.find(
+        (l: LocaleProperties) => l.bcp_47 == i18nLocale
+      );
     }
 
     if (navLocale) {
