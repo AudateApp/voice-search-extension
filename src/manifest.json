@@ -1,9 +1,13 @@
 {
-  "name": "Audate",
-  "description": "Bringing voice-forward experiences to the browser",
+  "name": "Audate - Voice Search",
+  "description": "Search the web with your voice",
   "homepage_url": "https://github.com/justiceo/audate",
   "version": "22.04.03",
   "manifest_version": 3,
+  "default_locale": "en",
+  "author": "Justice Ogbonna",
+  "short_name": "Audate",
+  // "content_security_policy": "",
   "permissions": ["storage"],
   "host_permissions": ["*://*/*"],
   "action": {
