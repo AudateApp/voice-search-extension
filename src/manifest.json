@@ -1,6 +1,6 @@
 {
-  "name": "Audate - Voice Search",
-  "description": "Search the web with your voice",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
   "homepage_url": "https://github.com/justiceo/audate",
   "version": "22.04.03",
   "manifest_version": 3,
