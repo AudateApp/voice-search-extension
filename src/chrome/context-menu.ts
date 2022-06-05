@@ -34,6 +34,11 @@ export class ContextMenu {
   init = () => {
     this.maybeAddReloadAction();
 
+    // Check if we can access context menus.
+    if (!chrome || !chrome.contextMenus) {
+      return;
+    }
+
     // Clear the menu.
     chrome.contextMenus.removeAll();
     // Add menu items.

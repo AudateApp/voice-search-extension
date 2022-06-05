@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./permission-request.component.scss'],
 })
 export class PermissionRequestComponent {
+  notice = '';
   constructor() {}
 
   /*
@@ -18,8 +19,12 @@ export class PermissionRequestComponent {
       .then((stream) => {
         stream.getTracks().forEach((track) => {
           track.stop();
+          // Wait a second then close the tab.
+          setTimeout(() => {
+            window.close();
+          }, 2000);
         });
-        console.log('Perimission granted ', stream);
+        this.notice = 'Permission Granted';
       })
       .catch((err) => {
         /*
@@ -39,6 +44,7 @@ export class PermissionRequestComponent {
          *
          */
         console.log('Error requesting permission ', err);
+        this.notice = 'Permission not granted';
       });
   }
 }
