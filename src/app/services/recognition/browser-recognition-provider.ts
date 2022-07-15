@@ -26,7 +26,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
   recognition!: any;
   locale: LocaleProperties = LocaleService.getDefaultLocale();
   recognitionState: RecognitionState = IdleState;
-  RecognitionState$: Subject<RecognitionState> = new Subject();
+  recognitionState$: Subject<RecognitionState> = new Subject();
   detectedSpeech: boolean = false;
   logger: Logger;
 
@@ -89,7 +89,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
     this.recognitionState = {
       state: State.START,
     };
-    this.RecognitionState$.next(this.recognitionState);
+    this.recognitionState$.next(this.recognitionState);
   };
 
   /** Fired when the user agent has started to capture audio. */
@@ -123,14 +123,14 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
     this.recognitionState = {
       state: State.END,
     };
-    this.RecognitionState$.next(this.recognitionState);
+    this.recognitionState$.next(this.recognitionState);
 
     if (!this.detectedSpeech) {
       this.recognitionState = {
         state: State.NO_SPEECH_DETECTED,
         errorMessage: 'No recognizable sound detected.',
       };
-      this.RecognitionState$.next(this.recognitionState);
+      this.recognitionState$.next(this.recognitionState);
     }
   };
 
@@ -143,7 +143,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
   #onEnd = () => {
     this.logger.log('#onEnd');
     this.recognitionState = IdleState;
-    this.RecognitionState$.next(this.recognitionState);
+    this.recognitionState$.next(this.recognitionState);
     this.recognition = null;
   };
 
@@ -207,7 +207,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
         };
         break;
     }
-    this.RecognitionState$.next(this.recognitionState);
+    this.recognitionState$.next(this.recognitionState);
   };
 
   /**
@@ -228,19 +228,20 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
           state: State.TRANSCRIBING,
           transcript: { finalText: finalContent },
         };
-        this.RecognitionState$.next(this.recognitionState);
+        this.recognitionState$.next(this.recognitionState);
       } else {
         interimContent += event.results[i][0].transcript;
         this.recognitionState = {
           state: State.TRANSCRIBING,
           transcript: { partialText: interimContent },
         };
-        this.RecognitionState$.next(this.recognitionState);
+        this.recognitionState$.next(this.recognitionState);
       }
     }
   };
 
   start(isContinuous: boolean): void {
+    this.start2(true);
     if (this.recognition) {
       this.logger.log('stopping recognition');
       this.recognition.abort();
@@ -257,7 +258,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
         state: state,
         errorMessage: 'Recognition not supported.',
       };
-      this.RecognitionState$.next(this.recognitionState);
+      this.recognitionState$.next(this.recognitionState);
       return;
     }
 
@@ -269,12 +270,42 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
       this.logger.error("Stopping recognition that isn't initialized");
       return;
     }
+    this.stop2();
 
     // Aborting instead of stopping prevents streaming results after closure.
     this.recognition.abort();
   }
 
   getRecognitionState(): Observable<RecognitionState> {
-    return this.RecognitionState$.asObservable().pipe(share());
+    return this.recognitionState$.asObservable().pipe(share());
+  }
+
+  mediaRecorder?: MediaRecorder;
+
+  // Start speech recognition.
+  start2(unusedIsContinuous: boolean): void {
+    navigator.mediaDevices
+      .getUserMedia({ video: false, audio: true })
+      .then((stream) => {
+        this.mediaRecorder = new MediaRecorder(stream);
+        this.mediaRecorder.start();
+        console.log('mediarecorder started');
+
+        this.mediaRecorder.ondataavailable = (e) => {
+          console.log('chunks: ', e.data);
+        };
+        this.mediaRecorder.onerror = (ev: MediaRecorderErrorEvent) => {
+          console.error('mediarecorder error: ', ev);
+        };
+      })
+      .catch((err) => {
+        console.log('Error requesting media devices ', err);
+      });
+  }
+
+  // Stop speech recognition.
+  stop2(): void {
+    this.mediaRecorder?.stop();
+    console.log('stopped mediarecorder');
   }
 }
