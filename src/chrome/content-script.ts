@@ -8,10 +8,12 @@ function insertPopup() {
   shadow.innerHTML = `
     <iframe 
         part="audate-frame" 
-        allow=""microphone *;"
+        allow="microphone *;"
         src="chrome-extension://${environment.extensionId}/index.html#content-popup"
     ></iframe>`;
-  document.body.appendChild(audateWrapper);
+  if (!inIframe()) {
+    document.body.appendChild(audateWrapper);
+  }
 }
 
 /*
@@ -19,5 +21,13 @@ function insertPopup() {
  * Enable this after custom STT APIs implemented.
  */
 if (!environment.production) {
-  //   insertPopup();
+  insertPopup();
+}
+
+function inIframe() {
+  try {
+    return window.self !== window.top;
+  } catch (e) {
+    return true;
+  }
 }
