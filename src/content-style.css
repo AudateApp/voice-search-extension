@@ -2,10 +2,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  background: red !important;
   padding: 20px;
-  z-index: -1;
-}
-.audate-wrapper::part(audate-frame) {
-  height: 500px;
-  border: 0px;
+  z-index: 1000;
 }

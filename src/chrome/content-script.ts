@@ -1,29 +1,20 @@
-import { environment } from '../environments/environment';
-
-function insertPopup() {
+/* This function inserts an Angular custom element (web component) into the DOM. */
+function insertCustomElement() {
   console.debug('inserting audate popup');
   const audateWrapper = document.createElement('div');
   audateWrapper.className = 'audate-wrapper';
   const shadow = audateWrapper.attachShadow({ mode: 'open' });
   shadow.innerHTML = `
-    <iframe 
-        part="audate-frame" 
-        allow="microphone *;"
-        src="chrome-extension://${environment.extensionId}/index.html#content-popup"
-    ></iframe>`;
+   <h1>Hello world</h1>`;
   if (!inIframe()) {
     document.body.appendChild(audateWrapper);
   }
 }
 
 /*
- * Mic access doesn't yet work with native recognition service.
- * Enable this after custom STT APIs implemented.
+ * Returns true if this script is running inside an iframe,
+ * since the content script is added to all frames.
  */
-if (!environment.production) {
-  insertPopup();
-}
-
 function inIframe() {
   try {
     return window.self !== window.top;
@@ -31,3 +22,5 @@ function inIframe() {
     return true;
   }
 }
+
+insertCustomElement();
