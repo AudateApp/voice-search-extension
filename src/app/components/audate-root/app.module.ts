@@ -27,7 +27,7 @@ import { OptionsPageComponent } from '../options-page/options-page.component';
 import { ContentPopupComponent } from '../content-popup/content-popup.component';
 import { PermissionRequestComponent } from '../permission-request/permission-request.component';
 import { Router } from '@angular/router';
-import { PageLoaderComponent } from '../../page-loader/page-loader.component';
+import { PageLoaderComponent } from '../page-loader/page-loader.component';
 
 @NgModule({
   declarations: [
