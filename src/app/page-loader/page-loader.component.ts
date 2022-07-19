@@ -5,7 +5,7 @@ import { PrimeNGConfig } from 'primeng/api';
   selector: 'audate-page-loader',
   templateUrl: './page-loader.component.html',
   styleUrls: ['./page-loader.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class PageLoaderComponent {
   constructor(private primengConfig: PrimeNGConfig) {}
