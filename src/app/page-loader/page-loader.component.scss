@@ -21,3 +21,8 @@ from inside it so including directly. */
 .p-dialog-content {
   padding: 0 !important;
 }
+
+iframe {
+  min-height: 700px;
+  border: none;
+}
