@@ -29,10 +29,20 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
+              "src/assets/icons",
+              "src/assets/images",
+              "src/assets/Inter-VariableFont.ttf",
               "src/_locales",
-              "src/manifest.json",
-              "src/content-style.css",
+              {
+                "glob": "manifest.json",
+                "input": "src/assets",
+                "output": "."
+              },
+              {
+                "glob": "content-style.css",
+                "input": "src/assets",
+                "output": "."
+              },
               {
                 "glob": "primeicons.css",
                 "input": "node_modules/primeicons",
