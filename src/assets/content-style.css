@@ -17,3 +17,13 @@ font definitions on the page. */
   font-weight: normal;
   font-style: normal;
 }
+
+.audate-floatie {
+  position: absolute;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+}

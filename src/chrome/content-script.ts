@@ -1,3 +1,5 @@
+import { computePosition } from '@floating-ui/dom';
+
 /* This function inserts an Angular custom element (web component) into the DOM. */
 function insertCustomElement() {
   if (inIframe()) {
@@ -42,4 +44,57 @@ function inIframe() {
   }
 }
 
-insertCustomElement();
+function addSearchButton(
+  reference: any,
+  floating: HTMLElement,
+  selectedText: string
+) {
+  console.error('adding button to', reference);
+  floating.innerHTML = 'Search for ' + selectedText;
+  computePosition(reference, floating, {
+    // Try changing this to a different side.
+    placement: 'top',
+  }).then(({ x, y }) => {
+    Object.assign(floating.style, {
+      top: `${y}px`,
+      left: `${x}px`,
+    });
+  });
+}
+
+function maybeSuggestSearch(floating: HTMLElement) {
+  if (typeof window.getSelection == 'undefined') {
+    console.error('No selection');
+    return;
+  }
+  const selection = window.getSelection()!;
+  if (selection.isCollapsed) {
+    console.error('Collapsed selection');
+    return;
+  }
+
+  console.log('selected: ', selection.toString());
+  addSearchButton(
+    window.getSelection()!.focusNode!.parentElement,
+    floating,
+    window.getSelection()!.toString()
+  );
+}
+
+function init() {
+  // Add floating UI to the DOM.
+  const floating = document.createElement('div');
+  floating.innerHTML = 'Search for';
+  floating.className = 'audate-floatie';
+  floating.onclick = (e) => {
+    insertCustomElement();
+  };
+  // TODO: Hide this at first.
+  document.body.appendChild(floating);
+
+  // Listen for all mouse/key up events and suggest search if there's a selection.
+  document.onmouseup = () => maybeSuggestSearch(floating);
+  document.onkeyup = () => maybeSuggestSearch(floating);
+}
+
+init();
