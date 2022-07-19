@@ -1,8 +1,23 @@
-.audate-wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: red !important;
-  padding: 20px;
-  z-index: 1000;
+/* Styles added here affect every page the extension is loaded on
+ * Use this style sparingly and with justification. */
+
+/* It is currently not possible to load fonts in ShadowDom or web components, 
+the existing hack is adding it to the parent document, which this css file achieves.
+
+The rule below defines a new font primeicons and does not override any existing
+font definitions on the page. */
+@font-face {
+  font-family: "primeicons";
+  font-display: block;
+  src: url("primeicons.eot");
+  src: url("primeicons.eot?#iefix") format("embedded-opentype"),
+    url("primeicons.ttf") format("truetype"),
+    url("primeicons.woff") format("woff"),
+    url("primeicons.svg?#primeicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pi {
+  font-size: 1rem;
 }

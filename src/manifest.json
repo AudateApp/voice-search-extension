@@ -7,7 +7,6 @@
   "default_locale": "en",
   "author": "Justice Ogbonna",
   "short_name": "Audate",
-  // "content_security_policy": "",
   "permissions": ["storage"],
   "host_permissions": ["*://*/*"],
   "action": {
@@ -28,6 +27,54 @@
   "web_accessible_resources": [
     {
       "resources": ["index.html"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["main.js"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["polyfills.js"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["runtime.js"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["vendor.js"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["assets/icons/google.svg"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["primeicons.eot"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["primeicons.svg"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["primeicons.ttf"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["primeicons.woff"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["content-style.css"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["primeicons.css"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["styles.css"],
       "matches": ["<all_urls>"]
     }
   ],

@@ -32,7 +32,12 @@
               "src/assets",
               "src/_locales",
               "src/manifest.json",
-              "src/content-style.css"
+              "src/content-style.css",
+              {
+                "glob": "primeicons.css",
+                "input": "node_modules/primeicons",
+                "output": "."
+              }
             ],
             "styles": [
               "node_modules/primeng/resources/themes/saga-blue/theme.css",

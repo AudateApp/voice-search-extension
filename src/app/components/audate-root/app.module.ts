@@ -1,7 +1,15 @@
-import { ErrorHandler, NgModule } from '@angular/core';
+import {
+  ApplicationRef,
+  DoBootstrap,
+  ErrorHandler,
+  Injector,
+  NgModule,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { createCustomElement } from '@angular/elements';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
@@ -19,6 +27,7 @@ import { OptionsPageComponent } from '../options-page/options-page.component';
 import { ContentPopupComponent } from '../content-popup/content-popup.component';
 import { PermissionRequestComponent } from '../permission-request/permission-request.component';
 import { Router } from '@angular/router';
+import { PageLoaderComponent } from '../../page-loader/page-loader.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +40,7 @@ import { Router } from '@angular/router';
     OptionsPageComponent,
     ContentPopupComponent,
     PermissionRequestComponent,
+    PageLoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,12 +62,24 @@ import { Router } from '@angular/router';
       provide: Sentry.TraceService,
       deps: [Router],
     },
+    {
+      provide: APP_BASE_HREF,
+      useValue: '/',
+    },
   ],
-  bootstrap: [AppComponent],
+  entryComponents: [PageLoaderComponent],
 })
-export class AppModule {
+export class AppModule implements DoBootstrap {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  constructor(trace: Sentry.TraceService) {
-    // myUndefinedFunction();
+  constructor(private injector: Injector, trace: Sentry.TraceService) {}
+  ngDoBootstrap(appRef: ApplicationRef) {
+    if (document.querySelector('audate-root')) {
+      appRef.bootstrap(AppComponent);
+    }
+
+    const el = createCustomElement(PageLoaderComponent, {
+      injector: this.injector,
+    });
+    customElements.define('audate-page-loader', el);
   }
 }
