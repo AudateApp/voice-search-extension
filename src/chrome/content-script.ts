@@ -1,4 +1,5 @@
 import { computePosition } from '@floating-ui/dom';
+import { Message } from 'src/shared/message';
 
 /* This function inserts an Angular custom element (web component) into the DOM. */
 function insertCustomElement() {
@@ -81,6 +82,22 @@ function maybeSuggestSearch(floating: HTMLElement) {
   );
 }
 
+function setUpVoiceSearchListener() {
+  const onMessage = (
+    message: Message,
+    sender: chrome.runtime.MessageSender,
+    callback: (response?: any) => void
+  ) => {
+    console.error('received message: ', message, ' from: ', sender);
+    // TODO Ensure sender.id is this extension. Confirm works for content-script.
+    if (message.key == 'voice_search_query') {
+      insertCustomElement();
+      callback();
+    }
+  };
+  chrome.runtime.onMessage.addListener(onMessage);
+}
+
 function init() {
   // Add floating UI to the DOM.
   const floating = document.createElement('div');
@@ -95,6 +112,9 @@ function init() {
   // Listen for all mouse/key up events and suggest search if there's a selection.
   document.onmouseup = () => maybeSuggestSearch(floating);
   document.onkeyup = () => maybeSuggestSearch(floating);
+
+  // Listen for voice search from popup.
+  setUpVoiceSearchListener();
 }
 
 init();

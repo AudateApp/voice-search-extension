@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { logger } from '@sentry/utils';
 import { Observable, share, Subject } from 'rxjs';
 import { DefaultSearchEngine, SearchEngine } from '../model/search-engine';
 import { Logger } from './logging/logger';
@@ -12,6 +13,8 @@ export class SearchEngineService {
   logger: Logger;
   currentSearchEngine = DefaultSearchEngine;
   currentSearchEngine$: Subject<SearchEngine> = new Subject();
+  // TODO: Make this a setting.
+  shouldOpenInNewTab = false;
 
   constructor(
     private storageService: StorageService,
@@ -69,7 +72,27 @@ export class SearchEngineService {
       query
     );
 
-    // TODO: Make NewTab optional.
-    (window as any).open(url, '_blank').focus();
+    if (this.shouldOpenInNewTab) {
+      (window as any).open(url, '_blank').focus();
+    } else {
+      // Open the query as a preview in the current tab.
+      chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+        var activeTab = tabs[0];
+        if (!activeTab.id) {
+          logger.error('Active tab does not have an ID');
+          return;
+        }
+        chrome.tabs.sendMessage(
+          activeTab.id,
+          {
+            key: 'voice_search_query',
+            value: url,
+          },
+          () => {
+            // TODO: close popup.
+          }
+        );
+      });
+    }
   }
 }
