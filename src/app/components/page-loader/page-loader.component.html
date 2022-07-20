@@ -1,6 +1,6 @@
 <p-dialog
   position="top-right"
-  [visible]="true"
+  [visible]="isVisible"
   [maximizable]="true"
   [contentStyleClass]="focusClass"
   [baseZIndex]="10000"
@@ -11,6 +11,7 @@
   (onDragEnd)="onDragEnd($event)"
   (onHide)="onHide($event)"
   (onShow)="onShow($event)"
+  (visibleChange)="onVisibleChange($event)"
   (onMaximize)="onMaximize($event)"
 >
   <iframe

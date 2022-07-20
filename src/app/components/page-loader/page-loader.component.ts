@@ -10,6 +10,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class PageLoaderComponent {
   trustedUrl: any;
+  isVisible = true;
   focusClass = '';
   constructor(
     private primengConfig: PrimeNGConfig,
@@ -36,5 +37,8 @@ export class PageLoaderComponent {
   }
   onMaximize(e: any) {
     console.error('on max: ', e);
+  }
+  onVisibleChange(isVisible: boolean) {
+    this.isVisible = isVisible;
   }
 }
