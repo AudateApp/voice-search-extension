@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, ViewEncapsulation } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
@@ -8,7 +9,15 @@ import { PrimeNGConfig } from 'primeng/api';
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class PageLoaderComponent {
-  constructor(private primengConfig: PrimeNGConfig) {}
+  trustedUrl: any;
+  constructor(
+    private primengConfig: PrimeNGConfig,
+    elementRef: ElementRef,
+    sanitizer: DomSanitizer
+  ) {
+    const url = elementRef.nativeElement.getAttribute('url');
+    this.trustedUrl = sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
   onResizeStart(e: any) {
     console.error('resize start', e);
   }

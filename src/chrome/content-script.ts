@@ -2,7 +2,7 @@ import { computePosition } from '@floating-ui/dom';
 import { Message } from 'src/shared/message';
 
 /* This function inserts an Angular custom element (web component) into the DOM. */
-function insertCustomElement() {
+function insertCustomElement(url: string) {
   if (inIframe()) {
     return;
   }
@@ -16,7 +16,7 @@ function insertCustomElement() {
   document.body.appendChild(styleFragment);
 
   const tagString = `
-    <audate-page-loader></audate-page-loader>
+    <audate-page-loader url="${url}"></audate-page-loader>
     <script src="chrome-extension://cbihefficekhofanhbnofgkfhdkbhnkg/runtime.js"></script>
     <script src="chrome-extension://cbihefficekhofanhbnofgkfhdkbhnkg/polyfills.js"></script>
     <script src="chrome-extension://cbihefficekhofanhbnofgkfhdkbhnkg/vendor.js"></script>
@@ -52,6 +52,11 @@ function addSearchButton(
 ) {
   console.error('adding button to', reference);
   floating.innerHTML = 'Search for ' + selectedText;
+  chrome.runtime.sendMessage({
+    key: 'create_search_url_for_query',
+    value: selectedText,
+  });
+
   computePosition(reference, floating, {
     // Try changing this to a different side.
     placement: 'top',
@@ -91,21 +96,25 @@ function setUpVoiceSearchListener() {
     console.error('received message: ', message, ' from: ', sender);
     // TODO Ensure sender.id is this extension. Confirm works for content-script.
     if (message.key == 'voice_search_query') {
-      insertCustomElement();
+      insertCustomElement(message.value);
       callback();
+    }
+
+    if (message.key === 'encoded_search_url') {
+      floating.onclick = (unusedClick) => {
+        insertCustomElement(message.value);
+      };
     }
   };
   chrome.runtime.onMessage.addListener(onMessage);
 }
 
+// Add floating UI to the DOM.
+const floating = document.createElement('div');
+floating.innerHTML = 'Search for';
+floating.className = 'audate-floatie';
+
 function init() {
-  // Add floating UI to the DOM.
-  const floating = document.createElement('div');
-  floating.innerHTML = 'Search for';
-  floating.className = 'audate-floatie';
-  floating.onclick = (e) => {
-    insertCustomElement();
-  };
   // TODO: Hide this at first.
   document.body.appendChild(floating);
 
