@@ -8,6 +8,16 @@ from inside it so including directly. */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+  > div.p-resizable-handle {
+    height: 30px;
+    right: 0px;
+    bottom: -10px;
+    transform: rotate(45deg);
+    &:hover {
+      background-color: #aaa;
+    }
+  }
 }
 
 .p-dialog-header {
