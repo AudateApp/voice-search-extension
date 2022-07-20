@@ -21,6 +21,10 @@ from inside it so including directly. */
 .p-dialog-content {
   padding: 0 !important;
   overflow: hidden;
+
+  &.transparent {
+    opacity: 50% !important;
+  }
 }
 
 iframe {

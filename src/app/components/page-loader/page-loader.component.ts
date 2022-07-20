@@ -10,6 +10,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class PageLoaderComponent {
   trustedUrl: any;
+  focusClass = '';
   constructor(
     private primengConfig: PrimeNGConfig,
     elementRef: ElementRef,

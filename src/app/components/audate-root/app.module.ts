@@ -30,43 +30,43 @@ import { Router } from '@angular/router';
 import { PageLoaderComponent } from '../page-loader/page-loader.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        VoiceSearchComponent,
-        InputPlateComponent,
-        TranscriptComponent,
-        AudioWavesComponent,
-        QuickSettingsComponent,
-        OptionsPageComponent,
-        ContentPopupComponent,
-        PermissionRequestComponent,
-        PageLoaderComponent,
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        ButtonModule,
-        DropdownModule,
-        DialogModule,
-        AppRoutingModule,
-        FormsModule,
-    ],
-    providers: [
-        {
-            provide: ErrorHandler,
-            useValue: Sentry.createErrorHandler({
-                showDialog: true,
-            }),
-        },
-        {
-            provide: Sentry.TraceService,
-            deps: [Router],
-        },
-        {
-            provide: APP_BASE_HREF,
-            useValue: '/',
-        },
-    ]
+  declarations: [
+    AppComponent,
+    VoiceSearchComponent,
+    InputPlateComponent,
+    TranscriptComponent,
+    AudioWavesComponent,
+    QuickSettingsComponent,
+    OptionsPageComponent,
+    ContentPopupComponent,
+    PermissionRequestComponent,
+    PageLoaderComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    ButtonModule,
+    DropdownModule,
+    DialogModule,
+    AppRoutingModule,
+    FormsModule,
+  ],
+  providers: [
+    {
+      provide: ErrorHandler,
+      useValue: Sentry.createErrorHandler({
+        showDialog: true,
+      }),
+    },
+    {
+      provide: Sentry.TraceService,
+      deps: [Router],
+    },
+    {
+      provide: APP_BASE_HREF,
+      useValue: '/',
+    },
+  ],
 })
 export class AppModule implements DoBootstrap {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
