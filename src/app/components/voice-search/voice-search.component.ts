@@ -31,6 +31,7 @@ export class VoiceSearchComponent implements OnInit {
         case State.IDLE:
           if (this.finalTrascript) {
             this.searchEngineService.performSearch(this.finalTrascript);
+            window.close();
           }
           this.finalTrascript = undefined;
       }
