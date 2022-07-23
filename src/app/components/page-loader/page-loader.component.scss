@@ -33,7 +33,10 @@ from inside it so including directly. */
   overflow: hidden;
 
   &.transparent {
-    opacity: 50% !important;
+    opacity: 10% !important;
+    transition-property: opacity;
+    transition-delay: 2s;
+    transition-duration: 5s;
   }
 }
 
