@@ -109,12 +109,35 @@ function setUpVoiceSearchListener() {
   chrome.runtime.onMessage.addListener(onMessage);
 }
 
+function redirectLinks() {
+  // If the <a> element contains other elements, we traverse the tree to find the anchor element clicked:
+  document.body.addEventListener(
+    'click',
+    function (e) {
+      var target: any = e.target;
+      do {
+        if (target.nodeName.toUpperCase() === 'A' && target.href) {
+          target.target = '_parent';
+          // TODO: save the link for re-opening.
+          break;
+        }
+      } while ((target = target.parentElement));
+    },
+    true
+  );
+}
+
 // Add floating UI to the DOM.
 const floating = document.createElement('div');
 floating.innerHTML = 'Search for';
 floating.className = 'audate-floatie';
 
 function init() {
+  if (inIframe()) {
+    redirectLinks();
+    return;
+  }
+
   // TODO: Hide this at first.
   document.body.appendChild(floating);
 
