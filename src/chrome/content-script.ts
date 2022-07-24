@@ -68,7 +68,10 @@ function addSearchButton(
   });
 }
 
-function maybeSuggestSearch(floating: HTMLElement) {
+function maybeSuggestSearch(
+  ev: MouseEvent | KeyboardEvent,
+  floating: HTMLElement
+) {
   if (typeof window.getSelection == 'undefined') {
     console.error('No selection');
     return;
@@ -78,8 +81,10 @@ function maybeSuggestSearch(floating: HTMLElement) {
     console.error('Collapsed selection');
     return;
   }
-
-  console.log('selected: ', selection.toString());
+  if (getLinkTarget(ev)) {
+    return;
+  }
+  console.log('Selected: ', selection.toString());
   addSearchButton(
     window.getSelection()!.focusNode!.parentElement,
     floating,
@@ -114,17 +119,24 @@ function redirectLinks() {
   document.body.addEventListener(
     'click',
     function (e) {
-      var target: any = e.target;
-      do {
-        if (target.nodeName.toUpperCase() === 'A' && target.href) {
-          target.target = '_parent';
-          // TODO: save the link for re-opening.
-          break;
-        }
-      } while ((target = target.parentElement));
+      var targetEl: any = getLinkTarget(e);
+      if (targetEl) {
+        targetEl.target = '_parent';
+      }
     },
     true
   );
+}
+
+// Returns a truthy value (the link element) if event target is a link.
+function getLinkTarget(e: MouseEvent | KeyboardEvent): EventTarget | null {
+  var target: any = e.target;
+  do {
+    if (target.nodeName.toUpperCase() === 'A' && target.href) {
+      return target;
+    }
+  } while ((target = target.parentElement));
+  return null;
 }
 
 // Add floating UI to the DOM.
@@ -142,8 +154,8 @@ function init() {
   document.body.appendChild(floating);
 
   // Listen for all mouse/key up events and suggest search if there's a selection.
-  document.onmouseup = () => maybeSuggestSearch(floating);
-  document.onkeyup = () => maybeSuggestSearch(floating);
+  document.onmouseup = (e) => maybeSuggestSearch(e, floating);
+  document.onkeyup = (e) => maybeSuggestSearch(e, floating);
 
   // Listen for voice search from popup.
   setUpVoiceSearchListener();
