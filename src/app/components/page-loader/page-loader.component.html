@@ -2,6 +2,7 @@
   position="top-right"
   [visible]="isVisible"
   [maximizable]="true"
+  [styleClass]="drawerClass"
   [contentStyleClass]="focusClass"
   [baseZIndex]="10000"
   [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
@@ -17,8 +18,8 @@
   <iframe
     [src]="trustedUrl"
     width="100%"
-    (mouseover)="focusClass = ''"
-    (mouseout)="focusClass = 'transparent'"
+    (mouseenter)="onMouseOver($event)"
+    (mouseleave)="onMouseOut($event)"
     height="100%"
   ></iframe>
 </p-dialog>

@@ -12,6 +12,7 @@ export class PageLoaderComponent {
   trustedUrl: any;
   isVisible = true;
   focusClass = '';
+  drawerClass = '';
   constructor(
     private primengConfig: PrimeNGConfig,
     elementRef: ElementRef,
@@ -40,5 +41,17 @@ export class PageLoaderComponent {
   }
   onVisibleChange(isVisible: boolean) {
     this.isVisible = isVisible;
+  }
+  onMouseOver(unused: MouseEvent) {
+    this.focusClass = '';
+    this.drawerClass = '';
+  }
+  onMouseOut(e: MouseEvent) {
+    // Ignore mouseout when it's from the right corner.
+    if (window.visualViewport.width - e.clientX < 100) {
+      return;
+    }
+    this.focusClass = 'transparent';
+    this.drawerClass = 'parked';
   }
 }

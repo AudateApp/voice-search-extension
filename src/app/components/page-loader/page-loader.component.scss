@@ -8,6 +8,24 @@ from inside it so including directly. */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  transition: width 0.1s ease 0s, margin-right 0.1s ease 0.1s;
+
+  &.parked {
+    // !important necessary to override inline styles.
+    width: 50px !important;
+    margin-right: -10px !important;
+    left: auto !important;
+    right: 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition-property: width, margin-right;
+    transition-delay: 2s;
+    transition-duration: 1s;
+
+    .p-dialog-header-icons {
+      visibility: hidden;
+    }
+  }
 
   > div.p-resizable-handle {
     height: 30px;
