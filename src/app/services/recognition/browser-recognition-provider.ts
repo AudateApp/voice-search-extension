@@ -4,7 +4,7 @@ import { RecognitionState, State } from './recognition-state';
 import { DefaultLocale, LocaleProperties } from '../locale/locale-properties';
 import { LocaleService } from '../locale/locale.service';
 import { LoggingService } from '../logging/logging.service';
-import { Logger } from '../logging/logger';
+import { Logger } from '../../../shared/logging/logger';
 import { RecognitionProvider } from './recognition-provider';
 
 /*

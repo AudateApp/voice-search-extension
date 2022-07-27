@@ -13,7 +13,7 @@ import { InputDeviceService } from 'src/app/services/input-device.service';
 import { LocaleService } from 'src/app/services/locale/locale.service';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
 import { LoggingService } from 'src/app/services/logging/logging.service';
-import { Logger } from 'src/app/services/logging/logger';
+import { Logger } from 'src/shared/logging/logger';
 
 @Component({
   selector: 'audate-quick-settings',

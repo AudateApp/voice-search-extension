@@ -5,7 +5,7 @@ import {
   LocalesForDefaultModel,
   DefaultLocale,
 } from './locale-properties';
-import { Logger } from '../logging/logger';
+import { Logger } from '../../../shared/logging/logger';
 import { LoggingService } from '../logging/logging.service';
 import { StorageService } from '../storage/storage.service';
 

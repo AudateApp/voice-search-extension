@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { logger } from '@sentry/utils';
 import { Observable, share, Subject } from 'rxjs';
 import { DefaultSearchEngine, SearchEngine } from '../model/search-engine';
-import { Logger } from './logging/logger';
+import { Logger } from '../../shared/logging/logger';
 import { LoggingService } from './logging/logging.service';
 import { StorageService } from './storage/storage.service';
 

@@ -1,5 +1,8 @@
 import { computePosition } from '@floating-ui/dom';
 import { Message } from 'src/shared/message';
+import { LoggingService } from './logging-service';
+
+const logger = new LoggingService().getLogger('content-script');
 
 /* This function inserts an Angular custom element (web component) into the DOM. */
 function insertCustomElement(url: string) {
@@ -51,7 +54,6 @@ function addSearchButton(
   floating: HTMLElement,
   selectedText: string
 ) {
-  console.error('adding button to', reference);
   floating.innerHTML = 'Search for ' + selectedText;
   chrome.runtime.sendMessage({
     key: 'create_search_url_for_query',
@@ -74,18 +76,16 @@ function maybeSuggestSearch(
   floating: HTMLElement
 ) {
   if (typeof window.getSelection == 'undefined') {
-    console.error('No selection');
     return;
   }
   const selection = window.getSelection()!;
   if (selection.isCollapsed) {
-    console.error('Collapsed selection');
     return;
   }
   if (getLinkTarget(ev)) {
     return;
   }
-  console.log('Selected: ', selection.toString());
+  logger.debug('Selected: ', selection.toString());
   addSearchButton(
     window.getSelection()!.focusNode!.parentElement,
     floating,
@@ -99,7 +99,7 @@ function setUpVoiceSearchListener() {
     sender: chrome.runtime.MessageSender,
     callback: (response?: any) => void
   ) => {
-    console.error('received message: ', message, ' from: ', sender);
+    logger.log('Received voice search message: ', message, ' from: ', sender);
     // TODO Ensure sender.id is this extension. Confirm works for content-script.
     if (message.key == 'voice_search_query') {
       displayPreview(message.value);
@@ -131,10 +131,10 @@ function redirectLinks() {
 
 function displayPreview(url: string) {
   if (document.getElementById('audate-preview-container')) {
-    console.debug('broadcasting the url');
+    logger.debug('broadcasting the url');
     channel.postMessage(url);
   } else {
-    console.debug('inserting audate preview');
+    logger.debug('inserting audate preview');
     insertCustomElement(url);
   }
 }
