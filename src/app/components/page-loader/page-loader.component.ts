@@ -48,31 +48,33 @@ export class PageLoaderComponent {
   }
 
   onResizeStart(e: any) {
-    console.error('resize start', e);
+    this.logger.debug('onResizeStart: ', e);
   }
   onResizeEnd(e: any) {
-    console.error('resize end', e);
+    this.logger.debug('onResizeEnd: ', e);
   }
   onShow(e: any) {
-    console.error('on show: ', e);
+    this.logger.debug('onShow: ', e);
   }
   onHide(e: any) {
-    console.error('on hide: ', e);
+    this.logger.debug('onHide: ', e);
   }
   onDragEnd(e: any) {
-    console.error('on drag end: ', e);
+    this.logger.debug('onDragEnd: ', e);
   }
   onMaximize(e: any) {
-    console.error('on max: ', e);
+    this.logger.debug('onMaximize: ', e);
   }
   onVisibleChange(isVisible: boolean) {
     this.isVisible = isVisible;
   }
-  onMouseOver(unused: MouseEvent) {
+  onMouseOver(e: MouseEvent) {
+    this.logger.debug('onMouseOver: ', e);
     this.focusClass = '';
     this.drawerClass = '';
   }
   onMouseOut(e: MouseEvent) {
+    this.logger.debug('onMouseOut: ', e);
     // Ignore mouseout when it's from the right corner.
     if (window.visualViewport.width - e.clientX < 100) {
       return;

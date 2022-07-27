@@ -289,23 +289,23 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
       .then((stream) => {
         this.mediaRecorder = new MediaRecorder(stream);
         this.mediaRecorder.start();
-        console.log('mediarecorder started');
+        this.logger.log('mediarecorder started');
 
         this.mediaRecorder.ondataavailable = (e) => {
-          console.log('chunks: ', e.data);
+          this.logger.log('chunks: ', e.data);
         };
         this.mediaRecorder.onerror = (ev: MediaRecorderErrorEvent) => {
-          console.error('mediarecorder error: ', ev);
+          this.logger.error('mediarecorder error: ', ev);
         };
       })
       .catch((err) => {
-        console.log('Error requesting media devices ', err);
+        this.logger.log('Error requesting media devices ', err);
       });
   }
 
   // Stop speech recognition.
   stop2(): void {
     this.mediaRecorder?.stop();
-    console.log('stopped mediarecorder');
+    this.logger.log('stopped mediarecorder');
   }
 }

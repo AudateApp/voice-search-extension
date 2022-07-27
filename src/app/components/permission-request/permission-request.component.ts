@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Logger } from 'src/app/services/logging/logger';
+import { LoggingService } from 'src/app/services/logging/logging.service';
 
 @Component({
   selector: 'audate-permission-request',
@@ -7,7 +9,10 @@ import { Component } from '@angular/core';
 })
 export class PermissionRequestComponent {
   notice = '';
-  constructor() {}
+  logger: Logger;
+  constructor(loggingService: LoggingService) {
+    this.logger = loggingService.getLogger('permission-request');
+  }
 
   /*
    * Also request permissions to display popups,
@@ -43,7 +48,7 @@ export class PermissionRequestComponent {
          * err: NotAllowedError: The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
          *
          */
-        console.log('Error requesting permission ', err);
+        this.logger.error('Error requesting permission ', err);
         this.notice = 'Permission not granted';
       });
   }
