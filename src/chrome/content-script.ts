@@ -15,6 +15,7 @@ function insertCustomElement(url: string) {
   const styleFragment = styleRange.createContextualFragment(stylesheets);
   document.body.appendChild(styleFragment);
 
+  // TODO: fix urls.
   const tagString = `
     <audate-page-loader url="${url}"></audate-page-loader>
     <script src="chrome-extension://cbihefficekhofanhbnofgkfhdkbhnkg/runtime.js"></script>
@@ -27,7 +28,7 @@ function insertCustomElement(url: string) {
   range.selectNode(document.getElementsByTagName('body').item(0)!);
   const documentFragment = range.createContextualFragment(tagString);
   const audateWrapper = document.createElement('div');
-  // audateWrapper.className = 'audate-wrapper';
+  audateWrapper.id = 'audate-preview-container';
   const shadow = audateWrapper.attachShadow({ mode: 'open' });
   shadow.appendChild(documentFragment);
   document.body.appendChild(audateWrapper);
@@ -101,13 +102,13 @@ function setUpVoiceSearchListener() {
     console.error('received message: ', message, ' from: ', sender);
     // TODO Ensure sender.id is this extension. Confirm works for content-script.
     if (message.key == 'voice_search_query') {
-      insertCustomElement(message.value);
+      displayPreview(message.value);
       callback();
     }
 
     if (message.key === 'encoded_search_url') {
       floating.onclick = (unusedClick) => {
-        insertCustomElement(message.value);
+        displayPreview(message.value);
       };
     }
   };
@@ -126,6 +127,16 @@ function redirectLinks() {
     },
     true
   );
+}
+
+function displayPreview(url: string) {
+  if (document.getElementById('audate-preview-container')) {
+    console.debug('broadcasting the url');
+    channel.postMessage(url);
+  } else {
+    console.debug('inserting audate preview');
+    insertCustomElement(url);
+  }
 }
 
 // Returns a truthy value (the link element) if event target is a link.
@@ -160,5 +171,5 @@ function init() {
   // Listen for voice search from popup.
   setUpVoiceSearchListener();
 }
-
+const channel = new BroadcastChannel('audate_link_preview');
 init();
