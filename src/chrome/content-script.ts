@@ -1,5 +1,6 @@
 import { computePosition } from '@floating-ui/dom';
 import { Message } from 'src/shared/message';
+import { getExtensionBaseUrl } from '../shared/util';
 import { LoggingService } from './logging-service';
 
 const logger = new LoggingService().getLogger('content-script');
@@ -11,20 +12,19 @@ function insertCustomElement(url: string) {
   }
 
   const stylesheets = `
-    <link href="chrome-extension://cbihefficekhofanhbnofgkfhdkbhnkg/content-style.css" rel="stylesheet">
+    <link href="${getExtensionBaseUrl()}/content-style.css" rel="stylesheet">
   `;
   const styleRange = document.createRange();
   styleRange.selectNode(document.getElementsByTagName('body').item(0)!);
   const styleFragment = styleRange.createContextualFragment(stylesheets);
   document.body.appendChild(styleFragment);
 
-  // TODO: fix urls.
   const tagString = `
     <audate-page-loader url="${url}"></audate-page-loader>
-    <script src="chrome-extension://cbihefficekhofanhbnofgkfhdkbhnkg/runtime.js"></script>
-    <script src="chrome-extension://cbihefficekhofanhbnofgkfhdkbhnkg/polyfills.js"></script>
-    <script src="chrome-extension://cbihefficekhofanhbnofgkfhdkbhnkg/vendor.js"></script>
-    <script src="chrome-extension://cbihefficekhofanhbnofgkfhdkbhnkg/main.js"></script>
+    <script src="${getExtensionBaseUrl()}/runtime.js"></script>
+    <script src="${getExtensionBaseUrl()}/polyfills.js"></script>
+    <script src="${getExtensionBaseUrl()}/vendor.js"></script>
+    <script src="${getExtensionBaseUrl()}/main.js"></script>
   
    `;
   const range = document.createRange();

@@ -7,7 +7,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { getUrlForPath } from 'src/app/utils/util';
+import { getUrlForPath } from 'src/shared/util';
 import { State } from '../../services/recognition/recognition-state';
 import { RecognitionService } from '../../services/recognition/recognition.service';
 
