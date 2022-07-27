@@ -21,10 +21,6 @@ from inside it so including directly. */
     transition-property: width, margin-right;
     transition-delay: 2s;
     transition-duration: 1s;
-
-    .p-dialog-header-icons {
-      visibility: hidden;
-    }
   }
 
   > div.p-resizable-handle {
