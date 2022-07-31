@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { logger } from '@sentry/utils';
 import { Observable, share, Subject } from 'rxjs';
 import { DefaultSearchEngine, SearchEngine } from '../model/search-engine';
 import { Logger } from '../../shared/logging/logger';
@@ -76,12 +75,21 @@ export class SearchEngineService {
       (window as any).open(url, '_blank').focus();
     } else {
       // Open the query as a preview in the current tab.
-      chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+      chrome.tabs.query({ currentWindow: true, active: true }, (tabs) => {
         var activeTab = tabs[0];
         if (!activeTab.id) {
-          logger.error('Active tab does not have an ID');
+          this.logger.error('Active tab does not have an ID');
           return;
         }
+
+        // Tab.url may be null if there's a pending navigation.
+        if (!activeTab.url && !activeTab.pendingUrl) {
+          // We're on the newTab page, update it.
+          chrome.tabs.update(activeTab.id, { url: url });
+          return;
+        }
+
+        this.logger.error('active tab ID is', activeTab.id, activeTab);
         chrome.tabs.sendMessage(
           activeTab.id,
           {
