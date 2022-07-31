@@ -61,6 +61,7 @@ function addSearchButton(
   });
 
   floating.setAttribute('alt', 'Search for ' + selectedText);
+  floating.style.display = 'block';
   computePosition(reference, floating, {
     // Try changing this to a different side.
     placement: 'top',
