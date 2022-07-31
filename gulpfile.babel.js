@@ -1,7 +1,7 @@
 import Jimp from "jimp";
 
 // Prefer png, it scales better than jpeg for resizing purposes.
-const originalIconPath = "src/assets/images/browser-icon.png";
+const originalIconPath = "src/assets/images/audate-logo.png";
 const generateIcons = () => {
   return new Promise((resolve, reject) => {
     Jimp.read(originalIconPath, (err, icon) => {
@@ -13,12 +13,12 @@ const generateIcons = () => {
         const colorIcon = icon.clone();
         colorIcon
           .resize(size, size)
-          .write(`src/assets/images/browser-icon-${size}x${size}.png`);
+          .write(`src/assets/images/logo-${size}x${size}.png`);
         const grayIcon = icon.clone();
         grayIcon
           .resize(size, size)
           .greyscale()
-          .write(`src/assets/images/browser-icon-gray-${size}x${size}.png`);
+          .write(`src/assets/images/logo-gray-${size}x${size}.png`);
       });
       resolve();
     });
