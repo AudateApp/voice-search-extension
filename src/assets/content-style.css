@@ -20,10 +20,11 @@ font definitions on the page. */
 
 .audate-floatie {
   position: absolute;
-  background: white;
-  color: black;
+  width: 40px;
+  height: 40px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 1rem;
+  border-radius: 50%;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
 }

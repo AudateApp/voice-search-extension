@@ -6,7 +6,7 @@ import { LoggingService } from './logging-service';
 const logger = new LoggingService().getLogger('content-script');
 
 /* This function inserts an Angular custom element (web component) into the DOM. */
-function insertCustomElement(url: string) {
+function insertPageLoader(url: string) {
   if (inIframe()) {
     return;
   }
@@ -52,18 +52,24 @@ function inIframe() {
 function addSearchButton(
   reference: any,
   floating: HTMLElement,
+  ev: MouseEvent | KeyboardEvent,
   selectedText: string
 ) {
-  floating.innerHTML = 'Search for ' + selectedText;
   chrome.runtime.sendMessage({
     key: 'create_search_url_for_query',
     value: selectedText,
   });
 
+  floating.setAttribute('alt', 'Search for ' + selectedText);
   computePosition(reference, floating, {
     // Try changing this to a different side.
     placement: 'top',
-  }).then(({ x, y }) => {
+  }).then((unusedRefs) => {
+    // TODO: Fix keyboardEvent not working.
+    let x = ev instanceof MouseEvent ? ev.pageX : ev.view!.pageXOffset;
+    x = x - 20;
+    let y = ev instanceof MouseEvent ? ev.pageY : ev.view!.pageYOffset!;
+    y = y - 55;
     Object.assign(floating.style, {
       top: `${y}px`,
       left: `${x}px`,
@@ -89,6 +95,7 @@ function maybeSuggestSearch(
   addSearchButton(
     window.getSelection()!.focusNode!.parentElement,
     floating,
+    ev,
     window.getSelection()!.toString()
   );
 }
@@ -135,7 +142,7 @@ function displayPreview(url: string) {
     channel.postMessage(url);
   } else {
     logger.debug('inserting audate preview');
-    insertCustomElement(url);
+    insertPageLoader(url);
   }
 }
 
@@ -152,8 +159,11 @@ function getLinkTarget(e: MouseEvent | KeyboardEvent): EventTarget | null {
 
 // Add floating UI to the DOM.
 const floating = document.createElement('div');
-floating.innerHTML = 'Search for';
 floating.className = 'audate-floatie';
+floating.setAttribute('role', 'img');
+floating.setAttribute('alt', 'Search for selected text');
+floating.setAttribute('tabindex', '0');
+floating.style.backgroundImage = `url(${getExtensionBaseUrl()}/assets/icons/search-icon.jpeg)`;
 
 function init() {
   if (inIframe()) {
