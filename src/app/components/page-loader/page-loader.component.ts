@@ -17,7 +17,9 @@ import { LoggingService } from 'src/app/services/logging/logging.service';
 })
 export class PageLoaderComponent {
   logger: Logger;
+  url = '';
   trustedUrl: SafeResourceUrl;
+  unsupportedHost = '';
   isVisible = true;
   focusClass = '';
   drawerClass = '';
@@ -29,9 +31,21 @@ export class PageLoaderComponent {
     loggingService: LoggingService
   ) {
     this.logger = loggingService.getLogger('page-loader');
-    const url = elementRef.nativeElement.getAttribute('url');
-    this.trustedUrl = sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.url = elementRef.nativeElement.getAttribute('url');
+    this.trustedUrl = sanitizer.bypassSecurityTrustResourceUrl(this.url);
+    this.listenForCspError();
     this.listenForUrlUpdates();
+  }
+
+  listenForCspError() {
+    document.addEventListener('securitypolicyviolation', (e) => {
+      this.logger.error('CSP error', e, e.blockedURI);
+      this.unsupportedHost = window.location.origin;
+      setTimeout(() => {
+        window.open(this.url, '_blank');
+        this.isVisible = false;
+      }, 1000);
+    });
   }
 
   listenForUrlUpdates() {
@@ -39,7 +53,14 @@ export class PageLoaderComponent {
     channel.onmessage = (e) => {
       this.ngZone.run(() => {
         this.logger.log('Received broadcast to preview', e.data);
-        this.trustedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(e.data);
+        this.url = e.data;
+        this.trustedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+          this.url
+        );
+        if (this.unsupportedHost) {
+          window.open(this.url, '_blank');
+          return;
+        }
         this.isVisible = true;
         this.focusClass = '';
         this.drawerClass = '';

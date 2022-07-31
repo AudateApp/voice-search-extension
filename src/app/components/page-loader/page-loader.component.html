@@ -18,5 +18,21 @@
   (visibleChange)="onVisibleChange($event)"
   (onMaximize)="onMaximize($event)"
 >
-  <iframe [src]="trustedUrl" width="100%" height="100%"></iframe>
+  <iframe
+    *ngIf="!unsupportedHost"
+    #iframe
+    [src]="trustedUrl"
+    width="100%"
+    height="100%"
+  ></iframe>
+  <p-card *ngIf="unsupportedHost" header="Incompatible Host">
+    <p>
+      You are on a page
+      <i>
+        <u>{{ unsupportedHost }}</u>
+      </i>
+      that does not support previews
+    </p>
+    <p>Taking you to a new tab.</p>
+  </p-card>
 </p-dialog>

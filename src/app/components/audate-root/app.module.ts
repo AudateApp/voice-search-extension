@@ -14,6 +14,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { DialogModule } from 'primeng/dialog';
+import { CardModule } from 'primeng/card';
 import * as Sentry from '@sentry/angular';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -46,6 +47,7 @@ import { PageLoaderComponent } from '../page-loader/page-loader.component';
     BrowserModule,
     BrowserAnimationsModule,
     ButtonModule,
+    CardModule,
     DropdownModule,
     DialogModule,
     AppRoutingModule,
