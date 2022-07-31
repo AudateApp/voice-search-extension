@@ -2,7 +2,7 @@
   "name": "__MSG_appName__",
   "description": "__MSG_appDesc__",
   "homepage_url": "https://github.com/justiceo/audate",
-  "version": "22.06.05",
+  "version": "22.07.30",
   "manifest_version": 3,
   "default_locale": "en",
   "author": "Justice Ogbonna",
