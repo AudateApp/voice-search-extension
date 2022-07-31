@@ -35,7 +35,7 @@ export class RelayStorageProvider implements StorageProvider {
       resolve = _resolve;
       reject = _reject;
     });
-    chrome.runtime.sendMessage(environment.extensionId, message, (response) => {
+    chrome.runtime.sendMessage(message, (response) => {
       // Handle platform errors.
       if (chrome.runtime.lastError) {
         reject(chrome.runtime.lastError.message);

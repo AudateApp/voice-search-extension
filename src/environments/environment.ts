@@ -6,7 +6,6 @@
 
 export const environment = {
   production: false,
-  extensionId: 'cbihefficekhofanhbnofgkfhdkbhnkg',
 };
 
 /*

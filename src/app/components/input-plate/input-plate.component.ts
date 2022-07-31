@@ -7,7 +7,6 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { getUrlForPath } from 'src/shared/util';
 import { State } from '../../services/recognition/recognition-state';
 import { RecognitionService } from '../../services/recognition/recognition.service';
 
@@ -63,7 +62,7 @@ export class InputPlateComponent implements OnInit, AfterViewInit {
 
   requestPermissions() {
     setTimeout(() => {
-      const url = getUrlForPath('request-permissions');
+      const url = chrome.runtime.getURL('index.html#request-permissions');
       chrome.tabs.create({ url: url });
     }, this.idleTimeoutMs);
   }

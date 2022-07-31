@@ -10,7 +10,7 @@ const logger = new LoggingService().getLogger('content-script');
 new ContextMenu().init();
 
 const uninstallUrl = 'https://justiceo.github.io/speak/uninstall.html';
-const welcomeUrl = `chrome-extension://${environment.extensionId}/index.html#request-permissions`;
+const welcomeUrl = chrome.runtime.getURL('index.html#request-permissions');
 
 const onInstalled = (details: chrome.runtime.InstalledDetails) => {
   // On fresh install, open page how to use extension.

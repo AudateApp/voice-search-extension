@@ -1,8 +1,8 @@
 import { computePosition } from '@floating-ui/dom';
 import { Message } from 'src/shared/message';
-import { getExtensionBaseUrl } from '../shared/util';
 import { LoggingService } from './logging-service';
 
+const getExtensionUrl = chrome.runtime.getURL;
 const logger = new LoggingService().getLogger('content-script');
 
 /* This function inserts an Angular custom element (web component) into the DOM. */
@@ -12,7 +12,7 @@ function insertPageLoader(url: string) {
   }
 
   const stylesheets = `
-    <link href="${getExtensionBaseUrl()}/content-style.css" rel="stylesheet">
+    <link href="${getExtensionUrl('content-style.css')}" rel="stylesheet">
   `;
   const styleRange = document.createRange();
   styleRange.selectNode(document.getElementsByTagName('body').item(0)!);
@@ -21,10 +21,10 @@ function insertPageLoader(url: string) {
 
   const tagString = `
     <audate-page-loader url="${url}"></audate-page-loader>
-    <script src="${getExtensionBaseUrl()}/runtime.js"></script>
-    <script src="${getExtensionBaseUrl()}/polyfills.js"></script>
-    <script src="${getExtensionBaseUrl()}/vendor.js"></script>
-    <script src="${getExtensionBaseUrl()}/main.js"></script>
+    <script src="${getExtensionUrl('runtime.js')}"></script>
+    <script src="${getExtensionUrl('polyfills.js')}"></script>
+    <script src="${getExtensionUrl('vendor.js')}"></script>
+    <script src="${getExtensionUrl('main.js')}"></script>
   
    `;
   const range = document.createRange();
@@ -164,7 +164,9 @@ floating.className = 'audate-floatie';
 floating.setAttribute('role', 'img');
 floating.setAttribute('alt', 'Search for selected text');
 floating.setAttribute('tabindex', '0');
-floating.style.backgroundImage = `url(${getExtensionBaseUrl()}/assets/icons/search-icon.jpeg)`;
+floating.style.backgroundImage = `url(${getExtensionUrl(
+  'assets/icons/search-icon.jpeg'
+)})`;
 
 function init() {
   if (inIframe()) {
