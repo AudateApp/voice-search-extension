@@ -82,6 +82,9 @@ function maybeSuggestSearch(
   ev: MouseEvent | KeyboardEvent,
   floating: HTMLElement
 ) {
+  // Ensure button is hidden by default.
+  floating.style.display = 'none';
+
   if (typeof window.getSelection == 'undefined') {
     return;
   }
