@@ -173,7 +173,7 @@ floating.style.backgroundImage = `url(${getExtensionUrl(
 
 function init() {
   if (inIframe()) {
-    redirectLinks();
+    // redirectLinks();
     return;
   }
 
