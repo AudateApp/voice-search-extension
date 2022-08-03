@@ -1,6 +1,6 @@
 import { Logger } from './logger';
 
-// TODO: Implement this.
+// TODO: Implement this: https://github.com/winstonjs/winston
 export class RemoteLogger implements Logger {
   debug(...unusedLogs: unknown[]): void {}
   log(...unusedLogs: unknown[]): void {}

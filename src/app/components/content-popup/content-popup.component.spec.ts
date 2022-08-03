@@ -8,9 +8,8 @@ describe('ContentPopupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContentPopupComponent ]
-    })
-    .compileComponents();
+      declarations: [ContentPopupComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

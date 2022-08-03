@@ -1,4 +1,3 @@
-import { environment } from '../environments/environment';
 import { StorageMessage } from 'src/shared/storage-message';
 import { ChromeStorageProvider } from '../shared/chrome-storage-provider';
 import { ContextMenu } from './context-menu';
