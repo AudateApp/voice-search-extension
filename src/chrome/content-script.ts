@@ -62,6 +62,9 @@ function addSearchButton(
 
   floating.setAttribute('alt', 'Search for ' + selectedText);
   floating.style.display = 'block';
+  getMaxZIndex().then((maxZ: number) => {
+    floating.style.zIndex = '' + (maxZ + 10);
+  });
   computePosition(reference, floating, {
     // Try changing this to a different side.
     placement: 'top',
@@ -75,6 +78,18 @@ function addSearchButton(
       top: `${y}px`,
       left: `${x}px`,
     });
+  });
+}
+
+function getMaxZIndex() {
+  return new Promise((resolve: (arg0: number) => void) => {
+    const z = Math.max(
+      ...Array.from(document.querySelectorAll('body *'), (el) =>
+        parseFloat(window.getComputedStyle(el).zIndex)
+      ).filter((zIndex) => !Number.isNaN(zIndex)),
+      0
+    );
+    resolve(z);
   });
 }
 

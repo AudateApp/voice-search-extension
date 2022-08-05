@@ -27,5 +27,6 @@ font definitions on the page. */
   background-size: 80px;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 10000;
   display: none;
 }
