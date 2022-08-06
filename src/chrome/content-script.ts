@@ -110,7 +110,23 @@ function maybeSuggestSearch(
   if (getLinkTarget(ev)) {
     return;
   }
-  logger.debug('Selected: ', selection.toString());
+
+  const selectedText = selection.toString().trim();
+  if (selectedText.length == 0 || selectedText.length > 100) {
+    return;
+  }
+
+  if (validateEmail(selectedText)) {
+    return;
+  }
+  if (!hasLetters(selectedText)) {
+    return;
+  }
+  if (!isNaN(Date.parse(selectedText))) {
+    return;
+  }
+
+  logger.debug('Selected: ', selectedText);
   addSearchButton(
     window.getSelection()!.focusNode!.parentElement,
     floating,
@@ -175,6 +191,18 @@ function getLinkTarget(e: MouseEvent | KeyboardEvent): EventTarget | null {
   } while ((target = target.parentElement));
   return null;
 }
+
+const validateEmail = (email: string) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+const hasLetters = (str: string) => {
+  return /[a-zA-Z]/.test(str);
+};
 
 // Add floating UI to the DOM.
 const floating = document.createElement('div');
