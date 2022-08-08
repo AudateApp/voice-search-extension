@@ -231,6 +231,14 @@ function init() {
   document.onmouseup = (e) => maybeSuggestSearch(e, floating);
   document.onkeyup = (e) => maybeSuggestSearch(e, floating);
 
+  window.addEventListener(
+    'resize',
+    function (unusedEvent) {
+      floating.style.display = 'none';
+    },
+    true
+  );
+
   // Listen for voice search from popup.
   setUpVoiceSearchListener();
 }
