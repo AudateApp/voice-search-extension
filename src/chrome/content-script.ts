@@ -153,6 +153,10 @@ function setUpVoiceSearchListener() {
         displayPreview(message.value);
       };
     }
+
+    if (message.key === 'ping') {
+      callback('pong');
+    }
   };
   chrome.runtime.onMessage.addListener(onMessage);
 }

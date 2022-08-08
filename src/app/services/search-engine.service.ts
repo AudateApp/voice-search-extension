@@ -75,32 +75,64 @@ export class SearchEngineService {
       (window as any).open(url, '_blank').focus();
     } else {
       // Open the query as a preview in the current tab.
+      this.getActiveTabForPreview().then(
+        (activeTab) => {
+          chrome.tabs.sendMessage(
+            activeTab.id!,
+            {
+              key: 'voice_search_query',
+              value: url,
+            },
+            () => {
+              // Maybe close popup here?
+            }
+          );
+        },
+        (error) => {
+          this.logger.error(error.message);
+          if (error.tabId) {
+            chrome.tabs.update(error.tabId, { url: url });
+          }
+        }
+      );
+    }
+  }
+
+  /** Return a tab if we can display preview in it. Fails otherwise. */
+  getActiveTabForPreview(): Promise<chrome.tabs.Tab> {
+    return new Promise((resolve, error) => {
       chrome.tabs.query({ currentWindow: true, active: true }, (tabs) => {
         var activeTab = tabs[0];
         if (!activeTab.id) {
-          this.logger.error('Active tab does not have an ID');
+          error({ message: 'Active tab does not have an ID' });
           return;
         }
 
         // Tab.url may be null if there's a pending navigation.
         if (!activeTab.url && !activeTab.pendingUrl) {
-          // We're on the newTab page, update it.
-          chrome.tabs.update(activeTab.id, { url: url });
+          error({ message: 'On NewTab or HomePage.', tabId: activeTab.id });
           return;
         }
 
-        this.logger.error('active tab ID is', activeTab.id, activeTab);
+        const timeout = setTimeout(() => {
+          error({ message: 'No response from page.', tabId: activeTab.id });
+        }, 200);
+
         chrome.tabs.sendMessage(
           activeTab.id,
           {
-            key: 'voice_search_query',
-            value: url,
+            key: 'ping',
           },
-          () => {
-            // TODO: close popup.
+          (unusedPong) => {
+            clearTimeout(timeout);
+            if (chrome.runtime.lastError) {
+              error({ message: chrome.runtime.lastError, tabId: activeTab.id });
+              return;
+            }
+            resolve(activeTab);
           }
         );
       });
-    }
+    });
   }
 }
