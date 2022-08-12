@@ -10,3 +10,8 @@ Enable voice search in the browser.
 - Enable sticky search results as user navigates.
 - Set up E2E tests.
 - Add logging and crash monitoring.
+- Add specialized support for google docs, medium, ms word etc.
+- Add link previews.
+- Automatically decline cookies and popup ads.
+- Use embeds where suited: YouTube, Instagram, TikTok etc.
+- Add reader-mode support? 
