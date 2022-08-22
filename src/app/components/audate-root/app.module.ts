@@ -15,6 +15,7 @@ import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { DialogModule } from 'primeng/dialog';
 import { CardModule } from 'primeng/card';
+import { CarouselModule } from 'primeng/carousel';
 import * as Sentry from '@sentry/angular';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,12 +30,14 @@ import { ContentPopupComponent } from '../content-popup/content-popup.component'
 import { PermissionRequestComponent } from '../permission-request/permission-request.component';
 import { Router } from '@angular/router';
 import { PageLoaderComponent } from '../page-loader/page-loader.component';
+import { OnboardingComponent } from '../onboarding/onboarding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VoiceSearchComponent,
     InputPlateComponent,
+    OnboardingComponent,
     TranscriptComponent,
     AudioWavesComponent,
     QuickSettingsComponent,
@@ -48,6 +51,7 @@ import { PageLoaderComponent } from '../page-loader/page-loader.component';
     BrowserAnimationsModule,
     ButtonModule,
     CardModule,
+    CarouselModule,
     DropdownModule,
     DialogModule,
     AppRoutingModule,
