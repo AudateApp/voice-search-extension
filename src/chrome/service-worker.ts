@@ -8,7 +8,7 @@ const logger = new LoggingService().getLogger('content-script');
 
 new ContextMenu().init();
 
-const uninstallUrl = 'https://justiceo.github.io/speak/uninstall.html';
+const uninstallUrl = 'https://forms.gle/TuRLnDRFoXRNFuZP7';
 const welcomeUrl = chrome.runtime.getURL('index.html#request-permissions');
 
 const onInstalled = (details: chrome.runtime.InstalledDetails) => {
