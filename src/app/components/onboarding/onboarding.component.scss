@@ -1,0 +1,30 @@
+.header,
+.footer {
+  background: #2136bb;
+  color: white;
+  min-height: 200px;
+  padding: 50px;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      color: yellow;
+    }
+  }
+}
+
+.footer {
+  audate-audio-waves {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin-bottom: -4px; // TODO: Remove this.
+  }
+}
