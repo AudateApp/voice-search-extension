@@ -36,23 +36,23 @@ export class AudioWavesComponent
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
       switch (rstate.state) {
         case State.START:
-          this.nodeCount = 10;
+          this.config.nodeCount = 10;
           this.init(this.canvasView.nativeElement);
           break;
         case State.TRANSCRIBING:
           if (rstate.transcript?.partialText) {
-            if (this.nodeCount != 20) {
-              this.nodeCount = 20;
+            if (this.config.nodeCount != 20) {
+              this.config.nodeCount = 20;
               this.init(this.canvasView.nativeElement);
             }
           }
           break;
         case State.END:
-          this.nodeCount = 2;
+          this.config.nodeCount = 2;
           this.init(this.canvasView.nativeElement);
           break;
         case State.IDLE:
-          this.nodeCount = 2;
+          this.config.nodeCount = 2;
           this.init(this.canvasView.nativeElement);
           break;
         case State.NOT_SUPPORTED:

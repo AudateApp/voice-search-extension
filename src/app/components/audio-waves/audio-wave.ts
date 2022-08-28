@@ -14,40 +14,15 @@ export class AudioWave {
   renderingContext!: CanvasRenderingContext2D;
   waves: Wave[] = [];
 
-  // This determines the number of peaks and troughs visible at a time. 1 - flat barely overlapping waves, 100 - a riot of waves.
-  nodeCount = 2;
+  config!: AudioWaveConfig;
 
-  // This is a dynamically set value. We anneal nodeCount with each frame to match targetNodeCount.
-  targetNodeCount = 2;
-
-  // This determines the height of the canvas, and by extension the height of the waves.
-  waveHeight = 10;
-
-  // This determines the width of the canvas which affects how many nodes are packed in the visible area.
-  canvasWidth = 400;
-
-  // This is the color from which screening (or color bleaching) begins.
-  darkColor = '#2136BB';
-
-  /*
-   * These three colors are 'screen'ed out of the topColor to create the bottom color. See https://colorblendy.com/#!/screen.
-   * To determine  what the final screened out color would be (usually close to #fff) - use a color picker :D
-   * If needed programmatically, here is the formular `Cscreen = 1 - [(1 - Ca) * (1 - Cb) * (1 - Cc)].
-   * Where Cx is a color and 1-Cx is an invertion of Cx.
-   * Based on the definition here https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode#values
-   * And https://webdesign.tutsplus.com/tutorials/blending-modes-in-css-color-theory-and-practical-application--cms-25201.
-   * For inverting a color, see https://stackoverflow.com/a/6961743.
-   */
-  screenColors = ['#ff0000', '#00ff00', '#0000ff'];
-
-  // The animation ID of the current running aniation from.
+  // The animation ID of the current running animation frame.
   animationId?: number;
 
-  constructor() {}
-
   // TODO: Slowly add and remove nodes to avoid jank due to complete canvas redraw.
-  init(canvas: HTMLCanvasElement): boolean {
+  init(canvas: HTMLCanvasElement, config = new AudioWaveConfig()): boolean {
     this.canvas = canvas;
+    this.config = config;
     // This may be null if another context already in use, https://stackoverflow.com/a/13406681.
     const context = this.canvas.getContext('2d');
     if (context == null) {
@@ -62,9 +37,9 @@ export class AudioWave {
     if (this.animationId) {
       window.cancelAnimationFrame(this.animationId);
     }
-    this.resizeCanvas(this.canvas, this.canvasWidth);
-    this.screenColors.forEach((color) =>
-      this.waves.push(new Wave(this.canvas, color, this.nodeCount))
+    this.resizeCanvas(this.canvas, this.config.canvasWidth);
+    this.config.screenColors.forEach((color) =>
+      this.waves.push(new Wave(this.canvas, color, this.config.nodeCount))
     );
     this.update();
     return true;
@@ -92,7 +67,7 @@ export class AudioWave {
      * TODO: Try adjusting the height via Math.sin.
      */
 
-    this.renderingContext.fillStyle = this.darkColor;
+    this.renderingContext.fillStyle = this.config.darkColor;
     this.renderingContext.globalCompositeOperation = 'source-over';
     this.renderingContext.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.renderingContext.globalCompositeOperation = 'screen';
@@ -108,7 +83,7 @@ export class AudioWave {
     // The smaller this number, the more the actual height is determined by the random yBase leading to more entropy.
     const entropy = 20;
     point.y =
-      (this.waveHeight / 2) * Math.sin(point.yBase / entropy) +
+      (this.config.waveHeight / 2) * Math.sin(point.yBase / entropy) +
       this.canvas.height / 2;
 
     // Increase the randomly generated Y value with a tiny amount to avoid a repeating loop.
@@ -156,7 +131,7 @@ export class AudioWave {
       }
     }
 
-    canvas.height = this.waveHeight;
+    canvas.height = this.config.waveHeight;
   }
 }
 
@@ -196,4 +171,32 @@ class Point {
   x = 0;
   y = 0;
   yBase = 0;
+}
+
+export class AudioWaveConfig {
+  // This determines the number of peaks and troughs visible at a time. 1 - flat barely overlapping waves, 100 - a riot of waves.
+  nodeCount = 2;
+
+  // This is a dynamically set value. We anneal nodeCount with each frame to match targetNodeCount.
+  targetNodeCount = 2;
+
+  // This determines the height of the canvas, and by extension the height (or amplitude) of the waves.
+  waveHeight = 10;
+
+  // This determines the width of the canvas, and by extension the spacing between node peaks (or frequency).
+  canvasWidth = 400;
+
+  // This is the color from which screening (or color bleaching) begins.
+  darkColor = '#2136BB';
+
+  /*
+   * These three colors are 'screen'ed out of the topColor to create the bottom color. See https://colorblendy.com/#!/screen.
+   * To determine  what the final screened out color would be (usually close to #fff) - use a color picker :D
+   * If needed programmatically, here is the formular `Cscreen = 1 - [(1 - Ca) * (1 - Cb) * (1 - Cc)].
+   * Where Cx is a color and 1-Cx is an invertion of Cx.
+   * Based on the definition here https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode#values
+   * And https://webdesign.tutsplus.com/tutorials/blending-modes-in-css-color-theory-and-practical-application--cms-25201.
+   * For inverting a color, see https://stackoverflow.com/a/6961743.
+   */
+  screenColors = ['#ff0000', '#00ff00', '#0000ff'];
 }
