@@ -16,11 +16,9 @@ import { AudioWave } from './audio-wave';
   templateUrl: './audio-waves.component.html',
   styleUrls: ['./audio-waves.component.scss'],
 })
-export class AudioWavesComponent
-  extends AudioWave
-  implements OnInit, AfterViewInit
-{
+export class AudioWavesComponent implements OnInit, AfterViewInit {
   logger: Logger;
+  audioWave: AudioWave;
 
   @ViewChild('waveCanvas') canvasView: any;
   constructor(
@@ -28,32 +26,46 @@ export class AudioWavesComponent
     private ref: ChangeDetectorRef,
     loggingService: LoggingService
   ) {
-    super();
+    this.audioWave = new AudioWave();
     this.logger = loggingService.getLogger('audio-waves');
   }
 
   ngOnInit(): void {
+    this.registerSpeechEventsHandler();
+  }
+
+  ngAfterViewInit() {
+    // Initialize the waves.
+    if (!this.audioWave.init(this.canvasView.nativeElement)) {
+      this.logger.error('Unable to initialize audio waves');
+    }
+  }
+
+  /**
+   * This handler updates wave properties to emulate different speech events/states.
+   */
+  registerSpeechEventsHandler() {
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
       switch (rstate.state) {
         case State.START:
-          this.config.nodeCount = 10;
-          this.init(this.canvasView.nativeElement);
+          this.audioWave.config.nodeCount = 10;
+          this.audioWave.init(this.canvasView.nativeElement);
           break;
         case State.TRANSCRIBING:
           if (rstate.transcript?.partialText) {
-            if (this.config.nodeCount != 20) {
-              this.config.nodeCount = 20;
-              this.init(this.canvasView.nativeElement);
+            if (this.audioWave.config.nodeCount != 20) {
+              this.audioWave.config.nodeCount = 20;
+              this.audioWave.init(this.canvasView.nativeElement);
             }
           }
           break;
         case State.END:
-          this.config.nodeCount = 2;
-          this.init(this.canvasView.nativeElement);
+          this.audioWave.config.nodeCount = 2;
+          this.audioWave.init(this.canvasView.nativeElement);
           break;
         case State.IDLE:
-          this.config.nodeCount = 2;
-          this.init(this.canvasView.nativeElement);
+          this.audioWave.config.nodeCount = 2;
+          this.audioWave.init(this.canvasView.nativeElement);
           break;
         case State.NOT_SUPPORTED:
         case State.PERMISSION_NOT_GRANTED:
@@ -67,12 +79,6 @@ export class AudioWavesComponent
       }
       this.ref.detectChanges();
     });
-  }
-
-  ngAfterViewInit() {
-    if (!this.init(this.canvasView.nativeElement)) {
-      this.logger.error('Unable to initialize audio waves');
-    }
   }
 
   /*
