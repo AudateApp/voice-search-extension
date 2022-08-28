@@ -20,7 +20,7 @@ export class AudioWave {
   animationId?: number;
 
   // TODO: Slowly add and remove nodes to avoid jank due to complete canvas redraw.
-  init(canvas: HTMLCanvasElement, config = new AudioWaveConfig()): boolean {
+  init(canvas: HTMLCanvasElement, config: AudioWaveConfig): boolean {
     this.canvas = canvas;
     this.config = config;
     // This may be null if another context already in use, https://stackoverflow.com/a/13406681.
@@ -206,5 +206,5 @@ export class AudioWaveConfig {
   screenColors = ['#ff0000', '#00ff00', '#0000ff'];
 
   // Canvas element rotation in degrees.
-  rotation = 180;
+  rotation = 0;
 }

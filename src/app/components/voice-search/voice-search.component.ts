@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
 import { State } from '../../services/recognition/recognition-state';
 import { RecognitionService } from '../../services/recognition/recognition.service';
+import { AudioWaveConfig } from '../audio-waves/audio-wave';
 
 @Component({
   selector: 'audate-voice-search',
@@ -10,12 +11,15 @@ import { RecognitionService } from '../../services/recognition/recognition.servi
 })
 export class VoiceSearchComponent implements OnInit {
   finalTrascript?: string;
+  waveConfig = new AudioWaveConfig();
 
   constructor(
     private speechRecognizer: RecognitionService,
     private searchEngineService: SearchEngineService,
     private ref: ChangeDetectorRef
-  ) {}
+  ) {
+    this.waveConfig.rotation = 180;
+  }
 
   ngOnInit(): void {
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {

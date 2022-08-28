@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
+  Input,
   OnInit,
   ViewChild,
 } from '@angular/core';
@@ -9,7 +10,7 @@ import { Logger } from 'src/shared/logging/logger';
 import { LoggingService } from 'src/app/services/logging/logging.service';
 import { State } from 'src/app/services/recognition/recognition-state';
 import { RecognitionService } from 'src/app/services/recognition/recognition.service';
-import { AudioWave } from './audio-wave';
+import { AudioWave, AudioWaveConfig } from './audio-wave';
 
 @Component({
   selector: 'audate-audio-waves',
@@ -19,6 +20,8 @@ import { AudioWave } from './audio-wave';
 export class AudioWavesComponent implements OnInit, AfterViewInit {
   logger: Logger;
   audioWave: AudioWave;
+
+  @Input() config!: AudioWaveConfig;
 
   @ViewChild('waveCanvas') canvasView: any;
   constructor(
@@ -31,12 +34,15 @@ export class AudioWavesComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    if (!this.config) {
+      this.config = new AudioWaveConfig();
+    }
     this.registerSpeechEventsHandler();
   }
 
   ngAfterViewInit() {
     // Initialize the waves.
-    if (!this.audioWave.init(this.canvasView.nativeElement)) {
+    if (!this.audioWave.init(this.canvasView.nativeElement, this.config)) {
       this.logger.error('Unable to initialize audio waves');
     }
   }
@@ -49,23 +55,23 @@ export class AudioWavesComponent implements OnInit, AfterViewInit {
       switch (rstate.state) {
         case State.START:
           this.audioWave.config.nodeCount = 10;
-          this.audioWave.init(this.canvasView.nativeElement);
+          this.audioWave.init(this.canvasView.nativeElement, this.config);
           break;
         case State.TRANSCRIBING:
           if (rstate.transcript?.partialText) {
             if (this.audioWave.config.nodeCount != 20) {
               this.audioWave.config.nodeCount = 20;
-              this.audioWave.init(this.canvasView.nativeElement);
+              this.audioWave.init(this.canvasView.nativeElement, this.config);
             }
           }
           break;
         case State.END:
           this.audioWave.config.nodeCount = 2;
-          this.audioWave.init(this.canvasView.nativeElement);
+          this.audioWave.init(this.canvasView.nativeElement, this.config);
           break;
         case State.IDLE:
           this.audioWave.config.nodeCount = 2;
-          this.audioWave.init(this.canvasView.nativeElement);
+          this.audioWave.init(this.canvasView.nativeElement, this.config);
           break;
         case State.NOT_SUPPORTED:
         case State.PERMISSION_NOT_GRANTED:
