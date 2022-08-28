@@ -38,6 +38,7 @@ export class AudioWave {
       window.cancelAnimationFrame(this.animationId);
     }
     this.resizeCanvas(this.canvas, this.config.canvasWidth);
+    this.rotateCanvas(this.canvas, this.config.rotation);
     this.config.screenColors.forEach((color) =>
       this.waves.push(new Wave(this.canvas, color, this.config.nodeCount))
     );
@@ -133,6 +134,10 @@ export class AudioWave {
 
     canvas.height = this.config.waveHeight;
   }
+
+  private rotateCanvas(canvas: HTMLCanvasElement, rotation: number) {
+    canvas.style.transform = 'rotate(' + rotation + 'deg)';
+  }
 }
 
 class Wave {
@@ -199,4 +204,7 @@ export class AudioWaveConfig {
    * For inverting a color, see https://stackoverflow.com/a/6961743.
    */
   screenColors = ['#ff0000', '#00ff00', '#0000ff'];
+
+  // Canvas element rotation in degrees.
+  rotation = 180;
 }
