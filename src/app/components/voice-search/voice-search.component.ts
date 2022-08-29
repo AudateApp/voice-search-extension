@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
 import { State } from '../../services/recognition/recognition-state';
 import { RecognitionService } from '../../services/recognition/recognition.service';
-import { AudioWaveConfig } from '../audio-waves/audio-wave';
+import { applyConfig, DefaultConfig } from '../audio-waves/audio-wave';
 
 @Component({
   selector: 'audate-voice-search',
@@ -11,7 +11,7 @@ import { AudioWaveConfig } from '../audio-waves/audio-wave';
 })
 export class VoiceSearchComponent implements OnInit {
   finalTrascript?: string;
-  waveConfig = new AudioWaveConfig();
+  waveConfig = DefaultConfig;
 
   constructor(
     private speechRecognizer: RecognitionService,
@@ -26,11 +26,20 @@ export class VoiceSearchComponent implements OnInit {
       switch (rstate.state) {
         case State.START:
           this.finalTrascript = undefined;
+          this.waveConfig = applyConfig({ nodeCount: 10, rotation: 180 });
           break;
         case State.TRANSCRIBING:
           if (rstate.transcript?.finalText) {
             this.finalTrascript = rstate.transcript?.finalText;
           }
+          if (rstate.transcript?.partialText) {
+            if (this.waveConfig.nodeCount != 20) {
+              this.waveConfig = applyConfig({ nodeCount: 20, rotation: 180 });
+            }
+          }
+          break;
+        case State.END:
+          this.waveConfig = applyConfig({ nodeCount: 2, rotation: 180 });
           break;
         case State.IDLE:
           if (this.finalTrascript) {
@@ -38,6 +47,7 @@ export class VoiceSearchComponent implements OnInit {
             window.close();
           }
           this.finalTrascript = undefined;
+          this.waveConfig = applyConfig({ nodeCount: 2, rotation: 180 });
       }
     });
   }

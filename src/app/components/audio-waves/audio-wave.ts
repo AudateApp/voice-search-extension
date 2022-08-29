@@ -37,7 +37,7 @@ export class AudioWave {
     if (this.animationId) {
       window.cancelAnimationFrame(this.animationId);
     }
-    this.resizeCanvas(this.canvas, this.config.canvasWidth);
+    this.resizeCanvas(this.canvas, this.config.width);
     this.rotateCanvas(this.canvas, this.config.rotation);
     this.config.screenColors.forEach((color) =>
       this.waves.push(new Wave(this.canvas, color, this.config.nodeCount))
@@ -68,7 +68,7 @@ export class AudioWave {
      * TODO: Try adjusting the height via Math.sin.
      */
 
-    this.renderingContext.fillStyle = this.config.darkColor;
+    this.renderingContext.fillStyle = this.config.opaqueColor;
     this.renderingContext.globalCompositeOperation = 'source-over';
     this.renderingContext.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.renderingContext.globalCompositeOperation = 'screen';
@@ -84,7 +84,7 @@ export class AudioWave {
     // The smaller this number, the more the actual height is determined by the random yBase leading to more entropy.
     const entropy = 20;
     point.y =
-      (this.config.waveHeight / 2) * Math.sin(point.yBase / entropy) +
+      (this.config.height / 2) * Math.sin(point.yBase / entropy) +
       this.canvas.height / 2;
 
     // Increase the randomly generated Y value with a tiny amount to avoid a repeating loop.
@@ -132,7 +132,7 @@ export class AudioWave {
       }
     }
 
-    canvas.height = this.config.waveHeight;
+    canvas.height = this.config.height;
   }
 
   private rotateCanvas(canvas: HTMLCanvasElement, rotation: number) {
@@ -178,21 +178,24 @@ class Point {
   yBase = 0;
 }
 
-export class AudioWaveConfig {
-  // This determines the number of peaks and troughs visible at a time. 1 - flat barely overlapping waves, 100 - a riot of waves.
-  nodeCount = 2;
-
-  // This is a dynamically set value. We anneal nodeCount with each frame to match targetNodeCount.
-  targetNodeCount = 2;
+export interface AudioWaveConfig {
+  /*
+   * This determines the width of the canvas, and by extension the spacing between node peaks (or frequency).
+   * Set to 0 to use the full width of the window.
+   */
+  width: number;
 
   // This determines the height of the canvas, and by extension the height (or amplitude) of the waves.
-  waveHeight = 10;
+  height: number;
 
-  // This determines the width of the canvas, and by extension the spacing between node peaks (or frequency).
-  canvasWidth = 400;
+  // This determines the number of peaks and troughs visible at a time. 1 - flat barely overlapping waves, 100 - a riot of waves.
+  nodeCount: number;
+
+  // This is a dynamically set value. We anneal nodeCount with each frame to match targetNodeCount.
+  targetNodeCount: number;
 
   // This is the color from which screening (or color bleaching) begins.
-  darkColor = '#2136BB';
+  opaqueColor: string;
 
   /*
    * These three colors are 'screen'ed out of the topColor to create the bottom color. See https://colorblendy.com/#!/screen.
@@ -203,8 +206,22 @@ export class AudioWaveConfig {
    * And https://webdesign.tutsplus.com/tutorials/blending-modes-in-css-color-theory-and-practical-application--cms-25201.
    * For inverting a color, see https://stackoverflow.com/a/6961743.
    */
-  screenColors = ['#ff0000', '#00ff00', '#0000ff'];
+  screenColors: Array<string>;
 
   // Canvas element rotation in degrees.
-  rotation = 0;
+  rotation: number;
 }
+
+export const DefaultConfig: AudioWaveConfig = {
+  width: 400,
+  height: 10,
+  nodeCount: 2,
+  targetNodeCount: 2,
+  opaqueColor: '#2136BB',
+  screenColors: ['#ff0000', '#00ff00', '#0000ff'],
+  rotation: 0,
+};
+
+export const applyConfig = (props: any) => {
+  return Object.assign({}, DefaultConfig, props) as AudioWaveConfig;
+};

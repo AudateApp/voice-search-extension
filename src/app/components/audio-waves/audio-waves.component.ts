@@ -3,21 +3,23 @@ import {
   ChangeDetectorRef,
   Component,
   Input,
+  OnChanges,
   OnInit,
+  SimpleChanges,
   ViewChild,
 } from '@angular/core';
 import { Logger } from 'src/shared/logging/logger';
 import { LoggingService } from 'src/app/services/logging/logging.service';
 import { State } from 'src/app/services/recognition/recognition-state';
 import { RecognitionService } from 'src/app/services/recognition/recognition.service';
-import { AudioWave, AudioWaveConfig } from './audio-wave';
+import { AudioWave, AudioWaveConfig, DefaultConfig } from './audio-wave';
 
 @Component({
   selector: 'audate-audio-waves',
   templateUrl: './audio-waves.component.html',
   styleUrls: ['./audio-waves.component.scss'],
 })
-export class AudioWavesComponent implements OnInit, AfterViewInit {
+export class AudioWavesComponent implements OnInit, AfterViewInit, OnChanges {
   logger: Logger;
   audioWave: AudioWave;
 
@@ -35,9 +37,8 @@ export class AudioWavesComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     if (!this.config) {
-      this.config = new AudioWaveConfig();
+      this.config = DefaultConfig;
     }
-    this.registerSpeechEventsHandler();
   }
 
   ngAfterViewInit() {
@@ -47,44 +48,22 @@ export class AudioWavesComponent implements OnInit, AfterViewInit {
     }
   }
 
-  /**
-   * This handler updates wave properties to emulate different speech events/states.
-   */
-  registerSpeechEventsHandler() {
-    this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
-      switch (rstate.state) {
-        case State.START:
-          this.audioWave.config.nodeCount = 10;
+  /** Listen for changes on the config input and update canvas. */
+  ngOnChanges(changes: SimpleChanges) {
+    for (const propName in changes) {
+      if (propName == 'config') {
+        const chng = changes[propName];
+        this.logger.debug(
+          'Updating config to curr:',
+          chng.currentValue,
+          'from prev:',
+          chng.previousValue
+        );
+        this.config = chng.currentValue as AudioWaveConfig;
+        if (this.canvasView)
           this.audioWave.init(this.canvasView.nativeElement, this.config);
-          break;
-        case State.TRANSCRIBING:
-          if (rstate.transcript?.partialText) {
-            if (this.audioWave.config.nodeCount != 20) {
-              this.audioWave.config.nodeCount = 20;
-              this.audioWave.init(this.canvasView.nativeElement, this.config);
-            }
-          }
-          break;
-        case State.END:
-          this.audioWave.config.nodeCount = 2;
-          this.audioWave.init(this.canvasView.nativeElement, this.config);
-          break;
-        case State.IDLE:
-          this.audioWave.config.nodeCount = 2;
-          this.audioWave.init(this.canvasView.nativeElement, this.config);
-          break;
-        case State.NOT_SUPPORTED:
-        case State.PERMISSION_NOT_GRANTED:
-        case State.NO_AUDIO_INPUT_DEVICE:
-        case State.NO_CONNECTION:
-        case State.NO_SPEECH_DETECTED:
-        case State.ABORTED:
-        case State.LANGUAGE_NOT_SUPPORTED:
-        case State.SERVICE_NOT_ALLOWED:
-          break;
       }
-      this.ref.detectChanges();
-    });
+    }
   }
 
   /*
