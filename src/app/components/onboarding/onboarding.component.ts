@@ -13,12 +13,18 @@ export class OnboardingComponent implements OnInit {
   footerWave = DefaultConfig;
 
   constructor() {
-    this.headerWave = applyConfig({ width: 0, height: 200 });
+    this.headerWave = applyConfig({
+      width: 0,
+      height: 200,
+      opaqueColor: '#410ff8',
+    });
 
     this.footerWave = applyConfig({
       width: 0,
-      height: 50,
+      height: 20,
+      opaqueColor: '#410ff8',
       rotation: 180,
+      nodeCount: 180,
     });
   }
 

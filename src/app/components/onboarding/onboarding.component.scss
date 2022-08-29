@@ -1,12 +1,20 @@
-.header,
-.footer {
-  background: #2136bb;
+.header {
+  background: #410ff8;
   color: white;
   min-height: 200px;
   padding: 50px;
 
+  .logo {
+    margin-top: -150px;
+    margin-bottom: -120px;
+  }
+
   h1 {
-    font-size: 4rem;
+    font-size: 6rem;
+    padding-left: 50px;
+    span {
+      font-size: 7rem;
+    }
   }
 
   a {
@@ -18,13 +26,24 @@
   }
 }
 
+.content {
+  padding: 50px;
+}
+
 .footer {
-  audate-audio-waves {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-    margin-bottom: -4px; // TODO: Remove this.
+  margin-top: -4px;
+  bottom: 0px;
+
+  background: #410ff8;
+  color: white;
+  min-height: 200px;
+  padding: 50px;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: yellow;
+    }
   }
 }

@@ -1,6 +1,5 @@
 import {
   AfterViewInit,
-  ChangeDetectorRef,
   Component,
   HostListener,
   Input,
@@ -11,8 +10,6 @@ import {
 } from '@angular/core';
 import { Logger } from 'src/shared/logging/logger';
 import { LoggingService } from 'src/app/services/logging/logging.service';
-import { State } from 'src/app/services/recognition/recognition-state';
-import { RecognitionService } from 'src/app/services/recognition/recognition.service';
 import { AudioWave, AudioWaveConfig, DefaultConfig } from './audio-wave';
 
 @Component({
@@ -27,11 +24,7 @@ export class AudioWavesComponent implements OnInit, AfterViewInit, OnChanges {
   @Input() config!: AudioWaveConfig;
 
   @ViewChild('waveCanvas') canvasView: any;
-  constructor(
-    private speechRecognizer: RecognitionService,
-    private ref: ChangeDetectorRef,
-    loggingService: LoggingService
-  ) {
+  constructor(loggingService: LoggingService) {
     this.audioWave = new AudioWave();
     this.logger = loggingService.getLogger('audio-waves');
   }
