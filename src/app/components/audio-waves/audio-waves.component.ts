@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
+  HostListener,
   Input,
   OnChanges,
   OnInit,
@@ -64,6 +65,11 @@ export class AudioWavesComponent implements OnInit, AfterViewInit, OnChanges {
           this.audioWave.init(this.canvasView.nativeElement, this.config);
       }
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(unusedEvent: any) {
+    this.audioWave.init(this.canvasView.nativeElement, this.config);
   }
 
   /*
