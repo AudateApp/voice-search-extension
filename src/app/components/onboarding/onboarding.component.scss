@@ -3,6 +3,7 @@
   color: white;
   min-height: 200px;
   padding: 50px;
+  padding-bottom: 20px;
 
   .logo {
     margin-top: -150px;
@@ -10,10 +11,10 @@
   }
 
   h1 {
-    font-size: 6rem;
+    font-size: 5em;
     padding-left: 50px;
     span {
-      font-size: 7rem;
+      font-size: 1.1em;
     }
   }
 
@@ -27,7 +28,14 @@
 }
 
 .content {
-  padding: 50px;
+  & > div {
+    margin-bottom: 20px;
+  }
+  .pin-extension {
+    img {
+      margin-left: -20px;
+    }
+  }
 }
 
 .footer {
