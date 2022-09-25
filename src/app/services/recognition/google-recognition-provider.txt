@@ -1,0 +1,88 @@
+import { Observable, of, share, Subject } from 'rxjs';
+import { SpeechClient } from '@google-cloud/speech';
+import { RecognitionProvider } from './recognition-provider';
+import { RecognitionState, State } from './recognition-state';
+import { Logger } from 'src/shared/logging/logger';
+import { LoggingService } from '../logging/logging.service';
+
+export class GoogleRecognitionProvider implements RecognitionProvider {
+  // Demo here - https://github.com/googleapis/nodejs-speech/blob/main/samples/MicrophoneStream.js
+  speechClient = new SpeechClient();
+  encoding = 'LINEAR16';
+  sampleRateHertz = 16000;
+  languageCode = 'en-US';
+  mediaRecorder?: MediaRecorder;
+  recognitionState$: Subject<RecognitionState> = new Subject();
+  logger: Logger;
+
+  config = {
+    encoding: this.encoding,
+    sampleRateHertz: this.sampleRateHertz,
+    languageCode: this.languageCode,
+  };
+
+  constructor(loggingService: LoggingService) {
+    this.logger = loggingService.getLogger('RecognitionService');
+  }
+
+  // Start speech recognition.
+  start(isContinuous: boolean): void {
+    const request = {
+      ...this.config,
+      interimResults: isContinuous, //Get interim results from stream
+    };
+
+    // Create a recognize stream
+    const recognizeStream = this.speechClient
+      .streamingRecognize(request)
+      .on('error', console.error)
+      .on('data', (data) =>
+        this.logger.error(
+          data.results[0] && data.results[0].alternatives[0]
+            ? `Transcription: ${data.results[0].alternatives[0].transcript}\n`
+            : '\n\nReached transcription time limit, press Ctrl+C\n'
+        )
+      );
+
+    const audioChunks: Blob[] = [];
+    navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
+      this.mediaRecorder = new MediaRecorder(stream);
+      this.mediaRecorder.addEventListener('dataavailable', (event) => {
+        this.logger.log('chunck: ', event.data);
+        audioChunks.push(event.data);
+        recognizeStream.push(event.data, this.encoding);
+        let recognitionState = {
+          state: State.TRANSCRIBING,
+          transcript: { partialText: 'partial' },
+        };
+        this.recognitionState$.next(recognitionState);
+      });
+      this.mediaRecorder.onerror = (ev: MediaRecorderErrorEvent) => {
+        this.logger.error('mediarecorder error: ', ev);
+        const recognitionState = {
+          state: State.NOT_SUPPORTED,
+          errorMessage: 'Recognition not supported.',
+        };
+        this.recognitionState$.next(recognitionState);
+      };
+      this.mediaRecorder.addEventListener('stop', () => {
+        this.logger.log('mediarecorder #stop');
+        const audioBlob = new Blob(audioChunks);
+        const audioUrl = URL.createObjectURL(audioBlob);
+        const audio = new Audio(audioUrl);
+        const play = () => audio.play();
+        play(); // Uncomment to stop play.
+      });
+      this.mediaRecorder.start();
+    });
+  }
+
+  // Stop speech recognition.
+  stop(): void {
+    this.mediaRecorder?.stop();
+  }
+
+  getRecognitionState(): Observable<RecognitionState> {
+    return this.recognitionState$.asObservable().pipe(share());
+  }
+}
