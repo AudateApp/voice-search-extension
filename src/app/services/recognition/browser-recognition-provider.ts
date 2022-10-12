@@ -150,8 +150,6 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
   /** Fired when a speech recognition error occurs. */
   #onError = (event: any) => {
     const eventError: string = event.error;
-    const errorMessage: string = event.message;
-    this.logger.error('#onError', eventError, errorMessage);
     // Not using errorMessage below as it is not very descriptive.
     switch (eventError) {
       case 'no-speech':
@@ -203,8 +201,9 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
       default:
         this.recognitionState = {
           state: State.UNKNOWN,
-          errorMessage: 'TODO:Please handle these cases',
+          errorMessage: 'Unhandled error',
         };
+        this.logger.error('#onError unhandled error', eventError, event.message);
         break;
     }
     this.recognitionState$.next(this.recognitionState);
