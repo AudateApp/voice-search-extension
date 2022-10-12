@@ -4,6 +4,7 @@ import { DefaultSearchEngine, SearchEngine } from '../model/search-engine';
 import { Logger } from '../../shared/logging/logger';
 import { LoggingService } from './logging/logging.service';
 import { StorageService } from './storage/storage.service';
+import { LaunchTarget, LaunchTargetService } from './launch-target.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,11 +13,10 @@ export class SearchEngineService {
   logger: Logger;
   currentSearchEngine = DefaultSearchEngine;
   currentSearchEngine$: Subject<SearchEngine> = new Subject();
-  // TODO: Make this a setting.
-  shouldOpenInNewTab = false;
 
   constructor(
     private storageService: StorageService,
+    private launchTargetService: LaunchTargetService,
     loggingService: LoggingService
   ) {
     this.logger = loggingService.getLogger('SearchEngService');
@@ -71,68 +71,18 @@ export class SearchEngineService {
       query
     );
 
-    if (this.shouldOpenInNewTab) {
-      (window as any).open(url, '_blank').focus();
-    } else {
-      // Open the query as a preview in the current tab.
-      this.getActiveTabForPreview().then(
-        (activeTab) => {
-          chrome.tabs.sendMessage(
-            activeTab.id!,
-            {
-              key: 'voice_search_query',
-              value: url,
-            },
-            () => {
-              // Maybe close popup here?
-            }
-          );
-        },
-        (error) => {
-          this.logger.error(error.message);
-          if (error.tabId) {
-            chrome.tabs.update(error.tabId, { url: url });
-          }
-        }
-      );
-    }
-  }
-
-  /** Return a tab if we can display preview in it. Fails otherwise. */
-  getActiveTabForPreview(): Promise<chrome.tabs.Tab> {
-    return new Promise((resolve, error) => {
-      chrome.tabs.query({ currentWindow: true, active: true }, (tabs) => {
-        var activeTab = tabs[0];
-        if (!activeTab.id) {
-          error({ message: 'Active tab does not have an ID' });
-          return;
-        }
-
-        // Tab.url may be null if there's a pending navigation.
-        if (!activeTab.url && !activeTab.pendingUrl) {
-          error({ message: 'On NewTab or HomePage.', tabId: activeTab.id });
-          return;
-        }
-
-        const timeout = setTimeout(() => {
-          error({ message: 'No response from page.', tabId: activeTab.id });
-        }, 200);
-
-        chrome.tabs.sendMessage(
-          activeTab.id,
-          {
-            key: 'ping',
-          },
-          (unusedPong) => {
-            clearTimeout(timeout);
-            if (chrome.runtime.lastError) {
-              error({ message: chrome.runtime.lastError, tabId: activeTab.id });
-              return;
-            }
-            resolve(activeTab);
-          }
-        );
-      });
-    });
+    this.launchTargetService.getSavedLaunchTarget().then(lt => {
+      switch (lt) {
+        case LaunchTarget.CURRENT_TAB:
+          (window as any).open(url, '_self').focus();
+          break;
+        case LaunchTarget.NEW_TAB:
+          (window as any).open(url, '_blank').focus();
+          break;
+        default:
+          (window as any).open(url, '_blank').focus();
+          break;
+      }
+    })
   }
 }
