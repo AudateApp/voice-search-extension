@@ -77,11 +77,13 @@ export class SearchEngineService {
           chrome.tabs.query({active: true}).then(tabs => {
             if(tabs.length !== 1) {
               console.error("Wrong number of active tabs, expected 1, got ", tabs.length);
+              chrome.tabs.create({url:url, active: true});
               return;
             }
             const tab = tabs[0];
             if(!tab.id) {
               console.error("No tab ID, context is not appropriate to updating tab");
+              chrome.tabs.create({url:url, active: true});
               return;
             }
             chrome.tabs.update(tab.id, {url: url, active: true});
