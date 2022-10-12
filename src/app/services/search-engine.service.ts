@@ -73,14 +73,25 @@ export class SearchEngineService {
 
     this.launchTargetService.getSavedLaunchTarget().then(lt => {
       switch (lt) {
-        case LaunchTarget.CURRENT_TAB:
-          (window as any).open(url, '_self').focus();
+        case LaunchTarget.CURRENT_TAB:     
+          chrome.tabs.query({active: true}).then(tabs => {
+            if(tabs.length !== 1) {
+              console.error("Wrong number of active tabs, expected 1, got ", tabs.length);
+              return;
+            }
+            const tab = tabs[0];
+            if(!tab.id) {
+              console.error("No tab ID, context is not appropriate to updating tab");
+              return;
+            }
+            chrome.tabs.update(tab.id, {url: url});
+          });
           break;
         case LaunchTarget.NEW_TAB:
-          (window as any).open(url, '_blank').focus();
+          chrome.tabs.create({url:url, active: true});
           break;
-        default:
-          (window as any).open(url, '_blank').focus();
+        default:          
+          chrome.tabs.create({url:url, active: true});
           break;
       }
     })

@@ -14,7 +14,7 @@ import { LocaleService } from 'src/app/services/locale/locale.service';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
 import { LoggingService } from 'src/app/services/logging/logging.service';
 import { Logger } from 'src/shared/logging/logger';
-import { LaunchTarget, LaunchTargetService } from 'src/app/services/launch-target.service';
+import { LaunchTarget, DefaultLaunchTarget, LaunchTargetService } from 'src/app/services/launch-target.service';
 
 @Component({
   selector: 'audate-quick-settings',
@@ -25,7 +25,7 @@ export class QuickSettingsComponent implements OnInit {
   logger: Logger;
   locales: LocaleProperties[] = LocalesForDefaultModel;
   currentLocale: LocaleProperties = DefaultLocale;
-  launchTarget: LaunchTarget = LaunchTarget.CURRENT_TAB;
+  launchTarget: LaunchTarget = DefaultLaunchTarget;
 
   searchEngines: SearchEngine[] = SearchEngines;
   currentSearchEngine: SearchEngine = DefaultSearchEngine;
@@ -81,7 +81,6 @@ export class QuickSettingsComponent implements OnInit {
     );
 
     this.launchTargetService.getLaunchTarget().subscribe(lt => {
-      console.log("got vibes", lt);
       this.launchTarget = lt;
       this.ref.detectChanges();
     })
@@ -94,7 +93,6 @@ export class QuickSettingsComponent implements OnInit {
     this.searchEngineService.setSearchEngine(se);
   }
   setLaunchTarget(lt: string): void {
-    console.log("set lt", lt);
     if (lt === 'Current Tab') {
       this.launchTargetService.setLaunchTarget(LaunchTarget.CURRENT_TAB);
     } else if (lt === 'New Tab') {
