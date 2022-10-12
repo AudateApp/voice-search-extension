@@ -84,7 +84,7 @@ export class SearchEngineService {
               console.error("No tab ID, context is not appropriate to updating tab");
               return;
             }
-            chrome.tabs.update(tab.id, {url: url});
+            chrome.tabs.update(tab.id, {url: url, active: true});
           });
           break;
         case LaunchTarget.NEW_TAB:
