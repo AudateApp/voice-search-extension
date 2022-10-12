@@ -24,6 +24,9 @@ export class LaunchTargetService {
   constructor(
     private storageService: StorageService, loggingService: LoggingService) {
     this.logger = loggingService.getLogger('LaunchTargetService');
+
+    // Emit value from store as initial value.
+    this.getSavedLaunchTarget().then(lt => this.currentLaunchTarget$.next(lt));
   }
 
   getLaunchTarget(): Observable<LaunchTarget> {
