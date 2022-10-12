@@ -1,9 +1,17 @@
 import { Logger } from './logger';
+import * as Sentry from "@sentry/angular";
 
-// TODO: Implement this: https://github.com/winstonjs/winston
 export class RemoteLogger implements Logger {
-  debug(...unusedLogs: unknown[]): void {}
-  log(...unusedLogs: unknown[]): void {}
-  warn(...unusedLogs: unknown[]): void {}
-  error(...unusedLogs: unknown[]): void {}
+  debug(...unused: unknown[]): void {
+    // Ignore these.
+  }
+  log(...unused: unknown[]): void {
+    // Ignore these.
+  }
+  warn(...messages: unknown[]): void {
+    Sentry.captureMessage(messages.join(","));
+  }
+  error(...err: unknown[]): void {
+    Sentry.captureException(err);
+  }
 }
