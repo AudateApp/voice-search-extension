@@ -8,6 +8,7 @@ Update version in
 
 1. package.json
 2. src/assets/manifest.json
+3. src/main.ts
 
 
 ## TODO

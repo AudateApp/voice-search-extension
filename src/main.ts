@@ -31,7 +31,7 @@ Sentry.init({
    */
   tracesSampleRate: 1.0,
 
-  release: "audate-voice-search@" + process.env['npm_package_version'],
+  release: "audate-voice-search@22.10.12",
   environment: "PROD",
 });
 
