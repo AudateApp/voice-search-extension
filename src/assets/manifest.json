@@ -7,7 +7,10 @@
   "default_locale": "en",
   "author": "Justice Ogbonna",
   "short_name": "Audate",
-  "permissions": ["storage", "declarativeNetRequest"],
+  "permissions": [
+    "storage",
+    "declarativeNetRequest"
+  ],
   "declarative_net_request": {
     "rule_resources": [
       {
@@ -17,7 +20,9 @@
       }
     ]
   },
-  "host_permissions": ["*://*/*"],
+  "host_permissions": [
+    "*://*/*"
+  ],
   "action": {
     "default_icon": {
       "16": "assets/images/logo-16x16.png",
@@ -35,64 +40,108 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["index.html"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "index.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["main.js"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "main.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["polyfills.js"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "polyfills.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["runtime.js"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "runtime.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["vendor.js"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "vendor.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["assets/icons/search-icon.jpeg"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "assets/icons/search-icon.jpeg"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["primeicons.eot"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "primeicons.eot"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["primeicons.svg"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "primeicons.svg"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["primeicons.ttf"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "primeicons.ttf"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["primeicons.woff"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "primeicons.woff"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["content-style.css"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "content-style.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["primeicons.css"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "primeicons.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     },
     {
-      "resources": ["styles.css"],
-      "matches": ["<all_urls>"]
-    }
-  ],
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "all_frames": true,
-      "js": ["content-script.js"],
-      "css": ["content-style.css"]
+      "resources": [
+        "styles.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ],
   "background": {

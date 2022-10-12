@@ -1,12 +1,9 @@
 import { StorageMessage } from 'src/shared/storage-message';
 import { ChromeStorageProvider } from '../shared/chrome-storage-provider';
-import { ContextMenu } from './context-menu';
 import { SearchEngine } from 'src/app/model/search-engine';
 import { LoggingService } from './logging-service';
 
 const logger = new LoggingService().getLogger('content-script');
-
-new ContextMenu().init();
 
 const uninstallUrl = 'https://forms.gle/TuRLnDRFoXRNFuZP7';
 const welcomeUrl = chrome.runtime.getURL('index.html#request-permissions');
