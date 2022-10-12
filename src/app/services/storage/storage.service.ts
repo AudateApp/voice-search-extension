@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { ChromeStorageProvider } from '../../../shared/chrome-storage-provider';
+import { ChromeStorageProvider } from './chrome-storage-provider';
 import { LocalStorageProvider } from './local-storage-provider';
-import { StorageProvider } from '../../../shared/storage-provider';
+import { StorageProvider } from './storage-provider';
 
 /**
  * Provides abstraction over different storage mechanisms and contexts for the app.

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, share, Subject } from 'rxjs';
 import { DefaultSearchEngine, SearchEngine } from '../model/search-engine';
-import { Logger } from '../../shared/logging/logger';
+import { Logger } from './logging/logger';
 import { LoggingService } from './logging/logging.service';
 import { StorageService } from './storage/storage.service';
 import { LaunchTarget, LaunchTargetService } from './launch-target.service';

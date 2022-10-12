@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Logger } from '../../shared/logging/logger';
+import { Logger } from './logging/logger';
 import { LoggingService } from './logging/logging.service';
 
 /** Provide abstraction for audio input devices. */
