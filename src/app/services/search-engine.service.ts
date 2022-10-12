@@ -86,7 +86,10 @@ export class SearchEngineService {
               chrome.tabs.create({url:url, active: true});
               return;
             }
-            chrome.tabs.update(tab.id, {url: url, active: true});
+            chrome.tabs.update(tab.id, {url: url, active: true}).then(
+              () =>this.logger.debug("successfully opened url"), 
+              err => this.logger.error("#performSearch: error opening url", err)
+            );
           });
           break;
         case LaunchTarget.NEW_TAB:

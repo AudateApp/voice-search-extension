@@ -44,7 +44,7 @@ export class VoiceSearchComponent implements OnInit {
         case State.IDLE:
           if (this.finalTrascript) {
             this.searchEngineService.performSearch(this.finalTrascript);
-            window.close();
+            setTimeout( () => window.close(), 1000);
           }
           this.finalTrascript = undefined;
           this.waveConfig = applyConfig({ nodeCount: 2, rotation: 180 });
