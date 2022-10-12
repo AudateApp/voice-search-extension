@@ -8,7 +8,6 @@ import {
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { createCustomElement } from '@angular/elements';
 import { APP_BASE_HREF } from '@angular/common';
 
 import { ButtonModule } from 'primeng/button';

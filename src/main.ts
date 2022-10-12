@@ -20,7 +20,6 @@ Sentry.init({
      * performance, including custom Angular routing instrumentation
      */
     new BrowserTracing({
-      tracingOrigins: ['localhost', 'https://yourserver.io/api'],
       routingInstrumentation: Sentry.routingInstrumentation,
     }),
   ],
@@ -31,6 +30,9 @@ Sentry.init({
    * We recommend adjusting this value in production
    */
   tracesSampleRate: 1.0,
+
+  release: "audate-voice-search@" + process.env['npm_package_version'],
+  environment: "PROD",
 });
 
 platformBrowserDynamic()
