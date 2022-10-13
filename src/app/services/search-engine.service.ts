@@ -77,13 +77,13 @@ export class SearchEngineService {
           chrome.tabs.query({active: true}).then(tabs => {
             if(tabs.length !== 1) {
               this.logger.error("Wrong number of active tabs, expected 1, got ", tabs.length);
-              chrome.tabs.create({url:url, active: true});
+              this.createTab(url);
               return;
             }
             const tab = tabs[0];
             if(!tab.id) {
               this.logger.error("No tab ID, context is not appropriate to updating tab");
-              chrome.tabs.create({url:url, active: true});
+              this.createTab(url);
               return;
             }
             chrome.tabs.update(tab.id, {url: url, active: true}).then(
@@ -93,12 +93,19 @@ export class SearchEngineService {
           });
           break;
         case LaunchTarget.NEW_TAB:
-          chrome.tabs.create({url:url, active: true});
+          this.createTab(url);
           break;
         default:          
-          chrome.tabs.create({url:url, active: true});
+          this.createTab(url);
           break;
       }
     })
+  }
+  
+  createTab(url: string): void {
+    chrome.tabs.create({url:url, active: true}).then(
+      () => {}, 
+      err => this.logger.error("#createTab error", err)
+    );
   }
 }
