@@ -10,6 +10,7 @@ function gtag(...args: any[]) { window.dataLayer.push(...args); }
 export class AnalyticsService {
   constructor() {
     gtag('js', new Date());
+    // The chrome dashboard uses legacy, UA-41478922-4.
     gtag('config', 'G-2VCZGVT0KN');
   }
 
