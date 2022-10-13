@@ -254,7 +254,6 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
   };
 
   start(isContinuous: boolean): void {
-    this.start2(true);
     if (this.recognition) {
       this.logger.log('stopping recognition');
       this.recognition.abort();
@@ -283,7 +282,6 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
       this.logger.error("Stopping recognition that isn't initialized");
       return;
     }
-    this.stop2();
 
     // Aborting instead of stopping prevents streaming results after closure.
     this.recognition.abort();
@@ -291,34 +289,5 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
 
   getRecognitionState(): Observable<RecognitionState> {
     return this.recognitionState$.asObservable().pipe(share());
-  }
-
-  mediaRecorder?: MediaRecorder;
-
-  // Start speech recognition.
-  start2(unusedIsContinuous: boolean): void {
-    navigator.mediaDevices
-      .getUserMedia({ video: false, audio: true })
-      .then((stream) => {
-        this.mediaRecorder = new MediaRecorder(stream);
-        this.mediaRecorder.start();
-        this.logger.log('mediarecorder started');
-
-        this.mediaRecorder.ondataavailable = (e) => {
-          this.logger.log('chunks: ', e.data);
-        };
-        this.mediaRecorder.onerror = (ev: MediaRecorderErrorEvent) => {
-          this.logger.error('mediarecorder error: ', ev);
-        };
-      })
-      .catch((err) => {
-        this.logger.log('Error requesting media devices ', err);
-      });
-  }
-
-  // Stop speech recognition.
-  stop2(): void {
-    this.mediaRecorder?.stop();
-    this.logger.log('stopped mediarecorder');
   }
 }
