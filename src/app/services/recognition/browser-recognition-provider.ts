@@ -6,6 +6,8 @@ import { LocaleService } from '../locale/locale.service';
 import { LoggingService } from '../logging/logging.service';
 import { Logger } from '../logging/logger';
 import { RecognitionProvider } from './recognition-provider';
+import { I18nService } from '../i18n.service';
+import { Mssg } from '../i18n-mssg';
 
 /*
  * This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
@@ -32,6 +34,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
 
   constructor(
     private localeService: LocaleService,
+    private i18n: I18nService,
     loggingService: LoggingService
   ) {
     this.logger = loggingService.getLogger('RecognitionService');
@@ -128,7 +131,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
     if (!this.detectedSpeech) {
       this.recognitionState = {
         state: State.NO_SPEECH_DETECTED,
-        errorMessage: 'No recognizable sound detected.',
+        errorMessage: this.i18n.get(Mssg.ErrNoSpeechDetected),
       };
       this.recognitionState$.next(this.recognitionState);
     }
@@ -155,53 +158,51 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
       case 'no-speech':
         this.recognitionState = {
           state: State.NO_SPEECH_DETECTED,
-          errorMessage: 'No speech detected.',
+          errorMessage: this.i18n.get(Mssg.ErrNoSoundDetected),
         };
         break;
       case 'audio-capture':
         this.recognitionState = {
           state: State.NO_AUDIO_INPUT_DEVICE,
-          errorMessage:
-            'No microphone devices detected or microphone is muted.',
+          errorMessage: this.i18n.get(Mssg.ErrNoAudioCapture),
         };
         break;
       case 'not-allowed':
         this.recognitionState = {
           state: State.PERMISSION_NOT_GRANTED,
-          errorMessage: 'Cannot access microphone.\nRequesting permission...',
+          errorMessage: this.i18n.get(Mssg.ErrPermissionNotGranted),
         };
         break;
       case 'network':
         this.recognitionState = {
           state: State.NO_CONNECTION,
-          errorMessage: 'Network disconnected.',
+          errorMessage: this.i18n.get(Mssg.ErrNoNetwork),
         };
         break;
       case 'aborted':
         this.recognitionState = {
           state: State.ABORTED,
-          errorMessage: 'Recognition cancelled.',
+          errorMessage: this.i18n.get(Mssg.ErrAborted),
         };
         break;
       case 'language-not-supported':
-        const locale = this.recognition.lang;
         this.localeService.setRecognitionLocale(DefaultLocale);
         this.recognitionState = {
           state: State.LANGUAGE_NOT_SUPPORTED,
-          errorMessage: `Locale ${locale} not supported, reset to ${DefaultLocale.bcp_47}`,
+          errorMessage: this.i18n.get(Mssg.ErrLangNotSupported),
         };
         break;
       case 'service-not-allowed':
         this.recognitionState = {
           state: State.SERVICE_NOT_ALLOWED,
-          errorMessage: 'Browser not allowing speech recognition.',
+          errorMessage: this.i18n.get(Mssg.ErrServiceNotAllowed),
         };
         break;
       case 'bad-grammar':
       default:
         this.recognitionState = {
           state: State.UNKNOWN,
-          errorMessage: 'Unhandled error',
+          errorMessage: this.i18n.get(Mssg.ErrUnhandledError),
         };
         this.logger.error('#onError unhandled error', eventError, event.message);
         break;
@@ -255,7 +256,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
     if (state === State.NOT_SUPPORTED) {
       this.recognitionState = {
         state: state,
-        errorMessage: 'Recognition not supported.',
+        errorMessage: this.i18n.get(Mssg.ErrServiceNotAllowed),
       };
       this.recognitionState$.next(this.recognitionState);
       return;

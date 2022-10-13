@@ -1,6 +1,6 @@
 {
-  "name": "__MSG_appName__",
-  "description": "__MSG_appDesc__",
+  "name": "__MSG_AppName__",
+  "description": "__MSG_AppDesc__",
   "homepage_url": "https://github.com/justiceo/audate",
   "version": "22.10.12",
   "manifest_version": 3,

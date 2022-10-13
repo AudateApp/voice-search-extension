@@ -13,12 +13,11 @@ export class I18nService {
     this.logger = loggingService.getLogger('i18n.service');
   }
 
-  getString(key: string): string {
+  get(key: string): string {
     if (chrome?.i18n) {
       return chrome.i18n.getMessage(key);
     }
     this.logger.error('chrome.i18n is not available in the current context');
-    // TODO: Consider loading and caching i18n strings if the chrome.i18n is not available during init.
     return '';
   }
 }

@@ -1,4 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Mssg } from 'src/app/services/i18n-mssg';
+import { I18nService } from 'src/app/services/i18n.service';
 import { State } from 'src/app/services/recognition/recognition-state';
 import { RecognitionService } from 'src/app/services/recognition/recognition.service';
 
@@ -8,22 +10,23 @@ import { RecognitionService } from 'src/app/services/recognition/recognition.ser
   styleUrls: ['./transcript.component.scss'],
 })
 export class TranscriptComponent implements OnInit {
-  idleMessage = 'Click ⓞ to start speaking';
+  idleMessage = this.i18n.get(Mssg.StatusIdle);
   idleTimeoutMs = 1000;
   idleTimeout?: any | null = null;
   message?: string = this.idleMessage;
 
   constructor(
     private speechRecognizer: RecognitionService,
+    private i18n: I18nService,
     private ref: ChangeDetectorRef
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
       clearTimeout(this.idleTimeout);
       switch (rstate.state) {
         case State.START:
-          this.message = 'Listening...';
+          this.message = this.i18n.get(Mssg.StatusListening);
           break;
         case State.TRANSCRIBING:
           if (rstate.transcript?.partialText) {

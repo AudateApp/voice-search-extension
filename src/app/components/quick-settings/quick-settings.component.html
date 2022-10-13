@@ -1,11 +1,11 @@
 <section class="settings-wrapper" [hidden]="activeSection !== 'quick-settings'">
   <div class="setting" (click)="activeSection = 'language'">
-    <h5 class="label">Speech Language</h5>
+    <h5 class="label">{{ i18n.get(Mssg.QsSpeechLanguage) }}</h5>
     <p class="value">{{ currentLocale.name }}</p>
   </div>
   <hr />
   <div class="setting" (click)="activeSection = 'search-engine'">
-    <h5 class="label">Search Engine</h5>
+    <h5 class="label">{{ i18n.get(Mssg.QsSearchEngine) }}</h5>
     <p class="value">
       <img src="{{ currentSearchEngine.iconPath }}" />
       {{ currentSearchEngine.name }}
@@ -13,19 +13,19 @@
   </div>
   <hr />
   <div class="setting" (click)="activeSection = 'microphone'">
-    <h5 class="label">Microphone</h5>
+    <h5 class="label">{{ i18n.get(Mssg.QsMicrophone) }}</h5>
     <p class="value">{{ currentInputDevice?.label }}</p>
   </div>
   <hr />
   <div class="setting" (click)="activeSection = 'launch-target'">
-    <h5 class="label">Launch Target</h5>
+    <h5 class="label">{{ i18n.get(Mssg.QsLaunchTarget) }}</h5>
     <p class="value">{{ launchTarget }}</p>
   </div>
 </section>
 
 <section [hidden]="activeSection !== 'language'" class="listbox language-selection">
   <p class="header" (click)="activeSection = 'quick-settings'">
-    <i class="selected pi pi-angle-left"></i> Go back
+    <i class="selected pi pi-angle-left"></i> {{ i18n.get(Mssg.QsGoBack) }}
   </p>
   <div class="items">
     <p class="item" *ngFor="let locale of locales" (click)="setLocale(locale); activeSection = 'quick-settings'">
@@ -37,7 +37,7 @@
 
 <section [hidden]="activeSection !== 'search-engine'" class="listbox search-engine-selection">
   <p class="header" (click)="activeSection = 'quick-settings'">
-    <i class="selected pi pi-angle-left"></i> Go back
+    <i class="selected pi pi-angle-left"></i> {{ i18n.get(Mssg.QsGoBack) }}
   </p>
   <div class="items">
     <p class="item" *ngFor="let se of searchEngines" (click)="setSearchEngine(se); activeSection = 'quick-settings'">
@@ -50,7 +50,7 @@
 
 <section [hidden]="activeSection !== 'microphone'" class="listbox microphone-selection">
   <p class="header" (click)="activeSection = 'quick-settings'">
-    <i class="selected pi pi-angle-left"></i> Go back
+    <i class="selected pi pi-angle-left"></i> {{ i18n.get(Mssg.QsGoBack) }}
   </p>
   <div class="items">
     <p class="item" *ngFor="let device of inputDevices" (click)="activeSection = 'quick-settings'">
@@ -59,24 +59,21 @@
     </p>
   </div>
   <p *ngIf="inputDevices.length > 1" class="notice">
-    This extension cannot change your microphone, see
-    <a
-      href="https://support.google.com/chrome/answer/2693767?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Cselect-a-default-microphone">guide
-      here</a>
+    {{ i18n.get(Mssg.QsCannotChangeMic) }}
   </p>
 </section>
 
 <section [hidden]="activeSection !== 'launch-target'" class="listbox launch-target-selection">
   <p class="header" (click)="activeSection = 'quick-settings'">
-    <i class="selected pi pi-angle-left"></i> Go back
+    <i class="selected pi pi-angle-left"></i> {{ i18n.get(Mssg.QsGoBack) }}
   </p>
   <div class="items">
     <p class="item" (click)="setLaunchTarget('Current Tab'); activeSection = 'quick-settings'">
-      <span class="label">Current Tab</span>
+      <span class="label">{{ i18n.get(Mssg.QsLaunchCurrentTab) }}</span>
       <i class="selected pi pi-check" *ngIf="launchTarget === 'Current Tab'"></i>
     </p>
     <p class="item" (click)="setLaunchTarget('New Tab'); activeSection = 'quick-settings'">
-      <span class="label">New Tab</span>
+      <span class="label">{{ i18n.get(Mssg.QsLaunchNewTab) }}</span>
       <i class="selected pi pi-check" *ngIf="launchTarget === 'New Tab'"></i>
     </p>
   </div>

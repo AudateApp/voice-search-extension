@@ -15,6 +15,8 @@ import { SearchEngineService } from 'src/app/services/search-engine.service';
 import { LoggingService } from 'src/app/services/logging/logging.service';
 import { Logger } from 'src/app/services/logging/logger';
 import { LaunchTarget, DefaultLaunchTarget, LaunchTargetService } from 'src/app/services/launch-target.service';
+import { I18nService } from 'src/app/services/i18n.service';
+import { Mssg } from 'src/app/services/i18n-mssg';
 
 @Component({
   selector: 'audate-quick-settings',
@@ -26,21 +28,14 @@ export class QuickSettingsComponent implements OnInit {
   locales: LocaleProperties[] = LocalesForDefaultModel;
   currentLocale: LocaleProperties = DefaultLocale;
   launchTarget: LaunchTarget = DefaultLaunchTarget;
+  Mssg = Mssg;
 
   searchEngines: SearchEngine[] = SearchEngines;
   currentSearchEngine: SearchEngine = DefaultSearchEngine;
 
   inputDevices: MediaDeviceInfo[] = [];
   currentInputDevice?: MediaDeviceInfo;
-  NO_DEFAULT_INPUT_DEVICE: MediaDeviceInfo = {
-    label: 'No Default Input Device',
-    kind: 'audioinput',
-    groupId: '',
-    deviceId: '',
-    toJSON: function () {
-      throw new Error('Function not implemented.');
-    },
-  };
+  NO_DEFAULT_INPUT_DEVICE: MediaDeviceInfo;
 
   activeSection: string = 'quick-settings';
 
@@ -49,10 +44,20 @@ export class QuickSettingsComponent implements OnInit {
     private searchEngineService: SearchEngineService,
     private inputDeviceService: InputDeviceService,
     private launchTargetService: LaunchTargetService,
+    protected i18n: I18nService,
     private ref: ChangeDetectorRef,
     loggingService: LoggingService
   ) {
     this.logger = loggingService.getLogger('quick-settings');
+    this.NO_DEFAULT_INPUT_DEVICE = {
+      label: i18n.get(Mssg.QsNoDefaultInput),
+      kind: 'audioinput',
+      groupId: '',
+      deviceId: '',
+      toJSON: function () {
+        throw new Error('Function not implemented.');
+      }
+    }
   }
 
   ngOnInit(): void {
