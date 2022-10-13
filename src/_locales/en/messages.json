@@ -87,6 +87,10 @@
     "message": "No Default Input Device",
     "description": "Message displayed when there's no input device."
   },
+  "AppDetailDescription": {
+    "message": "Audate brings a voice-forward affordances to the browsing experience.\n\nSearch the web using your voice by clicking on the browser icon.\n\nSpeak in your natural language and let advanced AI and ML models convert them to text. Over 300 locales around the world are supported!\n\nChoose from any of the top search engines like Google and Bing.\n\nIt's open source and published at https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
   "key": {
     "message": "Text to display",
     "description": "It's description in english"
