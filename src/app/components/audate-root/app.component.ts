@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
+import { AnalyticsService } from 'src/app/services/analytics.service';
 import { Logger } from 'src/app/services/logging/logger';
 import { LoggingService } from 'src/app/services/logging/logging.service';
 
@@ -16,6 +17,7 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private primengConfig: PrimeNGConfig,
+    private analytics: AnalyticsService,
     loggingService: LoggingService
   ) {
     this.logger = loggingService.getLogger('audate-root');
@@ -24,6 +26,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.primengConfig.ripple = true;
     this.addExtensionRedirects();
+    this.analytics.logStart("AudateRoot#onInit");
   }
 
   /**

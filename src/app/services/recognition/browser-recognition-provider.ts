@@ -8,6 +8,7 @@ import { Logger } from '../logging/logger';
 import { RecognitionProvider } from './recognition-provider';
 import { I18nService } from '../i18n.service';
 import { Mssg } from '../i18n-mssg';
+import { AnalyticsService } from '../analytics.service';
 
 /*
  * This is a strategy for adding the symbol webkitSpeechRecognition to the window object,
@@ -34,6 +35,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
 
   constructor(
     private localeService: LocaleService,
+    private analytics: AnalyticsService,
     private i18n: I18nService,
     loggingService: LoggingService
   ) {
@@ -93,6 +95,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
       state: State.START,
     };
     this.recognitionState$.next(this.recognitionState);
+    this.analytics.logMilestone("#onStart");
   };
 
   /** Fired when the user agent has started to capture audio. */
@@ -108,11 +111,13 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
   /** Fired when sound that is recognized by the speech recognition service as speech has been detected. */
   #onSpeechStart = () => {
     this.logger.log('#onSpeechStart');
+    this.analytics.logMilestone("#onSpeechStart");
   };
 
   /** Fired when speech recognized by the speech recognition service has stopped being detected. */
   #onSpeechEnd = () => {
     this.logger.log('#onSpeechEnd');
+    this.analytics.logMilestone("#onSpeechEnd");
   };
 
   /** Fired when any sound — recognizable speech or not — has stopped being detected. */
@@ -160,30 +165,35 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
           state: State.NO_SPEECH_DETECTED,
           errorMessage: this.i18n.get(Mssg.ErrNoSoundDetected),
         };
+        this.analytics.logEnd("NO_SPEECH_DETECTED", "failure");
         break;
       case 'audio-capture':
         this.recognitionState = {
           state: State.NO_AUDIO_INPUT_DEVICE,
           errorMessage: this.i18n.get(Mssg.ErrNoAudioCapture),
         };
+        this.analytics.logEnd("NO_AUDIO_INPUT_DEVICE", "failure");
         break;
       case 'not-allowed':
         this.recognitionState = {
           state: State.PERMISSION_NOT_GRANTED,
           errorMessage: this.i18n.get(Mssg.ErrPermissionNotGranted),
         };
+        this.analytics.logEnd("PERMISSION_NOT_GRANTED", "failure");
         break;
       case 'network':
         this.recognitionState = {
           state: State.NO_CONNECTION,
           errorMessage: this.i18n.get(Mssg.ErrNoNetwork),
         };
+        this.analytics.logEnd("NO_CONNECTION", "failure");
         break;
       case 'aborted':
         this.recognitionState = {
           state: State.ABORTED,
           errorMessage: this.i18n.get(Mssg.ErrAborted),
         };
+        this.analytics.logEnd("ABORTED", "cancel");
         break;
       case 'language-not-supported':
         this.localeService.setRecognitionLocale(DefaultLocale);
@@ -191,12 +201,14 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
           state: State.LANGUAGE_NOT_SUPPORTED,
           errorMessage: this.i18n.get(Mssg.ErrLangNotSupported),
         };
+        this.analytics.logEnd("LANGUAGE_NOT_SUPPORTED", "cancel");
         break;
       case 'service-not-allowed':
         this.recognitionState = {
           state: State.SERVICE_NOT_ALLOWED,
           errorMessage: this.i18n.get(Mssg.ErrServiceNotAllowed),
         };
+        this.analytics.logEnd("SERVICE_NOT_ALLOWED", "cancel");
         break;
       case 'bad-grammar':
       default:
@@ -204,6 +216,7 @@ export class BrowserRecognitionProvider implements RecognitionProvider {
           state: State.UNKNOWN,
           errorMessage: this.i18n.get(Mssg.ErrUnhandledError),
         };
+        this.analytics.logEnd("UNHANDLED_ERROR", "failure");
         this.logger.error('#onError unhandled error', eventError, event.message);
         break;
     }

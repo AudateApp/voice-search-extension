@@ -5,6 +5,7 @@ import { Logger } from './logging/logger';
 import { LoggingService } from './logging/logging.service';
 import { StorageService } from './storage/storage.service';
 import { LaunchTarget, LaunchTargetService } from './launch-target.service';
+import { AnalyticsService } from './analytics.service';
 
 @Injectable({
   providedIn: 'root',
@@ -17,6 +18,7 @@ export class SearchEngineService {
   constructor(
     private storageService: StorageService,
     private launchTargetService: LaunchTargetService,
+    private analytics: AnalyticsService,
     loggingService: LoggingService
   ) {
     this.logger = loggingService.getLogger('SearchEngService');
@@ -73,39 +75,50 @@ export class SearchEngineService {
 
     this.launchTargetService.getSavedLaunchTarget().then(lt => {
       switch (lt) {
-        case LaunchTarget.CURRENT_TAB:     
-          chrome.tabs.query({active: true}).then(tabs => {
-            if(tabs.length !== 1) {
+        case LaunchTarget.CURRENT_TAB:
+          chrome.tabs.query({ active: true }).then(tabs => {
+            if (tabs.length !== 1) {
               this.logger.error("Wrong number of active tabs, expected 1, got ", tabs.length);
               this.createTab(url);
               return;
             }
             const tab = tabs[0];
-            if(!tab.id) {
+            if (!tab.id) {
               this.logger.error("No tab ID, context is not appropriate to updating tab");
               this.createTab(url);
               return;
             }
-            chrome.tabs.update(tab.id, {url: url, active: true}).then(
-              () =>this.logger.debug("successfully opened url"), 
-              err => this.logger.error("#performSearch: error opening url", err)
+            chrome.tabs.update(tab.id, { url: url, active: true }).then(
+              () => {
+                this.logger.debug("successfully opened url");
+                this.analytics.logEnd("#updateTab", "success");
+              },
+              err => {
+                this.logger.error("#performSearch: error opening url", err);
+                this.analytics.logEnd("#updateTab", "failure");
+              }
             );
           });
           break;
         case LaunchTarget.NEW_TAB:
           this.createTab(url);
           break;
-        default:          
+        default:
           this.createTab(url);
           break;
       }
     })
   }
-  
+
   createTab(url: string): void {
-    chrome.tabs.create({url:url, active: true}).then(
-      () => {}, 
-      err => this.logger.error("#createTab error", err)
+    chrome.tabs.create({ url: url, active: true }).then(
+      () => {
+        this.analytics.logEnd("#createNewTab", "success");
+      },
+      err => {
+        this.logger.error("#createTab error", err);
+        this.analytics.logEnd("#createNewTab", "failure");
+      }
     );
   }
 }
