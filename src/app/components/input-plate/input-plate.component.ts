@@ -26,7 +26,7 @@ export class InputPlateComponent implements OnInit, AfterViewInit {
     private router: Router,
     private speechRecognizer: RecognitionService,
     private ref: ChangeDetectorRef
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.speechRecognizer.getRecognitionState().subscribe((rstate) => {
@@ -57,7 +57,13 @@ export class InputPlateComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     // Trigger mic tap.
-    this.micTap();
+    console.error("router url: ", this.router.url);
+    if (this.router.url === '/onboard') {
+      this.showSettings = true;
+      this.ref.detectChanges();
+    } else {
+      this.micTap();
+    }
   }
 
   requestPermissions() {
