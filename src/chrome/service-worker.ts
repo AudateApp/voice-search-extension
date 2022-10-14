@@ -1,6 +1,6 @@
 
 const uninstallUrl = 'https://forms.gle/TuRLnDRFoXRNFuZP7';
-const welcomeUrl = chrome.runtime.getURL('index.html#request-permissions');
+const welcomeUrl = chrome.runtime.getURL('index.html#onboard');
 
 const onInstalled = (details: chrome.runtime.InstalledDetails) => {
   // On fresh install, open page how to use extension.
