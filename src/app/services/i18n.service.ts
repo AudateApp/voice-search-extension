@@ -18,6 +18,6 @@ export class I18nService {
       return chrome.i18n.getMessage(key);
     }
     this.logger.error('chrome.i18n is not available in the current context');
-    return '';
+    return key;
   }
 }
