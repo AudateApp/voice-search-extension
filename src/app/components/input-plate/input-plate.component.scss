@@ -1,7 +1,6 @@
 #audate-input-plate {
   display: flex;
   flex-direction: column;
-  padding: 10px;
   padding-bottom: 0;
   background-color: #2136bb;
   color: white;
@@ -54,12 +53,12 @@
 }
 
 audate-quick-settings {
-  max-height: 0px;
+  display:none;
   overflow: hidden;
   transition: max-height 0.5s;
 
   &.show-settings {
-    max-height: 300px;
+    display: block;
     transition: max-height 0.5s ease-out;
   }
 }

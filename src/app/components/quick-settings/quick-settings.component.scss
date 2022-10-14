@@ -1,3 +1,7 @@
+.settings-wrapper {
+  padding: 15px;
+}
+
 .setting {
   opacity: 0.75;
 
@@ -27,12 +31,12 @@
     align-items: baseline;
     margin-top: 0;
     padding-top: 0;
+
     img {
       width: 13px;
       margin-right: 5px;
       // Hex for #eee from https://codepen.io/sosuke/pen/Pjoqqp.
-      filter: invert(100%) sepia(0%) saturate(5101%) hue-rotate(193deg)
-        brightness(123%) contrast(87%);
+      filter: invert(100%) sepia(0%) saturate(5101%) hue-rotate(193deg) brightness(123%) contrast(87%);
     }
   }
 }
@@ -57,14 +61,32 @@ hr {
 
   .items {
     max-height: 200px;
-    overflow: scroll;
+    overflow-y: auto;
+    scrollbar-width: thin;
     font-size: 0.9rem;
+    scrollbar-width: thin;
+    scrollbar-color: #90A4AE #2136BB;
+
+    &::-webkit-scrollbar {
+      width: 11px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #2136BB;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #90A4AE;
+      border-radius: 6px;
+      height: 30px;
+      border: 3px solid #2136BB;
+    }
   }
+
   .item {
     display: flex;
-    margin: 0 -15px;
+    margin: 0;
     padding: 15px;
-    padding-left: 30px;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.1);
@@ -79,12 +101,12 @@ hr {
       margin-right: 10px;
     }
   }
+
   img {
     width: 15px;
     margin-right: 10px;
     // Hex for #eee from https://codepen.io/sosuke/pen/Pjoqqp.
-    filter: invert(100%) sepia(0%) saturate(5101%) hue-rotate(193deg)
-      brightness(123%) contrast(87%);
+    filter: invert(100%) sepia(0%) saturate(5101%) hue-rotate(193deg) brightness(123%) contrast(87%);
   }
 }
 
