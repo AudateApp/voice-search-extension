@@ -9,6 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
+    "genLogo": "gulp",
     "start:chrome": "gulp ChromeDemo",
     "start:firefox": "web-ext run --source-dir ./extension/",
     "package": "ng build --configuration=development && webpack --config webpack.config.js --env development && zip -r dist/audate-dev.zip dist/audate",
