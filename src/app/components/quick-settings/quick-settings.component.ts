@@ -27,7 +27,7 @@ export class QuickSettingsComponent implements OnInit {
   logger: Logger;
   locales: LocaleProperties[] = LocalesForDefaultModel;
   currentLocale: LocaleProperties = DefaultLocale;
-  launchTarget: LaunchTarget = DefaultLaunchTarget;
+  launchTarget: string;
   Mssg = Mssg;
 
   searchEngines: SearchEngine[] = SearchEngines;
@@ -58,6 +58,7 @@ export class QuickSettingsComponent implements OnInit {
         throw new Error('Function not implemented.');
       }
     }
+    this.launchTarget = this.launchTargetService.toI18n(DefaultLaunchTarget);
   }
 
   ngOnInit(): void {
@@ -86,7 +87,7 @@ export class QuickSettingsComponent implements OnInit {
     );
 
     this.launchTargetService.getLaunchTarget().subscribe(lt => {
-      this.launchTarget = lt;
+      this.launchTarget = this.launchTargetService.toI18n(lt);
       this.ref.detectChanges();
     })
   }

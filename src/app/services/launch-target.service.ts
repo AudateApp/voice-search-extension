@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, share, Subject } from 'rxjs';
+import { Mssg } from './i18n-mssg';
+import { I18nService } from './i18n.service';
 import { Logger } from './logging/logger';
 import { LoggingService } from './logging/logging.service';
 import { StorageService } from './storage/storage.service';
@@ -22,7 +24,9 @@ export class LaunchTargetService {
   currentLaunchTarget = DefaultLaunchTarget;
   currentLaunchTarget$: Subject<LaunchTarget> = new Subject();
   constructor(
-    private storageService: StorageService, loggingService: LoggingService) {
+    private storageService: StorageService,
+    private i18n: I18nService,
+    loggingService: LoggingService) {
     this.logger = loggingService.getLogger('LaunchTargetService');
 
     // Emit value from store as initial value.
@@ -33,10 +37,19 @@ export class LaunchTargetService {
     return this.currentLaunchTarget$.asObservable().pipe(share());
   }
 
+  toI18n(lt: LaunchTarget): string {
+    switch (lt) {
+      case LaunchTarget.CURRENT_TAB:
+        return this.i18n.get(Mssg.QsLaunchCurrentTab);
+      case LaunchTarget.NEW_TAB:
+        return this.i18n.get(Mssg.QsLaunchNewTab);
+    }
+  }
+
   getSavedLaunchTarget(): Promise<LaunchTarget> {
     return this.storageService.get('launch_target').then(
       (lt: any) => {
-        if(!lt) {
+        if (!lt) {
           return DefaultLaunchTarget;
         }
         return lt as LaunchTarget;
