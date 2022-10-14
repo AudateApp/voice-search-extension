@@ -1,22 +1,36 @@
 <div class="header">
   <div class="logo">
-    <img src="assets/images/audate-full.png" />
+    <img src="assets/images/audate-logo.png" />
   </div>
-  <h1>welcome <br />to increased<br /><span>productivity</span></h1>
+  <h1>welcome <br />to increased<br /><i>productivity</i></h1>
 </div>
 <audate-audio-waves [config]="headerWave"></audate-audio-waves>
 <div class="content">
-  <h2>Get Started</h2>
   <div class="pin-extension">
+    <h2>Step 1: Pin the extension</h2>
+    <p>The browser icon is the only way of interacting with this extension, pinning it makes it accessible. </p>
     <img src="assets/images/pin-audate.gif" alt="Pin Audate Extension" />
+    <div>
+      <ol>
+        <li>Click on the extensions icon.</li>
+        <li>Find Audate in the list of extensions.</li>
+        <li>Click on the pin icon on the right of Audate icon.</li>
+      </ol>
+    </div>
   </div>
   <div class="mic-permission">
-    <img
-      src="assets/images/mic-permission.png"
-      alt="Grant Microphone Permission"
-    />
+    <h2>Step 2: Grant microphone permission</h2>
+    <p>This permission is necessary to record audio and convert it to search query.</p>
+    <img src="assets/images/mic-permission.png" alt="Grant Microphone Permission" />
+    <p><button pRipple class="p-button" (click)="requestPermission()">
+        Click to Grant permission
+      </button>
+    </p>
+    <p>{{ notice }}</p>
   </div>
   <div class="configure-options">
+    <h2>Step 3: Configure the extension</h2>
+    <p>You set the language you speak, search engine to use and other properties below.</p>
     <audate-voice-search></audate-voice-search>
   </div>
 </div>

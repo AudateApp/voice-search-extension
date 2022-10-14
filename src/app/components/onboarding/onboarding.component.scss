@@ -2,17 +2,18 @@
   background: #410ff8;
   color: white;
   min-height: 200px;
-  padding: 50px;
+  padding: 30px;
   padding-bottom: 20px;
 
-  .logo {
-    margin-top: -150px;
-    margin-bottom: -120px;
+  .logo img {
+    width: 70px;
+    margin-left: 10px;
   }
 
   h1 {
-    font-size: 5em;
-    padding-left: 50px;
+    font-size: 3.5em;
+    padding-left: 30px;
+
     span {
       font-size: 1.1em;
     }
@@ -28,9 +29,10 @@
 }
 
 .content {
-  & > div {
+  &>div {
     margin-bottom: 20px;
   }
+
   .pin-extension {
     img {
       margin-left: -20px;
@@ -53,5 +55,36 @@
     &:hover {
       color: yellow;
     }
+  }
+}
+
+.pin-extension,
+.mic-permission,
+.configure-options {
+  text-align: center;
+
+  h2 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+
+  img {
+    width: 800px;
+  }
+
+  div {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  ol {
+    text-align: left;
+  }
+
+  audate-voice-search {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    margin-bottom: 100px;
   }
 }
