@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "ઓડેટ - વૉઇસ શોધ",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "તમારા અવાજથી વેબ પર શોધો",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "બોલવાનું શરૂ કરવા માટે ⓞ પર ક્લિક કરો",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "સાંભળવું...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "કોઈ અવાજ મળ્યો નથી",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "કોઈ ઓળખી શકાય તેવી વાણી મળી નથી.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "કોઈ માઇક્રોફોન ઉપકરણો મળ્યા નથી અથવા માઇક્રોફોન મ્યૂટ કરેલ છે.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "માઈક્રોફોનને ઍક્સેસ કરી શકાતું નથી, પરવાનગી આપવામાં આવી નથી",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "નેટવર્ક ડિસ્કનેક્ટ થયું",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "ઓળખ રદ કરી.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "લોકેલ સપોર્ટેડ નથી.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "બ્રાઉઝર વાણી ઓળખને સપોર્ટ કરતું નથી.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "અનહેન્ડલ ભૂલ",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "પાછા જાવ",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "ભાષણની ભાષા",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "શોધ એન્જિન",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "માઈક્રોફોન",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "પ્રક્ષેપણ લક્ષ્ય",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "નવું ટેબ",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "વર્તમાન ટેબ",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "બ્રાઉઝર ઓળખ માટે માઇક પસંદગી ઉપલબ્ધ નથી.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "કોઈ ડિફોલ્ટ ઇનપુટ ઉપકરણ નથી",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "ઓડેટ બ્રાઉઝિંગ અનુભવ માટે વૉઇસ-ફોરવર્ડ એફોર્ડન્સ લાવે છે.\n\nબ્રાઉઝર આઇકન પર ક્લિક કરીને તમારા વૉઇસનો ઉપયોગ કરીને વેબ પર શોધો.\n\nતમારી પ્રાકૃતિક ભાષામાં બોલો અને અદ્યતન AI અને ML મોડલને તેમને ટેક્સ્ટમાં કન્વર્ટ કરવા દો. વિશ્વભરના 300 લોકેલ્સ સપોર્ટેડ છે!\n\nGoogle અને Bing જેવા કોઈપણ ટોચના સર્ચ એન્જિનમાંથી પસંદ કરો.\n\nતે ઓપન સોર્સ છે અને https://github.com/AudateApp પર પ્રકાશિત થયેલ છે.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "પ્રદર્શિત કરવા માટે ટેક્સ્ટ",
+    "description": "It's description in english"
   }
 }

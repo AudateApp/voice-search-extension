@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "অডিট - ভয়েস অনুসন্ধান",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "আপনার ভয়েস দিয়ে ওয়েব অনুসন্ধান করুন",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "কথা বলা শুরু করতে ⓞ ক্লিক করুন",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "শুনছি...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "মাইক্রোফোন ইনপুট শোনার সময় পাঠ্য প্রদর্শিত হয়।",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "কোনো স্বীকৃত বক্তৃতা সনাক্ত করা যায়নি.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "কোন মাইক্রোফোন ডিভাইস সনাক্ত বা মাইক্রোফোন নিঃশব্দ করা হয়েছে.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "মাইক্রোফোন অ্যাক্সেস করতে পারবেন না, অনুমতি দেওয়া হয়নি",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "নেটওয়ার্ক সংযোগ বিচ্ছিন্ন",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "স্বীকৃতি বাতিল করা হয়েছে।",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "লোকেল সমর্থিত নয়।",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "ব্রাউজার বক্তৃতা স্বীকৃতি সমর্থন করে না।",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "নিয়ন্ত্রণহীন ত্রুটি৷",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "ফিরে যাও",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "বক্তৃতা ভাষা",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "খোঁজ যন্ত্র",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "মাইক্রোফোন",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "লঞ্চ টার্গেট",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "নতুন ট্যাব",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "বর্তমান ট্যাব",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "ব্রাউজার শনাক্তকরণের জন্য মাইক নির্বাচন উপলব্ধ নয়।",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "কোনো ডিফল্ট ইনপুট ডিভাইস নেই",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "অডিট ব্রাউজিং অভিজ্ঞতায় ভয়েস-ফরোয়ার্ড সুবিধা নিয়ে আসে।\n\nব্রাউজার আইকনে ক্লিক করে আপনার ভয়েস ব্যবহার করে ওয়েবে অনুসন্ধান করুন।\n\nআপনার স্বাভাবিক ভাষায় কথা বলুন এবং উন্নত AI এবং ML মডেলকে সেগুলিকে পাঠ্যে রূপান্তর করতে দিন। বিশ্বজুড়ে 300 টিরও বেশি লোকেল সমর্থিত!\n\nGoogle এবং Bing-এর মতো শীর্ষ সার্চ ইঞ্জিনগুলির মধ্যে যেকোনো একটি থেকে বেছে নিন৷\n\nএটি ওপেন সোর্স এবং https://github.com/AudateApp-এ প্রকাশিত৷",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "প্রদর্শনের জন্য পাঠ্য",
+    "description": "It's description in english"
   }
 }

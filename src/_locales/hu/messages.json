@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate – Hangalapú keresés",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Keressen az interneten a hangjával",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Kattintson a ⓞ gombra a beszéd megkezdéséhez",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Figyelj...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Nem észlelt hangot",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Nem észleltünk felismerhető beszédet.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Nem észleltek mikrofoneszközt, vagy a mikrofon el van némítva.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Nem lehet hozzáférni a mikrofonhoz, nincs engedély megadva",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "A hálózat lekapcsolva",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Felismerés törölve.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "A nyelv nem támogatott.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "A böngésző nem támogatja a beszédfelismerést.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Kezeletlen hiba",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Menjen vissza",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Beszédnyelv",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Keresőmotor",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Mikrofon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Launch Target",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Új lap",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Aktuális lap",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "A mikrofon nem választható ki a böngésző felismeréséhez.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Nincs alapértelmezett beviteli eszköz",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Az Audate hangtovábbítási lehetőséget biztosít a böngészési élményhez.\n\nKeressen az interneten hangjával a böngésző ikonjára kattintva.\n\nBeszéljen természetes nyelvén, és hagyja, hogy a fejlett AI és ML modellek szöveggé alakítsák azokat. A világ 300 helye támogatott!\n\nVálasszon a legnépszerűbb keresők közül, például a Google és a Bing közül.\n\nNyílt forráskódú, és a következő címen érhető el: https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Megjelenítendő szöveg",
+    "description": "It's description in english"
   }
 }

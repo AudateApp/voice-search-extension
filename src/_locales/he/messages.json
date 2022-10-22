@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - חיפוש קולי",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "חפש באינטרנט עם הקול שלך",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "לחץ על ⓞ כדי להתחיל לדבר",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "הַקשָׁבָה...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "לא זוהה קול",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "לא זוהה דיבור ניתן לזיהוי.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "לא זוהו התקני מיקרופון או שהמיקרופון מושתק.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "לא יכול לגשת למיקרופון, הרשאה לא ניתנה",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "הרשת מנותקת",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "ההכרה בוטלה",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "מקומי לא נתמך.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "הדפדפן אינו תומך בזיהוי דיבור.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "שגיאה לא מטופלת",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "תחזור",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "שפת דיבור",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "מנוע חיפוש",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "מִיקרוֹפוֹן",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "יעד השקה",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "כרטיסייה חדשה",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "כרטיסייה נוכחית",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "בחירת המיקרופון אינה זמינה לזיהוי דפדפן.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "אין התקן קלט ברירת מחדל",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate מביאה לקידום קולי יתרונות לחוויית הגלישה.\n\nחפש באינטרנט באמצעות הקול שלך על ידי לחיצה על סמל הדפדפן.\n\nדבר בשפה הטבעית שלך ואפשר למודלים מתקדמים של AI ו-ML להמיר אותם לטקסט. 300 מקומות ברחבי העולם נתמכים!\n\nבחר מכל אחד ממנועי החיפוש המובילים כמו Google ובינג.\n\nזה קוד פתוח ומפורסם בכתובת https://github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "טקסט לתצוגה",
+    "description": "It's description in english"
   }
 }

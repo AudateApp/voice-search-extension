@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "ഓഡേറ്റ് - വോയ്സ് തിരയൽ",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "നിങ്ങളുടെ ശബ്ദം ഉപയോഗിച്ച് വെബിൽ തിരയുക",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "സംസാരിക്കാൻ തുടങ്ങാൻ ⓞ ക്ലിക്ക് ചെയ്യുക",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "കേൾക്കുന്നു...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "ശബ്ദമൊന്നും കണ്ടെത്തിയില്ല",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "തിരിച്ചറിയാവുന്ന സംസാരമൊന്നും കണ്ടെത്തിയില്ല.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "മൈക്രോഫോൺ ഉപകരണങ്ങളൊന്നും കണ്ടെത്തിയില്ല അല്ലെങ്കിൽ മൈക്രോഫോൺ നിശബ്ദമാക്കിയിട്ടില്ല.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "മൈക്രോഫോൺ ആക്സസ് ചെയ്യാൻ കഴിയില്ല, അനുമതി നൽകിയിട്ടില്ല",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "നെറ്റ്‌വർക്ക് വിച്ഛേദിച്ചു",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "അംഗീകാരം റദ്ദാക്കി.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "ലോക്കേൽ പിന്തുണയ്ക്കുന്നില്ല.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "സ്പീച്ച് തിരിച്ചറിയലിനെ ബ്രൗസർ പിന്തുണയ്ക്കുന്നില്ല.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "കൈകാര്യം ചെയ്യാത്ത പിശക്",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "മടങ്ങിപ്പോവുക",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "സംസാര ഭാഷ",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "തിരയല് യന്ത്രം",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "മൈക്രോഫോൺ",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "ലക്ഷ്യം വിക്ഷേപിക്കുക",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "പുതിയ ടാബ്",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "നിലവിലെ ടാബ്",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "ബ്രൗസർ തിരിച്ചറിയലിനായി മൈക്ക് തിരഞ്ഞെടുക്കൽ ലഭ്യമല്ല.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "ഡിഫോൾട്ട് ഇൻപുട്ട് ഉപകരണമില്ല",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate ബ്രൗസിംഗ് അനുഭവത്തിന് വോയ്‌സ്-ഫോർവേഡ് താങ്ങാനാവുന്ന തുക നൽകുന്നു.\n\nബ്രൗസർ ഐക്കണിൽ ക്ലിക്കുചെയ്‌ത് നിങ്ങളുടെ ശബ്‌ദം ഉപയോഗിച്ച് വെബിൽ തിരയുക.\n\nനിങ്ങളുടെ സ്വാഭാവിക ഭാഷയിൽ സംസാരിക്കുക, നൂതന AI, ML മോഡലുകൾ അവയെ ടെക്‌സ്‌റ്റിലേക്ക് പരിവർത്തനം ചെയ്യാൻ അനുവദിക്കുക. ലോകമെമ്പാടുമുള്ള 300 ലൊക്കേലുകൾ പിന്തുണയ്‌ക്കുന്നു!\n\nGoogle, Bing എന്നിവ പോലെയുള്ള ഏതെങ്കിലും മുൻനിര സെർച്ച് എഞ്ചിനുകളിൽ നിന്ന് തിരഞ്ഞെടുക്കുക.\n\nഇത് ഓപ്പൺ സോഴ്‌സ് ആണ് കൂടാതെ https: //github.com/AudateApp-ൽ പ്രസിദ്ധീകരിക്കുകയും ചെയ്യുന്നു.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "പ്രദർശനത്തിനുള്ള വാചകം",
+    "description": "It's description in english"
   }
 }

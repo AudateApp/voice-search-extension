@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - جستجوی صوتی",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "با صدای خود در وب جستجو کنید",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "برای شروع صحبت روی ⓞ کلیک کنید",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "استماع...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "هیچ صدایی شناسایی نشد",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "گفتار قابل تشخیصی شناسایی نشد.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "هیچ دستگاه میکروفونی شناسایی نشد یا میکروفون بی‌صدا شده است.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "دسترسی به میکروفون امکان پذیر نیست، مجوز داده نشده است",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "شبکه قطع شد",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "شناسایی لغو شد.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "محلی پشتیبانی نمی شود.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "مرورگر از تشخیص گفتار پشتیبانی نمی کند.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "خطای کنترل نشده",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "برگرد",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "زبان گفتار",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "موتور جستجو",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "میکروفون",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "هدف را راه اندازی کنید",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "برگه جدید",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "برگه فعلی",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "انتخاب میکروفون برای تشخیص مرورگر در دسترس نیست.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "دستگاه ورودی پیش فرض وجود ندارد",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate توانایی‌های صوتی را برای تجربه مرور به ارمغان می‌آورد.\n\nبا کلیک بر روی نماد مرورگر، با صدای خود در وب جستجو کنید.\n\nبه زبان طبیعی خود صحبت کنید و اجازه دهید مدل‌های پیشرفته هوش مصنوعی و ML آنها را به متن تبدیل کنند. بیش از 300 زبان در سراسر جهان پشتیبانی می‌شود!\n\nاز یکی از موتورهای جستجوی برتر مانند Google و Bing انتخاب کنید.\n\nاین منبع باز است و در https: //github.com/AudateApp منتشر شده است.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "متن برای نمایش",
+    "description": "It's description in english"
   }
 }

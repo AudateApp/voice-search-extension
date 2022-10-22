@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - 語音搜索",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "用你的聲音搜索網絡",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "點擊ⓞ開始講話",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "聽著……",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "沒有檢測到聲音",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "未檢測到可識別的語音。",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "未檢測到麥克風設備或麥克風已靜音。",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "無法訪問麥克風，未授予權限",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "網絡斷開",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "承認取消了。",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "不支持區域設置。",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "瀏覽器不支持語音識別。",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "未處理的錯誤",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "回去",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "言語語言",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "搜索引擎",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "麥克風",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "發射目標",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "新標籤",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "當前標籤",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "麥克風選擇不適用於瀏覽器識別。",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "沒有默認輸入設備",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate 為瀏覽體驗帶來了語音轉發功能。\n\n通過單擊瀏覽器圖標，使用語音搜索網絡。\n\n用您的自然語言說話，讓高級 AI 和 ML 模型將其轉換為文本。結束支持全球 300 種語言環境！\n\n從 Google 和 Bing 等任何頂級搜索引擎中選擇。\n\n它是開源的，發佈在 https://github.com/AudateApp。",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "要顯示的文字",
+    "description": "It's description in english"
   }
 }

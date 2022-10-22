@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - glasovno pretraživanje",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Pretražujte web svojim glasom",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Kliknite ⓞ da biste počeli govoriti",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Slušanje...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Zvuk nije otkriven",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Nije otkriven prepoznatljiv govor.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Nisu otkriveni mikrofonski uređaji ili je mikrofon isključen.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Ne mogu pristupiti mikrofonu, dopuštenje nije odobreno",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Mreža prekinuta",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Priznanje otkazano.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Lokacija nije podržana.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Preglednik ne podržava prepoznavanje govora.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Neobrađena pogreška",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Vrati se nazad",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Jezik govora",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Pretraživač",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Mikrofon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Cilja za lansiranje",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Nova kartica",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Trenutačna kartica",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Odabir mikrofona nije dostupan za prepoznavanje preglednika.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Nema zadanog uređaja za unos",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate donosi glasovne prednosti u iskustvo pregledavanja.\n\nPretražujte web svojim glasom klikom na ikonu preglednika.\n\nGovorite na svom prirodnom jeziku i dopustite naprednim AI i ML modelima da ih pretvore u tekst. Više Podržano je 300 lokacija diljem svijeta!\n\nBirajte s bilo koje od najboljih tražilica kao što su Google i Bing.\n\nOtvorenog je koda i objavljeno na https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Tekst za prikaz",
+    "description": "It's description in english"
   }
 }

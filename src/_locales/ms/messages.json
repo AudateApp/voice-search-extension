@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - Carian Suara",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Cari di web dengan suara anda",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Klik ⓞ untuk mula bercakap",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Mendengar...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Tiada bunyi dikesan",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Tiada pertuturan yang boleh dikenali dikesan.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Tiada peranti mikrofon dikesan atau mikrofon diredamkan.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Tidak boleh mengakses mikrofon, kebenaran tidak diberikan",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Rangkaian terputus sambungan",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Pengiktirafan dibatalkan.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Tempatan tidak disokong.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Pelayar tidak menyokong pengecaman pertuturan.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Ralat Tidak Terkendali",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Pergi balik",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Bahasa Pertuturan",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Enjin carian",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Mikrofon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Sasaran Pelancaran",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Tab baru",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Tab Semasa",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Pemilihan mikrofon tidak tersedia untuk pengecaman penyemak imbas.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Tiada Peranti Input Lalai",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate membawa kemampuan ke hadapan suara kepada pengalaman penyemakan imbas.\n\nCari di web menggunakan suara anda dengan mengklik ikon penyemak imbas.\n\nBercakap dalam bahasa semula jadi anda dan biarkan model AI dan ML canggih menukarnya kepada teks. Over 300 tempat di seluruh dunia disokong!\n\nPilih daripada mana-mana enjin carian teratas seperti Google dan Bing.\n\nIa adalah sumber terbuka dan diterbitkan di https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Teks untuk dipaparkan",
+    "description": "It's description in english"
   }
 }

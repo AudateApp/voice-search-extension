@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - የድምጽ ፍለጋ",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "ድሩን በድምጽዎ ይፈልጉ",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "መናገር ለመጀመር ⓞ ን ጠቅ ያድርጉ",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "በማዳመጥ ላይ...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "ምንም ድምፅ አልተገኘም።",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "ምንም የሚታወቅ ንግግር አልተገኘም።",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "ምንም የማይክሮፎን መሳሪያዎች አልተገኙም ወይም ማይክሮፎን አልተዘጋም።",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "ማይክሮፎን መድረስ አልተቻለም፣ ፍቃድ አልተሰጠም።",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "የአውታረ መረብ ግንኙነት ተቋርጧል",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "እውቅና ተሰርዟል።",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "አካባቢ አይደገፍም።",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "አሳሽ የንግግር መለየትን አይደግፍም።",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "ያልተያዘ ስህተት",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "ተመለስ",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "የንግግር ቋንቋ",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "የመፈለጊያ ማሸን",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "ማይክሮፎን",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "ኢላማን አስጀምር",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "አዲስ ትር",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "የአሁኑ ትር",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "የማይክሮፎን ምርጫ ለአሳሽ እውቅና አይገኝም።",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "ምንም ነባሪ የግቤት መሣሪያ የለም።",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate ለአሰሳ ተሞክሮ የድምጽ ማስተላለፍ አቅሞችን ያመጣል።\n\nየአሳሽ አዶውን ጠቅ በማድረግ ድምጽዎን ተጠቅመው ድሩን ይፈልጉ።\n\nበተፈጥሮ ቋንቋዎ ይናገሩ እና የላቁ AI እና ML ሞዴሎች ወደ ጽሑፍ እንዲለውጧቸው ያድርጉ። በአለም ዙሪያ ከ300 በላይ አከባቢዎች ይደገፋሉ!\n\nከማንኛውም ምርጥ የፍለጋ ፕሮግራሞች እንደ ጎግል እና ቢንግ ይምረጡ።\n\nክፍት ምንጭ ነው እና https ላይ ታትሟል፡ //github.com/AudateApp።",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "ለማሳየት ጽሑፍ",
+    "description": "It's description in english"
   }
 }

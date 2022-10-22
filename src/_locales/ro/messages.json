@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - Căutare vocală",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Căutați pe internet cu vocea",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Faceți clic pe ⓞ pentru a începe să vorbiți",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Ascultare...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Nu a fost detectat niciun sunet",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Nu a fost detectată nici o vorbire recognoscibilă.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Nu a fost detectat niciun dispozitiv de microfon sau microfonul este dezactivat.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Nu se poate accesa microfonul, permisiunea nu este acordată.",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Rețea deconectată",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Recunoașterea a fost anulată.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Regiunea nu este acceptată.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Browserul nu acceptă recunoașterea vocală.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Unhandled Error",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Go Back",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Limbajul vorbirii",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Motor de căutare",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Microfon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Launch Target",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "New Tab",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Current Tab",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Selecția microfonului nu este disponibilă pentru recunoașterea browserului.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Nu există dispozitiv de intrare implicit",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate oferă experienței de navigare avantaje de transmitere a vocii.\n\nCăutați pe web folosind vocea făcând clic pe pictograma browserului.\n\nVorbiți în limbajul dvs. natural și lăsați modelele avansate AI și ML să le convertească în text. Peste 300 de locații din întreaga lume sunt acceptate!\n\nAlegeți din oricare dintre motoarele de căutare de top precum Google și Bing.\n\nEste open source și publicat la https://github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Text de afișat",
+    "description": "It's description in english"
   }
 }

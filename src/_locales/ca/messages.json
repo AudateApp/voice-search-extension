@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - Cerca per veu",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Cerca al web amb la teva veu",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Feu clic a ⓞ per començar a parlar",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Escoltant...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "No s'ha detectat cap so",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "No s'ha detectat cap parla reconeixible.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "No s'ha detectat cap dispositiu de micròfon o el micròfon està silenciat.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Xarxa desconnectada",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Reconeixement cancel·lat.",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "La configuració regional no és compatible.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "La configuració regional seleccionada per l'usuari no és compatible.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "El navegador no admet el reconeixement de veu.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Error no gestionat",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Torna",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Llenguatge de la parla",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Motor de cerca",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Micròfon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Inicieu Target",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Nova pestanya",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Pestanya actual",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "La selecció del micròfon no està disponible per al reconeixement del navegador.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "No hi ha cap dispositiu d'entrada predeterminat",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate ofereix un avantatge de veu endavant a l'experiència de navegació.\n\nCerqueu al web amb la vostra veu fent clic a la icona del navegador.\n\nParleu en el vostre llenguatge natural i deixeu que els models avançats d'IA i ML els converteixin en text. S'admeten més de 300 localitzacions arreu del món!\n\nTrieu entre qualsevol dels principals motors de cerca com Google i Bing.\n\nÉs de codi obert i es publica a https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Text per mostrar",
+    "description": "It's description in english"
   }
 }

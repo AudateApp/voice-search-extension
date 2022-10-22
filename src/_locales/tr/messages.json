@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - Sesli Arama",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Web'de sesinizle arama yapın",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Konuşmaya başlamak için ⓞ düğmesine tıklayın",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Dinleniyor...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Ses algılanmadı",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Tanınabilir konuşma algılanmadı.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Hiçbir mikrofon cihazı algılanmadı veya mikrofonun sesi kapatıldı.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Mikrofona erişilemiyor, izin verilmemiş",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Ağ bağlantısı kesildi",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Tanıma iptal edildi.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Yerel ayar desteklenmiyor.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Tarayıcı konuşma tanımayı desteklemiyor.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "İşlenmemiş Hata",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Geri Dön",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Konuşma Dili",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Arama Motoru",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Mikrofon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Hedefi Başlat",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Yeni Sekme",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Geçerli Sekme",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Tarayıcı tanıma için mikrofon seçimi mevcut değil.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Varsayılan Giriş Aygıtı Yok",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate, göz atma deneyimine sese dayalı bir olanak getiriyor.\n\nTarayıcı simgesine tıklayarak sesinizi kullanarak web'de arama yapın.\n\nDoğal dilinizde konuşun ve gelişmiş yapay zeka ve makine öğrenimi modellerinin bunları metne dönüştürmesine izin verin. Dünya çapında 300'den fazla yerel desteklenmektedir.\n\nGoogle ve Bing gibi en iyi arama motorlarından birini seçin.\n\nAçık kaynaklıdır ve https: //github.com/AudateApp adresinde yayınlanmıştır.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Görüntülenecek metin",
+    "description": "It's description in english"
   }
 }

@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - Hlasové vyhľadávanie",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Vyhľadávanie na webe pomocou hlasu",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Kliknutím na ⓞ začnete hovoriť",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Počúvanie...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Nebol zistený žiadny zvuk",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Nebola zistená žiadna rozpoznateľná reč.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Nezistili sa žiadne zariadenia mikrofónu alebo mikrofón je stlmený.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Nemožno získať prístup k mikrofónu, povolenie nebolo udelené",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Sieť odpojená",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Rozpoznávanie zrušené.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Miestne prostredie nie je podporované",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Prehliadač nepodporuje rozpoznávanie reči.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Neobsluhovaná chyba",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Vráť sa späť",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Jazyk reči",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Vyhľadávač",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Mikrofón",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Spustiť cieľ",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Nová karta",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Aktuálna karta",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Výber mikrofónu nie je k dispozícii pre rozpoznanie prehliadača.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Žiadne predvolené vstupné zariadenie",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate prináša do prehliadania webu možnosť hlasového vyhľadávania.\n\nVyhľadávajte web pomocou hlasu kliknutím na ikonu prehliadača.\n\nHovorte svojím prirodzeným jazykom a nechajte pokročilé modely umelej inteligencie a ML previesť ich na text. Podporovaných je viac ako 300 lokalít na celom svete!\n\nVyberte si z niektorého z najlepších vyhľadávačov, ako sú Google a Bing.\n\nJe to open source a je to zverejnené na https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Text na zobrazenie",
+    "description": "It's description in english"
   }
 }

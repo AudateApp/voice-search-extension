@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate – häälotsing",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Otsige veebist oma häälega",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Rääkimise alustamiseks klõpsake ⓞ",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Kuulan...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Heli ei tuvastatud",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Äratuntavat kõnet ei tuvastatud.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Mikrofoniseadet ei tuvastatud või mikrofon on vaigistatud.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Mikrofonile ei pääse juurde, luba pole antud",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Võrguühendus katkestatud",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Tunnustamine tühistati.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Lokaati ei toetata.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Brauser ei toeta kõnetuvastust.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Käsitlemata viga",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Mine tagasi",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Kõnekeel",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Otsingumootor",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Mikrofon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Käivitage Target",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Uuel kaardil",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Praegune vahekaart",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Mikrofoni valik pole brauseri tuvastamiseks saadaval.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Vaikesisendseade puudub",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate annab sirvimiskogemusele hääle edasisuunamise eelised.\n\nOtsige veebist oma häälega, klõpsates brauseri ikoonil.\n\nRääkige oma loomulikus keeles ja laske täiustatud AI- ja ML-mudelitel need tekstiks teisendada. Toetatud on üle 300 asukoha üle maailma!\n\nValige mis tahes populaarsemate otsingumootorite, nagu Google ja Bing, hulgast.\n\nSee on avatud lähtekoodiga ja avaldatud aadressil https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Kuvatav tekst",
+    "description": "It's description in english"
   }
 }

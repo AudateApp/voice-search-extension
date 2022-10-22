@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate — balss meklēšana",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Meklēt tīmeklī ar balsi",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Noklikšķiniet uz ⓞ, lai sāktu runāt",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Klausos...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Netika konstatēta skaņa",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Atpazīstama runa nav konstatēta.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Netika konstatēta neviena mikrofona ierīce vai mikrofons ir izslēgts.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Nevar piekļūt mikrofonam, atļauja nav piešķirta",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Tīkls ir atvienots",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Atzīšana atcelta.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Lokalizācija netiek atbalstīta.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Pārlūkprogramma neatbalsta runas atpazīšanu.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Neapstrādāta kļūda",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Atgriezties",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Runas valoda",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Meklētājs",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Mikrofons",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Palaist mērķi",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Jauna cilne",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Pašreizējā cilne",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Mikrofona izvēle pārlūkprogrammas atpazīšanai nav pieejama.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Nav noklusējuma ievades ierīces",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate nodrošina balss pārsūtīšanas iespējas pārlūkošanas pieredzei.\n\nMeklējiet tīmeklī, izmantojot balsi, noklikšķinot uz pārlūkprogrammas ikonas.\n\nRunājiet savā dabiskajā valodā un ļaujiet uzlabotajiem AI un ML modeļiem pārvērst tos tekstā. Tiek atbalstītas 300 lokalizācijas visā pasaulē!\n\nIzvēlieties kādu no populārākajām meklētājprogrammām, piemēram, Google un Bing.\n\nTas ir atvērts avots un publicēts vietnē https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Teksts parādīšanai",
+    "description": "It's description in english"
   }
 }

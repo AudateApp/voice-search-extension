@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - Sprachsuche",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Durchsuchen Sie das Internet mit Ihrer Stimme",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Klicken Sie auf ⓞ, um mit dem Sprechen zu beginnen",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Hören...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Es wurde kein Ton erkannt",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Keine erkennbare Sprache erkannt.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Keine Mikrofongeräte erkannt oder Mikrofon ist stummgeschaltet.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Zugriff auf Mikrofon nicht möglich, Berechtigung nicht erteilt",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Netzwerk getrennt",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Anerkennung aufgehoben.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Gebietsschema wird nicht unterstützt.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Browser unterstützt keine Spracherkennung.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Unbehandelter Fehler",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Geh zurück",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Gesprochene Sprache",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Suchmaschine",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Mikrofon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Ziel starten",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Neue Registerkarte",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Aktuelle Registerkarte",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Mikrofonauswahl für Browsererkennung nicht verfügbar.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Kein Standardeingabegerät",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate bringt sprachgesteuerte Angebote in das Surferlebnis.\n\nDurchsuchen Sie das Web mit Ihrer Stimme, indem Sie auf das Browsersymbol klicken.\n\nSprechen Sie in Ihrer natürlichen Sprache und lassen Sie fortschrittliche KI- und ML-Modelle sie in Text umwandeln. Über 300 Gebietsschemas auf der ganzen Welt werden unterstützt!\n\nWählen Sie aus einer der Top-Suchmaschinen wie Google und Bing.\n\nEs ist Open Source und veröffentlicht unter https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Anzuzeigender Text",
+    "description": "It's description in english"
   }
 }

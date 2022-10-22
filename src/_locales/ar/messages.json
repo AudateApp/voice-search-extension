@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "تدقيق - البحث الصوتي",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "ابحث في الويب بصوتك",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "انقر فوق ⓞ لبدء التحدث",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "الاستماع ...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "لم يتم الكشف عن أي صوت",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "لم يتم اكتشاف كلام يمكن التعرف عليه",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "لم يتم اكتشاف أجهزة ميكروفون أو تم كتم صوت الميكروفون",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "لا يمكن الوصول إلى الميكروفون ، لم يتم منح الإذن",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "انقطع الاتصال بالشبكة",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "تم إلغاء الاعتراف",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "اللغة غير مدعومة",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "لا يدعم المستعرض التعرف على الكلام",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "خطأ غير معالج",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "عُد",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "لغة الكلام",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "محرك البحث",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "ميكروفون",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "إطلاق الهدف",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "علامة تبويب جديد",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "علامة التبويب الحالية",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "تحديد هيئة التصنيع العسكري غير متاح للتعرف على المتصفح",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "لا يوجد جهاز إدخال افتراضي",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": " Audate إمكانيات إعادة توجيه الصوت إلى تجربة الاستعراض.​\n\n ابحث في الويب باستخدام صوتك بالنقر فوق رمز المستعرض.\n\n تحدث بلغتك الطبيعية واسمح لنماذج AI و ML المتقدمة بتحويلها إلى نص. يتم دعم أكثر من 300 لغة حول العالم!\n\n اختر من أي من أفضل محركات البحث مثل Google و Bing.\n\n إنه مفتوح المصدر ويتم نشره على https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "النص المراد عرضه",
+    "description": "It's description in english"
   }
 }

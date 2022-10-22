@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - Utafutaji wa Sauti",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Tafuta wavuti kwa sauti yako",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Bofya ⓞ kuanza kuzungumza",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Kusikiliza ...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Hakuna sauti iliyogunduliwa",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Hakuna hotuba inayotambulika iliyogunduliwa.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Hakuna kifaa cha maikrofoni kilichogunduliwa au maikrofoni imezimwa.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Haiwezi kufikia maikrofoni, ruhusa haijatolewa",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Mtandao umekatika",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Utambuzi umeghairiwa.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Maeneo hayatumiki.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Kivinjari hakitumii utambuzi wa matamshi.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Hitilafu Isiyoshughulikiwa",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Rudi nyuma",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Lugha ya Maongezi",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Injini ya Utafutaji",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Makrofoni",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Lengo la uzinduzi",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Tabo mpya",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Kichupo cha Sasa",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Uteuzi wa maikrofoni haupatikani kwa utambuzi wa kivinjari.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Hakuna Kifaa Chaguomsingi cha Kuingiza",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audite huleta uwezo wa kusambaza sauti kwa matumizi ya kuvinjari.\n\nTafuta wavuti ukitumia sauti yako kwa kubofya aikoni ya kivinjari.\n\nOngea kwa lugha yako asilia na uruhusu miundo ya hali ya juu ya AI na ML ibadilishe hadi maandishi. Lugha 300 duniani kote zinatumika!\n\nChagua kutoka kwa injini yoyote bora ya utafutaji kama vile Google na Bing.\n\nNi chanzo huria na kuchapishwa katika https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Nakala ya kuonyesha",
+    "description": "It's description in english"
   }
 }

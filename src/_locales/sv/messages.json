@@ -1,8 +1,98 @@
 {
-  "appName": {
-    "message": "Audate - Voice Search"
+  "AppName": {
+    "message": "Audate - Röstsökning",
+    "description": "The name of the extension"
   },
-  "appDesc": {
-    "message": "Search the web with your voice"
+  "AppDesc": {
+    "message": "Sök på webben med rösten",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Klicka på ⓞ för att börja tala",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Lyssnar...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Inget ljud upptäcktes",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Inget igenkännbart tal upptäcktes.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Inga mikrofonenheter upptäcktes eller mikrofonen är avstängd.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Kan inte komma åt mikrofonen, behörighet inte beviljad.",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Nätverket är bortkopplat",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Erkännandet avbryts.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Lokala språk stöds inte.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Webbläsaren stöder inte taligenkänning.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Obehandlat fel",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Gå tillbaka",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Talspråk",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Sökmotor",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Mikrofon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Launch Target",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Ny flik",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Aktuell flik",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Val av mikrofon är inte tillgängligt för webbläsarigenkänning.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Ingen standardinmatningsenhet",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate ger webbläsarupplevelsen en röstförstärkning.\n\nSök på webben med hjälp av din röst genom att klicka på webbläsarikonen.\n\nSäg ditt naturliga språk och låt avancerade AI- och ML-modeller omvandla det till text. Över 300 lokala språk runt om i världen stöds!\n\nVälj från någon av de främsta sökmotorerna som Google och Bing.\n\nDet är öppen källkod och publiceras på https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Text som ska visas",
+    "description": "It's description in english"
   }
 }
