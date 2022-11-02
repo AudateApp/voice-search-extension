@@ -29,7 +29,7 @@ Sentry.init({
    * of transactions for performance monitoring.
    * We recommend adjusting this value in production
    */
-  tracesSampleRate: 1.0,
+  tracesSampleRate: 0.1,
 
   release: "audate-voice-search@22.10.12",
   environment: "PROD",
