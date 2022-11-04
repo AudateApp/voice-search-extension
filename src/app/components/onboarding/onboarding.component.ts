@@ -40,10 +40,6 @@ export class OnboardingComponent {
       .then((stream) => {
         stream.getTracks().forEach((track) => {
           track.stop();
-          // Wait a second then close the tab.
-          setTimeout(() => {
-            window.close();
-          }, 2000);
         });
         this.notice = 'Permission Granted';
       })
