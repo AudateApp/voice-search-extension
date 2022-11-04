@@ -31,7 +31,7 @@ Sentry.init({
    */
   tracesSampleRate: 0.1,
 
-  release: "audate-voice-search@22.10.12",
+  release: "audate-voice-search@22.11.04",
   environment: "PROD",
 });
 
