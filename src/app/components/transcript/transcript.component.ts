@@ -11,7 +11,7 @@ import { RecognitionService } from 'src/app/services/recognition/recognition.ser
 })
 export class TranscriptComponent implements OnInit {
   idleMessage = this.i18n.get(Mssg.StatusIdle);
-  idleTimeoutMs = 1000;
+  idleTimeoutMs = 2000;
   idleTimeout?: any | null = null;
   message?: string = this.idleMessage;
 
