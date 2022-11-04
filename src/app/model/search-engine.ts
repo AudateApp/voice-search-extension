@@ -8,7 +8,7 @@ export interface SearchEngine {
 export const SearchEngines: SearchEngine[] = [
   {
     name: 'Google',
-    queryTemplate: 'https://google.com/search?igu=1&q=%QUERY%',
+    queryTemplate: 'https://google.com/search?q=%QUERY%',
     iconPath: 'assets/icons/google.svg',
   },
   {
