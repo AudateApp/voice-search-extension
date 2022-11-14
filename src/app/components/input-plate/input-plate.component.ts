@@ -57,7 +57,6 @@ export class InputPlateComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     // Trigger mic tap.
-    console.error("router url: ", this.router.url);
     if (this.router.url === '/onboard') {
       this.showSettings = true;
       this.ref.detectChanges();
