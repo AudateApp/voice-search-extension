@@ -42,7 +42,8 @@ export class InputDeviceService {
             'Default device not found in devices list: ',
             devices
           );
-          const firstInputDevice = devices.filter(d => d.kind === 'audioinput')[0];
+          const audioInputDevices = devices.filter(d => d.kind === 'audioinput');
+          const firstInputDevice = audioInputDevices.length > 0 ? audioInputDevices[0] : null;
           if (firstInputDevice) {
             return firstInputDevice;
           }
