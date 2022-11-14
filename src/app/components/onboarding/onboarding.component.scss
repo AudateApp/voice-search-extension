@@ -38,6 +38,14 @@
       margin-left: -20px;
     }
   }
+
+  #mic-permission .p-button {
+    background: #410ff8;
+
+    &:hover {
+      box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    }
+  }
 }
 
 .footer {
