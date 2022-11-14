@@ -10,9 +10,6 @@
   "permissions": [
     "storage"
   ],
-  "host_permissions": [
-    "*://*/*"
-  ],
   "action": {
     "default_icon": {
       "16": "assets/images/logo-16x16.png",
