@@ -15,6 +15,10 @@ export class OnboardingComponent {
   footerWave = DefaultConfig;
   logger: Logger;
 
+  /*
+   * TODO: Use InputDeviceService.getDefaultInputDevice to check that there is a microphone.
+   * Display a notice if none.
+   */
   constructor(loggingService: LoggingService) {
     this.logger = loggingService.getLogger("onboarding");
 

@@ -38,7 +38,7 @@ export class InputDeviceService {
         if (device) {
           return device;
         } else {
-          this.logger.error(
+          this.logger.warn(
             'Default device not found in devices list: ',
             devices
           );
