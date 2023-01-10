@@ -31,8 +31,8 @@ Sentry.init({
    */
   tracesSampleRate: 0.1,
 
-  release: "audate-voice-search@22.11.18",
-  environment: "PROD",
+  release: 'audate-voice-search@23.01.10',
+  environment: 'PROD',
 });
 
 platformBrowserDynamic()

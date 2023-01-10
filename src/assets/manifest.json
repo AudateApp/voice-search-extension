@@ -2,14 +2,12 @@
   "name": "__MSG_AppName__",
   "description": "__MSG_AppDesc__",
   "homepage_url": "https://github.com/justiceo/audate",
-  "version": "22.11.18",
+  "version": "23.01.10",
   "manifest_version": 3,
   "default_locale": "en",
   "author": "Justice Ogbonna",
   "short_name": "Audate",
-  "permissions": [
-    "storage"
-  ],
+  "permissions": ["storage"],
   "action": {
     "default_icon": {
       "16": "assets/images/logo-16x16.png",
