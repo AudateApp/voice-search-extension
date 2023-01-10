@@ -91,6 +91,34 @@
         "message": "ऑडेट ब्राउज़िंग अनुभव के लिए एक आवाज-फॉरवर्ड खर्च लाता है। \n\n ब्राउज़र आइकन पर क्लिक करके अपनी आवाज का उपयोग करके वेब खोजें। \n\n अपनी प्राकृतिक भाषा में बोलें और उन्नत एआई और एमएल मॉडल उन्हें पाठ में परिवर्तित करें। दुनिया भर में 300 से अधिक स्थानों का समर्थन किया जाता है! \n\n Google और बिंग जैसे शीर्ष खोज इंजन में से किसी से चुनें। \n\n यह खुला स्रोत है और https: //github.com/audateapp पर प्रकाशित किया गया है।",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "गूगल",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "बिंग खोज",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "याहू",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "प्रदर्शित करने के लिए पाठ",
         "description": "It's description in english"

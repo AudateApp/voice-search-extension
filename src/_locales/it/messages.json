@@ -91,6 +91,34 @@
         "message": "ADUDATE porta a prezzi vocali all'esperienza di navigazione. \n\n Cerca il Web utilizzando la tua voce facendo clic sull'icona del browser. \n\n Parla nel tuo linguaggio naturale e lascia che i modelli AI e ML avanzati li convertono in testo. Oltre 300 locali in tutto il mondo sono supportati! \n\n Scegli tra uno dei migliori motori di ricerca come Google e Bing. \n\n È open source e pubblicato su https: //github.com/audaTapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Ricerca Bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "DuckDuckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Testo da visualizzare",
         "description": "It's description in english"

@@ -91,6 +91,34 @@
         "message": "ഓഡിറ്റ് ബ്ര rows സിംഗ് അനുഭവത്തിലേക്ക് ഒരു ശബ്ദം-ഫോർവേഡ് താങ്ങാനാക്കുന്നു. \n\n ബ്ര browser സർ ഐക്കണിൽ ക്ലിക്കുചെയ്ത് നിങ്ങളുടെ ശബ്ദം ഉപയോഗിച്ച് വെബിൽ തിരയുക. \n\n നിങ്ങളുടെ സ്വാഭാവിക ഭാഷയിൽ സംസാരിക്കുകയും AI, ML മോഡലുകൾ അവരെ വാചകത്തിലേക്ക് പരിവർത്തനം ചെയ്യാൻ അനുവദിക്കുക. ലോകമെമ്പാടുമുള്ള 300 ലധികം ലോക്കലുകൾ പിന്തുണയ്ക്കുന്നു! \n\n Google, Bing പോലുള്ള ഏതെങ്കിലും മികച്ച തിരയൽ എഞ്ചിനുകളിൽ നിന്ന് തിരഞ്ഞെടുക്കുക. \n\n ഇത് ഓപ്പൺ സോഴ്സും https: //githb.com/adatapepp- ൽ പ്രസിദ്ധീകരിച്ചു.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "ഗൂഗിണ്",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "ബിംഗ് തിരയൽ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "യാഹൂ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Bakeu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ഇക്കോസിയ",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "ഡക്ക്ഡക്ക്ഗോ",
+        "description": "Google"
+    },
     "key": {
         "message": "പ്രദർശിപ്പിക്കുന്നതിനുള്ള വാചകം",
         "description": "It's description in english"

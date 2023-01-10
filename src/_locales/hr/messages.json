@@ -91,6 +91,34 @@
         "message": "Audate donosi prigodne prihode prema naprijed do iskustva pregledavanja. \n\n Pretražite mrežu pomoću glasa klikom na ikonu preglednika. \n\n Govorite na svom prirodnom jeziku i pustite da ih napredni AI i ML modeli pretvaraju u tekst. Podržano je preko 300 lokaliteta širom svijeta! \n\n Odaberite bilo koju od najboljih tražilica poput Googlea i Binga. \n\n Otvoreni je i objavljen na https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Pretraživanje binga",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Jezera",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Jahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekozija",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Patka",
+        "description": "Google"
+    },
     "key": {
         "message": "Tekst za prikaz",
         "description": "It's description in english"

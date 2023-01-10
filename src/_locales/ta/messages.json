@@ -91,6 +91,34 @@
         "message": "தணிக்கை உலாவல் அனுபவத்திற்கு குரல்-முன்னோக்கி செலவினங்களைக் கொண்டுவருகிறது. \n\n உலாவி ஐகானைக் கிளிக் செய்வதன் மூலம் உங்கள் குரலைப் பயன்படுத்தி வலையைத் தேடுங்கள். \n\n உங்கள் இயல்பான மொழியில் பேசுங்கள், மேம்பட்ட AI மற்றும் ML மாதிரிகள் அவற்றை உரையாக மாற்றட்டும். உலகெங்கிலும் 300 க்கும் மேற்பட்ட இடங்கள் ஆதரிக்கப்படுகின்றன! \n\n கூகிள் மற்றும் பிங் போன்ற சிறந்த தேடுபொறிகளிலிருந்து தேர்வு செய்யவும். \n\n இது திறந்த மூலமாகும் மற்றும் https: //github.com/audateapp இல் வெளியிடப்பட்டது.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "கூகிள்",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "பிங் தேடல்",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "யாண்டெக்ஸ்",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "யாகூ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "பைடு",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "சுற்றுச்சூழல்",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "டக்டக்கோ",
+        "description": "Google"
+    },
     "key": {
         "message": "காண்பிக்க உரை",
         "description": "It's description in english"

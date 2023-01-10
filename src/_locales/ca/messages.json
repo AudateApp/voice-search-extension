@@ -91,6 +91,34 @@
         "message": "Audate aporta un avantatge de veu a l'experiència de navegació. \n\n Cerqueu el web mitjançant la vostra veu fent clic a la icona del navegador. \n\n Parleu en el vostre llenguatge natural i deixeu que els models AI i ML avançats els converteixin en text. Més de 300 locals de tot el món són compatibles. \n\n Trieu entre qualsevol dels motors de cerca més importants com Google i Bing. \n\n És de codi obert i es publica a https: //github.com/audateApp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Cerca Bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Text per mostrar",
         "description": "It's description in english"

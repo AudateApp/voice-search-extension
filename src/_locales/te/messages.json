@@ -91,6 +91,34 @@
         "message": "ఆడిట్ బ్రౌజింగ్ అనుభవానికి వాయిస్-ఫార్వర్డ్ స్థోమతను తెస్తుంది. \n\n బ్రౌజర్ చిహ్నంపై క్లిక్ చేయడం ద్వారా మీ వాయిస్ ఉపయోగించి వెబ్‌లో శోధించండి. \n\n మీ సహజ భాషలో మాట్లాడండి మరియు అధునాతన AI మరియు ML నమూనాలు వాటిని టెక్స్ట్‌గా మార్చనివ్వండి. ప్రపంచవ్యాప్తంగా 300 కి పైగా ప్రాంతాలకు మద్దతు ఉంది! \n\n గూగుల్ మరియు బింగ్ వంటి అగ్ర సెర్చ్ ఇంజన్ల నుండి ఎంచుకోండి. \n\n ఇది ఓపెన్ సోర్స్ మరియు https: //github.com/audateapp లో ప్రచురించబడింది.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "గూగుల్",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "బింగ్ శోధన",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "యాండెక్స్",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "యాహూ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "బైడు",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ఎకోసియా",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "డక్డక్గో",
+        "description": "Google"
+    },
     "key": {
         "message": "ప్రదర్శించడానికి వచనం",
         "description": "It's description in english"

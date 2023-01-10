@@ -91,6 +91,34 @@
         "message": "Audate prináša k zážitku z prehliadania hlasové povolenie. \n\n Vyhľadajte web pomocou hlasu kliknutím na ikonu prehliadača. \n\n Hovorte vo svojom prirodzenom jazyku a nechajte modely Advanced AI a ML previesť ich na text. Podporuje sa viac ako 300 miest po celom svete! \n\n Vyberte si z ktoréhokoľvek z najlepších vyhľadávacích nástrojov ako Google a Bing. \n\n Je to Open Source a publikované na adrese https: //github.com/audateApp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Riadenie",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Vyhľadávanie",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Kabáza",
+        "description": "Google"
+    },
     "key": {
         "message": "Text na zobrazenie",
         "description": "It's description in english"

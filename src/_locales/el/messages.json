@@ -91,6 +91,34 @@
         "message": "Η Audate φέρνει μια φωνή-προς τα εμπρός προσφορές στην εμπειρία περιήγησης. \n\n Αναζητήστε τον ιστό χρησιμοποιώντας τη φωνή σας κάνοντας κλικ στο εικονίδιο του προγράμματος περιήγησης. \n\n Μιλήστε στη φυσική σας γλώσσα και αφήστε τα προχωρημένα μοντέλα AI και ML να τα μετατρέψουν σε κείμενο. Υποστηρίζονται πάνω από 300 τοποθεσίες σε όλο τον κόσμο! \n\n Επιλέξτε από οποιαδήποτε από τις κορυφαίες μηχανές αναζήτησης όπως το Google και το Bing. \n\n Είναι ανοιχτή πηγή και δημοσιεύεται στη διεύθυνση https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Αναζήτηση Bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Θόρυβος",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Θόρυβος",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Οικοσσία",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Πρεσβύτερος",
+        "description": "Google"
+    },
     "key": {
         "message": "Κείμενο για εμφάνιση",
         "description": "It's description in english"

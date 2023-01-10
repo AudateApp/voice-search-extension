@@ -91,6 +91,34 @@
         "message": "Audate brings a voice-forward affordances to the browsing experience.\n\nSearch the web using your voice by clicking on the browser icon.\n\nSpeak in your natural language and let advanced AI and ML models convert them to text. Over 300 locales around the world are supported!\n\nChoose from any of the top search engines like Google and Bing.\n\nIt's open source and published at https: //github.com/AudateApp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing Search",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "DuckDuckGo",
+        "description": "Google"
+    },
     "key": {
         "message": "Text to display",
         "description": "It's description in english"

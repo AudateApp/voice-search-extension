@@ -91,6 +91,34 @@
         "message": "Audate ger en röst framåt priser till surfupplevelsen. \n\n Sök på webben med din röst genom att klicka på webbläsarikonen. \n\n Tala på ditt naturliga språk och låt avancerade AI- och ML -modeller konvertera dem till text. Över 300 platser runt om i världen stöds! \n\n Välj mellan någon av de bästa sökmotorerna som Google och Bing. \n\n Det är öppen källkod och publiceras på https: //github.com/AudateApp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bingsökning",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duck",
+        "description": "Google"
+    },
     "key": {
         "message": "Text för att visa",
         "description": "It's description in english"

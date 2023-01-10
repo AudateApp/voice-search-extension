@@ -91,6 +91,34 @@
         "message": "Ауденція приносить голосові переваги для перегляду досвіду. \n\n Шукайте в Інтернеті, використовуючи свій голос, натиснувши піктограму браузера. \n\n Розмовляйте своєю природною мовою і дозвольте просунутим моделям AI та ML перетворити їх на текст. Підтримуються понад 300 місцевостей у всьому світі! \n\n Виберіть з будь -якого з найкращих пошукових систем, таких як Google та Bing. \n\n Він відкритий і опублікований за адресою https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Бінг пошук",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Яндекс",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Байду",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Екосія",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Дакдукго",
+        "description": "Google"
+    },
     "key": {
         "message": "Текст для відображення",
         "description": "It's description in english"

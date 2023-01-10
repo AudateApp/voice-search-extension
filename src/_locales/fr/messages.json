@@ -91,6 +91,34 @@
         "message": "Audate apporte des possibilités vocales à l'expérience de navigation. \n\n Recherchez le Web à l'aide de votre voix en cliquant sur l'icône du navigateur. \n\n Parlez dans votre langue naturelle et laissez les modèles AI et ML avancés les convertir en texte. Plus de 300 endroits dans le monde sont soutenus! \n\n Choisissez parmi l'un des meilleurs moteurs de recherche comme Google et Bing. \n\n Il est open source et publié sur https: //github.com/audateApp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Recherche de bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Écosie",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Texte à afficher",
         "description": "It's description in english"

@@ -91,6 +91,34 @@
         "message": "Audycja wnosi do przeglądania afordancje głosowe. \n\n Przeszukaj sieć za pomocą głosu, klikając ikonę przeglądarki. \n\n Mów w języku naturalnym i pozwól zaawansowanym modele AI i ML przekształcić je na tekst. Obsługiwane jest ponad 300 miejsc na całym świecie! \n\n Wybierz spośród dowolnej z najlepszych wyszukiwarek, takich jak Google i Bing. \n\n Jest open source i opublikowany na stronie https: //github.com/audateApp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing Search",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Wieśniak",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekozja",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Tekst do wyświetlenia",
         "description": "It's description in english"

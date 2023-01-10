@@ -91,6 +91,34 @@
         "message": "Audate membawa kemampuan suara ke pengalaman melayari. \n\n Cari web menggunakan suara anda dengan mengklik ikon penyemak imbas. \n\n Bercakap dalam bahasa semulajadi anda dan biarkan model AI dan ML maju menukarnya ke teks. Lebih 300 tempatan di seluruh dunia disokong! \n\n Pilih dari mana -mana enjin carian teratas seperti Google dan Bing. \n\n Ia sumber terbuka dan diterbitkan di https: //github.com/AudateApp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Carian bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Teks untuk dipaparkan",
         "description": "It's description in english"

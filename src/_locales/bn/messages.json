@@ -91,6 +91,34 @@
         "message": "অডেট ব্রাউজিংয়ের অভিজ্ঞতায় একটি ভয়েস-ফরোয়ার্ড সাশ্রয়ী করে। \n\n ব্রাউজার আইকনে ক্লিক করে আপনার ভয়েস ব্যবহার করে ওয়েবটি অনুসন্ধান করুন। \n\n আপনার প্রাকৃতিক ভাষায় কথা বলুন এবং উন্নত এআই এবং এমএল মডেলগুলি তাদের পাঠ্যে রূপান্তর করতে দিন। বিশ্বজুড়ে 300 টিরও বেশি লোকাল সমর্থিত! \n\n গুগল এবং বিংয়ের মতো শীর্ষ অনুসন্ধান ইঞ্জিনগুলির যে কোনও থেকে চয়ন করুন। \n\n এটি ওপেন সোর্স এবং https: //github.com/audateapp এ প্রকাশিত।",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "গুগল",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "বিং অনুসন্ধান",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "ইয়ানডেক্স",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "ইয়াহু",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "বাইদু",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ইকোসিয়া",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "ডাকডাকগো",
+        "description": "Google"
+    },
     "key": {
         "message": "প্রদর্শন করতে পাঠ্য",
         "description": "It's description in english"

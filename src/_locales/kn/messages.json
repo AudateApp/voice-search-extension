@@ -91,6 +91,34 @@
         "message": "ಆಡಿಟ್ ಬ್ರೌಸಿಂಗ್ ಅನುಭವಕ್ಕೆ ಧ್ವನಿ-ಫಾರ್ವರ್ಡ್ ವೆಚ್ಚವನ್ನು ತರುತ್ತದೆ. \n\n ಬ್ರೌಸರ್ ಐಕಾನ್ ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ ನಿಮ್ಮ ಧ್ವನಿಯನ್ನು ಬಳಸಿಕೊಂಡು ವೆಬ್ ಅನ್ನು ಹುಡುಕಿ. \n\n ನಿಮ್ಮ ನೈಸರ್ಗಿಕ ಭಾಷೆಯಲ್ಲಿ ಮಾತನಾಡಿ ಮತ್ತು ಸುಧಾರಿತ AI ಮತ್ತು ML ಮಾದರಿಗಳು ಅವುಗಳನ್ನು ಪಠ್ಯಕ್ಕೆ ಪರಿವರ್ತಿಸಲು ಅವಕಾಶ ಮಾಡಿಕೊಡಿ. ಪ್ರಪಂಚದಾದ್ಯಂತ 300 ಕ್ಕೂ ಹೆಚ್ಚು ಸ್ಥಳಗಳನ್ನು ಬೆಂಬಲಿಸಲಾಗುತ್ತದೆ! \n\n ಗೂಗಲ್ ಮತ್ತು ಬಿಂಗ್‌ನಂತಹ ಯಾವುದೇ ಉನ್ನತ ಸರ್ಚ್ ಇಂಜಿನ್‌ಗಳಿಂದ ಆರಿಸಿ. \n\n ಇದು ಓಪನ್ ಸೋರ್ಸ್ ಮತ್ತು https: //github.com/audateapp ನಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗಿದೆ.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "ಗೂಗಲ್",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "ಬಿಂಗ್ ಹುಡುಕಾಟ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "ಕವಣೆ",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "ಯಾಹೂ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "ಜರಡಿ",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ಪರಿಸರ",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "ಡಕ್ಡಕ್ಗೊ",
+        "description": "Google"
+    },
     "key": {
         "message": "ಪ್ರದರ್ಶಿಸಲು ಪಠ್ಯ",
         "description": "It's description in english"

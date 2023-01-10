@@ -91,6 +91,34 @@
         "message": "Audateは、ブラウジングエクスペリエンスにボイスフォワードアフォーダンスをもたらします。 \n\n ブラウザアイコンをクリックして、音声を使用してWebを検索します。 \n\n あなたの自然言語で話し、高度なAIおよびMLモデルをテキストに変換させます。 世界中の300以上のロケールがサポートされています！ \n\n GoogleやBingなどのトップ検索エンジンから選択してください。 \n\n オープンソースで、https：//github.com/audateappで公開されています。",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "グーグル",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "ビング検索",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "エコシア",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "表示するテキスト",
         "description": "It's description in english"

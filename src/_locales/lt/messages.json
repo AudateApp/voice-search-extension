@@ -91,6 +91,34 @@
         "message": "Audate suteikia naršymo patirties balso į priekį. \n\n Ieškokite interneto naudodami savo balsą spustelėdami naršyklės piktogramą. \n\n Kalbėkite savo natūralia kalba ir leiskite „Advanced AI“ ir „ML“ modeliams paversti juos tekstu. Palaikoma daugiau nei 300 vietų visame pasaulyje! \n\n Pasirinkite iš bet kurios iš populiariausių paieškos variklių, tokių kaip „Google“ ir „Bing“. \n\n Tai atviras kodas ir paskelbtas https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "„Google“",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing paieška",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekozija",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "„DuckDuckgo“",
+        "description": "Google"
+    },
     "key": {
         "message": "Tekstas, kurį reikia rodyti",
         "description": "It's description in english"

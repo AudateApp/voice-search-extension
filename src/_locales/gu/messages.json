@@ -91,6 +91,34 @@
         "message": "Aud ડેટ બ્રાઉઝિંગ અનુભવ માટે વ voice ઇસ-ફોરવર્ડ પરવડે છે. \n\n બ્રાઉઝર આયકન પર ક્લિક કરીને તમારા વ voice ઇસનો ઉપયોગ કરીને વેબ શોધો. \n\n તમારી કુદરતી ભાષામાં બોલો અને અદ્યતન એઆઈ અને એમએલ મોડેલો તેમને ટેક્સ્ટમાં રૂપાંતરિત કરવા દો. વિશ્વભરના 300 થી વધુ સ્થાનો સપોર્ટેડ છે! \n\n ગૂગલ અને બિંગ જેવા કોઈપણ ટોચનાં સર્ચ એન્જિનમાંથી પસંદ કરો. \n\n તે ખુલ્લું સ્રોત છે અને https: //github.com/audateapp પર પ્રકાશિત છે.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "ગૂગલ",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "બિંગ શોધ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "યાંદેક્સ",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "એક જાતનો અવાજ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "દાડુ",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ઇકોસિયા",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "ગોકળગારી",
+        "description": "Google"
+    },
     "key": {
         "message": "પ્રદર્શિત કરવા માટે લખાણ",
         "description": "It's description in english"

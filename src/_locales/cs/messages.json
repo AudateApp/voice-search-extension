@@ -91,6 +91,34 @@
         "message": "Audate přináší do zážitku pro prohlížení hlasové dopředu. \n\n Prohledejte web pomocí hlasu kliknutím na ikonu prohlížeče. \n\n Mluvte ve svém přirozeném jazyce a nechte pokročilé modely AI a ML převést na text. Podporováno je více než 300 míst po celém světě! \n\n Vyberte si z kteréhokoli z nejlepších vyhledávačů, jako je Google a Bing. \n\n Je to open source a publikován na adrese https: //github.com/adadeapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Hledání bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosie",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Text, který se má zobrazit",
         "description": "It's description in english"

@@ -91,6 +91,34 @@
         "message": "Audate מביא רווחים קדימה לחוויית הגלישה. \n\n חפש באינטרנט באמצעות הקול שלך על ידי לחיצה על סמל הדפדפן. \n\n דבר בשפה הטבעית שלך ונתן למודלים AI ו- ML מתקדמים להמיר אותם לטקסט. יותר מ -300 יישובים ברחבי העולם נתמכים! \n\n בחר מבין כל אחד ממנועי החיפוש המובילים כמו גוגל ובינג. \n\n זה קוד פתוח ומפורסם בכתובת https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "גוגל",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "חיפוש בינג",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "ינדקס",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "יאהו",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "אקוסיה",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "DuckDuckGo",
+        "description": "Google"
+    },
     "key": {
         "message": "טקסט לתצוגה",
         "description": "It's description in english"

@@ -91,6 +91,34 @@
         "message": "АУТЕД доноси приступање гласа на искуство прегледавања. \n\n Претражите веб користећи свој глас кликом на икону прегледача. \n\n Говорите на свом природном језику и пустите напредне АИ и МЛ моделе да их претвори у текст. Подржано је преко 300 локација широм света! \n\n Изаберите из било којег од горњих претраживача попут Гоогле и Бинг-а. \n\n То је отворени извор и објављен на хттпс: //гитхуб.цом/аудатеап.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Гоогле",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "БИНГ ПРЕТРАЖИ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Иандек",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Иахоо",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Баиду",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Екосија",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Дуцкдуцкго",
+        "description": "Google"
+    },
     "key": {
         "message": "Текст за приказ",
         "description": "It's description in english"

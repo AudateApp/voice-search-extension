@@ -91,6 +91,34 @@
         "message": "Cheate, tarama deneyimine sesli bir uygunluk getirir. \n\n Tarayıcı simgesine tıklayarak sesinizi kullanarak web'de arama yapın. \n\n Doğal dilinizde konuşun ve gelişmiş AI ve ML modellerinin bunları metne dönüştürmesine izin verin. Dünyanın dört bir yanında 300'den fazla yerel destekleniyor! \n\n Google ve Bing gibi en iyi arama motorlarından herhangi birini seçin. \n\n Açık kaynaklıdır ve https: //github.com/audateapp adresinde yayınlanmıştır.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing Arama",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "DuckDuckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Görüntülenecek metin",
         "description": "It's description in english"

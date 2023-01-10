@@ -91,6 +91,34 @@
         "message": "Audate mang lại khả năng chi trả cho trải nghiệm duyệt. \n\n Tìm kiếm web bằng giọng nói của bạn bằng cách nhấp vào biểu tượng trình duyệt. \n\n Nói bằng ngôn ngữ tự nhiên của bạn và để các mô hình AI và ML nâng cao chuyển đổi chúng thành văn bản. Hơn 300 địa phương trên khắp thế giới được hỗ trợ! \n\n Chọn từ bất kỳ công cụ tìm kiếm hàng đầu nào như Google và Bing. \n\n Đó là nguồn mở và được xuất bản tại https: //github.com/audateApp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Tìm kiếm bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Văn bản để hiển thị",
         "description": "It's description in english"

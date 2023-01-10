@@ -91,6 +91,34 @@
         "message": "Ukaguzi huleta uwezo wa mbele wa sauti kwa uzoefu wa kuvinjari. \n\n Tafuta wavuti kwa kutumia sauti yako kwa kubonyeza ikoni ya kivinjari. \n\n Ongea kwa lugha yako ya asili na acha mifano ya hali ya juu ya AI na ML ibadilishe kuwa maandishi. Zaidi ya maeneo 300 ulimwenguni kote yanaungwa mkono! \n\n Chagua kutoka kwa injini yoyote ya juu ya utaftaji kama Google na Bing. \n\n Ni chanzo wazi na kuchapishwa kwa https: //github.com/uadateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Utafutaji wa Bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Maandishi kuonyesha",
         "description": "It's description in english"

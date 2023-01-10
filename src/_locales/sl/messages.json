@@ -91,6 +91,34 @@
         "message": "Aumet prinaša glasovne ponudbe za izkušnjo brskanja. \n\n Poiščite po spletu s svojim glasom s klikom na ikono brskalnika. \n\n Govorite v svojem naravnem jeziku in pustite, da jih napredni modeli AI in ML pretvorijo v besedilo. Podprtih je več kot 300 krajev po vsem svetu! \n\n Izberite med katerim od najboljših iskalnikov, kot sta Google in Bing. \n\n Odprta je in objavljena na https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing iskanje",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekozija",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Besedilo za prikaz",
         "description": "It's description in english"

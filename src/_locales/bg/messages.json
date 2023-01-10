@@ -91,6 +91,34 @@
         "message": "Audate предоставя гласови предложения за преживяването на сърфирането. \n\n Търсете в мрежата, като използвате гласа си, като кликнете върху иконата на браузъра. \n\n Говорете на вашия естествен език и оставете моделите за напреднали AI и ML да ги преобразуват в текст. Поддържат се над 300 локали по света! \n\n Изберете от някой от най -добрите търсачки като Google и Bing. \n\n Той е с отворен код и публикуван на https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Търсене на бинг",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "BAIDU",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Екосия",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Текст за показване",
         "description": "It's description in english"

@@ -91,6 +91,34 @@
         "message": "Pārlūkošanas pieredzē audate sniedz balss piedāvājumus. \n\n Meklējiet tīmeklī, izmantojot savu balsi, noklikšķinot uz pārlūka ikonas. \n\n Runājiet savā dabiskajā valodā un ļaujiet uzlabotajiem AI un ML modeļiem tos pārveidot par tekstu. Tiek atbalstīti vairāk nekā 300 vietņu visā pasaulē! \n\n Izvēlieties no jebkuras no labākajām meklētājprogrammām, piemēram, Google un Bing. \n\n Tas ir atvērtā koda un publicēts vietnē https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing meklēšana",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Jandekss",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosija",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Teksts, lai parādītu",
         "description": "It's description in english"

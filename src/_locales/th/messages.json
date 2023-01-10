@@ -91,6 +91,34 @@
         "message": "การตรวจสอบนำมาซึ่งการส่งต่อเสียงไปสู่ประสบการณ์การท่องเว็บ \n\n ค้นหาเว็บโดยใช้เสียงของคุณโดยคลิกที่ไอคอนเบราว์เซอร์ \n\n พูดในภาษาธรรมชาติของคุณและปล่อยให้โมเดล AI และ ML ขั้นสูงแปลงเป็นข้อความ ได้รับการสนับสนุนมากกว่า 300 แห่งทั่วโลก! \n\n เลือกจากเครื่องมือค้นหาชั้นนำใด ๆ เช่น Google และ Bing \n\n เป็นโอเพ่นซอร์สและเผยแพร่ที่ https: //github.com/audateApp",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "การค้นหา Bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "ยาฮู",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "ข้อความที่จะแสดง",
         "description": "It's description in english"

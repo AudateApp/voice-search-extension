@@ -91,6 +91,34 @@
         "message": "AUDATE為瀏覽體驗帶來了配音。 \n\n 通過單擊瀏覽器圖標，使用您的語音搜索網絡。 \n\n 用您的自然語言說話，讓高級AI和ML模型將它們轉換為文本。 世界各地有300多個地區得到支持！ \n\n 從Google和Bing等任何頂級搜索引擎中進行選擇。 \n\n 它是開源的，並在https：//github.com/audateapp上發布。",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "谷歌",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing搜索",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "雅虎",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "百度",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "達克達克戈",
+        "description": "Google"
+    },
     "key": {
         "message": "要顯示的文字",
         "description": "It's description in english"

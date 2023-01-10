@@ -91,6 +91,34 @@
         "message": "Audate bringer en stemmefremspil til browseroplevelsen. \n\n Søg på nettet ved hjælp af din stemme ved at klikke på browserikonet. \n\n Tal på dit naturlige sprog, og lad avancerede AI- og ML -modeller konvertere dem til tekst. Over 300 lokaliteter over hele verden understøttes! \n\n Vælg mellem en af de bedste søgemaskiner som Google og Bing. \n\n Det er open source og offentliggjort på https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing -søgning",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Tekst at vise",
         "description": "It's description in english"

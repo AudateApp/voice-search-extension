@@ -91,6 +91,34 @@
         "message": "Das Audat bringt ein Voice-Forward-Leistungsverhältnis in das Browsing-Erlebnis. \n\n Suchen Sie das Web mit Ihrer Stimme, indem Sie auf das Browser -Symbol klicken. \n\n Sprechen Sie in Ihrer natürlichen Sprache und lassen Sie sich mit fortgeschrittenen KI- und ML -Modellen in Text umwandeln. Über 300 Orte auf der ganzen Welt werden unterstützt! \n\n Wählen Sie aus einer der besten Suchmaschinen wie Google und Bing. \n\n Es ist Open Source und veröffentlicht unter https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing -Suche",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ökosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Text zum Anzeigen",
         "description": "It's description in english"

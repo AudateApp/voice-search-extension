@@ -91,6 +91,34 @@
         "message": "ኦዲት ለአሰሳ ተሞክሮ ድምፃዊነትን የሚያስተላልፍ ዋጋን የሚያመጣ ነው. \n\n የአሳሽ አዶን ጠቅ በማድረግ በድምጽዎ ላይ ድምጽዎን ይፈልጉ. \n\n በተፈጥሯዊ ቋንቋ ይናገሩ እና የቅድመ አዲ እና የ ML ሞዴሎች ወደ ጽሑፍ እንዲወጡ ያድርጓቸው. በዓለም ዙሪያ ከ 300 በላይ መጠለያዎች ይደገፋሉ! \n\n እንደ Google እና Bing ካሉ ምርጥ የፍለጋ ሞተሮች ውስጥ ይምረጡ. \n\n ክፍት ምንጭ እና በ https.com/gititub.com/audateApp ነው የታተመው.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "ጉግል",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "የ Bing ፍለጋ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "ያሁ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ኢኮሲያ",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckuckocko",
+        "description": "Google"
+    },
     "key": {
         "message": "ጽሑፍ ለማሳየት ጽሑፍ",
         "description": "It's description in english"

@@ -91,6 +91,34 @@
         "message": "Audate هزینه های صوتی را به تجربه مرور می بخشد. \n\n با کلیک بر روی نماد مرورگر ، وب را با استفاده از صدای خود جستجو کنید. \n\n به زبان طبیعی خود صحبت کنید و بگذارید مدلهای پیشرفته AI و ML آنها را به متن تبدیل کنند. بیش از 300 محلی در سراسر جهان پشتیبانی می شوند! \n\n از بین هر یک از موتورهای جستجوگر برتر مانند Google و Bing انتخاب کنید. \n\n این منبع باز است و در https: //github.com/audateapp منتشر شده است.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "گوگل",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "جستجوی بینگ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "یاندکس",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "یاهو",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "بیدو",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "اکسیا",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "اردک",
+        "description": "Google"
+    },
     "key": {
         "message": "متن برای نمایش",
         "description": "It's description in english"

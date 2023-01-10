@@ -91,6 +91,34 @@
         "message": "Az Audate hang-előrejelző előnyöket hoz a böngészési élményhez. \n\n Keresse meg az internetet a hangjával a böngésző ikonra kattintva. \n\n Beszéljen a természetes nyelvén, és hagyja, hogy az Advanced AI és ML modellek átalakítsák őket szöveggé. A világ több mint 300 helyszíne támogatott! \n\n Válasszon olyan legjobb keresőmotorok közül, mint a Google és a Bing. \n\n Ez nyílt forráskódú, és közzétette a https: //github.com/audateapp oldalon.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing -keresés",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Jehu",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ökózia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckducko",
+        "description": "Google"
+    },
     "key": {
         "message": "Szöveg a megjelenítendő szöveg",
         "description": "It's description in english"

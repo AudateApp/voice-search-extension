@@ -91,6 +91,34 @@
         "message": "ऑडिट ब्राउझिंगच्या अनुभवासाठी व्हॉईस-फॉरवर्ड परवडते. \n\n ब्राउझर चिन्हावर क्लिक करून आपला आवाज वापरुन वेब शोधा. \n\n आपल्या नैसर्गिक भाषेत बोला आणि प्रगत एआय आणि एमएल मॉडेल त्यांना मजकूरात रूपांतरित करू द्या. जगभरातील 300 हून अधिक लोकॅल्स समर्थित आहेत! \n\n Google आणि बिंग सारख्या कोणत्याही शीर्ष शोध इंजिनमधून निवडा. \n\n हे मुक्त स्त्रोत आहे आणि https: //github.com/audateapp वर प्रकाशित आहे.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "गूगल",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "बिंग शोध",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "यॅन्डेक्स",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "याहू",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "बाईडू",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "इकोसिया",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "डकडकगो",
+        "description": "Google"
+    },
     "key": {
         "message": "प्रदर्शित करण्यासाठी मजकूर",
         "description": "It's description in english"

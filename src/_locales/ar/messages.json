@@ -91,6 +91,34 @@
         "message": "يقدم Audate معالجة صوتية إلى الأمام لتجربة التصفح. \n\n ابحث في الويب باستخدام صوتك من خلال النقر على أيقونة المتصفح. \n\n تحدث بلغتك الطبيعية واترك نماذج AI و ML متقدمة تحويلها إلى نص. يتم دعم أكثر من 300 لغ في جميع أنحاء العالم! \n\n اختر من أي من أفضل محركات البحث مثل Google و Bing. \n\n إنه مفتوح المصدر ونشره على https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "جوجل",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "البحث بينج",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "ياندكس",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "ياهو",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "بايدو",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "إيكوزيا",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "نص لعرضه",
         "description": "It's description in english"

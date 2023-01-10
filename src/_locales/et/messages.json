@@ -91,6 +91,34 @@
         "message": "Audate annab sirvimiskogemusele häälte võimaluse. \n\n Otsige oma hääle abil veebist, klõpsates brauseriikoonil. \n\n Rääkige oma loomulikus keeles ja laske arenenud AI ja ML -mudelitel neid tekstiks teisendada. Toetatakse üle 300 paiku kogu maailmas! \n\n Valige mis tahes parimate otsingumootorite hulgast, näiteks Google ja Bing. \n\n See on avatud lähtekoodiga ja avaldatud aadressil https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bingiotsing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ökoloogia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Pardipoeg",
+        "description": "Google"
+    },
     "key": {
         "message": "Tekst, mida kuvada",
         "description": "It's description in english"

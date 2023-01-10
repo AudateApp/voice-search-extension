@@ -91,6 +91,34 @@
         "message": "Audate aduce o voce avansată pentru experiența de navigare. \n\n Căutați pe web folosind vocea dvs. făcând clic pe pictograma browserului. \n\n Vorbiți în limbajul dvs. natural și lăsați modelele avansate AI și ML să le convertească în text. Peste 300 de localități din întreaga lume sunt susținute! \n\n Alegeți dintre oricare dintre motoarele de căutare de top precum Google și Bing. \n\n Este open source și publicat la https: //github.com/audateApp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Căutare bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
     "key": {
         "message": "Text de afișat",
         "description": "It's description in english"

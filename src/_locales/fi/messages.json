@@ -91,6 +91,34 @@
         "message": "Audnate tuo äänen eteenpäin suuntautumisen selauskokemukseen. \n\n Etsi verkosta äänesi avulla napsauttamalla selainkuvaketta. \n\n Puhu luonnollisella kielelläsi ja anna Advanced AI- ja ML -mallien muuntaa ne tekstiin. Yli 300 paikkaa ympäri maailmaa tuetaan! \n\n Valitse mistä tahansa parhaimmista hakukoneista, kuten Google ja Bing. \n\n Se on avoimen lähdekoodin ja julkaistu osoitteessa https: //github.com/audateapp.",
         "description": "Detailed description displayed on extension page."
     },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing -haku",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Ankka",
+        "description": "Google"
+    },
     "key": {
         "message": "Tekstiä",
         "description": "It's description in english"
