@@ -1,98 +1,98 @@
 {
     "AppName": {
-        "message": "Hlasové vyhledávání",
+        "message": "Pesquisa por voz",
         "description": "The name of the extension"
     },
     "AppDesc": {
-        "message": "Hledejte na webu hlasem",
+        "message": "Pesquise na web com sua voz",
         "description": "A description of its function"
     },
     "StatusIdle": {
-        "message": "Kliknutím na ⓞ začnete mluvit",
+        "message": "Clique em ⓞ para começar a falar",
         "description": "The text displayed when microphone is not listening."
     },
     "StatusListening": {
-        "message": "Naslouchání...",
+        "message": "Audição...",
         "description": "The text displayed when microphone is listening for input."
     },
     "ErrNoSoundDetected": {
-        "message": "Nebyl zjištěn žádný zvuk.",
+        "message": "Nenhum som foi detectado.",
         "description": "This text is displayed when the microphone does not detect any speech."
     },
     "ErrNoSpeechDetected": {
-        "message": "Žádná rozpoznatelná řeč.",
+        "message": "Nenhuma fala reconhecível detectada.",
         "description": "This text is displayed when the microphone does not detect any speech."
     },
     "ErrNoAudioCapture": {
-        "message": "Žádná detekovaná mikrofonní zařízení nebo mikrofon nejsou tlumeni.",
+        "message": "Nenhum dispositivo microfone detectado ou microfone é silenciado.",
         "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
     },
     "ErrPermissionNotGranted": {
-        "message": "Nemůže získat přístup k mikrofonu, povolení není uděleno",
+        "message": "Não pode acessar o microfone, permissão não concedida",
         "description": "The user has not granted microphone permission"
     },
     "ErrNoNetwork": {
-        "message": "Síť je odpojena.",
+        "message": "Rede desconectada.",
         "description": "There is no network connection."
     },
     "ErrAborted": {
-        "message": "Uznání zrušeno.",
+        "message": "Reconhecimento cancelado.",
         "description": "User initiated cancellation of recognition."
     },
     "ErrLangNotSupported": {
-        "message": "Národní prostředí není podporováno.",
+        "message": "Local não suportado.",
         "description": "The user's selected locale is not supported."
     },
     "ErrServiceNotAllowed": {
-        "message": "Prohlížeč nepodporuje rozpoznávání řeči.",
+        "message": "O navegador não suporta reconhecimento de fala.",
         "description": "Browser doesn't support recognition."
     },
     "ErrUnhandledError": {
-        "message": "Neochvětená chyba",
+        "message": "Erro não atendido",
         "description": "We encountered an unknown error."
     },
     "QsGoBack": {
-        "message": "Vraťte se",
+        "message": "Volte",
         "description": "Text on button used to navigate backwards"
     },
     "QsSpeechLanguage": {
-        "message": "Řečový jazyk",
+        "message": "Linguagem fonoaudiológica",
         "description": "Label for the drop-down to select user speech language."
     },
     "QsSearchEngine": {
-        "message": "Vyhledávač",
+        "message": "Motor de pesquisa",
         "description": "Label for drop-down to select search engine."
     },
     "QsMicrophone": {
-        "message": "Mikrofon",
+        "message": "Microfone",
         "description": "Label for drop-down to select microphone to use."
     },
     "QsLaunchTarget": {
-        "message": "Spuštění cíle",
+        "message": "Lançar o destino",
         "description": "Label for drop-down to select launch target."
     },
     "QsLaunchNewTab": {
-        "message": "Nová karta",
+        "message": "Nova aba",
         "description": "Option to open URLs in new tab."
     },
     "QsLaunchCurrentTab": {
-        "message": "Aktuální karta",
+        "message": "Guia atual",
         "description": "Option to open URLs in current tab."
     },
     "QsCannotChangeMic": {
-        "message": "Výběr mikrofonu není k dispozici pro rozpoznávání prohlížeče.",
+        "message": "Seleção de microfones não disponíveis para reconhecimento do navegador.",
         "description": "Error message for mic selection not available."
     },
     "QsNoDefaultInput": {
-        "message": "Žádné výchozí vstupní zařízení",
+        "message": "Nenhum dispositivo de entrada padrão",
         "description": "Message displayed when there's no input device."
     },
     "AppDetailDescription": {
-        "message": "Audate přináší do zážitku pro prohlížení hlasové dopředu. \n\n Prohledejte web pomocí hlasu kliknutím na ikonu prohlížeče. \n\n Mluvte ve svém přirozeném jazyce a nechte pokročilé modely AI a ML převést na text. Podporováno je více než 300 míst po celém světě! \n\n Vyberte si z kteréhokoli z nejlepších vyhledávačů, jako je Google a Bing. \n\n Je to open source a publikován na adrese https: //github.com/adadeapp.",
+        "message": "A Audate traz uma promoção de voz à experiência de navegação. \n\n Pesquise a web usando sua voz clicando no ícone do navegador. \n\n Fale em sua linguagem natural e deixe os modelos avançados de IA e ML convertem -os em texto. Mais de 300 locais em todo o mundo são apoiados! \n\n Escolha em qualquer um dos principais mecanismos de pesquisa como Google e Bing. \n\n É de código aberto e publicado em https: //github.com/audateApp.",
         "description": "Detailed description displayed on extension page."
     },
     "key": {
-        "message": "Text, který se má zobrazit",
+        "message": "Texto para ser exibido",
         "description": "It's description in english"
     }
 }

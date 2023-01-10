@@ -1,98 +1,98 @@
 {
-  "AppName": {
-    "message": "Голосовий пошук",
-    "description": "The name of the extension"
-  },
-  "AppDesc": {
-    "message": "Пошук в Інтернеті голосом",
-    "description": "A description of its function"
-  },
-  "StatusIdle": {
-    "message": "Натисніть ⓞ, щоб почати говорити",
-    "description": "The text displayed when microphone is not listening."
-  },
-  "StatusListening": {
-    "message": "Слухаю...",
-    "description": "The text displayed when microphone is listening for input."
-  },
-  "ErrNoSoundDetected": {
-    "message": "Звук не виявлено",
-    "description": "This text is displayed when the microphone does not detect any speech."
-  },
-  "ErrNoSpeechDetected": {
-    "message": "Не виявлено розпізнаваної мови",
-    "description": "This text is displayed when the microphone does not detect any speech."
-  },
-  "ErrNoAudioCapture": {
-    "message": "Не виявлено жодного мікрофонного пристрою або мікрофон вимкнено.",
-    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
-  },
-  "ErrPermissionNotGranted": {
-    "message": "Неможливо отримати доступ до мікрофона, дозвіл не надано",
-    "description": "The user has not granted microphone permission"
-  },
-  "ErrNoNetwork": {
-    "message": "Мережа відключена",
-    "description": "There is no network connection."
-  },
-  "ErrAborted": {
-    "message": "Розпізнавання скасовано",
-    "description": "User initiated cancellation of recognition."
-  },
-  "ErrLangNotSupported": {
-    "message": "Локальність не підтримується.",
-    "description": "The user's selected locale is not supported."
-  },
-  "ErrServiceNotAllowed": {
-    "message": "Браузер не підтримує розпізнавання мови.",
-    "description": "Browser doesn't support recognition."
-  },
-  "ErrUnhandledError": {
-    "message": "Невиправлена помилка",
-    "description": "We encountered an unknown error."
-  },
-  "QsGoBack": {
-    "message": "Повернутися назад",
-    "description": "Text on button used to navigate backwards"
-  },
-  "QsSpeechLanguage": {
-    "message": "Мова мовлення",
-    "description": "Label for the drop-down to select user speech language."
-  },
-  "QsSearchEngine": {
-    "message": "Пошукова система",
-    "description": "Label for drop-down to select search engine."
-  },
-  "QsMicrophone": {
-    "message": "Мікрофон",
-    "description": "Label for drop-down to select microphone to use."
-  },
-  "QsLaunchTarget": {
-    "message": "Ціль запуску",
-    "description": "Label for drop-down to select launch target."
-  },
-  "QsLaunchNewTab": {
-    "message": "Нова вкладка",
-    "description": "Option to open URLs in new tab."
-  },
-  "QsLaunchCurrentTab": {
-    "message": "Поточна вкладка",
-    "description": "Option to open URLs in current tab."
-  },
-  "QsCannotChangeMic": {
-    "message": "Вибір мікрофона недоступний для розпізнавання браузером.",
-    "description": "Error message for mic selection not available."
-  },
-  "QsNoDefaultInput": {
-    "message": "Немає пристрою введення за замовчуванням",
-    "description": "Message displayed when there's no input device."
-  },
-  "AppDetailDescription": {
-    "message": "Audate надає можливості голосового керування веб-переглядом.\n\nЗдійснюйте пошук в Інтернеті за допомогою голосу, натиснувши на іконку браузера.\n\nГоворіть своєю природною мовою і дозвольте вдосконаленим моделям штучного інтелекту і машинного навчання перетворити їх в текст. Підтримується більше 300 локалізацій по всьому світу!\n\nВибирайте будь-яку з провідних пошукових систем, таких як Google і Bing.\n\nВін має відкритий вихідний код і опублікований за адресою https: //github.com/AudateApp.",
-    "description": "Detailed description displayed on extension page."
-  },
-  "key": {
-    "message": "Текст для відображення",
-    "description": "It's description in english"
-  }
+    "AppName": {
+        "message": "Голосовий пошук",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Шукайте в Інтернеті своїм голосом",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Клацніть ⓞ, щоб почати говорити",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Слухання ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Звук не виявлено.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Не виявлено впізнаваного мови.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Не виявлено пристрої мікрофона або приглушений мікрофон.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Не вдається отримати доступ до мікрофона, дозвіл не наданий",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Мережа відключена.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Визнання скасовано.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Локал не підтримується.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Браузер не підтримує розпізнавання мови.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Неперешкоджена помилка",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Повертайся",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Мова мови",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Пошукова система",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Мікрофон",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Запустити ціль",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Нова вкладка",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Поточна вкладка",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Вибір MIC недоступний для розпізнавання браузера.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Немає пристрою введення за замовчуванням",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Ауденція приносить голосові переваги для перегляду досвіду. \n\n Шукайте в Інтернеті, використовуючи свій голос, натиснувши піктограму браузера. \n\n Розмовляйте своєю природною мовою і дозвольте просунутим моделям AI та ML перетворити їх на текст. Підтримуються понад 300 місцевостей у всьому світі! \n\n Виберіть з будь -якого з найкращих пошукових систем, таких як Google та Bing. \n\n Він відкритий і опублікований за адресою https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "key": {
+        "message": "Текст для відображення",
+        "description": "It's description in english"
+    }
 }
