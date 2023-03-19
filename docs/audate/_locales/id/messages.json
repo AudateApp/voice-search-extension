@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Pencarian suara",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Cari web dengan suara Anda",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Klik ⓞ untuk mulai berbicara",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Mendengarkan...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Tidak ada suara yang terdeteksi.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Tidak ada ucapan yang dapat dikenali yang terdeteksi.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Tidak ada perangkat mikrofon yang terdeteksi atau mikrofon yang diredam.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Tidak dapat mengakses mikrofon, izin tidak diberikan",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Jaringan terputus.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Pengakuan dibatalkan.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Lokal tidak didukung.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Browser tidak mendukung pengenalan suara.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Kesalahan yang tidak ditangani",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Kembali",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Bahasa ucapan",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Mesin pencari",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikropon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Luncurkan target",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Tab baru",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Tab saat ini",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Pilihan mic tidak tersedia untuk pengenalan browser.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Tidak ada perangkat input default",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate membawa keterjangkauan suara-maju ke pengalaman penelusuran. \n\n Cari web menggunakan suara Anda dengan mengklik ikon browser. \n\n Bicaralah dalam bahasa alami Anda dan biarkan model AI dan ML canggih mengubahnya menjadi teks. Lebih dari 300 lokal di seluruh dunia didukung! \n\n Pilih dari salah satu mesin pencari teratas seperti Google dan Bing. \n\n Ini open source dan diterbitkan di https: //github.com/audateApp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Pencarian bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Teks untuk ditampilkan",
+        "description": "It's description in english"
+    }
+}

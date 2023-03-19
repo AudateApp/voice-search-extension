@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Äänihaku",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Etsi verkosta äänelläsi",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Napsauta ⓞ aloittaaksesi puhumisen",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Kuunteleminen ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Ääniä ei havaittu.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Tunnistettavissa olevaa puhetta ei havaittu.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Mitään havaittuja mikrofonilaitteita tai mikrofonia ei vaimenneta.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Mikrofonia ei voi käyttää, lupaa ei myönnetä",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Verkko irrotettu.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Tunnustus peruutettu.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Paikkaa ei tueta.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Selain ei tue puheentunnistusta.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Käsittämätön virhe",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Mene takaisin",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Puhekieli",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Hakukone",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofoni",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Avata tavoite",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Uusi välilehti",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Nykyinen välilehti",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "MIC -valinta ei ole saatavana selaimen tunnistamiseen.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Ei oletuslaitetta",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audnate tuo äänen eteenpäin suuntautumisen selauskokemukseen. \n\n Etsi verkosta äänesi avulla napsauttamalla selainkuvaketta. \n\n Puhu luonnollisella kielelläsi ja anna Advanced AI- ja ML -mallien muuntaa ne tekstiin. Yli 300 paikkaa ympäri maailmaa tuetaan! \n\n Valitse mistä tahansa parhaimmista hakukoneista, kuten Google ja Bing. \n\n Se on avoimen lähdekoodin ja julkaistu osoitteessa https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing -haku",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Ankka",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Tekstiä",
+        "description": "It's description in english"
+    }
+}

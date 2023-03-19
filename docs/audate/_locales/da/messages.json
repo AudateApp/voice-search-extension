@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Stemmesøgning",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Søg på nettet med din stemme",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Klik på ⓞ for at begynde at tale",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Hører efter...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Ingen lyd blev detekteret.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Ingen genkendelig tale opdaget.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Ingen mikrofonindretninger detekteres eller mikrofon er dæmpet.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Kan ikke få adgang til mikrofon, tilladelse ikke tildelt",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Netværk frakoblet.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Anerkendelse annulleret.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Locale understøttes ikke.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Browser understøtter ikke talegenkendelse.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Uhåndteret fejl",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Gå tilbage",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Talesprog",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Søgemaskine",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Start mål",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Ny fane",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Nuværende fane",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "MIC -valg, der ikke er tilgængelig til genkendelse af browser.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Ingen standardindgangsenhed",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate bringer en stemmefremspil til browseroplevelsen. \n\n Søg på nettet ved hjælp af din stemme ved at klikke på browserikonet. \n\n Tal på dit naturlige sprog, og lad avancerede AI- og ML -modeller konvertere dem til tekst. Over 300 lokaliteter over hele verden understøttes! \n\n Vælg mellem en af de bedste søgemaskiner som Google og Bing. \n\n Det er open source og offentliggjort på https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing -søgning",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Tekst at vise",
+        "description": "It's description in english"
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Φωνητική αναζήτηση",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Αναζητήστε τον ιστό με τη φωνή σας",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Κάντε κλικ στο ⓞ για να αρχίσετε να μιλάτε",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Ακρόαση ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Δεν εντοπίστηκε ήχος.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Δεν εντοπίστηκε αναγνωρίσιμη ομιλία.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Δεν ανιχνεύονται συσκευές μικροφώνου ή δεν είναι σίγαση συσκευών.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Δεν είναι δυνατή η πρόσβαση στο μικρόφωνο, η άδεια δεν χορηγείται",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Αποσυνδέθηκε το δίκτυο.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Η αναγνώριση ακυρώθηκε.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Το τοπίο δεν υποστηρίζεται.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Το πρόγραμμα περιήγησης δεν υποστηρίζει την αναγνώριση ομιλίας.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Σφάλμα που δεν έχει χειριστεί",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Πήγαινε πίσω",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Γλώσσα ομιλίας",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Μηχανή αναζήτησης",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Μικρόφωνο",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Στόχος εκκίνησης",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Νέα καρτέλα",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Τρέχουσα καρτέλα",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Η επιλογή MIC δεν είναι διαθέσιμη για αναγνώριση του προγράμματος περιήγησης.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Χωρίς προεπιλεγμένη συσκευή εισόδου",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Η Audate φέρνει μια φωνή-προς τα εμπρός προσφορές στην εμπειρία περιήγησης. \n\n Αναζητήστε τον ιστό χρησιμοποιώντας τη φωνή σας κάνοντας κλικ στο εικονίδιο του προγράμματος περιήγησης. \n\n Μιλήστε στη φυσική σας γλώσσα και αφήστε τα προχωρημένα μοντέλα AI και ML να τα μετατρέψουν σε κείμενο. Υποστηρίζονται πάνω από 300 τοποθεσίες σε όλο τον κόσμο! \n\n Επιλέξτε από οποιαδήποτε από τις κορυφαίες μηχανές αναζήτησης όπως το Google και το Bing. \n\n Είναι ανοιχτή πηγή και δημοσιεύεται στη διεύθυνση https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Αναζήτηση Bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Θόρυβος",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Θόρυβος",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Οικοσσία",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Πρεσβύτερος",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Κείμενο για εμφάνιση",
+        "description": "It's description in english"
+    }
+}

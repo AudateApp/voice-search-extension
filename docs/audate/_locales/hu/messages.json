@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Hang Keresés",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Keresse meg az internetet a hangjával",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Kattintson a ⓞ gombra a beszéd megkezdéséhez",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Hallgatás ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Nem észleltek hangot.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Nincs felismerhető beszéd.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Nem tompított mikrofon eszközök vagy mikrofon nem tompítottak.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Nem fér hozzá a mikrofonhoz, az engedélyt nem adva",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Hálózat leválasztva.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Az elismerés törölte.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "A lokál nem támogatott.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "A böngésző nem támogatja a beszédfelismerést.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Nem kezelt hiba",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "menjen vissza",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Beszédnyelv",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Keresőmotor",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Indító cél",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Új lap",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Aktuális fül",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "A mikrofon kiválasztása nem érhető el a böngésző felismerésére.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Nincs alapértelmezett bemeneti eszköz",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Az Audate hang-előrejelző előnyöket hoz a böngészési élményhez. \n\n Keresse meg az internetet a hangjával a böngésző ikonra kattintva. \n\n Beszéljen a természetes nyelvén, és hagyja, hogy az Advanced AI és ML modellek átalakítsák őket szöveggé. A világ több mint 300 helyszíne támogatott! \n\n Válasszon olyan legjobb keresőmotorok közül, mint a Google és a Bing. \n\n Ez nyílt forráskódú, és közzétette a https: //github.com/audateapp oldalon.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing -keresés",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Jehu",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ökózia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckducko",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Szöveg a megjelenítendő szöveg",
+        "description": "It's description in english"
+    }
+}

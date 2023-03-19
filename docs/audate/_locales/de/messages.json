@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Sprachsuche",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Suchen Sie das Web mit Ihrer Stimme",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Klicken Sie auf ⓞ, um zu sprechen",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Hören...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Es wurde kein Ton festgestellt.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Keine erkennbare Sprache erkannt.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Kein nachgewiesenes oder Mikrofonmikrofongeräte ist gedämpft.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Kann nicht auf Mikrofon zugreifen, die Erlaubnis nicht erteilt",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Netzwerk getrennt.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Anerkennung abgesagt.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Gebietsschema nicht unterstützt.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Browser unterstützt keine Spracherkennung.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Unberechtigtes Fehler",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Geh zurück",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Gesprochene Sprache",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Suchmaschine",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Ziel starten",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Neue Registerkarte",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Aktuelle Registerkarte",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "MIC -Auswahl nicht für die Browsererkennung verfügbar.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Kein Standardeingangsgerät",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Das Audat bringt ein Voice-Forward-Leistungsverhältnis in das Browsing-Erlebnis. \n\n Suchen Sie das Web mit Ihrer Stimme, indem Sie auf das Browser -Symbol klicken. \n\n Sprechen Sie in Ihrer natürlichen Sprache und lassen Sie sich mit fortgeschrittenen KI- und ML -Modellen in Text umwandeln. Über 300 Orte auf der ganzen Welt werden unterstützt! \n\n Wählen Sie aus einer der besten Suchmaschinen wie Google und Bing. \n\n Es ist Open Source und veröffentlicht unter https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing -Suche",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ökosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Text zum Anzeigen",
+        "description": "It's description in english"
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "음성 검색",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "목소리로 웹을 검색하십시오",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "말을 시작하려면 ⓞ를 클릭하십시오",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "청취...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "소리가 감지되지 않았습니다.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "인식 가능한 연설이 감지되지 않았습니다.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "검출 된 마이크 장치 또는 마이크는 음소거되지 않습니다.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "마이크에 액세스 할 수없고 허가가 부여되지 않습니다",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "네트워크 연결이 끊어졌습니다.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "인식이 취소되었습니다.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "로케일은 지원되지 않습니다.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "브라우저는 음성 인식을 지원하지 않습니다.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "처리되지 않은 오류",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "돌아 가라",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "언어",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "검색 엔진",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "마이크로폰",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "대상을 시작하십시오",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "새로운 탭",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "현재 탭",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "브라우저 인식을 위해 MIC 선택을 사용할 수 없습니다.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "기본 입력 장치가 없습니다",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "감사는 브라우징 경험에 대한 음성을 제공합니다. \n\n 브라우저 아이콘을 클릭하여 음성을 사용하여 웹을 검색하십시오. \n\n 자연어로 말하고 고급 AI 및 ML 모델이 텍스트로 변환하도록하십시오. 전 세계 300 개가 넘는 지역이 지원됩니다! \n\n Google 및 Bing과 같은 최고의 검색 엔진 중에서 선택하십시오. \n\n 오픈 소스이며 https : //github.com/audateapp에 게시되었습니다.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "빙 검색",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "얀덱스",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "야후",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "바이두",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "에코 시아",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "덕 벅 고",
+        "description": "Google"
+    },
+    "key": {
+        "message": "표시 할 텍스트",
+        "description": "It's description in english"
+    }
+}

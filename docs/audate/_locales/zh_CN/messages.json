@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "声音搜索",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "用您的声音搜索网络",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "点击ⓞ开始说话",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "听...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "未检测到声音。",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "未检测到可识别的语音。",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "没有检测到的麦克风设备或麦克风被静音。",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "无法访问麦克风，未授予许可",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "网络断开连接。",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "识别取消。",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "语言环境不支持。",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "浏览器不支持语音识别。",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "未经治疗的错误",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "回去",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "语言语言",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "搜索引擎",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "麦克风",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "启动目标",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "新标签",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "当前选项卡",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "麦克风选择不可用于浏览器识别。",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "没有默认输入设备",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "AUDATE为浏览体验带来了配音。 \n\n 通过单击浏览器图标，使用您的语音搜索网络。 \n\n 用您的自然语言说话，让高级AI和ML模型将它们转换为文本。 世界各地有300多个地区得到支持！ \n\n 从Google和Bing等任何顶级搜索引擎中进行选择。 \n\n 它是开源的，并在https：//github.com/audateapp上发布。",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "谷歌",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing搜索",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "雅虎",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "百度",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "达克达克戈",
+        "description": "Google"
+    },
+    "key": {
+        "message": "要显示的文字",
+        "description": "It's description in english"
+    }
+}

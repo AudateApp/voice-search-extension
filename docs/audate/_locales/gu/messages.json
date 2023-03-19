@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "અવાજ શોધ",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "તમારા અવાજથી વેબ શોધો",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "બોલવાનું પ્રારંભ કરવા માટે ક્લિક કરો",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "સાંભળવું...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "કોઈ અવાજ મળ્યો નથી.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "કોઈ ઓળખી શકાય તેવું ભાષણ મળ્યું નથી.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "કોઈ માઇક્રોફોન ઉપકરણો શોધી કા or ્યા નથી અથવા માઇક્રોફોન મ્યૂટ નથી.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "માઇક્રોફોનને access ક્સેસ કરી શકતા નથી, પરવાનગી આપવામાં આવી નથી",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "નેટવર્ક ડિસ્કનેક્ટ થયું.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "માન્યતા રદ.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "લોકેલ સપોર્ટેડ નથી.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "બ્રાઉઝર વાણી માન્યતાને ટેકો આપતું નથી.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "અનહેન્ડલ્ડ ભૂલ",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "પાછા જાવ",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "વાણી -ભાષા",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "શોધ એન્જિન",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "માઇક્રોફોન",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "પ્રારંભ લક્ષ્યાંક",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "નવું ટેબ",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "ચાલુ રાખ",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "બ્રાઉઝર માન્યતા માટે એમઆઈસી પસંદગી ઉપલબ્ધ નથી.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "કોઈ ડિફ default લ્ટ ઇનપુટ ડિવાઇસ",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Aud ડેટ બ્રાઉઝિંગ અનુભવ માટે વ voice ઇસ-ફોરવર્ડ પરવડે છે. \n\n બ્રાઉઝર આયકન પર ક્લિક કરીને તમારા વ voice ઇસનો ઉપયોગ કરીને વેબ શોધો. \n\n તમારી કુદરતી ભાષામાં બોલો અને અદ્યતન એઆઈ અને એમએલ મોડેલો તેમને ટેક્સ્ટમાં રૂપાંતરિત કરવા દો. વિશ્વભરના 300 થી વધુ સ્થાનો સપોર્ટેડ છે! \n\n ગૂગલ અને બિંગ જેવા કોઈપણ ટોચનાં સર્ચ એન્જિનમાંથી પસંદ કરો. \n\n તે ખુલ્લું સ્રોત છે અને https: //github.com/audateapp પર પ્રકાશિત છે.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "ગૂગલ",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "બિંગ શોધ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "યાંદેક્સ",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "એક જાતનો અવાજ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "દાડુ",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ઇકોસિયા",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "ગોકળગારી",
+        "description": "Google"
+    },
+    "key": {
+        "message": "પ્રદર્શિત કરવા માટે લખાણ",
+        "description": "It's description in english"
+    }
+}

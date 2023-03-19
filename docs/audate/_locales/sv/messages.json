@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Röstsökning",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Sök på webben med din röst",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Klicka på ⓞ för att börja prata",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Lyssnande...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Inget ljud upptäcktes.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Inget igenkännligt tal upptäckt.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Inga mikrofonanordningar detekteras eller mikrofon dämpas.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Kan inte komma åt mikrofon, tillstånd som inte beviljas",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Nätverk frånkopplad.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Erkännande avbröts.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Lokalstöd stöds inte.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Webbläsare stöder inte taligenkänning.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Obehandlad fel",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Gå tillbaka",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Talspråk",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Sökmotor",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Lanseringsmål",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Ny flik",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Aktuell flik",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "MIC -val är inte tillgängligt för webbläsarigenkänning.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Ingen standardinmatningsenhet",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate ger en röst framåt priser till surfupplevelsen. \n\n Sök på webben med din röst genom att klicka på webbläsarikonen. \n\n Tala på ditt naturliga språk och låt avancerade AI- och ML -modeller konvertera dem till text. Över 300 platser runt om i världen stöds! \n\n Välj mellan någon av de bästa sökmotorerna som Google och Bing. \n\n Det är öppen källkod och publiceras på https: //github.com/AudateApp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bingsökning",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duck",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Text för att visa",
+        "description": "It's description in english"
+    }
+}

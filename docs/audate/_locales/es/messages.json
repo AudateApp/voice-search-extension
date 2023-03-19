@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Búsqueda por voz",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Busca en la web con tu voz",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Haga clic en ⓞ para comenzar a hablar",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Escuchar...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "No se detectó ningún sonido.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Sin discurso reconocible detectado.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "No se detectan dispositivos de micrófono o micrófono.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "No se puede acceder al micrófono, permiso no otorgado",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Red desconectada.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Reconocimiento cancelado.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Lugar no compatible.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "El navegador no apoya el reconocimiento de voz.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Error no controlado",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Regresa",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Lenguaje del habla",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Buscador",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Micrófono",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Objetivo de lanzamiento",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Nueva pestaña",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Pestaña actual",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Selección de micrófono no disponible para el reconocimiento del navegador.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Sin dispositivo de entrada predeterminado",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate aporta una posibilidad de voz a la experiencia de navegación. \n\n Busque en la web usando su voz haciendo clic en el icono del navegador. \n\n Hable en su lenguaje natural y deje que los modelos avanzados de IA y ML los conviertan en texto. ¡Se apoyan más de 300 lugares en todo el mundo! \n\n Elija entre cualquiera de los principales motores de búsqueda como Google y Bing. \n\n Es de código abierto y publicado en https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Búsqueda de bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Pato Pato a ganar",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Texto para mostrar",
+        "description": "It's description in english"
+    }
+}

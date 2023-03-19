@@ -1,0 +1,98 @@
+{
+  "AppName": {
+    "message": "Gesproken zoekopdracht",
+    "description": "The name of the extension"
+  },
+  "AppDesc": {
+    "message": "Zoek op internet met je stem",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Klik op ⓞ om te beginnen met spreken",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Luisteren...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Geen geluid gedetecteerd",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Geen herkenbare spraak gedetecteerd.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Er zijn geen microfoonapparaten gedetecteerd of de microfoon is gedempt.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Kan geen toegang krijgen tot microfoon, toestemming niet verleend",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Netwerk verbroken",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Erkenning geannuleerd.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Lokale niet ondersteund.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Browser ondersteunt geen spraakherkenning.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Onverwerkte fout",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Ga terug",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Spreektaal",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Zoekmachine",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Microfoon",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Lancering doel",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Nieuw tabblad",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Huidig ​​tabblad",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Mic selectie niet beschikbaar voor browserherkenning.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Geen standaard invoerapparaat",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Audate brengt een stem vooruit naar de browse-ervaring.\n\nZoek op internet met uw stem door op het browserpictogram te klikken.\n\nSpreek in uw natuurlijke taal en laat geavanceerde AI- en ML-modellen ze naar tekst converteren. Over 300 talen over de hele wereld worden ondersteund!\n\nKies uit een van de beste zoekmachines zoals Google en Bing.\n\nHet is open source en wordt gepubliceerd op https://github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Tekst om weer te geven",
+    "description": "It's description in english"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "AppName": {
+    "message": "Pesquisa por voz",
+    "description": "The name of the extension"
+  },
+  "AppDesc": {
+    "message": "Pesquise a web com sua voz",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "Clique em ⓞ para começar a falar",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Ouvindo...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Nenhum som foi detectado",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Nenhum discurso reconhecível detectado.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Nenhum dispositivo de microfone é detectado ou o microfone é silenciado.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Não é possível acessar o microfone, permissão não concedida.",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Rede desconectada",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Reconhecimento cancelado.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Local não suportado.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Navegador não suporta reconhecimento de fala.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Erro não suportado.",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Voltar.",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Língua da fala",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Motor de busca.",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "Microfone.",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Alvo de lançamento.",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Nova etiqueta.",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Aba atual.",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Seleção do microfone não disponível para reconhecimento no navegador.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Nenhum dispositivo de entrada padrão.",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "A Audate traz uma voz-avançada para a experiência de navegação. Pesquisar a web usando sua voz, clicando no ícone do navegador. Mais de 300 locais em todo o mundo são suportados! Escolha a partir de qualquer um dos principais motores de busca, como Google e Bing.n É de código aberto e publicado em https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Texto a ser exibido.",
+    "description": "It's description in english"
+  }
+}

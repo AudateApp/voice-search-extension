@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "音声検索",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "あなたの声でウェブを検索します",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "[and]をクリックして話し始めます",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "聞いている...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "音は検出されませんでした。",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "認識可能な音声は検出されませんでした。",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "マイクデバイスは検出されたり、マイクがミュートされたりしません。",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "マイクにアクセスすることはできません。許可は許可されていません",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "ネットワークが切断されました。",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "認識がキャンセルされました。",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "ロケールはサポートされていません。",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "ブラウザは音声認識をサポートしていません。",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "未処理のエラー",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "戻る",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "音声言語",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "検索エンジン",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "マイクロフォン",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "ターゲットを起動します",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "新しいタブ",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "現在のタブ",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "ブラウザ認識には利用できません。",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "デフォルトの入力デバイスはありません",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audateは、ブラウジングエクスペリエンスにボイスフォワードアフォーダンスをもたらします。 \n\n ブラウザアイコンをクリックして、音声を使用してWebを検索します。 \n\n あなたの自然言語で話し、高度なAIおよびMLモデルをテキストに変換させます。 世界中の300以上のロケールがサポートされています！ \n\n GoogleやBingなどのトップ検索エンジンから選択してください。 \n\n オープンソースで、https：//github.com/audateappで公開されています。",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "グーグル",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "ビング検索",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "エコシア",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "表示するテキスト",
+        "description": "It's description in english"
+    }
+}

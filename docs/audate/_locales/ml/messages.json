@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "വോയ്സ് തിരയൽ",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "നിങ്ങളുടെ ശബ്ദത്തിൽ വെബിൽ തിരയുക",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "സംസാരിക്കാൻ ആരംഭിക്കുന്നതിന് ⓞ ക്ലിക്കുചെയ്യുക",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "ശ്രദ്ധിക്കുന്നു ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "ഒരു ശബ്ദവും കണ്ടെത്തിയില്ല.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "തിരിച്ചറിയാവുന്ന സംഭാഷണവും കണ്ടെത്തിയില്ല.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "മൈക്രോഫോൺ ഉപകരണങ്ങളൊന്നും കണ്ടെത്തിയോ മൈക്രോഫോൺ നിശബ്ദമാക്കിയിട്ടില്ല.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "മൈക്രോഫോൺ ആക്സസ് ചെയ്യാൻ കഴിയില്ല, അനുമതി നൽകിയില്ല",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "നെറ്റ്വർക്ക് വിച്ഛേദിച്ചു.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "തിരിച്ചറിവ് റദ്ദാക്കി.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "ലോക്കേൽ പിന്തുണയ്ക്കുന്നില്ല.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "സംഭാഷണ തിരിച്ചറിയലിനെ ബ്രൗസർ പിന്തുണയ്ക്കുന്നില്ല.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "രൂപപ്പെടുത്തിയിട്ടില്ല",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "മടങ്ങിപ്പോവുക",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "സ്പീച്ച് ഭാഷ",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "തിരയല് യന്ത്രം",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "മൈക്രോഫോൺ",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "ലോഞ്ച് ടാർഗെറ്റ്",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "പുതിയ ടാബ്",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "നിലവിലെ ടാബ്",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "ബ്ര browser സർ അംഗീസിനായി മൈക്ക് തിരഞ്ഞെടുക്കൽ ലഭ്യമല്ല.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "സ്ഥിരസ്ഥിതി ഇൻപുട്ട് ഉപകരണങ്ങളൊന്നുമില്ല",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "ഓഡിറ്റ് ബ്ര rows സിംഗ് അനുഭവത്തിലേക്ക് ഒരു ശബ്ദം-ഫോർവേഡ് താങ്ങാനാക്കുന്നു. \n\n ബ്ര browser സർ ഐക്കണിൽ ക്ലിക്കുചെയ്ത് നിങ്ങളുടെ ശബ്ദം ഉപയോഗിച്ച് വെബിൽ തിരയുക. \n\n നിങ്ങളുടെ സ്വാഭാവിക ഭാഷയിൽ സംസാരിക്കുകയും AI, ML മോഡലുകൾ അവരെ വാചകത്തിലേക്ക് പരിവർത്തനം ചെയ്യാൻ അനുവദിക്കുക. ലോകമെമ്പാടുമുള്ള 300 ലധികം ലോക്കലുകൾ പിന്തുണയ്ക്കുന്നു! \n\n Google, Bing പോലുള്ള ഏതെങ്കിലും മികച്ച തിരയൽ എഞ്ചിനുകളിൽ നിന്ന് തിരഞ്ഞെടുക്കുക. \n\n ഇത് ഓപ്പൺ സോഴ്സും https: //githb.com/adatapepp- ൽ പ്രസിദ്ധീകരിച്ചു.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "ഗൂഗിണ്",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "ബിംഗ് തിരയൽ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "യാഹൂ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Bakeu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ഇക്കോസിയ",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "ഡക്ക്ഡക്ക്ഗോ",
+        "description": "Google"
+    },
+    "key": {
+        "message": "പ്രദർശിപ്പിക്കുന്നതിനുള്ള വാചകം",
+        "description": "It's description in english"
+    }
+}

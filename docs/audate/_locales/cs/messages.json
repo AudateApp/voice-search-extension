@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Hlasové vyhledávání",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Hledejte na webu hlasem",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Kliknutím na ⓞ začnete mluvit",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Naslouchání...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Nebyl zjištěn žádný zvuk.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Žádná rozpoznatelná řeč.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Žádná detekovaná mikrofonní zařízení nebo mikrofon nejsou tlumeni.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Nemůže získat přístup k mikrofonu, povolení není uděleno",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Síť je odpojena.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Uznání zrušeno.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Národní prostředí není podporováno.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Prohlížeč nepodporuje rozpoznávání řeči.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Neochvětená chyba",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Vraťte se",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Řečový jazyk",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Vyhledávač",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Spuštění cíle",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Nová karta",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Aktuální karta",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Výběr mikrofonu není k dispozici pro rozpoznávání prohlížeče.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Žádné výchozí vstupní zařízení",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate přináší do zážitku pro prohlížení hlasové dopředu. \n\n Prohledejte web pomocí hlasu kliknutím na ikonu prohlížeče. \n\n Mluvte ve svém přirozeném jazyce a nechte pokročilé modely AI a ML převést na text. Podporováno je více než 300 míst po celém světě! \n\n Vyberte si z kteréhokoli z nejlepších vyhledávačů, jako je Google a Bing. \n\n Je to open source a publikován na adrese https: //github.com/adadeapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Hledání bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosie",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Text, který se má zobrazit",
+        "description": "It's description in english"
+    }
+}

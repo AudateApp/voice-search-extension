@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Гласово търсене",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Търсете в мрежата с вашия глас",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Щракнете ⓞ, за да започнете да говорите",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Слушане ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Не беше открит звук.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Не е открита разпознаваема реч.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Не са открити микрофонни устройства или микрофон не е заглушен.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Няма достъп до микрофон, разрешение не е предоставено",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Мрежата изключена.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Признание е отменено.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Локал не се поддържа.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Браузърът не поддържа разпознаването на речта.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Неудобна грешка",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Върни се",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Речев език",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Търсачка",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Микрофон",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Целта за стартиране",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Нов прозорец",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Текущ раздел",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Изборът на микрофон не е наличен за разпознаване на браузъра.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Няма устройство за въвеждане по подразбиране",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate предоставя гласови предложения за преживяването на сърфирането. \n\n Търсете в мрежата, като използвате гласа си, като кликнете върху иконата на браузъра. \n\n Говорете на вашия естествен език и оставете моделите за напреднали AI и ML да ги преобразуват в текст. Поддържат се над 300 локали по света! \n\n Изберете от някой от най -добрите търсачки като Google и Bing. \n\n Той е с отворен код и публикуван на https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Търсене на бинг",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "BAIDU",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Екосия",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Текст за показване",
+        "description": "It's description in english"
+    }
+}

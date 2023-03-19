@@ -1,0 +1,1 @@
+(()=>{"use strict";const r=chrome.runtime.getURL("index.html#onboard");chrome.runtime.onInstalled.addListener((e=>{"install"===e.reason&&chrome.tabs.create({url:r,active:!0}),chrome.runtime.setUninstallURL("https://forms.gle/TuRLnDRFoXRNFuZP7",(()=>{chrome.runtime.lastError&&console.error("Error setting uninstall URL",chrome.runtime.lastError)}))}))})();

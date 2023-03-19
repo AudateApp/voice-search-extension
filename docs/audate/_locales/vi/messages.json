@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Tìm kiếm bằng giọng nói",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Tìm kiếm trên web bằng giọng nói của bạn",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Nhấp vào ⓞ để bắt đầu nói",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Lắng nghe ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Không có âm thanh được phát hiện.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Không phát hiện ra lời nói dễ nhận biết.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Không có thiết bị micrô được phát hiện hoặc micrô bị tắt tiếng.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Không thể truy cập micrô, sự cho phép không được cấp",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Mạng bị ngắt kết nối.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Công nhận bị hủy bỏ.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Địa điểm không được hỗ trợ.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Trình duyệt không hỗ trợ nhận dạng giọng nói.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Lỗi không được xử lý",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Quay lại",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Ngôn ngữ nói",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Máy tìm kiếm",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Cái mic cờ rô",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Khởi chạy mục tiêu",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Tab mới",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Tab hiện tại",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Lựa chọn mic không có sẵn để nhận dạng trình duyệt.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Không có thiết bị đầu vào mặc định",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate mang lại khả năng chi trả cho trải nghiệm duyệt. \n\n Tìm kiếm web bằng giọng nói của bạn bằng cách nhấp vào biểu tượng trình duyệt. \n\n Nói bằng ngôn ngữ tự nhiên của bạn và để các mô hình AI và ML nâng cao chuyển đổi chúng thành văn bản. Hơn 300 địa phương trên khắp thế giới được hỗ trợ! \n\n Chọn từ bất kỳ công cụ tìm kiếm hàng đầu nào như Google và Bing. \n\n Đó là nguồn mở và được xuất bản tại https: //github.com/audateApp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Tìm kiếm bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Văn bản để hiển thị",
+        "description": "It's description in english"
+    }
+}

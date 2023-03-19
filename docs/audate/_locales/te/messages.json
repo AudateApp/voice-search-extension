@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "వాయిస్ శోధన",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "మీ స్వరంతో వెబ్‌ను శోధించండి",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "మాట్లాడటం ప్రారంభించడానికి ⓞ క్లిక్ చేయండి",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "వింటూ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "శబ్దం కనుగొనబడలేదు.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "గుర్తించదగిన ప్రసంగం కనుగొనబడలేదు.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "మైక్రోఫోన్ పరికరాలు కనుగొనబడవు లేదా మైక్రోఫోన్ మ్యూట్ చేయబడలేదు.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "మైక్రోఫోన్‌ను యాక్సెస్ చేయలేరు, అనుమతి ఇవ్వబడలేదు",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "నెట్‌వర్క్ డిస్‌కనెక్ట్ చేయబడింది.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "గుర్తింపు రద్దు చేయబడింది.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "లొకేల్‌కు మద్దతు లేదు.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "బ్రౌజర్ ప్రసంగ గుర్తింపుకు మద్దతు ఇవ్వదు.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "అవాంఛనీయ లోపం",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "వెనక్కి వెళ్ళు",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "ప్రసంగ భాష",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "శోధన యంత్రము",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "మైక్రోఫోన్",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "లాంచ్ టార్గెట్",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "కొత్త టాబ్",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "ప్రస్తుత టాబ్",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "బ్రౌజర్ గుర్తింపు కోసం MIC ఎంపిక అందుబాటులో లేదు.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "డిఫాల్ట్ ఇన్పుట్ పరికరం లేదు",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "ఆడిట్ బ్రౌజింగ్ అనుభవానికి వాయిస్-ఫార్వర్డ్ స్థోమతను తెస్తుంది. \n\n బ్రౌజర్ చిహ్నంపై క్లిక్ చేయడం ద్వారా మీ వాయిస్ ఉపయోగించి వెబ్‌లో శోధించండి. \n\n మీ సహజ భాషలో మాట్లాడండి మరియు అధునాతన AI మరియు ML నమూనాలు వాటిని టెక్స్ట్‌గా మార్చనివ్వండి. ప్రపంచవ్యాప్తంగా 300 కి పైగా ప్రాంతాలకు మద్దతు ఉంది! \n\n గూగుల్ మరియు బింగ్ వంటి అగ్ర సెర్చ్ ఇంజన్ల నుండి ఎంచుకోండి. \n\n ఇది ఓపెన్ సోర్స్ మరియు https: //github.com/audateapp లో ప్రచురించబడింది.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "గూగుల్",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "బింగ్ శోధన",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "యాండెక్స్",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "యాహూ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "బైడు",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ఎకోసియా",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "డక్డక్గో",
+        "description": "Google"
+    },
+    "key": {
+        "message": "ప్రదర్శించడానికి వచనం",
+        "description": "It's description in english"
+    }
+}

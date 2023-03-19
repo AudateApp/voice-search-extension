@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "البحث الصوتي",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "ابحث في الويب بصوتك",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "انقر فوق ⓞ لبدء التحدث",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "الاستماع ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "لم يتم اكتشاف صوت.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "لم يتم اكتشاف خطاب يمكن التعرف عليه.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "لا توجد أجهزة ميكروفون مكتشفة أو ميكروفون.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "لا يمكن الوصول إلى الميكروفون ، الإذن غير الممنوح",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "شبكة منفصلة.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "تم إلغاء الاعتراف.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "لغة غير مدعومة.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "المتصفح لا يدعم التعرف على الكلام.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "خطأ غير محدد",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "عُد",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "لغة الكلام",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "محرك البحث",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "ميكروفون",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "الهدف إطلاق",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "علامة تبويب جديدة",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "علامة التبويب الحالية",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "اختيار الميكروفون غير متاح للتعرف على المتصفح.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "لا يوجد جهاز إدخال افتراضي",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "يقدم Audate معالجة صوتية إلى الأمام لتجربة التصفح. \n\n ابحث في الويب باستخدام صوتك من خلال النقر على أيقونة المتصفح. \n\n تحدث بلغتك الطبيعية واترك نماذج AI و ML متقدمة تحويلها إلى نص. يتم دعم أكثر من 300 لغ في جميع أنحاء العالم! \n\n اختر من أي من أفضل محركات البحث مثل Google و Bing. \n\n إنه مفتوح المصدر ونشره على https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "جوجل",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "البحث بينج",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "ياندكس",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "ياهو",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "بايدو",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "إيكوزيا",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "نص لعرضه",
+        "description": "It's description in english"
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Balss meklēšana",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Meklējiet tīmeklī ar savu balsi",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Noklikšķiniet uz ⓞ, lai sāktu runāt",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Klausīšanās ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Neviena skaņa netika atklāta.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Nav atklāta atpazīstama runa.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Netiek izslēgtas mikrofona ierīces vai mikrofons.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Nevar piekļūt mikrofonam, atļauja netiek piešķirta",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Tīkls atvienots.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Atzīšana atcelta.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Lokalizācija netiek atbalstīta.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Pārlūks neatbalsta runas atpazīšanu.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Neapmierināta kļūda",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Atgriezties",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Runas valoda",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Meklētājs",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofons",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Palaišanas mērķis",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Jauna cilne",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Pašreizējā cilne",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "MIC izvēle nav pieejama pārlūkprogrammas atpazīšanai.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Nav noklusējuma ievades ierīces",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Pārlūkošanas pieredzē audate sniedz balss piedāvājumus. \n\n Meklējiet tīmeklī, izmantojot savu balsi, noklikšķinot uz pārlūka ikonas. \n\n Runājiet savā dabiskajā valodā un ļaujiet uzlabotajiem AI un ML modeļiem tos pārveidot par tekstu. Tiek atbalstīti vairāk nekā 300 vietņu visā pasaulē! \n\n Izvēlieties no jebkuras no labākajām meklētājprogrammām, piemēram, Google un Bing. \n\n Tas ir atvērtā koda un publicēts vietnē https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing meklēšana",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Jandekss",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosija",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Teksts, lai parādītu",
+        "description": "It's description in english"
+    }
+}

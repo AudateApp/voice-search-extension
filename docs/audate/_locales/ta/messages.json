@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "குரல் தேடல்",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "உங்கள் குரலுடன் வலையைத் தேடுங்கள்",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "பேசத் தொடங்க ⓞ என்பதைக் கிளிக் செய்க",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "கேட்பது ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "எந்த சத்தமும் கண்டறியப்படவில்லை.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "அடையாளம் காணக்கூடிய பேச்சு எதுவும் கண்டறியப்படவில்லை.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "மைக்ரோஃபோன் சாதனங்கள் கண்டறியப்படவில்லை அல்லது மைக்ரோஃபோன் முடக்கப்படவில்லை.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "மைக்ரோஃபோனை அணுக முடியாது, அனுமதி வழங்கப்படவில்லை",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "நெட்வொர்க் துண்டிக்கப்பட்டது.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "அங்கீகாரம் ரத்து செய்யப்பட்டது.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "இடம் ஆதரிக்கப்படவில்லை.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "உலாவி பேச்சு அங்கீகாரத்தை ஆதரிக்காது.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "தடையற்ற பிழை",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "திரும்பிச் செல்லுங்கள்",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "பேச்சு மொழி",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "தேடல் இயந்திரம்",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "மைக்ரோஃபோன்",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "இலக்கு தொடங்கவும்",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "புதிய தாவலில்",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "தற்போதைய தாவல்",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "உலாவி அங்கீகாரத்திற்கு மைக் தேர்வு கிடைக்கவில்லை.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "இயல்புநிலை உள்ளீட்டு சாதனம் இல்லை",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "தணிக்கை உலாவல் அனுபவத்திற்கு குரல்-முன்னோக்கி செலவினங்களைக் கொண்டுவருகிறது. \n\n உலாவி ஐகானைக் கிளிக் செய்வதன் மூலம் உங்கள் குரலைப் பயன்படுத்தி வலையைத் தேடுங்கள். \n\n உங்கள் இயல்பான மொழியில் பேசுங்கள், மேம்பட்ட AI மற்றும் ML மாதிரிகள் அவற்றை உரையாக மாற்றட்டும். உலகெங்கிலும் 300 க்கும் மேற்பட்ட இடங்கள் ஆதரிக்கப்படுகின்றன! \n\n கூகிள் மற்றும் பிங் போன்ற சிறந்த தேடுபொறிகளிலிருந்து தேர்வு செய்யவும். \n\n இது திறந்த மூலமாகும் மற்றும் https: //github.com/audateapp இல் வெளியிடப்பட்டது.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "கூகிள்",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "பிங் தேடல்",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "யாண்டெக்ஸ்",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "யாகூ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "பைடு",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "சுற்றுச்சூழல்",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "டக்டக்கோ",
+        "description": "Google"
+    },
+    "key": {
+        "message": "காண்பிக்க உரை",
+        "description": "It's description in english"
+    }
+}

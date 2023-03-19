@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Căutare vocală",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Căutați pe web cu vocea dvs.",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Faceți clic ⓞ pentru a începe să vorbiți",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Ascultare...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Nu a fost detectat niciun sunet.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Nu a fost detectat un discurs de recunoscut.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Nu există dispozitive de microfon detectate sau microfon.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Nu poate accesa microfonul, permisiunea nu a fost acordată",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Rețea deconectată.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Recunoașterea a fost anulată.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Local nu este acceptat.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Browserul nu acceptă recunoașterea vorbirii.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Eroare neegalată",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Întoarce-te",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Limba vorbind",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Motor de căutare",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Microfon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Lansați țintă",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Filă nouă",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Fila curentă",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Selecția microfonului nu este disponibilă pentru recunoașterea browserului.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Niciun dispozitiv de intrare implicit",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate aduce o voce avansată pentru experiența de navigare. \n\n Căutați pe web folosind vocea dvs. făcând clic pe pictograma browserului. \n\n Vorbiți în limbajul dvs. natural și lăsați modelele avansate AI și ML să le convertească în text. Peste 300 de localități din întreaga lume sunt susținute! \n\n Alegeți dintre oricare dintre motoarele de căutare de top precum Google și Bing. \n\n Este open source și publicat la https: //github.com/audateApp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Căutare bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Text de afișat",
+        "description": "It's description in english"
+    }
+}

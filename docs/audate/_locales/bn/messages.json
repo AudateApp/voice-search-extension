@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "কণ্ঠের সন্ধান",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "আপনার ভয়েস দিয়ে ওয়েব অনুসন্ধান করুন",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "কথা বলা শুরু করতে ক্লিক করুন",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "শুনছি ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "কোনও শব্দ সনাক্ত করা যায়নি।",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "কোনও স্বীকৃত বক্তৃতা সনাক্ত করা হয়নি।",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "কোনও মাইক্রোফোন ডিভাইস সনাক্ত বা মাইক্রোফোন নিঃশব্দ করা হয় না।",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "মাইক্রোফোন অ্যাক্সেস করতে পারে না, অনুমতি দেওয়া হয়নি",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "নেটওয়ার্ক সংযোগ বিচ্ছিন্ন।",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "স্বীকৃতি বাতিল।",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "লোকেল সমর্থিত নয়।",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "ব্রাউজার বক্তৃতা স্বীকৃতি সমর্থন করে না।",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Unched ত্রুটি",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "ফিরে যাও",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "বক্তৃতা ভাষা",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "খোঁজ যন্ত্র",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "মাইক্রোফোন",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "টার্গেট চালু করুন",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "নতুন ট্যাব",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "বর্তমান ট্যাব",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "ব্রাউজার স্বীকৃতির জন্য এমআইসি নির্বাচন উপলভ্য নয়।",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "কোনও ডিফল্ট ইনপুট ডিভাইস নেই",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "অডেট ব্রাউজিংয়ের অভিজ্ঞতায় একটি ভয়েস-ফরোয়ার্ড সাশ্রয়ী করে। \n\n ব্রাউজার আইকনে ক্লিক করে আপনার ভয়েস ব্যবহার করে ওয়েবটি অনুসন্ধান করুন। \n\n আপনার প্রাকৃতিক ভাষায় কথা বলুন এবং উন্নত এআই এবং এমএল মডেলগুলি তাদের পাঠ্যে রূপান্তর করতে দিন। বিশ্বজুড়ে 300 টিরও বেশি লোকাল সমর্থিত! \n\n গুগল এবং বিংয়ের মতো শীর্ষ অনুসন্ধান ইঞ্জিনগুলির যে কোনও থেকে চয়ন করুন। \n\n এটি ওপেন সোর্স এবং https: //github.com/audateapp এ প্রকাশিত।",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "গুগল",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "বিং অনুসন্ধান",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "ইয়ানডেক্স",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "ইয়াহু",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "বাইদু",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ইকোসিয়া",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "ডাকডাকগো",
+        "description": "Google"
+    },
+    "key": {
+        "message": "প্রদর্শন করতে পাঠ্য",
+        "description": "It's description in english"
+    }
+}

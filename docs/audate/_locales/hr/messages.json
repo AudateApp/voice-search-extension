@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Pretraživanje glasa",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Pretražite mrežu svojim glasom",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Kliknite ⓞ za početak govora",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Slušanje...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Nije otkriven zvuk.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Nije otkriven prepoznatljiv govor.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Nisu otkriveni mikrofon ili mikrofon nije isključen.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Ne može pristupiti mikrofonu, dopuštenje nije odobreno",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Mreža prekinuta.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Priznanje otkazano.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Lokalitet nije podržan.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Preglednik ne podržava prepoznavanje govora.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Neispravljena pogreška",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Vratiti se",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Govornik",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Pretraživač",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Pokretanje cilja",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Nova kartica",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Trenutni kartica",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Odabir MIC -a nije dostupan za prepoznavanje preglednika.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Nema zadanog ulaznog uređaja",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate donosi prigodne prihode prema naprijed do iskustva pregledavanja. \n\n Pretražite mrežu pomoću glasa klikom na ikonu preglednika. \n\n Govorite na svom prirodnom jeziku i pustite da ih napredni AI i ML modeli pretvaraju u tekst. Podržano je preko 300 lokaliteta širom svijeta! \n\n Odaberite bilo koju od najboljih tražilica poput Googlea i Binga. \n\n Otvoreni je i objavljen na https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Pretraživanje binga",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Jezera",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Jahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekozija",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Patka",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Tekst za prikaz",
+        "description": "It's description in english"
+    }
+}

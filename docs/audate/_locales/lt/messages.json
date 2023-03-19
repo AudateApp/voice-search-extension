@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Balso paieška",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Ieškokite interneto savo balsu",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Spustelėkite ⓞ Norėdami pradėti kalbėti",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Klausymas ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Jokio garso neaptikta.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Jokios atpažįstamos kalbos.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Jokie mikrofono įtaisai aptikti ar mikrofonas nėra nutildytas.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Negalima pasiekti mikrofono, leidimas nesuteiktas",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Tinklas atjungtas.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Pripažinimas atšauktas.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Lokalumas nepalaikomas.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Naršyklė nepalaiko kalbos atpažinimo.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Neapdorota klaida",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Eik atgal",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Kalbos kalba",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Paieškos variklis",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofonas",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Paleisti tikslą",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Naujas skirtukas",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Dabartinis skirtukas",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "MIC pasirinkimas nėra prieinamas naršyklės atpažinimui.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Nėra numatytojo įvesties įrenginio",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate suteikia naršymo patirties balso į priekį. \n\n Ieškokite interneto naudodami savo balsą spustelėdami naršyklės piktogramą. \n\n Kalbėkite savo natūralia kalba ir leiskite „Advanced AI“ ir „ML“ modeliams paversti juos tekstu. Palaikoma daugiau nei 300 vietų visame pasaulyje! \n\n Pasirinkite iš bet kurios iš populiariausių paieškos variklių, tokių kaip „Google“ ir „Bing“. \n\n Tai atviras kodas ir paskelbtas https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "„Google“",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing paieška",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekozija",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "„DuckDuckgo“",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Tekstas, kurį reikia rodyti",
+        "description": "It's description in english"
+    }
+}

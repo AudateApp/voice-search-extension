@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Sesli arama",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Web'i sesinizle arayın",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Konuşmaya başlamak için ⓞ tıklayın",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Dinleme...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Hiçbir ses tespit edilmedi.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Tanınabilir bir konuşma tespit edilmedi.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Hiçbir mikrofon cihazı tespit edilmez veya mikrofon susturulmaz.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Mikrofona erişilemiyor, izin verilmiyor",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Ağ bağlantısı kesildi.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Tanıma iptal edildi.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Yerel ayar desteklenmedi.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Tarayıcı konuşma tanımayı desteklemez.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Zorunlu Hata",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Geri dön",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Konuşma dili",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Arama motoru",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Başlatma Hedefi",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Yeni sekme",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Mevcut sekme",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Mikrofon seçimi tarayıcı tanıma için mevcut değildir.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Varsayılan giriş cihazı yok",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Cheate, tarama deneyimine sesli bir uygunluk getirir. \n\n Tarayıcı simgesine tıklayarak sesinizi kullanarak web'de arama yapın. \n\n Doğal dilinizde konuşun ve gelişmiş AI ve ML modellerinin bunları metne dönüştürmesine izin verin. Dünyanın dört bir yanında 300'den fazla yerel destekleniyor! \n\n Google ve Bing gibi en iyi arama motorlarından herhangi birini seçin. \n\n Açık kaynaklıdır ve https: //github.com/audateapp adresinde yayınlanmıştır.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing Arama",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "DuckDuckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Görüntülenecek metin",
+        "description": "It's description in english"
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Гласовна претрага",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Претражите веб са својим гласом",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Кликните на ⓞ да бисте започели говор",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Слушање ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Није откривен звук.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Није откривен препознатљив говор.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Није откривен микрофонски уређаји или микрофон се искључује.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Не може приступити микрофону, дозвола није одобрена",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Мрежа искључена.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Препознавање отказано.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Локале није подржана.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Бровсер не подржава препознавање говора.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Неријешено грешке",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Вратити се",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Говорник говора",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Претраживач",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Микрофон",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Покретање циља",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Нови прозор",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Тренутна картица",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Избор микрофона није доступан за препознавање прегледача.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Нема подразумеваног уноса уноса",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "АУТЕД доноси приступање гласа на искуство прегледавања. \n\n Претражите веб користећи свој глас кликом на икону прегледача. \n\n Говорите на свом природном језику и пустите напредне АИ и МЛ моделе да их претвори у текст. Подржано је преко 300 локација широм света! \n\n Изаберите из било којег од горњих претраживача попут Гоогле и Бинг-а. \n\n То је отворени извор и објављен на хттпс: //гитхуб.цом/аудатеап.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Гоогле",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "БИНГ ПРЕТРАЖИ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Иандек",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Иахоо",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Баиду",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Екосија",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Дуцкдуцкго",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Текст за приказ",
+        "description": "It's description in english"
+    }
+}

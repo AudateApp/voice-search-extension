@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "आवाज शोध",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "आपल्या आवाजासह वेब शोधा",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "बोलण्यास प्रारंभ करण्यासाठी Clack क्लिक करा",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "ऐकत आहे ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "कोणताही आवाज आढळला नाही.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "कोणतेही ओळखण्यायोग्य भाषण आढळले नाही.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "कोणतीही मायक्रोफोन डिव्हाइस आढळली नाही किंवा मायक्रोफोन नि: शब्द केला नाही.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "मायक्रोफोनमध्ये प्रवेश करू शकत नाही, परवानगी दिली जात नाही",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "नेटवर्क डिस्कनेक्ट झाले.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "ओळख रद्द केली.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "लोकॅल समर्थित नाही.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "ब्राउझर भाषण ओळखण्यास समर्थन देत नाही.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "अनहॅन्डल्ड त्रुटी",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "परत जा",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "भाषण भाषा",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "शोध इंजिन",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "मायक्रोफोन",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "लाँच लक्ष्य",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "नवीन टॅब",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "वर्तमान टॅब",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "ब्राउझर ओळखण्यासाठी माइक निवड उपलब्ध नाही.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "डीफॉल्ट इनपुट डिव्हाइस नाही",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "ऑडिट ब्राउझिंगच्या अनुभवासाठी व्हॉईस-फॉरवर्ड परवडते. \n\n ब्राउझर चिन्हावर क्लिक करून आपला आवाज वापरुन वेब शोधा. \n\n आपल्या नैसर्गिक भाषेत बोला आणि प्रगत एआय आणि एमएल मॉडेल त्यांना मजकूरात रूपांतरित करू द्या. जगभरातील 300 हून अधिक लोकॅल्स समर्थित आहेत! \n\n Google आणि बिंग सारख्या कोणत्याही शीर्ष शोध इंजिनमधून निवडा. \n\n हे मुक्त स्त्रोत आहे आणि https: //github.com/audateapp वर प्रकाशित आहे.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "गूगल",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "बिंग शोध",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "यॅन्डेक्स",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "याहू",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "बाईडू",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "इकोसिया",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "डकडकगो",
+        "description": "Google"
+    },
+    "key": {
+        "message": "प्रदर्शित करण्यासाठी मजकूर",
+        "description": "It's description in english"
+    }
+}

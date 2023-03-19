@@ -1,0 +1,98 @@
+{
+  "AppName": {
+    "message": "Paghahanap gamit ang Boses",
+    "description": "The name of the extension"
+  },
+  "AppDesc": {
+    "message": "Maghanap sa web gamit ang iyong boses",
+    "description": "A description of its function"
+  },
+  "StatusIdle": {
+    "message": "I-click ang ⓞ upang magsimulang magsalita",
+    "description": "The text displayed when microphone is not listening."
+  },
+  "StatusListening": {
+    "message": "Nakikinig...",
+    "description": "The text displayed when microphone is listening for input."
+  },
+  "ErrNoSoundDetected": {
+    "message": "Walang nakitang tunog",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoSpeechDetected": {
+    "message": "Walang natukoy na nakikilalang pananalita.",
+    "description": "This text is displayed when the microphone does not detect any speech."
+  },
+  "ErrNoAudioCapture": {
+    "message": "Walang natukoy na microphone device o naka-mute ang mikropono.",
+    "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+  },
+  "ErrPermissionNotGranted": {
+    "message": "Hindi ma-access ang mikropono, hindi ibinigay ang pahintulot",
+    "description": "The user has not granted microphone permission"
+  },
+  "ErrNoNetwork": {
+    "message": "Nadiskonekta ang network",
+    "description": "There is no network connection."
+  },
+  "ErrAborted": {
+    "message": "Kinansela ang pagkilala.",
+    "description": "User initiated cancellation of recognition."
+  },
+  "ErrLangNotSupported": {
+    "message": "Hindi suportado ang lokal.",
+    "description": "The user's selected locale is not supported."
+  },
+  "ErrServiceNotAllowed": {
+    "message": "Hindi sinusuportahan ng browser ang speech recognition.",
+    "description": "Browser doesn't support recognition."
+  },
+  "ErrUnhandledError": {
+    "message": "Hindi Nahawakang Error",
+    "description": "We encountered an unknown error."
+  },
+  "QsGoBack": {
+    "message": "Bumalik ka",
+    "description": "Text on button used to navigate backwards"
+  },
+  "QsSpeechLanguage": {
+    "message": "Wika ng Pagsasalita",
+    "description": "Label for the drop-down to select user speech language."
+  },
+  "QsSearchEngine": {
+    "message": "Search Engine",
+    "description": "Label for drop-down to select search engine."
+  },
+  "QsMicrophone": {
+    "message": "mikropono",
+    "description": "Label for drop-down to select microphone to use."
+  },
+  "QsLaunchTarget": {
+    "message": "Ilunsad ang Target",
+    "description": "Label for drop-down to select launch target."
+  },
+  "QsLaunchNewTab": {
+    "message": "Bagong tab",
+    "description": "Option to open URLs in new tab."
+  },
+  "QsLaunchCurrentTab": {
+    "message": "Kasalukuyang Tab",
+    "description": "Option to open URLs in current tab."
+  },
+  "QsCannotChangeMic": {
+    "message": "Hindi available ang pagpili ng mikropono para sa pagkilala sa browser.",
+    "description": "Error message for mic selection not available."
+  },
+  "QsNoDefaultInput": {
+    "message": "Walang Default na Input Device",
+    "description": "Message displayed when there's no input device."
+  },
+  "AppDetailDescription": {
+    "message": "Ang Audate ay nagdadala ng voice-forward affordance sa karanasan sa pagba-browse.\n\nMaghanap sa web gamit ang iyong boses sa pamamagitan ng pag-click sa icon ng browser.\n\nMagsalita sa iyong natural na wika at hayaan ang mga advanced na modelo ng AI at ML na i-convert ang mga ito sa text. Higit sa 300 locale sa buong mundo ang sinusuportahan!\n\nPumili mula sa alinman sa mga nangungunang search engine tulad ng Google at Bing.\n\nIto ay open source at na-publish sa https: //github.com/AudateApp.",
+    "description": "Detailed description displayed on extension page."
+  },
+  "key": {
+    "message": "Tekstong ipapakita",
+    "description": "It's description in english"
+  }
+}

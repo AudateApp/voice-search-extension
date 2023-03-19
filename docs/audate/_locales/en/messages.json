@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Voice Search",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Search the web with your voice",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Click ⓞ to start speaking",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Listening...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "No sound was detected.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "No recognizable speech detected.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "No microphone devices detected or microphone is muted.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Cannot access microphone, permission not granted",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Network disconnected.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Recognition cancelled.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Locale not supported.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Browser does not support speech recognition.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Unhandled Error",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Go Back",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Speech Language",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Search Engine",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Microphone",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Launch Target",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "New Tab",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Current Tab",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Mic selection not available for browser recognition.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "No Default Input Device",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate brings a voice-forward affordances to the browsing experience.\n\nSearch the web using your voice by clicking on the browser icon.\n\nSpeak in your natural language and let advanced AI and ML models convert them to text. Over 300 locales around the world are supported!\n\nChoose from any of the top search engines like Google and Bing.\n\nIt's open source and published at https: //github.com/AudateApp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing Search",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "DuckDuckGo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Text to display",
+        "description": "It's description in english"
+    }
+}

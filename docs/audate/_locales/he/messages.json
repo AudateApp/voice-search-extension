@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "חיפוש קולי",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "חפש באינטרנט עם הקול שלך",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "לחץ על ⓞ כדי להתחיל לדבר",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "הַקשָׁבָה...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "לא התגלה שום צליל.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "לא התגלה נאום מזוהה.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "לא מתגלה התקני מיקרופון או מיקרופון מושתק.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "לא ניתן לגשת למיקרופון, אישור לא ניתן",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "רשת מנותקת.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "הכרה בוטלה.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "אזור לא נתמך.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "הדפדפן אינו תומך בזיהוי דיבור.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "שגיאה שלא מטופלת",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "תחזור",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "שפת דיבור",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "מנוע חיפוש",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "מִיקרוֹפוֹן",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "השקה יעד",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "כרטיסייה חדשה",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "כרטיסייה נוכחית",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "בחירת מיקרופון אינה זמינה לזיהוי דפדפן.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "אין מכשיר קלט ברירת מחדל",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate מביא רווחים קדימה לחוויית הגלישה. \n\n חפש באינטרנט באמצעות הקול שלך על ידי לחיצה על סמל הדפדפן. \n\n דבר בשפה הטבעית שלך ונתן למודלים AI ו- ML מתקדמים להמיר אותם לטקסט. יותר מ -300 יישובים ברחבי העולם נתמכים! \n\n בחר מבין כל אחד ממנועי החיפוש המובילים כמו גוגל ובינג. \n\n זה קוד פתוח ומפורסם בכתובת https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "גוגל",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "חיפוש בינג",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "ינדקס",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "יאהו",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "אקוסיה",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "DuckDuckGo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "טקסט לתצוגה",
+        "description": "It's description in english"
+    }
+}

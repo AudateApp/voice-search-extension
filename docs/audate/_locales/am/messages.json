@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "የድምፅ ፍለጋ",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "በድምጽዎ ላይ ድሩን ይፈልጉ",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "መናገር ለመጀመር Q ን ጠቅ ያድርጉ",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "ማዳመጥ ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "ምንም ድምፅ አልተገኘም.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "የማይታወቅ የንግግር ስሜት አልተገኘም.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "ምንም የማይክሮፎን መሣሪያዎች አልነበቡም ወይም ማይክሮፎን መለጠፊያ ነው.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "ማይክሮፎን መድረስ አይችልም, ፈቃድ አልተሰጠም",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "አውታረመረብ ተለያይቷል.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "ማወቂያ መሰረዝ.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "አካባቢን አልተደገፈም.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "አሳሽ የንግግር ማወቂያ አይደገፍም.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "ያልተስተካከለ ስህተት",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "ተመለስ",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "የንግግር ቋንቋ",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "የመፈለጊያ ማሸን",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "ማይክሮፎን",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Target ላማውን ማስጀመር",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "አዲስ ትር",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "የአሁኑ ትር",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "ሚክ ምርጫ ለአሳሽ ማወቂያ አይገኝም.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "ነባሪ የግቤት መሣሪያ የለም",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "ኦዲት ለአሰሳ ተሞክሮ ድምፃዊነትን የሚያስተላልፍ ዋጋን የሚያመጣ ነው. \n\n የአሳሽ አዶን ጠቅ በማድረግ በድምጽዎ ላይ ድምጽዎን ይፈልጉ. \n\n በተፈጥሯዊ ቋንቋ ይናገሩ እና የቅድመ አዲ እና የ ML ሞዴሎች ወደ ጽሑፍ እንዲወጡ ያድርጓቸው. በዓለም ዙሪያ ከ 300 በላይ መጠለያዎች ይደገፋሉ! \n\n እንደ Google እና Bing ካሉ ምርጥ የፍለጋ ሞተሮች ውስጥ ይምረጡ. \n\n ክፍት ምንጭ እና በ https.com/gititub.com/audateApp ነው የታተመው.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "ጉግል",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "የ Bing ፍለጋ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "ያሁ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ኢኮሲያ",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckuckocko",
+        "description": "Google"
+    },
+    "key": {
+        "message": "ጽሑፍ ለማሳየት ጽሑፍ",
+        "description": "It's description in english"
+    }
+}

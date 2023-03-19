@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "ಧ್ವನಿ ಹುಡುಕಾಟ",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "ನಿಮ್ಮ ಧ್ವನಿಯೊಂದಿಗೆ ವೆಬ್ ಅನ್ನು ಹುಡುಕಿ",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "ಮಾತನಾಡಲು ಪ್ರಾರಂಭಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "ಕೇಳುವ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "ಯಾವುದೇ ಶಬ್ದ ಪತ್ತೆಯಾಗಿಲ್ಲ.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "ಗುರುತಿಸಬಹುದಾದ ಮಾತು ಪತ್ತೆಯಾಗಿಲ್ಲ.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "ಯಾವುದೇ ಮೈಕ್ರೊಫೋನ್ ಸಾಧನಗಳು ಪತ್ತೆಯಾಗಿಲ್ಲ ಅಥವಾ ಮೈಕ್ರೊಫೋನ್ ಮ್ಯೂಟ್ ಆಗಿಲ್ಲ.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "ಮೈಕ್ರೊಫೋನ್ ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ, ಅನುಮತಿ ನೀಡಲಾಗಿಲ್ಲ",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕ ಕಡಿತಗೊಂಡಿದೆ.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "ಗುರುತಿಸುವಿಕೆ ರದ್ದುಗೊಂಡಿದೆ.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "ಲೊಕೇಲ್ ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "ಭಾಷಣ ಗುರುತಿಸುವಿಕೆಯನ್ನು ಬ್ರೌಸರ್ ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "ಅನಿಯಮಿತ ದೋಷ",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "ಹಿಂದೆ ಹೋಗು",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "ಭಾಷಣ ಭಾಷೆ",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "ಶೋಧಕ ಎಂಜಿನ್",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "ಮೈಕ್ರೋಫೋನ್",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "ಗುರಿ ಪ್ರಾರಂಭಿಸಿ",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "ಹೊಸ ಟ್ಯಾಬ್",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "ಪ್ರಸ್ತುತ ಟ್ಯಾಬ್",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "ಬ್ರೌಸರ್ ಗುರುತಿಸುವಿಕೆಗಾಗಿ ಎಂಐಸಿ ಆಯ್ಕೆ ಲಭ್ಯವಿಲ್ಲ.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "ಡೀಫಾಲ್ಟ್ ಇನ್ಪುಟ್ ಸಾಧನವಿಲ್ಲ",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "ಆಡಿಟ್ ಬ್ರೌಸಿಂಗ್ ಅನುಭವಕ್ಕೆ ಧ್ವನಿ-ಫಾರ್ವರ್ಡ್ ವೆಚ್ಚವನ್ನು ತರುತ್ತದೆ. \n\n ಬ್ರೌಸರ್ ಐಕಾನ್ ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ ನಿಮ್ಮ ಧ್ವನಿಯನ್ನು ಬಳಸಿಕೊಂಡು ವೆಬ್ ಅನ್ನು ಹುಡುಕಿ. \n\n ನಿಮ್ಮ ನೈಸರ್ಗಿಕ ಭಾಷೆಯಲ್ಲಿ ಮಾತನಾಡಿ ಮತ್ತು ಸುಧಾರಿತ AI ಮತ್ತು ML ಮಾದರಿಗಳು ಅವುಗಳನ್ನು ಪಠ್ಯಕ್ಕೆ ಪರಿವರ್ತಿಸಲು ಅವಕಾಶ ಮಾಡಿಕೊಡಿ. ಪ್ರಪಂಚದಾದ್ಯಂತ 300 ಕ್ಕೂ ಹೆಚ್ಚು ಸ್ಥಳಗಳನ್ನು ಬೆಂಬಲಿಸಲಾಗುತ್ತದೆ! \n\n ಗೂಗಲ್ ಮತ್ತು ಬಿಂಗ್‌ನಂತಹ ಯಾವುದೇ ಉನ್ನತ ಸರ್ಚ್ ಇಂಜಿನ್‌ಗಳಿಂದ ಆರಿಸಿ. \n\n ಇದು ಓಪನ್ ಸೋರ್ಸ್ ಮತ್ತು https: //github.com/audateapp ನಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗಿದೆ.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "ಗೂಗಲ್",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "ಬಿಂಗ್ ಹುಡುಕಾಟ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "ಕವಣೆ",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "ಯಾಹೂ",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "ಜರಡಿ",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "ಪರಿಸರ",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "ಡಕ್ಡಕ್ಗೊ",
+        "description": "Google"
+    },
+    "key": {
+        "message": "ಪ್ರದರ್ಶಿಸಲು ಪಠ್ಯ",
+        "description": "It's description in english"
+    }
+}

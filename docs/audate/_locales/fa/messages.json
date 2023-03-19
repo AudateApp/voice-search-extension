@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "جستجوی صوتی",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "با صدای خود وب را جستجو کنید",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "برای شروع صحبت کردن ، روی ⓞ کلیک کنید",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "استماع...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "هیچ صدایی تشخیص داده نشد.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "هیچ گفتاری قابل تشخیص تشخیص داده نشده است.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "هیچ دستگاه میکروفون شناسایی نشده یا میکروفون خاموش نیست.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "اجازه دسترسی به میکروفون را نمی دهد ، مجوز اعطا نشده است",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "شبکه قطع شده است.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "تشخیص لغو شد.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "محلی پشتیبانی نمی شود.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "مرورگر از تشخیص گفتار پشتیبانی نمی کند.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "خطای نامشخص",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "برگرد",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "زبان گفتاری",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "موتور جستجو",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "میکروفن",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "هدف",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "برگه جدید",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "برگه کنونی",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "انتخاب میکروفن برای تشخیص مرورگر در دسترس نیست.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "بدون دستگاه ورودی پیش فرض",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate هزینه های صوتی را به تجربه مرور می بخشد. \n\n با کلیک بر روی نماد مرورگر ، وب را با استفاده از صدای خود جستجو کنید. \n\n به زبان طبیعی خود صحبت کنید و بگذارید مدلهای پیشرفته AI و ML آنها را به متن تبدیل کنند. بیش از 300 محلی در سراسر جهان پشتیبانی می شوند! \n\n از بین هر یک از موتورهای جستجوگر برتر مانند Google و Bing انتخاب کنید. \n\n این منبع باز است و در https: //github.com/audateapp منتشر شده است.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "گوگل",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "جستجوی بینگ",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "یاندکس",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "یاهو",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "بیدو",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "اکسیا",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "اردک",
+        "description": "Google"
+    },
+    "key": {
+        "message": "متن برای نمایش",
+        "description": "It's description in english"
+    }
+}

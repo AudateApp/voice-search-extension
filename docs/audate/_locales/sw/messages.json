@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Utafutaji wa sauti",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Tafuta wavuti na sauti yako",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Bonyeza ⓞ kuanza kuongea",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Kusikiliza ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Hakuna sauti iliyogunduliwa.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Hakuna hotuba inayotambulika iliyogunduliwa.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Hakuna vifaa vya kipaza sauti vilivyogunduliwa au kipaza sauti hubadilishwa.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Haiwezi kupata kipaza sauti, ruhusa haijapewa",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Mtandao umekataliwa.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Utambuzi umeghairiwa.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Locale haijaungwa mkono.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Kivinjari hakiungi mkono utambuzi wa hotuba.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Kosa lisilosimamiwa",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Rudi nyuma",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Lugha ya hotuba",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Injini ya utaftaji",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Kipaza sauti",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Zindua Lengo",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Tabo mpya",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Tabo ya sasa",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Uteuzi wa MIC haupatikani kwa utambuzi wa kivinjari.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Hakuna kifaa cha kuingiza chaguo -msingi",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Ukaguzi huleta uwezo wa mbele wa sauti kwa uzoefu wa kuvinjari. \n\n Tafuta wavuti kwa kutumia sauti yako kwa kubonyeza ikoni ya kivinjari. \n\n Ongea kwa lugha yako ya asili na acha mifano ya hali ya juu ya AI na ML ibadilishe kuwa maandishi. Zaidi ya maeneo 300 ulimwenguni kote yanaungwa mkono! \n\n Chagua kutoka kwa injini yoyote ya juu ya utaftaji kama Google na Bing. \n\n Ni chanzo wazi na kuchapishwa kwa https: //github.com/uadateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Utafutaji wa Bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Maandishi kuonyesha",
+        "description": "It's description in english"
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Szukanie głosowe",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Przeszukaj Internet swoim głosem",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Kliknij ⓞ, aby zacząć mówić",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Słuchający...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Nie wykryto dźwięku.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Żadna rozpoznawalna mowa.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Brak wykrytych urządzeń mikrofonowych lub mikrofon jest wyciszony.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Nie można uzyskać dostępu do mikrofonu, pozwolenia nie jest przyznane",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Rozłączono sieć.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Uznanie anulowane.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Lokalizacja nie jest obsługiwana.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Przeglądarka nie popiera rozpoznawania mowy.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Niezbadany błąd",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Wróć",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Język mowy",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Wyszukiwarka",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Uruchom cel",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Nowa karta",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Obecna karta",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Wybór mikrofonu niedostępny do rozpoznawania przeglądarki.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Brak domyślnego urządzenia wejściowego",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audycja wnosi do przeglądania afordancje głosowe. \n\n Przeszukaj sieć za pomocą głosu, klikając ikonę przeglądarki. \n\n Mów w języku naturalnym i pozwól zaawansowanym modele AI i ML przekształcić je na tekst. Obsługiwane jest ponad 300 miejsc na całym świecie! \n\n Wybierz spośród dowolnej z najlepszych wyszukiwarek, takich jak Google i Bing. \n\n Jest open source i opublikowany na stronie https: //github.com/audateApp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bing Search",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Wieśniak",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ekozja",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Tekst do wyświetlenia",
+        "description": "It's description in english"
+    }
+}

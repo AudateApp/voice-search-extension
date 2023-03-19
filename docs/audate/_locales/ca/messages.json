@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Cerca de veu",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Cerqueu la web amb la vostra veu",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Feu clic a ⓞ per començar a parlar",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Escoltant ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "No es va detectar cap so.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "No es va detectar cap discurs reconeixible.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "No hi ha dispositius de micròfon detectats ni micròfon.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "No es pot accedir al micròfon, permís no concedit",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "La xarxa desconnectada.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Reconeixement cancel·lat.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "No és compatible.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "El navegador no admet el reconeixement de la parla.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Error no mandat",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Torna",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Llenguatge de parla",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Motor de cerca",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Micròfon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Llançar l'objectiu",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Nova pestanya",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Pestanya actual",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "Selecció de MIC no disponible per al reconeixement del navegador.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Sense dispositiu d'entrada per defecte",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate aporta un avantatge de veu a l'experiència de navegació. \n\n Cerqueu el web mitjançant la vostra veu fent clic a la icona del navegador. \n\n Parleu en el vostre llenguatge natural i deixeu que els models AI i ML avançats els converteixin en text. Més de 300 locals de tot el món són compatibles. \n\n Trieu entre qualsevol dels motors de cerca més importants com Google i Bing. \n\n És de codi obert i es publica a https: //github.com/audateApp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Cerca Bing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ecosia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Duckduckgo",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Text per mostrar",
+        "description": "It's description in english"
+    }
+}

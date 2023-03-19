@@ -1,0 +1,126 @@
+{
+    "AppName": {
+        "message": "Kõneotsing",
+        "description": "The name of the extension"
+    },
+    "AppDesc": {
+        "message": "Otsige veebist oma häälega",
+        "description": "A description of its function"
+    },
+    "StatusIdle": {
+        "message": "Klõpsake ⓞ, et rääkida",
+        "description": "The text displayed when microphone is not listening."
+    },
+    "StatusListening": {
+        "message": "Kuulamine ...",
+        "description": "The text displayed when microphone is listening for input."
+    },
+    "ErrNoSoundDetected": {
+        "message": "Heli ei tuvastatud.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoSpeechDetected": {
+        "message": "Äratuntav kõne ei tuvastatud.",
+        "description": "This text is displayed when the microphone does not detect any speech."
+    },
+    "ErrNoAudioCapture": {
+        "message": "Mikrofoniseadmeid ei tuvastatud ega mikrofon vaigistatud.",
+        "description": "The extension is unable to detect any connected microphone, also happens when mic is muted."
+    },
+    "ErrPermissionNotGranted": {
+        "message": "Ei pääse mikrofonile, luba ei saa anda",
+        "description": "The user has not granted microphone permission"
+    },
+    "ErrNoNetwork": {
+        "message": "Võrk lahti ühendatud.",
+        "description": "There is no network connection."
+    },
+    "ErrAborted": {
+        "message": "Tunnustus tühistati.",
+        "description": "User initiated cancellation of recognition."
+    },
+    "ErrLangNotSupported": {
+        "message": "Lokaale ei toetata.",
+        "description": "The user's selected locale is not supported."
+    },
+    "ErrServiceNotAllowed": {
+        "message": "Brauser ei toeta kõnetuvastust.",
+        "description": "Browser doesn't support recognition."
+    },
+    "ErrUnhandledError": {
+        "message": "Kandmata viga",
+        "description": "We encountered an unknown error."
+    },
+    "QsGoBack": {
+        "message": "Mine tagasi",
+        "description": "Text on button used to navigate backwards"
+    },
+    "QsSpeechLanguage": {
+        "message": "Kõnekeel",
+        "description": "Label for the drop-down to select user speech language."
+    },
+    "QsSearchEngine": {
+        "message": "Otsingumootor",
+        "description": "Label for drop-down to select search engine."
+    },
+    "QsMicrophone": {
+        "message": "Mikrofon",
+        "description": "Label for drop-down to select microphone to use."
+    },
+    "QsLaunchTarget": {
+        "message": "Stardieesmärk",
+        "description": "Label for drop-down to select launch target."
+    },
+    "QsLaunchNewTab": {
+        "message": "Uuel kaardil",
+        "description": "Option to open URLs in new tab."
+    },
+    "QsLaunchCurrentTab": {
+        "message": "Praegune vahekaart",
+        "description": "Option to open URLs in current tab."
+    },
+    "QsCannotChangeMic": {
+        "message": "MIC -valik pole brauseri äratundmiseks saadaval.",
+        "description": "Error message for mic selection not available."
+    },
+    "QsNoDefaultInput": {
+        "message": "Vaikimisi sisendseadet pole",
+        "description": "Message displayed when there's no input device."
+    },
+    "AppDetailDescription": {
+        "message": "Audate annab sirvimiskogemusele häälte võimaluse. \n\n Otsige oma hääle abil veebist, klõpsates brauseriikoonil. \n\n Rääkige oma loomulikus keeles ja laske arenenud AI ja ML -mudelitel neid tekstiks teisendada. Toetatakse üle 300 paiku kogu maailmas! \n\n Valige mis tahes parimate otsingumootorite hulgast, näiteks Google ja Bing. \n\n See on avatud lähtekoodiga ja avaldatud aadressil https: //github.com/audateapp.",
+        "description": "Detailed description displayed on extension page."
+    },
+    "Google": {
+        "message": "Google",
+        "description": "Google"
+    },
+    "Bing": {
+        "message": "Bingiotsing",
+        "description": "Google"
+    },
+    "Yandex": {
+        "message": "Yandex",
+        "description": "Google"
+    },
+    "Yahoo": {
+        "message": "Yahoo",
+        "description": "Google"
+    },
+    "Baidu": {
+        "message": "Baidu",
+        "description": "Google"
+    },
+    "Ecosia": {
+        "message": "Ökoloogia",
+        "description": "Google"
+    },
+    "DuckDuckGo": {
+        "message": "Pardipoeg",
+        "description": "Google"
+    },
+    "key": {
+        "message": "Tekst, mida kuvada",
+        "description": "It's description in english"
+    }
+}
