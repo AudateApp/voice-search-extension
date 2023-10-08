@@ -1,6 +1,6 @@
 {
   "name": "audate-voice-search",
-  "version": "23.01.10",
+  "version": "23.10.8",
   "description": "Bringing voice-forward experiences to the browser",
   "scripts": {
     "ng": "ng",
