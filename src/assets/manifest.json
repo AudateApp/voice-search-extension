@@ -6,7 +6,7 @@
   "manifest_version": 3,
   "default_locale": "en",
   "author": "Justice Ogbonna",
-  "short_name": "Audate",
+  "short_name": "__MSG_AppName__",
   "permissions": ["storage"],
   "action": {
     "default_icon": {
