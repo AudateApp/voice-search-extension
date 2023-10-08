@@ -1,5 +1,5 @@
 import { Logger } from './logger';
-import * as Sentry from "@sentry/angular";
+import * as Sentry from "@sentry/angular-ivy";
 
 export class RemoteLogger implements Logger {
   debug(...unused: unknown[]): void {

@@ -15,7 +15,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { DialogModule } from 'primeng/dialog';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
-import * as Sentry from '@sentry/angular';
+import * as Sentry from '@sentry/angular-ivy';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
