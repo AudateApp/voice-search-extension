@@ -73,32 +73,10 @@ export class SearchEngineService {
       query
     );
 
-    this.launchTargetService.getSavedLaunchTarget().then(lt => {
+    this.launchTargetService.getSavedLaunchTarget().then((lt) => {
       switch (lt) {
         case LaunchTarget.CURRENT_TAB:
-          chrome.tabs.query({ active: true, currentWindow: true }).then(tabs => {
-            if (tabs.length !== 1) {
-              this.logger.error("Wrong number of active tabs, expected 1, got ", tabs.length);
-              this.openInNewTab(url);
-              return;
-            }
-            const tab = tabs[0];
-            if (!tab.id) {
-              this.logger.error("No tab ID, context is not appropriate to updating tab");
-              this.openInNewTab(url);
-              return;
-            }
-            chrome.tabs.update(tab.id, { url: url, active: true }).then(
-              () => {
-                this.logger.debug("successfully opened url");
-                this.analytics.logEnd("#updateTab", "success");
-              },
-              err => {
-                this.logger.error("#performSearch: error opening url", err);
-                this.analytics.logEnd("#updateTab", "failure");
-              }
-            );
-          });
+          this.openInCurrentTab(url);
           break;
         case LaunchTarget.NEW_TAB:
           this.openInNewTab(url);
@@ -107,18 +85,57 @@ export class SearchEngineService {
           this.openInNewTab(url);
           break;
       }
-    })
+    });
   }
 
   openInNewTab(url: string): void {
+    if (!chrome?.tabs) {
+      window.open(url, '_blank');
+      return;
+    }
     chrome.tabs.create({ url: url, active: true }).then(
       () => {
-        this.analytics.logEnd("#createNewTab", "success");
+        this.analytics.logEnd('#createNewTab', 'success');
       },
-      err => {
-        this.logger.error("#createTab error", err);
-        this.analytics.logEnd("#createNewTab", "failure");
+      (err) => {
+        this.logger.error('#createTab error', err);
+        this.analytics.logEnd('#createNewTab', 'failure');
       }
     );
+  }
+
+  openInCurrentTab(url: string): void {
+    if (!chrome?.tabs) {
+      window.open(url, '_top');
+      return;
+    }
+    chrome.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+      if (tabs.length !== 1) {
+        this.logger.error(
+          'Wrong number of active tabs, expected 1, got ',
+          tabs.length
+        );
+        this.openInNewTab(url);
+        return;
+      }
+      const tab = tabs[0];
+      if (!tab.id) {
+        this.logger.error(
+          'No tab ID, context is not appropriate to updating tab'
+        );
+        this.openInNewTab(url);
+        return;
+      }
+      chrome.tabs.update(tab.id, { url: url, active: true }).then(
+        () => {
+          this.logger.debug('successfully opened url');
+          this.analytics.logEnd('#updateTab', 'success');
+        },
+        (err) => {
+          this.logger.error('#performSearch: error opening url', err);
+          this.analytics.logEnd('#updateTab', 'failure');
+        }
+      );
+    });
   }
 }
