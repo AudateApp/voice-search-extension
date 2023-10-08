@@ -12,6 +12,10 @@ const routes: Routes = [
     component: VoiceSearchComponent,
   },
   {
+    path: 'popup?demo=true',
+    component: VoiceSearchComponent,
+  },
+  {
     path: 'content-popup',
     component: ContentPopupComponent,
   },
@@ -38,4 +42,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

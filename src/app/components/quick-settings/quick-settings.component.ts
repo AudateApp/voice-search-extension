@@ -14,7 +14,11 @@ import { LocaleService } from 'src/app/services/locale/locale.service';
 import { SearchEngineService } from 'src/app/services/search-engine.service';
 import { LoggingService } from 'src/app/services/logging/logging.service';
 import { Logger } from 'src/app/services/logging/logger';
-import { LaunchTarget, DefaultLaunchTarget, LaunchTargetService } from 'src/app/services/launch-target.service';
+import {
+  LaunchTarget,
+  DefaultLaunchTarget,
+  LaunchTargetService,
+} from 'src/app/services/launch-target.service';
 import { I18nService } from 'src/app/services/i18n.service';
 import { Mssg } from 'src/app/services/i18n-mssg';
 
@@ -56,8 +60,8 @@ export class QuickSettingsComponent implements OnInit {
       deviceId: '',
       toJSON: function () {
         throw new Error('Function not implemented.');
-      }
-    }
+      },
+    };
     this.launchTarget = this.launchTargetService.toI18n(DefaultLaunchTarget);
   }
 
@@ -86,10 +90,10 @@ export class QuickSettingsComponent implements OnInit {
       }
     );
 
-    this.launchTargetService.getLaunchTarget().subscribe(lt => {
+    this.launchTargetService.getLaunchTarget().subscribe((lt) => {
       this.launchTarget = this.launchTargetService.toI18n(lt);
       this.ref.detectChanges();
-    })
+    });
   }
 
   setLocale(locale: LocaleProperties): void {
