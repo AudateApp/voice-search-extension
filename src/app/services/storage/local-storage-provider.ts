@@ -11,7 +11,10 @@ export class LocalStorageProvider implements StorageProvider {
       return Promise.reject('Attempting to save a null value');
     }
 
-    const audate = await this.getAll();
+    let audate = await this.getAll();
+    if (audate == null) {
+      audate = {};
+    }
     audate[key] = value;
     this.storageService.setItem('audate', JSON.stringify(audate));
     Promise.resolve();
