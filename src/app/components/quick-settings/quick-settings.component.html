@@ -14,7 +14,7 @@
   <hr />
   <div class="setting" (click)="activeSection = 'microphone'">
     <h5 class="label">{{ i18n.get(Mssg.QsMicrophone) }}</h5>
-    <p class="value">{{ currentInputDevice?.label }}</p>
+    <p class="value">{{ currentInputDevice?.label || "Default" }}</p>
   </div>
   <hr />
   <div class="setting" (click)="activeSection = 'launch-target'">
@@ -54,7 +54,7 @@
   </p>
   <div class="items">
     <p class="item" *ngFor="let device of inputDevices" (click)="activeSection = 'quick-settings'">
-      <span class="label">{{ device.label }}</span>
+      <span class="label">{{ device.label || "Default" }}</span>
       <i class="selected pi pi-check" *ngIf="device === currentInputDevice"></i>
     </p>
   </div>
